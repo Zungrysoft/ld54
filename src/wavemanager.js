@@ -10,11 +10,12 @@ import Wasp from './wasp.js'
 export default class WaveManager extends Thing {
   wave = 0
   time = 0
+  waveActive = false
 
   constructor () {
     super()
     game.setThingName(this, 'wavemanager')
-    this.nextWave()
+    this.after(60 * 3, () => this.nextWave())
   }
 
   update () {
@@ -26,9 +27,13 @@ export default class WaveManager extends Thing {
   }
 
   getEnemyCount () {
+    return this.getEnemies().length
+  }
+
+  getEnemies () {
     return game.getThings().filter(thing =>
       ('health' in thing && thing != game.getThing('player'))
-    ).length
+    )
   }
 
   spawn () {
@@ -49,9 +54,19 @@ export default class WaveManager extends Thing {
     }
   }
 
+  endWave () {
+    for (const enemy of this.getEnemies()) {
+      enemy.dead = true
+    }
+    this.cancelTimer('spawn')
+    this.waveActive = false
+    this.after(60 * 10, () => this.nextWave())
+  }
+
   nextWave () {
     this.wave += 1
-    this.after(60 * 60, () => this.nextWave(), 'wave')
+    this.waveActive = true
+    this.after(60 * 10, () => this.endWave(), 'wave')
     this.spawn()
   }
 
@@ -59,51 +74,108 @@ export default class WaveManager extends Thing {
     const { ctx, assets } = game
 
     // wave counter
-    ctx.save()
-    ctx.fillStyle = 'black'
-    ctx.font = 'italic bold 48px Tahoma'
-    ctx.textAlign = 'center'
-    ctx.translate(game.config.width / 2, 38)
-    ctx.scale(1, 0.65)
-    ctx.fillText(`WAVE ${this.wave}`, 0, 0)
-    ctx.restore()
+    if (this.wave > 0) {
+      ctx.save()
+      ctx.font = 'italic bold 48px Tahoma'
+      ctx.textAlign = 'center'
+      ctx.translate(0, 40)
+      {
+        ctx.save()
+        ctx.fillStyle = 'black'
+        ctx.translate(game.config.width / 2, 0)
+        ctx.scale(1, 0.65)
+        ctx.fillText(`WAVE ${this.wave}`, 0, 0)
+        ctx.restore()
+      }
+      ctx.translate(4, -4)
+      {
+        ctx.save()
+        ctx.fillStyle = 'white'
+        ctx.translate(game.config.width / 2, 0)
+        ctx.scale(1, 0.65)
+        ctx.fillText(`WAVE ${this.wave}`, 0, 0)
+        ctx.restore()
+        ctx.restore()
+      }
+    }
 
     // wave progress bar
-    ctx.save()
-    ctx.fillStyle = 'black'
-    ctx.translate(game.config.width / 2, 50)
-    const halfWidth = 256
-    const height = 12
-    ctx.fillRect(-halfWidth, 0, halfWidth * 2, height)
-    ctx.fillStyle = 'red'
-    const border = 4
-    ctx.fillRect(
+    if (this.waveActive) {
+      ctx.save()
+      ctx.fillStyle = 'black'
+      ctx.translate(game.config.width / 2, 50)
+      const halfWidth = 256
+      const height = 12
+      ctx.fillRect(-halfWidth, 0, halfWidth * 2, height)
+      ctx.fillStyle = 'red'
+      const border = 4
+      ctx.fillRect(
       -halfWidth + border,
-      border,
-      this.timer('wave') * (halfWidth * 2 - border * 2),
-      height - border * 2
-    )
-    ctx.restore()
+        border,
+        this.timer('wave') * (halfWidth * 2 - border * 2),
+        height - border * 2
+      )
+      ctx.restore()
+    }
 
     // lives counter
     const player = game.getThing('player')
     if (player) {
       ctx.save()
-      ctx.fillStyle = 'black'
       ctx.font = 'italic bold 40px Tahoma'
       ctx.textAlign = 'center'
-      ctx.translate(100, game.config.height - 48)
-      ctx.scale(1, 0.65)
-      ctx.fillText(`LIVES`, 0, 0)
+      {
+        ctx.save()
+        ctx.fillStyle = 'black'
+        ctx.translate(100, game.config.height - 48)
+        ctx.scale(1, 0.65)
+        ctx.fillText('LIVES', 0, 0)
+        ctx.restore()
+      }
+      ctx.translate(4, -4)
+      {
+        ctx.save()
+        ctx.fillStyle = 'white'
+        ctx.translate(100, game.config.height - 48)
+        ctx.scale(1, 0.65)
+        ctx.fillText('LIVES', 0, 0)
+        ctx.restore()
+      }
       ctx.restore()
 
       ctx.save()
-      ctx.fillStyle = 'black'
-      ctx.font = 'italic bold 72px Tahoma'
-      ctx.textAlign = 'center'
-      ctx.translate(100, game.config.height - 80)
-      ctx.fillText(String(player.lives), 0, 0)
+      {
+        ctx.save()
+        ctx.fillStyle = 'black'
+        ctx.font = 'italic bold 72px Tahoma'
+        ctx.textAlign = 'center'
+        ctx.translate(100, game.config.height - 80)
+        ctx.fillText(String(player.lives), 0, 0)
+        ctx.restore()
+      }
+      ctx.translate(4, -4)
+      {
+        ctx.save()
+        ctx.fillStyle = 'white'
+        ctx.font = 'italic bold 72px Tahoma'
+        ctx.textAlign = 'center'
+        ctx.translate(100, game.config.height - 80)
+        ctx.fillText(String(player.lives), 0, 0)
+        ctx.restore()
+      }
       ctx.restore()
+
+      // jetpack
+      const fuel = player.jetpack / player.jetpackMaximum
+      if (player.jetpack < player.jetpackMaximum) {
+        ctx.save()
+        ctx.lineWidth = 6
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.75)'
+        ctx.beginPath()
+        ctx.arc(game.config.width * 2 / 4, game.config.height / 2, 38, 0, Math.PI * 2 * fuel)
+        ctx.stroke()
+        ctx.save()
+      }
     }
   }
 }
