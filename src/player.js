@@ -83,7 +83,7 @@ export default class Player extends Thing {
     let dy = !!game.keysDown.KeyS - !!game.keysDown.KeyW
 
     // Counter for view bobbing
-    if (Math.abs(dx) + Math.abs(dy) > 0) {
+    if (Math.abs(dx) + Math.abs(dy) > 0 && this.onGround) {
       this.walkFrameAccel = 0.08
     } else {
       this.walkFrameAccel = Math.max(this.walkFrameAccel - 0.002, 0)
@@ -252,9 +252,9 @@ export default class Player extends Thing {
         sound.play()
         */
 
-        //this.velocity[0] -= look[0] * 4.5
-        //this.velocity[1] -= look[1] * 4.5
-        //this.velocity[2] -= look[2] * 2.5
+        this.velocity[0] -= look[0] * 0.45
+        this.velocity[1] -= look[1] * 0.45
+        this.velocity[2] -= look[2] * 0.25
       } else if (globals.powerup === 'machinegun') {
         // Animation and Timing
         this.after(7, () => {}, 'shoot')

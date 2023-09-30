@@ -2,6 +2,7 @@ import * as game from './core/game.js'
 import * as gfx from './core/webgl.js'
 import Terrain from './terrain.js'
 import Player from './player.js'
+import WaveManager from './wavemanager.js'
 import { flush } from './database.js'
 
 game.config.width = 1024 // 640
@@ -86,6 +87,7 @@ assets.meshes = Object.fromEntries(
 flush(() => {
   game.setScene(() => {
     game.addThing(new Terrain())
+    game.addThing(new WaveManager())
     game.addThing(new Player([20.1, 20, 79]))
   })
 })

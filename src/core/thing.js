@@ -80,13 +80,12 @@ export default class Thing {
     for (const [name, value] of Object.entries(this.timers)) {
       value.time -= 1
       if (value.time <= 0) {
-        if (typeof value.action === 'function') value.action()
-
         if (Number(name) === name) {
           this.timers.splice(Number(name), 1)
         } else {
           delete this.timers[name]
         }
+        if (typeof value.action === 'function') value.action()
       }
     }
   }
