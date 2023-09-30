@@ -52,6 +52,10 @@ export default class WaspGib extends Thing {
       this.paint(chunks, vPos)
       this.dead = true
     }
+
+    if (this.time > 300) {
+      this.dead = true
+    }
   }
 
   paint(chunks, vPos) {
