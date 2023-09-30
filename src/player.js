@@ -13,6 +13,7 @@ import * as vec3 from './core/vector3.js'
 import * as vec2 from './core/vector2.js'
 import * as vox from './voxel.js'
 import Wasp from './wasp.js'
+import Bullet from './bullet.js'
 
 export default class Player extends Thing {
   height = 3.8
@@ -226,44 +227,50 @@ export default class Player extends Thing {
       const ang = game.getCamera3D().lookVector
       const hitData = terrain.traceLine(pos, vec3.subtract(pos, vec3.scale(ang, 128)))
       // console.log (hitData)
-      vox.setVoxelSolid(terrain.chunks, vec3.add(hitData.voxel, hitData.normal), true)
+      //vox.setVoxelSolid(terrain.chunks, vec3.add(hitData.voxel, hitData.normal), true)
       // vox.setVoxelShade(terrain.chunks, vec3.add(hitData.voxel, hitData.normal), 'up', 128)
     }
 
     // shooting
-    if (leftClicked && !this.timer('shoot') && false) {
+    if (leftClicked && !this.timer('shoot')) {
       this.after(16, () => {}, 'shoot')
       this.after(12, () => {}, 'fire')
-      const look = vec3.scale(game.getCamera3D().lookVector, -1)
+      let look = vec3.scale(game.getCamera3D().lookVector, -1)
       const side = vec3.crossProduct([0, 0, 1], look)
-      let pos = vec3.add(this.position, vec3.scale(side, 16))
-      pos = vec3.add(pos, [0, 0, -14])
+      let pos = vec3.add(this.position, vec3.scale(side, 0.25))
+      pos = vec3.add(pos, [0, 0, 3.25])
 
-      if (globals.powerup === 'shotgun') {
+      if (true || globals.powerup === 'shotgun') {
         // Animation and Timing
         this.after(24, () => {}, 'shoot')
         this.after(30, () => {}, 'fire')
 
+        look = vec3.scale(look, 0.8)
+
         // Create bullets
+        /*
         for (let i = 0; i < 6; i++) {
-          const r = 0.15
+          const r = 0.015
           let dir = vec3.add(look, [u.random(-r, r), u.random(-r, r), u.random(-r, r)])
-          dir = vec3.normalize(dir)
-          game.addThing(new Bullet(pos, dir, 28, this))
+          dir = vec3.scale(vec3.normalize(dir), 0.1)
+          game.addThing(new Bullet(pos, vec3.add(dir, look), this))
         }
+        */
         // Guarantee that one bullet will go straight ahead
-        game.addThing(new Bullet(pos, look, 28, this))
+        game.addThing(new Bullet(pos, look, this))
 
         // Sound effect
+        /*
         const sound = assets.sounds.shotgun
         sound.playbackRate = u.random(1, 1.3)
         sound.currentTime = 0
         sound.volume = 0.6
         sound.play()
+        */
 
-        this.velocity[0] -= look[0] * 4.5
-        this.velocity[1] -= look[1] * 4.5
-        this.velocity[2] -= look[2] * 2.5
+        //this.velocity[0] -= look[0] * 4.5
+        //this.velocity[1] -= look[1] * 4.5
+        //this.velocity[2] -= look[2] * 2.5
       } else if (globals.powerup === 'machinegun') {
         // Animation and Timing
         this.after(7, () => {}, 'shoot')
@@ -354,6 +361,10 @@ export default class Player extends Thing {
     // Debug mode
     if (game.keysPressed.Backslash) {
       game.globals.debugMode = !game.globals.debugMode
+    }
+
+    if (this.position[2] < -10) {
+      game.resetScene()
     }
 
     this.moveAndCollide()
