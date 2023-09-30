@@ -46,7 +46,7 @@ export default class Player extends Thing {
   jetpackMaximum = 60
   jetpackCanRecharge = true
   jetpackRechargeRate = 1.0
-  powerup = "pistol"
+  weapon = "pistol"
   ammo = 0
   akimbo = false
 
@@ -226,7 +226,7 @@ export default class Player extends Thing {
       }
 
       // Shotgun
-      if (this.powerup === 'shotgun' && this.ammo > 0) {
+      if (this.weapon === 'shotgun' && this.ammo > 0) {
         // Animation and Timing
         this.after(24, () => {}, 'shoot')
         this.after(30, () => {
@@ -259,7 +259,7 @@ export default class Player extends Thing {
         // this.velocity[2] -= look[2] * 0.25
       }
       // Machinegun
-      else if (this.powerup === 'machinegun' && this.ammo > 0) {
+      else if (this.weapon === 'machinegun' && this.ammo > 0) {
         // Animation and Timing
         this.after(7, () => {}, 'shoot')
         this.after(4, () => {}, 'fire')
@@ -323,8 +323,8 @@ export default class Player extends Thing {
     }
 
     // Switch back to pistol if out of ammo
-    if (this.ammo <= 0 && this.timer("shoot") > 0.9 && this.powerup !== "pistol") {
-      this.powerup = "pistol"
+    if (this.ammo <= 0 && this.timer("shoot") > 0.9 && this.weapon !== "pistol") {
+      this.weapon = "pistol"
     }
 
     // step sounds
@@ -671,7 +671,7 @@ export default class Player extends Thing {
 
     // Animation
     // Shotgun
-    if (this.powerup === 'shotgun') {
+    if (this.weapon === 'shotgun') {
       // Viewmodel
       let shotgunFlip = 0
       if (!this.timer('fire') && this.timer('shotgunFlip')) {
@@ -697,7 +697,7 @@ export default class Player extends Thing {
       gfx.drawMesh(assets.meshes.shell)
     }
     // Machinegun
-    else if (this.powerup === 'machinegun') {
+    else if (this.weapon === 'machinegun') {
       gfx.set('modelMatrix', mat.getTransformation({
         translation: [bobX - 2, -4.5 + knockback * 0.2, bobY - 2.6],
         rotation: [Math.PI*1.52 + knockback*0.1, Math.PI, 0.05],
@@ -821,7 +821,7 @@ export default class Player extends Thing {
     ctx.restore()
 
     // ammo
-    if (this.powerup !== "pistol") {
+    if (this.weapon !== "pistol") {
       ctx.save()
       {
         ctx.save()

@@ -11,7 +11,7 @@ export default class ShotgunPickup extends Pickup {
   }
 
   onPickup (other) {
-    other.powerup = "shotgun"
+    other.weapon = "shotgun"
     other.ammo = 8
   }
 }
