@@ -45,6 +45,10 @@ export default class Bullet extends Thing {
       }
     }
 
+    if (this.time > 120) {
+      this.dead = true
+    }
+
     // Check for wall
     let vPos = this.position.map(x => Math.round(x))
     if (vox.getVoxelSolid(chunks, vPos)) {

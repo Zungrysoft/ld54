@@ -100,53 +100,35 @@ export default class Player extends Thing {
     const xAccelNorm = Math.cos(yaw) * dx - Math.sin(yaw) * dy
     const yAccelNorm = Math.sin(yaw) * dx + Math.cos(yaw) * dy
 
-    // Friction should be lower when accelerating than when decelerating
-    const dp = vec2.dotProduct(vec2.normalize(this.velocity), [xAccelNorm, yAccelNorm])
-    const slip = u.map(dp, -1, 1, 0.9, 0.6)
-
-    let friction = 0.9
-    let groundAccel = 0.0394375
-    let airAccel = 0.025
-
-    // Apply slip
-    groundAccel *= slip
-    airAccel *= slip
-    friction = 1 - ((1-friction)*slip)
-
-    const moveAccel = this.onGround ? groundAccel : airAccel
+    let friction = 0.8
+    let groundAccel = 0.08
+    let airAccel = 0.04
     const maxSpeed = groundAccel / (1 - friction)
+    let moveAccel = groundAccel
 
     // Apply friction
     if (this.onGround) {
       this.velocity[0] *= friction
       this.velocity[1] *= friction
+    } else {
+      moveAccel = airAccel
+      const proj = xAccelNorm * this.velocity[0] + yAccelNorm * this.velocity[1]
+      if (proj + moveAccel > maxSpeed) {
+        moveAccel = Math.max(maxSpeed - proj, 0)
+      }
     }
 
     // Scale accel
     const xAccel = xAccelNorm * moveAccel
     const yAccel = yAccelNorm * moveAccel
+    this.velocity[0] += xAccel
+    this.velocity[1] += yAccel
 
     this.moveDirection = vec3.normalize([xAccel, yAccel, 0])
     this.forward = vec3.normalize([Math.sin(yaw), Math.cos(yaw), 0])
 
-    // Don't move if in air and air control is disabled
-    if (this.onGround || !this.timer('disableAirControl')) {
-      // Apply movement acceleration
-      const lastMagnitude = vec2.magnitude(this.velocity)
-      this.velocity[0] += xAccel
-      this.velocity[1] += yAccel
-      const newMagnitude = vec2.magnitude(this.velocity)
-
-      // If player is at or above max speed, don't let them increase their speed.
-      // They can change the direction of their velocity, but not increase the magnitude.
-      if (u.distance2d(0, 0, this.velocity[0] + xAccel, this.velocity[1] + yAccel) >= maxSpeed) {
-        this.velocity[0] *= lastMagnitude / newMagnitude
-        this.velocity[1] *= lastMagnitude / newMagnitude
-      }
-    }
-
     // Falling due to gravity
-    let grav = this.velocity[2] < 0 ? 0.019 : 0.011
+    let grav = this.velocity[2] < 0 ? 0.025 : 0.014
     this.velocity[2] -= grav
 
     if (this.onGround) {
