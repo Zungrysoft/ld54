@@ -16,13 +16,14 @@ export default class Bullet extends Thing {
   damage = 20
   explosionRadius = 2
 
-  constructor (position = [0, 0, 0], velocity = [0, 0, 0], owner, damage = 20) {
+  constructor (position = [0, 0, 0], velocity = [0, 0, 0], owner, damage = 20, explosionRadius=2) {
     super()
     this.position = [...position]
     this.velocity = [...velocity]
     this.owner = owner
     this.spawnPosition = [...this.position]
     this.damage = damage
+    this.explosionRadius = explosionRadius
   }
 
   update () {
@@ -69,23 +70,8 @@ export default class Bullet extends Thing {
     let vPos = this.position.map(x => Math.round(x))
     if (vox.getVoxelSolid(chunks, vPos)) {
       //this.break(chunks, vPos)
-      game.addThing(new Explosion(vPos, 3))
+      game.addThing(new Explosion(vPos, this.explosionRadius))
       this.dead = true
-    }
-  }
-
-  break(chunks, vPos) {
-    const radius = this.explosionRadius
-    for (let x = -radius; x <= radius; x ++) {
-      for (let y = -radius; y <= radius; y ++) {
-        for (let z = -radius; z <= radius; z ++) {
-          let newPos = vec3.add(vPos, [x, y, z])
-          let breakChance = (radius - vec3.distance(newPos, vPos)) / radius
-          if (breakChance > Math.random()) {
-            vox.setVoxelSolid(chunks, newPos, false)
-          }
-        }
-      }
     }
   }
 
