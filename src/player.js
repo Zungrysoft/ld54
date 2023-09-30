@@ -45,6 +45,9 @@ export default class Player extends Thing {
   lives = 5
   jetpack = 0
   jetpackMaximum = 60
+  powerup = "pistol"
+  ammo = 0
+  akimbo = false
 
   constructor (position = [0, 0, 0], angle = 0) {
     super()
@@ -52,9 +55,6 @@ export default class Player extends Thing {
     this.position = position
     game.getCamera3D().position = [...this.position]
     game.getCamera3D().lookVector = vec3.anglesToVector(angle, 0.25)
-
-    globals.powerup = "pistol"
-    globals.akimbo = false
 
     this.spawnPosition = [...this.position]
     this.velocity = [0, 0, 0]
@@ -227,13 +227,13 @@ export default class Player extends Thing {
     // }
 
     if (game.keysPressed.KeyB) {
-      if (globals.powerup == "pistol") {
-        globals.akimbo = !globals.akimbo
+      if (this.powerup == "pistol") {
+        this.akimbo = !this.akimbo
       }
-      globals.powerup = "pistol"
+      this.powerup = "pistol"
     }
     if (game.keysPressed.KeyN) {
-      globals.powerup = "shotgun"
+      this.powerup = "shotgun"
     }
 
     // shooting
@@ -250,7 +250,8 @@ export default class Player extends Thing {
         game.addThing(new Bullet(pos, vec3.scale(vec3.add(dir, look), velocity), this, damage))
       }
 
-      if (globals.powerup === 'shotgun') {
+      // Shotgun
+      if (this.powerup === 'shotgun' && this.ammo > 0) {
         // Animation and Timing
         this.after(24, () => {}, 'shoot')
         this.after(30, () => {
@@ -265,6 +266,9 @@ export default class Player extends Thing {
         // Guarantee that one bullet will go straight ahead
         shootBullet(60, 2.0, 1, 0.0)
 
+        // Reduce ammo
+        this.ammo --
+
         // Sound effect
         /*
         const sound = assets.sounds.shotgun
@@ -278,7 +282,9 @@ export default class Player extends Thing {
         // this.velocity[0] -= look[0] * 0.45
         // this.velocity[1] -= look[1] * 0.45
         // this.velocity[2] -= look[2] * 0.25
-      } else if (globals.powerup === 'machinegun') {
+      }
+      // Machinegun
+      else if (this.powerup === 'machinegun' && this.ammo > 0) {
         // Animation and Timing
         this.after(7, () => {}, 'shoot')
         this.after(4, () => {}, 'fire')
@@ -299,9 +305,11 @@ export default class Player extends Thing {
         this.velocity[0] -= look[0] * 0.9
         this.velocity[1] -= look[1] * 0.9
         this.velocity[2] -= look[2] * 0.5
-      } else {
+      }
+      // Pistol
+      else {
         // Shoot timer
-        if (globals.akimbo) {
+        if (this.akimbo) {
           this.akimboSide = !this.akimboSide
           this.after(8, () => {}, 'shoot')
         }
@@ -310,7 +318,7 @@ export default class Player extends Thing {
         }
 
         // Fire animation and bullet
-        if (this.akimboSide && globals.akimbo) {
+        if (this.akimboSide && this.akimbo) {
           this.after(12, () => {}, 'fire2')
           shootBullet(20, 2.0, -1, 0.23)
         }
@@ -318,7 +326,6 @@ export default class Player extends Thing {
           this.after(12, () => {}, 'fire')
           shootBullet(20, 2.0, 1, 0.23)
         }
-
 
         // const sound = assets.sounds.machinegun
         // sound.playbackRate = u.random(1, 1.3)
@@ -338,6 +345,11 @@ export default class Player extends Thing {
         // this.velocity[2] -= look[2] * 1.5
 
       }
+    }
+
+    // Switch back to pistol if out of ammo
+    if (this.ammo <= 0 && this.timer("shoot") > 0.9 && this.powerup !== "pistol") {
+      this.powerup = "pistol"
     }
 
     // step sounds
@@ -663,6 +675,15 @@ export default class Player extends Thing {
     gfx.set('projectionMatrix', mat.getPerspective({ fovy: Math.PI / 4 }))
     gfx.set('color', [1.0, 1.0, 1.0, 1.0, ])
 
+    // Heart
+    gfx.set('modelMatrix', mat.getTransformation({
+      translation: [5.2, -6.0, -2.4],
+      rotation: [Math.PI * 0.5, Math.sin(this.time/50)*0.3, Math.PI/4],
+      scale: 0.4
+    }))
+    gfx.setTexture(assets.textures.uv_heart)
+    gfx.drawMesh(assets.meshes.heart)
+
     // Bobbing
     const t = this.walkFrames
     const bobX = Math.sin(t) * 2 * 0.15
@@ -672,7 +693,9 @@ export default class Player extends Thing {
     }
 
     // Animation
-    if (globals.powerup === 'shotgun') {
+    // Shotgun
+    if (this.powerup === 'shotgun') {
+      // Viewmodel
       let shotgunFlip = 0
       if (!this.timer('fire') && this.timer('shotgunFlip')) {
         let sf = this.timer('shotgunFlip')
@@ -686,7 +709,18 @@ export default class Player extends Thing {
       }))
       gfx.setTexture(assets.textures.uv_shotgun)
       gfx.drawMesh(assets.meshes.shotgun)
-    } else if (globals.powerup === 'machinegun') {
+
+      // Ammo
+      gfx.set('modelMatrix', mat.getTransformation({
+        translation: [5.2, -6.0, -1.4],
+        rotation: [Math.PI * 0.4, Math.sin(this.time/50)*0.3, Math.PI/2],
+        scale: 0.3
+      }))
+      gfx.setTexture(assets.textures.uv_shell)
+      gfx.drawMesh(assets.meshes.shell)
+    }
+    // Machinegun
+    else if (this.powerup === 'machinegun') {
       gfx.set('modelMatrix', mat.getTransformation({
         translation: [bobX - 2, -4.5 + knockback * 0.2, bobY - 2.6],
         rotation: [Math.PI*1.52 + knockback*0.1, Math.PI, 0.05],
@@ -694,7 +728,9 @@ export default class Player extends Thing {
       }))
       gfx.setTexture(assets.textures.uv_machinegun)
       gfx.drawMesh(assets.meshes.machinegun)
-    } else {
+    }
+    // Pistol
+    else {
       gfx.set('modelMatrix', mat.getTransformation({
         translation: [bobX - 2, -4 + knockback * 0.2, bobY - 2.3 - (knockback * 0.5)],
         rotation: [Math.PI*1.5 + knockback, Math.PI, 0],
@@ -704,7 +740,7 @@ export default class Player extends Thing {
       gfx.drawMesh(assets.meshes.pistol)
 
       // Draw akimbo pistol
-      if (globals.akimbo) {
+      if (this.akimbo) {
         let knockback2 = this.timer('fire2') ? 1 - this.timer('fire2') : 0
         knockback2 *= Math.PI / 4
 
@@ -782,6 +818,66 @@ export default class Player extends Thing {
         ctx.fillText(str, 2, -2)
       }
       ctx.restore()
+    }
+
+    // lives counter
+    ctx.save()
+    {
+      ctx.save()
+      ctx.fillStyle = 'black'
+      ctx.font = 'italic bold 72px Tahoma'
+      ctx.textAlign = 'center'
+      ctx.translate(140, game.config.height - 30)
+      ctx.fillText(String(this.lives), 0, 0)
+      ctx.restore()
+    }
+    ctx.translate(4, -4)
+    {
+      ctx.save()
+      ctx.fillStyle = 'white'
+      ctx.font = 'italic bold 72px Tahoma'
+      ctx.textAlign = 'center'
+      ctx.translate(140, game.config.height - 30)
+      ctx.fillText(String(this.lives), 0, 0)
+      ctx.restore()
+    }
+    ctx.restore()
+
+    // ammo
+    if (this.powerup !== "pistol") {
+      ctx.save()
+      {
+        ctx.save()
+        ctx.fillStyle = 'black'
+        ctx.font = 'italic bold 72px Tahoma'
+        ctx.textAlign = 'center'
+        ctx.translate(140, game.config.height - 140)
+        ctx.fillText(String(this.ammo), 0, 0)
+        ctx.restore()
+      }
+      ctx.translate(4, -4)
+      {
+        ctx.save()
+        ctx.fillStyle = 'white'
+        ctx.font = 'italic bold 72px Tahoma'
+        ctx.textAlign = 'center'
+        ctx.translate(140, game.config.height - 140)
+        ctx.fillText(String(this.ammo), 0, 0)
+        ctx.restore()
+      }
+      ctx.restore()
+    }
+
+    // jetpack
+    const fuel = this.jetpack / this.jetpackMaximum
+    if (this.jetpack < this.jetpackMaximum) {
+      ctx.save()
+      ctx.lineWidth = 6
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.75)'
+      ctx.beginPath()
+      ctx.arc(game.config.width * 2 / 4, game.config.height / 2, 38, 0, Math.PI * 2 * fuel)
+      ctx.stroke()
+      ctx.save()
     }
   }
 
