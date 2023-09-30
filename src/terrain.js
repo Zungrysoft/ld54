@@ -134,7 +134,33 @@ export default class Terrain extends Thing {
     )
   }
 
+  saveChunks () {
+    this.savedChunks = (
+      Object.fromEntries(
+        Object
+          .entries(this.chunks)
+          .map(([index, chunk]) => (
+            [index, vox.serializeChunk(chunk)]
+          )
+        )
+      )
+    )
+  }
 
+  loadSavedChunks () {
+    const newChunks = (
+      Object.fromEntries(
+        Object
+          .entries(this.savedChunks)
+          .map(([index, data]) => (
+            [index, { ...vox.deserializeChunk(data) }]
+          )
+        )
+      )
+    )
+    console.log(newChunks)
+    this.chunks = newChunks
+  }
 
   update () {
     super.update()
@@ -144,6 +170,13 @@ export default class Terrain extends Thing {
     // Chunk loading and unloading
     if (this.time % 60 === 0) {
       this.selectChunks(game.getThing('player').position)
+    }
+
+    if (game.keysPressed.KeyY) {
+      this.saveChunks()
+    }
+    if (game.keysPressed.KeyU) {
+      this.loadSavedChunks()
     }
 
     // Debug button

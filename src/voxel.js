@@ -151,6 +151,19 @@ export function emptyStructure() {
   }
 }
 
+export function serializeChunk (chunk) {
+  return JSON.stringify({
+    ...chunk,
+    voxels: Array.from(new Uint8Array(chunk.voxels))
+  })
+}
+
+export function deserializeChunk (text) {
+  const value = JSON.parse(text)
+  value.voxels = new Uint8Array(value.voxels)
+  return value
+}
+
 export function emptyChunk() {
   let buffer = new ArrayBuffer(0);
   return {
