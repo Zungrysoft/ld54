@@ -1,8 +1,8 @@
 import Pickup from './pickup.js'
 
-export default class ShotgunPickup extends Pickup {
-  texture = "uv_shotgun"
-  mesh = "shotgun"
+export default class BatteryPickup extends Pickup {
+  texture = "uv_battery"
+  mesh = "battery"
   scale = 0.2
   pickupSound = ""
 
@@ -11,7 +11,6 @@ export default class ShotgunPickup extends Pickup {
   }
 
   onPickup (other) {
-    other.weapon = "shotgun"
-    other.ammo = 8
+    other.jetpackRechargeRate += 0.75
   }
 }

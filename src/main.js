@@ -7,6 +7,7 @@ import Skybox from './skybox.js'
 import { flush } from './database.js'
 import ShotgunPickup from './pickupshotgun.js'
 import PistolPickup from './pickuppistol.js'
+import BatteryPickup from './pickupbattery.js'
 
 game.config.width = 1024 // 640
 game.config.height = 576 // 360
@@ -26,6 +27,7 @@ await game.loadAssets({
     uv_pistol: 'images/uv_pistol.png',
     uv_shell: 'images/uv_shell.png',
     uv_heart: 'images/uv_heart.png',
+    uv_battery: 'images/uv_battery.png',
     miramar_bk: 'images/miramar_bk.jpg',
     miramar_dn: 'images/miramar_dn.jpg',
     miramar_ft: 'images/miramar_ft.jpg',
@@ -68,6 +70,7 @@ await game.loadAssets({
     pistol: 'models/pistol.obj',
     shell: 'models/shell.obj',
     heart: 'models/heart.obj',
+    battery: 'models/battery.obj',
   },
 
   json: {
@@ -114,5 +117,6 @@ flush(() => {
     game.addThing(new Player([20.1, 20, 79]))
     game.addThing(new ShotgunPickup([60, 20, 41]))
     game.addThing(new PistolPickup([60, 60, 41]))
+    game.addThing(new BatteryPickup([100, 60, 41]))
   })
 })

@@ -12,7 +12,6 @@ import { assets } from './core/game.js'
 import * as vec3 from './core/vector3.js'
 import * as vec2 from './core/vector2.js'
 import * as vox from './voxel.js'
-import Wasp from './wasp.js'
 import Bullet from './bullet.js'
 
 export default class Player extends Thing {
@@ -43,10 +42,11 @@ export default class Player extends Thing {
   emptyChunkSolid = false
   depth = 1000
   lives = 5
-  jetpack = 0
+  jetpack = 60
   jetpackMaximum = 60
   jetpackCanRecharge = true
-  powerup = "pistol"
+  jetpackRechargeRate = 1.0
+  weapon = "pistol"
   ammo = 0
   akimbo = false
 
@@ -166,7 +166,7 @@ export default class Player extends Thing {
         this.jetpackCanRecharge = true
     }
     if (this.jetpackCanRecharge) {
-      this.jetpack = Math.min(this.jetpack + (this.onGround ? 0.5 : 0.2), this.jetpackMaximum)
+      this.jetpack = Math.min(this.jetpack + (this.onGround ? 0.1 : 0.05) * this.jetpackRechargeRate, this.jetpackMaximum)
     }
 
     const jump = () => {
@@ -211,35 +211,6 @@ export default class Player extends Thing {
     this.disableAirControl = Math.max(this.disableAirControl - 1, 0)
     this.disableAirControl = Math.max(this.disableAirControl - 1, 0)
 
-    // Test voxel creation and destruction
-    // if (mouse.rightClick) {
-    //   const terrain = game.getThing("terrain")
-    //   const pos = game.getCamera3D().position
-    //   const ang = game.getCamera3D().lookVector
-    //   const hitData = terrain.traceLine(pos, vec3.subtract(pos, vec3.scale(ang, 128)))
-    //   // console.log (hitData)
-    //   vox.setVoxelSolid(terrain.chunks, hitData.voxel, false)
-    // }
-    // if (leftClicked) {
-    //   const terrain = game.getThing("terrain")
-    //   const pos = game.getCamera3D().position
-    //   const ang = game.getCamera3D().lookVector
-    //   const hitData = terrain.traceLine(pos, vec3.subtract(pos, vec3.scale(ang, 128)))
-    //   // console.log (hitData)
-    //   //vox.setVoxelSolid(terrain.chunks, vec3.add(hitData.voxel, hitData.normal), true)
-    //   // vox.setVoxelShade(terrain.chunks, vec3.add(hitData.voxel, hitData.normal), 'up', 128)
-    // }
-
-    if (game.keysPressed.KeyB) {
-      if (this.powerup == "pistol") {
-        this.akimbo = !this.akimbo
-      }
-      this.powerup = "pistol"
-    }
-    if (game.keysPressed.KeyN) {
-      this.powerup = "shotgun"
-    }
-
     // shooting
     if (game.mouse.leftButton && !this.timer('shoot')) {
 
@@ -255,7 +226,7 @@ export default class Player extends Thing {
       }
 
       // Shotgun
-      if (this.powerup === 'shotgun' && this.ammo > 0) {
+      if (this.weapon === 'shotgun' && this.ammo > 0) {
         // Animation and Timing
         this.after(24, () => {}, 'shoot')
         this.after(30, () => {
@@ -288,7 +259,7 @@ export default class Player extends Thing {
         // this.velocity[2] -= look[2] * 0.25
       }
       // Machinegun
-      else if (this.powerup === 'machinegun' && this.ammo > 0) {
+      else if (this.weapon === 'machinegun' && this.ammo > 0) {
         // Animation and Timing
         this.after(7, () => {}, 'shoot')
         this.after(4, () => {}, 'fire')
@@ -352,8 +323,8 @@ export default class Player extends Thing {
     }
 
     // Switch back to pistol if out of ammo
-    if (this.ammo <= 0 && this.timer("shoot") > 0.9 && this.powerup !== "pistol") {
-      this.powerup = "pistol"
+    if (this.ammo <= 0 && this.timer("shoot") > 0.9 && this.weapon !== "pistol") {
+      this.weapon = "pistol"
     }
 
     // step sounds
@@ -700,7 +671,7 @@ export default class Player extends Thing {
 
     // Animation
     // Shotgun
-    if (this.powerup === 'shotgun') {
+    if (this.weapon === 'shotgun') {
       // Viewmodel
       let shotgunFlip = 0
       if (!this.timer('fire') && this.timer('shotgunFlip')) {
@@ -726,7 +697,7 @@ export default class Player extends Thing {
       gfx.drawMesh(assets.meshes.shell)
     }
     // Machinegun
-    else if (this.powerup === 'machinegun') {
+    else if (this.weapon === 'machinegun') {
       gfx.set('modelMatrix', mat.getTransformation({
         translation: [bobX - 2, -4.5 + knockback * 0.2, bobY - 2.6],
         rotation: [Math.PI*1.52 + knockback*0.1, Math.PI, 0.05],
@@ -850,7 +821,7 @@ export default class Player extends Thing {
     ctx.restore()
 
     // ammo
-    if (this.powerup !== "pistol") {
+    if (this.weapon !== "pistol") {
       ctx.save()
       {
         ctx.save()
