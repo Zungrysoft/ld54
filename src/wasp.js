@@ -96,6 +96,7 @@ export default class Wasp extends Thing {
   }
 
   shoot() {
+    // this.health -= Math.floor(Math.random() * 50)
     let bulletPos = [...this.position]
     let bulletVel = vec3.scale(vec3.normalize(vec3.subtract(this.targetPosition, this.position)), 0.3)
     game.addThing(new WaspBullet(bulletPos, bulletVel))
