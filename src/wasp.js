@@ -65,30 +65,69 @@ export default class Wasp extends Thing {
 
   pickNearbyVoxel() {
     let chunks = game.getThing("terrain").chunks
-    let radius = 10
-    let height = 10
-    let searchIterations = 256
 
-    function rand(p, r) {
-      return Math.round(p + (Math.random() - 0.5)*2*r)
+    function getAirScore(chunks, pos) {
+      let score = 0
+      if (!vox.getVoxelSolid(chunks, vec3.add(pos, [1, 0, 0]))) {score += 1}
+      if (!vox.getVoxelSolid(chunks, vec3.add(pos, [-1, 0, 0]))) {score += 1}
+      if (!vox.getVoxelSolid(chunks, vec3.add(pos, [0, 1, 0]))) {score += 1}
+      if (!vox.getVoxelSolid(chunks, vec3.add(pos, [0, -1, 0]))) {score += 1}
+      if (!vox.getVoxelSolid(chunks, vec3.add(pos, [0, 0, 1]))) {score += 3}
+      if (!vox.getVoxelSolid(chunks, vec3.add(pos, [0, 0, -1]))) {score += 1}
+      return score
     }
 
-    for (let i = 0; i < searchIterations; i ++) {
-      radius += 0.5
-      height += 0.1
+    const thisPos = this.position.map(x => Math.round(x))
+    const searchDistance = 64
+    const searchHeightHigh = 4
+    const searchHeightLow = -16
+    let x = 0
+    let y = 0
 
-      let randomPos = [
-        rand(this.position[0], radius),
-        rand(this.position[1], radius),
-        rand(this.position[2], height),
-      ]
-      // TODO: Do not allow wasp to target indestructible materials
-      let voxelSolid = vox.getVoxelSolid(chunks, randomPos, 0)
-      if (voxelSolid) {
-        return randomPos
+    let bestScore = Number.MIN_VALUE
+    let bestPos = undefined
+
+    const turns = (searchDistance * 4) + 1
+    for (let t = 0; t < turns; t ++) {
+      const steps = Math.floor(t/2) + 1
+
+      // Early exit if we've found a "good enough" target
+      if (t/4 > 6 && bestScore >= 5) {
+        return bestPos
+      }
+      if (t/4 > 12 && bestScore >= 3) {
+        return bestPos
+      }
+      if (t/4 > 18 && bestScore >= 0) {
+        return bestPos
+      }
+
+      for (let s = 0; s < steps; s ++) {
+        // If this horizontal position is within the load cylinder...
+        for (let z = searchHeightLow; z <= searchHeightHigh; z ++) {
+          const checkPos = vec3.add(thisPos, [x, y, z])
+
+          if (vox.getVoxelSolid(chunks, checkPos)) {
+            const airScore = getAirScore(chunks, checkPos)
+            if (airScore > bestScore) {
+              bestScore = airScore
+              bestPos = checkPos
+            }
+          }
+        }
+
+        // Step in direction
+        if (t % 4 === 0) x ++;
+        else if (t % 4 === 1) y ++;
+        else if (t % 4 === 2) x --;
+        else if (t % 4 === 3) y --;
       }
     }
+
+    return bestPos
   }
+
+
 
   shoot() {
     // this.health -= Math.floor(Math.random() * 50)
