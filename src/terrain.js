@@ -158,7 +158,6 @@ export default class Terrain extends Thing {
         )
       )
     )
-    console.log(newChunks)
     this.chunks = newChunks
   }
 
