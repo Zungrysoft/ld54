@@ -12,6 +12,7 @@ import { assets } from './core/game.js'
 import * as vec3 from './core/vector3.js'
 import * as vec2 from './core/vector2.js'
 import * as vox from './voxel.js'
+import Wasp from './wasp.js'
 
 export default class Player extends Thing {
   height = 3.8
@@ -57,6 +58,10 @@ export default class Player extends Thing {
 
   update () {
     this.time ++
+
+    if (game.keysPressed.KeyM) {
+      game.addThing(new Wasp([...this.position]))
+    }
 
     // Lock the mouse (allow mouse control of camera) if the user clicks
     let leftClicked = false
