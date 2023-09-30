@@ -29,25 +29,13 @@ export default class Wasp extends Thing {
     this.spawnPosition = [...this.position]
     this.velocity = [0, 0, 0]
     this.lookAngle = 0
+    this.checkShoot()
   }
 
   update () {
     super.update()
-    let chunks = game.getThing("terrain").chunks
 
     this.time ++
-
-    if (this.time % 60 === 1) {
-      // If the targeted voxel is destroyed, find a new voxel to target
-      if (!this.targetPosition || !vox.getVoxelSolid(chunks, this.targetPosition, {index:0})) {
-        this.targetPosition = this.pickNearbyVoxel()
-        console.log("New target: " + this.targetPosition)
-      }
-      // Otherwise, shoot it!
-      else {
-        this.shoot()
-      }
-    }
 
     if (this.targetPosition) {
       // Face target
@@ -61,6 +49,22 @@ export default class Wasp extends Thing {
 
     // Grow from zero
     this.growScale = Math.min(this.growScale + 0.03, 1.0)
+  }
+
+  checkShoot() {
+    let chunks = game.getThing("terrain").chunks
+
+    // If the targeted voxel is destroyed, find a new voxel to target
+    if (!this.targetPosition || !vox.getVoxelSolid(chunks, this.targetPosition, {index:0})) {
+      this.targetPosition = this.pickNearbyVoxel()
+    }
+    // Otherwise, shoot it!
+    else {
+      this.shoot()
+    }
+
+    // checkShoot again after a random amount of time
+    this.after(Math.floor(45 + Math.random()*30), () => this.checkShoot())
   }
 
   pickNearbyVoxel() {
