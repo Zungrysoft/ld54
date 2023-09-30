@@ -131,6 +131,15 @@ class Explosion extends Thing {
   update () {
     super.update()
     this.time += 1
+
+    const player = game.getThing('player')
+    const playerPosition = [player.position[0], player.position[1], player.position[2] + 2]
+    if (u.distance(this.position, playerPosition) <= this.radius + 2) {
+      const push = vec3.toLength(vec3.subtract(playerPosition, this.position), 1.5)
+      player.velocity[0] += push[0]
+      player.velocity[1] += push[1]
+      player.velocity[2] += push[2]
+    }
   }
 
   draw () {

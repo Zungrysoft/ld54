@@ -45,9 +45,11 @@ export default class Player extends Thing {
   lives = 5
   jetpack = 0
   jetpackMaximum = 60
+  jetpackCanRecharge = true
   powerup = "pistol"
   ammo = 0
   akimbo = false
+
 
   constructor (position = [0, 0, 0], angle = 0) {
     super()
@@ -156,12 +158,14 @@ export default class Player extends Thing {
       this.wannaJump = 6
       if (this.coyoteFrames <= 0) {
         this.usingJetpack = true
+        this.jetpackCanRecharge = false
       }
     }
     if (this.onGround) {
       this.coyoteFrames = 10
+        this.jetpackCanRecharge = true
     }
-    if (!this.usingJetpack) {
+    if (this.jetpackCanRecharge) {
       this.jetpack = Math.min(this.jetpack + (this.onGround ? 0.5 : 0.2), this.jetpackMaximum)
     }
 
@@ -379,6 +383,8 @@ export default class Player extends Thing {
       //game.resetScene()
       this.position = [...this.spawnPosition]
       this.lives -= 1
+      this.velocity = [0, 0, 0]
+      this.jetpack = this.jetpackMaximum
     }
 
     this.moveAndCollide()
@@ -869,7 +875,7 @@ export default class Player extends Thing {
     }
 
     // jetpack
-    const fuel = this.jetpack / this.jetpackMaximum
+    const fuel = Math.min(Math.max(this.jetpack / this.jetpackMaximum, 0), 1)
     if (this.jetpack < this.jetpackMaximum) {
       ctx.save()
       ctx.lineWidth = 6
