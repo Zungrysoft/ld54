@@ -43,6 +43,7 @@ export default class Player extends Thing {
   walkFrames = 0
   walkFrameAccel = 0
   emptyChunkSolid = false
+  depth = 1000
 
   constructor (position = [0, 0, 0], angle = 0) {
     super()
@@ -101,8 +102,8 @@ export default class Player extends Thing {
     const yAccelNorm = Math.sin(yaw) * dx + Math.cos(yaw) * dy
 
     let friction = 0.8
-    let groundAccel = 0.07
-    let airAccel = 0.025
+    let groundAccel = 0.08
+    let airAccel = 0.04
     const maxSpeed = groundAccel / (1 - friction)
     let moveAccel = groundAccel
 
@@ -619,6 +620,8 @@ export default class Player extends Thing {
   }
 
   draw () {
+    const { ctx, gl } = game
+
     // Viewmodel
     gfx.setShader(assets.shaders.default)
     gfx.set('viewMatrix', [
@@ -628,10 +631,12 @@ export default class Player extends Thing {
       0, 0, 0, 1
     ])
 
+    gl.clear(gl.DEPTH_BUFFER_BIT);
+
     let knockback = this.timer('fire') ? 1 - this.timer('fire') : 0
     knockback *= Math.PI / 4
     gfx.set('projectionMatrix', mat.getPerspective({ fovy: Math.PI / 4 }))
-    gfx.set('color', [1.0, 1.0, 1.0, 1.0])
+    gfx.set('color', [1.0, 1.0, 1.0, 1.0, ])
 
     // Bobbing
     const t = this.walkFrames
