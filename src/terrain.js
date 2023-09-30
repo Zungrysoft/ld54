@@ -78,7 +78,7 @@ export default class Terrain extends Thing {
     )
 
     // Terrain Generators
-    this.generatorPool = new WorkerPool('src/workers/chunkgenerator.js', game.config.threads,
+    this.generatorPool = new WorkerPool('src/workers/chunkgenerator.js', 0,
       {
         idempotencyKeys: ['chunkKeyStr'],
       },
@@ -104,7 +104,7 @@ export default class Terrain extends Thing {
     )
 
     // Chunk Unloaders
-    this.unloaderPool = new WorkerPool('src/workers/chunkunloader.js', game.config.threads,
+    this.unloaderPool = new WorkerPool('src/workers/chunkunloader.js', 0,
       {
         idempotencyKeys: ['chunkKeyStr'],
       },
