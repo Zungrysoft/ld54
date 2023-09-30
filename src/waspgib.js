@@ -23,6 +23,10 @@ export default class WaspGib extends Thing {
     const powerScale = 0.003
     const verticalScale = 2.0
 
+    this.rot1 = Math.PI * 2 * Math.random()
+    this.rot2 = Math.PI * 2 * Math.random()
+    this.rotv = (Math.random() - 0.5) * 0.4
+
     this.position = position
     this.velocity = [
       (Math.random()-0.5) * power * powerScale,
@@ -39,6 +43,8 @@ export default class WaspGib extends Thing {
     this.position = vec3.add(this.position, this.velocity)
 
     this.velocity[2] -= 0.02
+
+    this.rot2 += this.rotv
 
     // Check for wall
     let vPos = this.position.map(x => Math.round(x))
@@ -69,7 +75,7 @@ export default class WaspGib extends Thing {
     gfx.set('color', [1.0, 0.0, 0.0, 1.0])
     gfx.set('modelMatrix', mat.getTransformation({
       translation: [...this.position],
-      rotation: [Math.PI/2, 0, 0],
+      rotation: [this.rot1, this.rot2, 0],
       scale: 0.7
     }))
     gfx.setTexture(assets.textures.wasp)

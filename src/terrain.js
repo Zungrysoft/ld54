@@ -28,28 +28,28 @@ export default class Terrain extends Thing {
     game.setThingName(this, 'terrain')
 
     const cartesian = (...a) => a.reduce((a, b) => a.flatMap(d => b.map(e => [d, e].flat())))
-    const dim = [-2, -1, 0, 1, 2]
+    const dim = [0, 1, 2, 3, 4, 5]
     for (const coord of cartesian(dim, dim, dim)) {
       this.chunks[vox.ts(coord)] = vox.emptyChunk()
+      this.chunkStates[vox.ts(coord)] = 'loaded'
     }
 
     // Spawn platform
     //this.chunks[vox.ts([0,0,0])] = vox.emptyChunk()
-    this.chunkStates[vox.ts([0,0,0])] = 'loaded'
-    let plat = procBasics.generateRectangularPrism({
-      length: vox.CHUNK_SIZE,
-      width: vox.CHUNK_SIZE,
-      height: 7,
-      voxel: {material: 'structure', solid: true},
-    })
-    plat = procBasics.applyPattern(plat, {
-      pattern: 'checker',
-      voxel1: {material: 'dirt', solid: true},
-      voxel2: {material: 'grass', solid: true},
-    })
     //vox.mergeStructureIntoWorld(this.chunks, plat, [0, 0, 0])
 
-    vox.mergeStructureIntoWorld(this.chunks, game.assets.json.test, [-64, -64, 0])
+    // let plat = procBasics.generateRectangularPrism({
+    //   length: vox.CHUNK_SIZE,
+    //   width: vox.CHUNK_SIZE,
+    //   height: 7,
+    //   voxel: {material: 'structure', solid: true},
+    // })
+    // plat = procBasics.applyPattern(plat, {
+    //   pattern: 'checker',
+    //   voxel1: {material: 'dirt', solid: true},
+    //   voxel2: {material: 'grass', solid: true},
+    // })
+    vox.mergeStructureIntoWorld(this.chunks, assets.json.starter, [0, 0, 0])
 
     // Palette test
     // let keyZ = 0

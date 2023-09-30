@@ -50,28 +50,7 @@ await game.loadAssets({
   },
 
   json: {
-    parameters: 'json/parameters.json',
-    structureArchesBottomCenter: 'json/structures/arches/bottomCenter.json',
-    structureArchesBottomEdge: 'json/structures/arches/bottomEdge.json',
-    structureArchesBottomEdgePillar: 'json/structures/arches/bottomEdgePillar.json',
-    structureArchesBottomCornerPillar: 'json/structures/arches/bottomCornerPillar.json',
-    structureArchesBottomJunctionPillar: 'json/structures/arches/bottomJunctionPillar.json',
-    structureArchesTopEdge: 'json/structures/arches/topEdge.json',
-    structureArchesTopEdgePillar: 'json/structures/arches/topEdgePillar.json',
-    structureArchesTopCornerPillar: 'json/structures/arches/topCornerPillar.json',
-    structureArchesTopJunctionPillar: 'json/structures/arches/topJunctionPillar.json',
-    structureArchesRoofCorner: 'json/structures/arches/roofCorner.json',
-    structureArchesRoofEdge: 'json/structures/arches/roofEdge.json',
-    structureArchesRoofJunction: 'json/structures/arches/roofJunction.json',
-    structureArchesRoofCenterEnd: 'json/structures/arches/roofCenterEnd.json',
-    structureArchesRoofCenterQuad: 'json/structures/arches/roofCenterQuad.json',
-    structureArchesRoofCenterStraight: 'json/structures/arches/roofCenterStraight.json',
-    structureArchesRoofCenterTee: 'json/structures/arches/roofCenterTee.json',
-    structureArchesRoofCenterTurn: 'json/structures/arches/roofCenterTurn.json',
-    structureFlat: 'json/structures/util/flat.json',
-    structureAir: 'json/structures/util/air.json',
-    structureAny: 'json/structures/util/any.json',
-    test: 'json/test1.json'
+    starter: 'json/structures/main/starter.json',
   },
 })
 
@@ -103,7 +82,7 @@ assets.meshes = Object.fromEntries(
 // console.log(assets)
 flush(() => {
   game.setScene(() => {
-    const terrain = game.addThing(new Terrain())
-    game.addThing(new Player([7.1, 7, 7]))
+    game.addThing(new Terrain())
+    game.addThing(new Player([20.1, 20, 79]))
   })
 })
