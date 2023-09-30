@@ -1,0 +1,140 @@
+{
+    "weight": 0,
+    "things": [],
+    "doorways": [],
+    "symmetryMode": 2,
+    "connections": [
+        {
+            "type": "air"
+        },
+        {
+            "type": "air"
+        },
+        {
+            "type": "archMiddleCorner",
+            "symmetry": [
+                0,
+                0,
+                1,
+                1
+            ]
+        },
+        {
+            "type": "archTopEdgePillar"
+        },
+        {
+            "type": "archTopEdgePillar"
+        },
+        {
+            "type": "archRoofCorner",
+            "symmetry": [
+                0,
+                0,
+                1,
+                1
+            ]
+        }
+    ],
+    "voxels": {
+        "2,2,4": {
+            "material": "stone",
+            "solid": true
+        },
+        "2,3,4": {
+            "material": "stone",
+            "solid": true
+        },
+        "3,2,4": {
+            "material": "stone",
+            "solid": true
+        },
+        "2,4,4": {
+            "material": "stone",
+            "solid": true
+        },
+        "4,2,4": {
+            "material": "stone",
+            "solid": true
+        },
+        "2,2,3": {
+            "material": "stone",
+            "solid": true
+        },
+        "2,2,2": {
+            "material": "stone",
+            "solid": true
+        },
+        "2,2,1": {
+            "material": "stone",
+            "solid": true
+        },
+        "2,2,0": {
+            "material": "stone",
+            "solid": true
+        },
+        "3,2,0": {
+            "material": "stone",
+            "solid": true
+        },
+        "4,2,0": {
+            "material": "stone",
+            "solid": true
+        },
+        "3,2,1": {
+            "material": "stone",
+            "solid": true
+        },
+        "4,2,1": {
+            "material": "stone",
+            "solid": true
+        },
+        "3,2,2": {
+            "material": "stone",
+            "solid": true
+        },
+        "4,2,2": {
+            "material": "stone",
+            "solid": true
+        },
+        "3,2,3": {
+            "material": "stone",
+            "solid": true
+        },
+        "4,2,3": {
+            "material": "stone",
+            "solid": true
+        },
+        "2,4,0": {
+            "material": "stone",
+            "solid": true
+        },
+        "2,3,0": {
+            "material": "stone",
+            "solid": true
+        },
+        "2,4,1": {
+            "material": "stone",
+            "solid": true
+        },
+        "2,3,1": {
+            "material": "stone",
+            "solid": true
+        },
+        "2,4,2": {
+            "material": "stone",
+            "solid": true
+        },
+        "2,3,2": {
+            "material": "stone",
+            "solid": true
+        },
+        "2,4,3": {
+            "material": "stone",
+            "solid": true
+        },
+        "2,3,3": {
+            "material": "stone",
+            "solid": true
+        }
+    }
+}

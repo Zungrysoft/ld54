@@ -1,0 +1,26 @@
+{
+    "weight": 10,
+    "things": [],
+    "doorways": [],
+    "connections": [
+        {
+            "type": "air"
+        },
+        {
+            "type": "air"
+        },
+        {
+            "type": "air"
+        },
+        {
+            "type": "air"
+        },
+        {
+            "type": "air"
+        },
+        {
+            "type": "air"
+        }
+    ],
+    "voxels": {}
+}
