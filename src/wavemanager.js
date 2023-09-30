@@ -166,7 +166,7 @@ export default class WaveManager extends Thing {
       ctx.restore()
 
       // jetpack
-      const fuel = player.jetpack / player.jetpackMaximum
+      const fuel = Math.max(player.jetpack / player.jetpackMaximum, 0)
       if (player.jetpack < player.jetpackMaximum) {
         ctx.save()
         ctx.lineWidth = 6
@@ -177,5 +177,68 @@ export default class WaveManager extends Thing {
         ctx.save()
       }
     }
+  }
+}
+
+function choose (...things) {
+  const index = Math.floor(Math.random(0, things.length - 0.001))
+  const result = things[index]
+  return result
+}
+
+const builds = [
+  'redplat'
+]
+
+class BuildManager extends Thing {
+  time = 0
+
+  constructor () {
+    super()
+    this.builds = Array(4).fill(undefined).map(() => choose(builds))
+    game.setThingName(this, 'buildmanager')
+    game.pause(this, game.getThing('skybox'))
+  }
+
+  update () {
+    super.update()
+    //game.getCamera3D().lookVector = vec3.normalize([0.1, 0, -0.1])
+    //game.getCamera3D().updateMatrices()
+    this.time += 1
+    const angle = this.time / (60 * 5)
+    const radius = 64
+    game.getCamera3D().viewMatrix = mat.getView({
+      position: [Math.cos(angle) * radius + 64, Math.sin(angle) * radius + 40, 70],
+      target: [64, 40, 40]
+    })
+
+    if (game.keysPressed.Space) {
+      this.dead = true
+      const terrain = game.getThing('terrain')
+      vox.mergeStructureIntoWorld(terrain.chunks, game.assets.json[this.builds[0]], [0, 0, 0])
+    }
+  }
+
+  draw () {
+    const { ctx, assets } = game
+
+    ctx.save()
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'
+    ctx.fillRect(0, 0, game.config.width, game.config.height)
+    ctx.restore()
+
+    ctx.save()
+    ctx.fillStyle = 'black'
+    ctx.font = '80px Tahoma'
+    let i = 1
+    for (const build of this.builds) {
+      ctx.fillText(build, 80, 80 * i)
+      i += 1
+    }
+    ctx.restore()
+  }
+
+  onDeath () {
+    game.unpause()
   }
 }

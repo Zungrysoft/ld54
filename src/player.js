@@ -79,8 +79,8 @@ export default class Player extends Thing {
     }
 
     // Walking
-    let dx = !!game.keysDown.KeyD - !!game.keysDown.KeyA
-    let dy = !!game.keysDown.KeyS - !!game.keysDown.KeyW
+    let dx = !!game.keysDown.KeyA - !!game.keysDown.KeyD
+    let dy = !!game.keysDown.KeyW - !!game.keysDown.KeyS
 
     // Counter for view bobbing
     if (Math.abs(dx) + Math.abs(dy) > 0 && this.onGround) {
@@ -160,7 +160,9 @@ export default class Player extends Thing {
     }
     if (this.onGround) {
       this.coyoteFrames = 10
-      this.jetpack = Math.min(this.jetpack + 1, this.jetpackMaximum)
+    }
+    if (!this.usingJetpack) {
+      this.jetpack = Math.min(this.jetpack + (this.onGround ? 0.5 : 0.2), this.jetpackMaximum)
     }
 
     const jump = () => {
@@ -238,7 +240,7 @@ export default class Player extends Thing {
     if (game.mouse.leftButton && !this.timer('shoot')) {
 
       const shootBullet = (damage, velocity=1.0, side=1, spread=0.1) => {
-        let look = vec3.scale(game.getCamera3D().lookVector, -1)
+        let look = game.getCamera3D().lookVector
         const sideVec = vec3.crossProduct([0, 0, side], look)
         let pos = vec3.add(this.position, vec3.scale(sideVec, 0.25))
         pos = vec3.add(pos, [0, 0, 3.25])
@@ -619,7 +621,7 @@ export default class Player extends Thing {
       let yaw, pitch
       ;[yaw, pitch] = vec3.vectorToAngles(game.getCamera3D().lookVector)
       yaw += mouse.delta[0] * sens
-      pitch += mouse.delta[1] * sens
+      pitch -= mouse.delta[1] * sens
 
       game.getCamera3D().lookVector = vec3.anglesToVector(yaw, pitch)
     }
@@ -630,6 +632,8 @@ export default class Player extends Thing {
       this.position[1],
       this.position[2] - this.staircaseOffset + this.cameraHeight,
     ]
+
+    game.getCamera3D().updateMatrices()
   }
 
   takeDamage (dmg, knockback) {
@@ -771,7 +775,7 @@ export default class Player extends Thing {
           "0,0,1": "Up (+Z)",
           "0,0,-1": "Down (-Z)",
         }
-        const str = "Facing " + mapping[vec3.findMostSimilarVector(vec3.scale(game.getCamera3D().lookVector, -1), possibilities)]
+        const str = "Facing " + mapping[vec3.findMostSimilarVector(game.getCamera3D().lookVector, possibilities)]
         ctx.fillStyle = 'darkBlue'
         ctx.fillText(str, 0, 0)
         ctx.fillStyle = 'white'

@@ -519,7 +519,7 @@ export function addThing (thing) {
 
 export function pause (...excludedThings) {
   scene.paused = true
-  scene.excludedThings = excludedThings
+  scene.pauseExcludedThings = excludedThings
 }
 
 export function unpause () {

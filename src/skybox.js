@@ -6,6 +6,11 @@ import { assets } from './core/game.js'
 import Thing from './core/thing.js'
 
 export default class Skybox extends Thing {
+  constructor () {
+    super()
+    game.setThingName(this, 'skybox')
+  }
+
   draw () {
     gfx.setShader(assets.shaders.default)
     game.getCamera3D().setUniforms()
