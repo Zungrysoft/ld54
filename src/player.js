@@ -214,7 +214,7 @@ export default class Player extends Thing {
     }
 
     // shooting
-    if (leftClicked && !this.timer('shoot')) {
+    if (game.mouse.leftButton && !this.timer('shoot')) {
       this.after(16, () => {}, 'shoot')
       this.after(12, () => {}, 'fire')
       let look = vec3.scale(game.getCamera3D().lookVector, -1)
