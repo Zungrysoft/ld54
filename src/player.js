@@ -213,23 +213,23 @@ export default class Player extends Thing {
     this.disableAirControl = Math.max(this.disableAirControl - 1, 0)
 
     // Test voxel creation and destruction
-    if (mouse.rightClick) {
-      const terrain = game.getThing("terrain")
-      const pos = game.getCamera3D().position
-      const ang = game.getCamera3D().lookVector
-      const hitData = terrain.traceLine(pos, vec3.subtract(pos, vec3.scale(ang, 128)))
-      // console.log (hitData)
-      vox.setVoxelSolid(terrain.chunks, hitData.voxel, false)
-    }
-    if (leftClicked) {
-      const terrain = game.getThing("terrain")
-      const pos = game.getCamera3D().position
-      const ang = game.getCamera3D().lookVector
-      const hitData = terrain.traceLine(pos, vec3.subtract(pos, vec3.scale(ang, 128)))
-      // console.log (hitData)
-      //vox.setVoxelSolid(terrain.chunks, vec3.add(hitData.voxel, hitData.normal), true)
-      // vox.setVoxelShade(terrain.chunks, vec3.add(hitData.voxel, hitData.normal), 'up', 128)
-    }
+    // if (mouse.rightClick) {
+    //   const terrain = game.getThing("terrain")
+    //   const pos = game.getCamera3D().position
+    //   const ang = game.getCamera3D().lookVector
+    //   const hitData = terrain.traceLine(pos, vec3.subtract(pos, vec3.scale(ang, 128)))
+    //   // console.log (hitData)
+    //   vox.setVoxelSolid(terrain.chunks, hitData.voxel, false)
+    // }
+    // if (leftClicked) {
+    //   const terrain = game.getThing("terrain")
+    //   const pos = game.getCamera3D().position
+    //   const ang = game.getCamera3D().lookVector
+    //   const hitData = terrain.traceLine(pos, vec3.subtract(pos, vec3.scale(ang, 128)))
+    //   // console.log (hitData)
+    //   //vox.setVoxelSolid(terrain.chunks, vec3.add(hitData.voxel, hitData.normal), true)
+    //   // vox.setVoxelShade(terrain.chunks, vec3.add(hitData.voxel, hitData.normal), 'up', 128)
+    // }
 
     // shooting
     if (game.mouse.leftButton && !this.timer('shoot')) {
@@ -257,7 +257,7 @@ export default class Player extends Thing {
         }
         */
         // Guarantee that one bullet will go straight ahead
-        game.addThing(new Bullet(pos, look, this))
+        game.addThing(new Bullet(pos, look, this, 20))
 
         // Sound effect
         /*

@@ -14,12 +14,13 @@ export default class Bullet extends Thing {
   aabb = [-8, -8, 8, 8]
   damage = 20
 
-  constructor (position = [0, 0, 0], velocity = [0, 0, 0], owner) {
+  constructor (position = [0, 0, 0], velocity = [0, 0, 0], owner, damage = 20) {
     super()
     this.position = [...position]
     this.velocity = [...velocity]
     this.owner = owner
     this.spawnPosition = [...this.position]
+    this.damage = damage
   }
 
   update () {

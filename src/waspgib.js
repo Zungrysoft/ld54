@@ -42,7 +42,7 @@ export default class WaspGib extends Thing {
 
     this.position = vec3.add(this.position, this.velocity)
 
-    this.velocity[2] -= 0.02
+    this.velocity[2] -= 0.025
 
     this.rot2 += this.rotv
 
