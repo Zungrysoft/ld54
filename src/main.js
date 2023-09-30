@@ -42,6 +42,7 @@ await game.loadAssets({
 
   models: {
     cube: 'models/cube.obj',
+    sphere: 'models/sphere.obj',
     skybox: 'models/skybox.obj',
     chunkOutline: 'models/chunk_outline.obj',
     wasp1: 'models/wasp1.obj',

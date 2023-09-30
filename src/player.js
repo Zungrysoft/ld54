@@ -101,8 +101,8 @@ export default class Player extends Thing {
     const yAccelNorm = Math.sin(yaw) * dx + Math.cos(yaw) * dy
 
     let friction = 0.8
-    let groundAccel = 0.08
-    let airAccel = 0.04
+    let groundAccel = 0.07
+    let airAccel = 0.025
     const maxSpeed = groundAccel / (1 - friction)
     let moveAccel = groundAccel
 
