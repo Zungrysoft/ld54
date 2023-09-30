@@ -13,6 +13,7 @@ import * as vec3 from './core/vector3.js'
 import * as vec2 from './core/vector2.js'
 import * as vox from './voxel.js'
 import WaspBullet from './waspbullet.js'
+import WaspGib from './waspgib.js'
 
 export default class Wasp extends Thing {
   time = 0
@@ -22,6 +23,8 @@ export default class Wasp extends Thing {
 
     console.log("WASP")
 
+    this.health = 100
+    this.growScale = 0.0
     this.position = position
     this.targetPosition = undefined
     this.spawnPosition = [...this.position]
@@ -34,7 +37,7 @@ export default class Wasp extends Thing {
 
     this.time ++
 
-    if (this.time % 60 === 0) {
+    if (this.time % 60 === 1) {
       // If the targeted voxel is destroyed, find a new voxel to target
       if (!this.targetPosition || !vox.getVoxelSolid(chunks, this.targetPosition, {index:0})) {
         this.targetPosition = this.pickNearbyVoxel()
@@ -54,6 +57,14 @@ export default class Wasp extends Thing {
       if (vec3.distance(this.position, this.targetPosition) > 16) {
 
       }
+    }
+
+    // Grow from zero
+    this.growScale = Math.min(this.growScale + 0.03, 1.0)
+
+    // Die
+    if (this.health <= 0) {
+      this.dead = true
     }
   }
 
@@ -105,7 +116,7 @@ export default class Wasp extends Thing {
     gfx.set('modelMatrix', mat.getTransformation({
       translation: [...this.position],
       rotation: [Math.PI/2, 0, this.lookAngle + Math.PI/2],
-      scale: 1.0
+      scale: this.growScale
     }))
     gfx.setTexture(assets.textures.wasp)
     gfx.drawMesh(assets.meshes[frameModel])
@@ -113,6 +124,9 @@ export default class Wasp extends Thing {
 
   // TODO: Finish this
   onDeath () {
-    console.log("DEAD")
+    // Throw gibs
+    for (let i = 0; i < 7; i ++) {
+      game.addThing(new WaspGib([...this.position], -this.health))
+    }
   }
 }
