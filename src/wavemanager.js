@@ -66,7 +66,7 @@ export default class WaveManager extends Thing {
   nextWave () {
     this.wave += 1
     this.waveActive = true
-    this.after(60 * 10, () => this.endWave(), 'wave')
+    this.after(60 * 60, () => this.endWave(), 'wave')
     this.spawn()
   }
 
