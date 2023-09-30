@@ -46,6 +46,7 @@ await game.loadAssets({
     wasp1: 'models/wasp1.obj',
     wasp2: 'models/wasp2.obj',
     wasp3: 'models/wasp3.obj',
+    gib: 'models/gib.obj',
   },
 
   json: {

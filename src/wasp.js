@@ -12,6 +12,7 @@ import { assets } from './core/game.js'
 import * as vec3 from './core/vector3.js'
 import * as vec2 from './core/vector2.js'
 import * as vox from './voxel.js'
+import WaspBullet from './waspbullet.js'
 
 export default class Wasp extends Thing {
   time = 0
@@ -26,8 +27,6 @@ export default class Wasp extends Thing {
     this.spawnPosition = [...this.position]
     this.velocity = [0, 0, 0]
     this.lookAngle = 0
-
-    game.setThingName(this, 'player')
   }
 
   update () {
@@ -41,6 +40,10 @@ export default class Wasp extends Thing {
         this.targetPosition = this.pickNearbyVoxel()
         console.log("New target: " + this.targetPosition)
       }
+      // Otherwise, shoot it!
+      else {
+        this.shoot()
+      }
     }
 
     if (this.targetPosition) {
@@ -52,30 +55,6 @@ export default class Wasp extends Thing {
 
       }
     }
-
-
-  }
-
-  draw () {
-    let frameModel = "wasp2"
-    if (this.time % 4 === 0) {
-      frameModel = "wasp1"
-    }
-    else if (this.time % 4 === 2) {
-      frameModel = "wasp3"
-    }
-
-    gfx.setShader(assets.shaders.default)
-    // game.getCamera3D().updateMatrices()
-    game.getCamera3D().setUniforms()
-    gfx.set('color', [1.0, 0.0, 0.0, 1.0])
-    gfx.set('modelMatrix', mat.getTransformation({
-      translation: [...this.position],
-      rotation: [Math.PI/2, 0, this.lookAngle],
-      scale: 1.0
-    }))
-    gfx.setTexture(assets.textures.wasp)
-    gfx.drawMesh(assets.meshes[frameModel])
   }
 
   pickNearbyVoxel() {
@@ -103,6 +82,33 @@ export default class Wasp extends Thing {
         return randomPos
       }
     }
+  }
+
+  shoot() {
+    let bulletPos = [...this.position]
+    let bulletVel = vec3.scale(vec3.normalize(vec3.subtract(this.targetPosition, this.position)), 0.3)
+    game.addThing(new WaspBullet(bulletPos, bulletVel))
+  }
+
+  draw () {
+    let frameModel = "wasp2"
+    if (this.time % 4 === 0) {
+      frameModel = "wasp1"
+    }
+    else if (this.time % 4 === 2) {
+      frameModel = "wasp3"
+    }
+
+    gfx.setShader(assets.shaders.default)
+    game.getCamera3D().setUniforms()
+    gfx.set('color', [1.0, 0.0, 0.0, 1.0])
+    gfx.set('modelMatrix', mat.getTransformation({
+      translation: [...this.position],
+      rotation: [Math.PI/2, 0, this.lookAngle + Math.PI/2],
+      scale: 1.0
+    }))
+    gfx.setTexture(assets.textures.wasp)
+    gfx.drawMesh(assets.meshes[frameModel])
   }
 
   // TODO: Finish this

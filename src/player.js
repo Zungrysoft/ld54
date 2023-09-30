@@ -16,6 +16,7 @@ import Wasp from './wasp.js'
 
 export default class Player extends Thing {
   height = 3.8
+  health = 100
   cameraHeight = 3.5
   onGround = false
   wasOnGround = false
@@ -618,6 +619,10 @@ export default class Player extends Thing {
       this.position[1],
       this.position[2] - this.staircaseOffset + this.cameraHeight,
     ]
+  }
+
+  takeDamage(dmg) {
+    this.health -= dmg
   }
 
   // draw () {
