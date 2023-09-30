@@ -120,7 +120,7 @@ export default class Player extends Thing {
       }
     }
     if (this.usingJetpack) {
-      moveAccel *= 0.25
+      moveAccel *= 0.5
     }
 
     // Scale accel
@@ -154,7 +154,7 @@ export default class Player extends Thing {
     // falling and jumping
     if (game.keysPressed.Space) {
       this.wannaJump = 6
-      if (!this.onGround) {
+      if (this.coyoteFrames <= 0) {
         this.usingJetpack = true
       }
     }
@@ -237,10 +237,10 @@ export default class Player extends Thing {
     // shooting
     if (game.mouse.leftButton && !this.timer('shoot')) {
 
-      function shootBullet(position, damage, velocity=1.0, side=1, spread=0.1) {
+      const shootBullet = (damage, velocity=1.0, side=1, spread=0.1) => {
         let look = vec3.scale(game.getCamera3D().lookVector, -1)
         const sideVec = vec3.crossProduct([0, 0, side], look)
-        let pos = vec3.add(position, vec3.scale(sideVec, 0.25))
+        let pos = vec3.add(this.position, vec3.scale(sideVec, 0.25))
         pos = vec3.add(pos, [0, 0, 3.25])
 
         let dir = vec3.add(look, [Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5])
@@ -257,11 +257,11 @@ export default class Player extends Thing {
 
         // Create bullets
         for (let i = 0; i < 6; i++) {
-          shootBullet(this.position, 60, 2.0, 1, 0.3)
+          shootBullet(60, 2.0, 1, 0.3)
         }
 
         // Guarantee that one bullet will go straight ahead
-        shootBullet(this.position, 60, 2.0, 1, 0.0)
+        shootBullet(60, 2.0, 1, 0.0)
 
         // Sound effect
         /*
@@ -310,11 +310,11 @@ export default class Player extends Thing {
         // Fire animation and bullet
         if (this.akimboSide && globals.akimbo) {
           this.after(12, () => {}, 'fire2')
-          shootBullet(this.position, 20, 2.0, -1, 0.2)
+          shootBullet(20, 2.0, -1, 0.2)
         }
         else {
           this.after(12, () => {}, 'fire')
-          shootBullet(this.position, 20, 2.0, 1, 0.2)
+          shootBullet(20, 2.0, 1, 0.2)
         }
 
 
@@ -632,8 +632,12 @@ export default class Player extends Thing {
     ]
   }
 
-  takeDamage(dmg) {
-    this.health -= dmg
+  takeDamage (dmg, knockback) {
+    console.log('take damage')
+    //this.health -= dmg
+    this.velocity[0] += knockback[0]
+    this.velocity[1] += knockback[1]
+    this.velocity[2] += knockback[2]
   }
 
   draw () {

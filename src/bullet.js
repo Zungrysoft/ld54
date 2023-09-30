@@ -8,12 +8,12 @@ import * as vec3 from './core/vector3.js'
 import * as vec2 from './core/vector2.js'
 import * as vox from './voxel.js'
 import Wasp from './wasp.js'
+import Player from './player.js'
 
 export default class Bullet extends Thing {
   time = 0
   aabb = [-8, -8, 8, 8]
   damage = 20
-  positions = []
   explosionRadius = 2
 
   constructor (position = [0, 0, 0], velocity = [0, 0, 0], owner, damage = 20) {
@@ -29,7 +29,6 @@ export default class Bullet extends Thing {
     let chunks = game.getThing('terrain').chunks
 
     this.time += 1
-    this.positions.push([...this.position])
     this.position[0] += this.velocity[0]
     this.position[1] += this.velocity[1]
     this.position[2] += this.velocity[2]
@@ -39,9 +38,25 @@ export default class Bullet extends Thing {
     for (const thing of this.getAllThingCollisions()) {
       if (!('health' in thing)) continue
       if (thing === this.owner) continue
+
+      let hit = false
+      if (thing === player &&
+          vec2.distance(this.position, thing.position) < 2 &&
+          this.position[2] >= thing.position[2] - 1 &&
+          this.position[2] <= thing.position[2] + 5) {
+        hit = true
+      }
+
       const hitRadius = thing.hitRadius ?? 1.5
-      if (vec3.distance(this.position, thing.position) < hitRadius && !thing.dead) {
-        if (thing.takeDamage) { thing.takeDamage(this.damage) }
+      if (thing !== player &&
+          vec3.distance(this.position, thing.position) < hitRadius && !thing.dead) {
+        hit = true
+      }
+
+      if (hit) {
+        if (thing.takeDamage) {
+          thing.takeDamage(this.damage, vec3.add(vec3.scale(this.velocity, 2), [0, 0, 1.5]))
+        }
         this.dead = true
       }
     }
@@ -78,7 +93,7 @@ export default class Bullet extends Thing {
     gfx.setShader(assets.shaders.default)
     game.getCamera3D().setUniforms()
     gfx.setTexture(assets.textures.square)
-    gfx.set('color', [1.0, 0.0, 0.0, 1.0])
+    gfx.set('color', [1.0, 1.0, 1.0, 1.0])
     gfx.set('modelMatrix', mat.getTransformation({
       translation: [...this.position],
       rotation: [Math.PI/2, 0, 0],
