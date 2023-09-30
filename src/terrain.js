@@ -5,10 +5,6 @@ import * as mat from './core/matrices.js'
 import * as vec3 from './core/vector3.js'
 import * as vox from './voxel.js'
 import * as pal from './palette.js'
-import * as lit from './lighting.js'
-import * as procBasics from './procbasics.js'
-import * as procDungeon from './procdungeon.js'
-import * as procTerrain from './procterrain.js'
 import WorkerPool from './workerpool.js'
 import Thing from './core/thing.js'
 import { assets } from './core/game.js'
@@ -158,8 +154,8 @@ export default class Terrain extends Thing {
         )
       )
     )
-    console.log(newChunks)
     this.chunks = newChunks
+    this.mesherPool.clearQueue()
   }
 
   update () {

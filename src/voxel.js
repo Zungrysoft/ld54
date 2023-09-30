@@ -160,7 +160,13 @@ export function serializeChunk (chunk) {
 
 export function deserializeChunk (text) {
   const value = JSON.parse(text)
-  value.voxels = new Uint8Array(value.voxels)
+  let buffer = new ArrayBuffer(value.voxels.length);
+  let bufferView = new Uint8Array(buffer);
+  for (let i = 0; i < value.voxels.length; i ++) {
+    bufferView[i] = value.voxels[i]
+  }
+  value.voxels = buffer
+  value.modified = true
   return value
 }
 
