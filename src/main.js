@@ -17,7 +17,8 @@ await game.loadAssets({
     colorMap: 'images/color_map.png',
     crosshair: 'images/crosshair.png',
     wasp: 'images/square.png',
-    noise: 'images/noise1.png'
+    noise: 'images/noise1.png',
+    uv_shotgun: 'images/uv_shotgun.png',
   },
 
   sounds: {
@@ -47,6 +48,7 @@ await game.loadAssets({
     wasp2: 'models/wasp2.obj',
     wasp3: 'models/wasp3.obj',
     gib: 'models/gib.obj',
+    shotgun: 'models/shotgun.obj',
   },
 
   json: {

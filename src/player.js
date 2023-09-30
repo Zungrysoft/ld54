@@ -618,63 +618,64 @@ export default class Player extends Thing {
     this.health -= dmg
   }
 
-  // draw () {
-  //   // Viewmodel
-  //   gfx.setShader(assets.shaders.voxel)
-  //   gfx.set('viewMatrix', [
-  //     1, 0, 0, 0,
-  //     0, 0, 2, 0,
-  //     0, 1, 0, 0,
-  //     0, 0, 0, 1
-  //   ])
+  draw () {
+    // Viewmodel
+    gfx.setShader(assets.shaders.default)
+    gfx.set('viewMatrix', [
+      1, 0, 0, 0,
+      0, 0, 1, 0,
+      0, 1, 0, 0,
+      0, 0, 0, 1
+    ])
 
-  //   let knockback = this.timer('fire') ? 1 - this.timer('fire') : 0
-  //   knockback *= Math.PI / 4
-  //   gfx.set('projectionMatrix', mat.getPerspective({ fovy: Math.PI / 4 }))
+    let knockback = this.timer('fire') ? 1 - this.timer('fire') : 0
+    knockback *= Math.PI / 4
+    gfx.set('projectionMatrix', mat.getPerspective({ fovy: Math.PI / 4 }))
+    gfx.set('color', [1.0, 1.0, 1.0, 1.0])
 
-  //   // Bobbing
-  //   const t = this.walkFrames
-  //   const bobX = Math.sin(t) * 2 * 0.15
-  //   const bobY = Math.cos(2 * t) * -0.5 * 0.15
-  //   if (knockback > 0) {
-  //     this.walkFrames = 0
-  //   }
-
-  //   // Animation
-  //   if (globals.powerup === 'shotgun') {
-  //     gfx.set('modelMatrix', mat.getTransformation({
-  //       translation: [bobX - 2, -3 + knockback * 4, bobY - 2.3 - (knockback * 0.5)],
-  //       rotation: [Math.PI*1.5 + knockback*0.3, Math.PI, 0],
-  //       scale: 0.4
-  //     }))
-  //     gfx.setTexture(assets.textures.shotgun)
-  //     gfx.drawMesh(assets.models.shotgun)
-  //   } else if (globals.powerup === 'machinegun') {
-  //     gfx.set('modelMatrix', mat.getTransformation({
-  //       translation: [bobX - 2, -4.5 + knockback * 0.2, bobY - 2.6],
-  //       rotation: [Math.PI*1.52 + knockback*0.1, Math.PI, 0.05],
-  //       scale: 0.5
-  //     }))
-  //     gfx.setTexture(assets.textures.machinegun)
-  //     gfx.drawMesh(assets.models.machinegun)
-  //   } else if (globals.powerup === 'rifle') {
-  //     gfx.set('modelMatrix', mat.getTransformation({
-  //       translation: [bobX - 2, -5 + knockback * 3, bobY - 2.3 - (knockback * 0.5)],
-  //       rotation: [Math.PI*1.5 + knockback*0.4, Math.PI, 0],
-  //       scale: 0.4
-  //     }))
-  //     gfx.setTexture(assets.textures.rifle)
-  //     gfx.drawMesh(assets.models.rifle)
-  //   } else {
-  //     gfx.set('modelMatrix', mat.getTransformation({
-  //       translation: [bobX - 2, -4 + knockback * 0.2, bobY - 2.3 - (knockback * 0.5)],
-  //       rotation: [Math.PI*1.5 + knockback, Math.PI, 0],
-  //       scale: 0.4
-  //     }))
-  //     gfx.setTexture(assets.textures.pistol)
-  //     gfx.drawMesh(assets.models.pistol)
-  //   }
-  // }
+    // Bobbing
+    const t = this.walkFrames
+    const bobX = Math.sin(t) * 2 * 0.15
+    const bobY = Math.cos(2 * t) * -0.5 * 0.15
+    if (knockback > 0) {
+      this.walkFrames = 0
+    }
+    globals.powerup = 'shotgun'
+    // Animation
+    if (globals.powerup === 'shotgun') {
+      gfx.set('modelMatrix', mat.getTransformation({
+        translation: [bobX - 2, -3 + knockback * 4, bobY - 2.3 - (knockback * 0.5)],
+        rotation: [Math.PI*1.5 + knockback*0.3, Math.PI, 0],
+        scale: 0.4
+      }))
+      gfx.setTexture(assets.textures.uv_shotgun)
+      gfx.drawMesh(assets.meshes.shotgun)
+    } else if (globals.powerup === 'machinegun') {
+      gfx.set('modelMatrix', mat.getTransformation({
+        translation: [bobX - 2, -4.5 + knockback * 0.2, bobY - 2.6],
+        rotation: [Math.PI*1.52 + knockback*0.1, Math.PI, 0.05],
+        scale: 0.5
+      }))
+      gfx.setTexture(assets.textures.machinegun)
+      gfx.drawMesh(assets.meshes.machinegun)
+    } else if (globals.powerup === 'rifle') {
+      gfx.set('modelMatrix', mat.getTransformation({
+        translation: [bobX - 2, -5 + knockback * 3, bobY - 2.3 - (knockback * 0.5)],
+        rotation: [Math.PI*1.5 + knockback*0.4, Math.PI, 0],
+        scale: 0.4
+      }))
+      gfx.setTexture(assets.textures.rifle)
+      gfx.drawMesh(assets.meshes.rifle)
+    } else {
+      gfx.set('modelMatrix', mat.getTransformation({
+        translation: [bobX - 2, -4 + knockback * 0.2, bobY - 2.3 - (knockback * 0.5)],
+        rotation: [Math.PI*1.5 + knockback, Math.PI, 0],
+        scale: 0.4
+      }))
+      gfx.setTexture(assets.textures.pistol)
+      gfx.drawMesh(assets.meshes.pistol)
+    }
+  }
 
   postDraw () {
     // Exit if GUI should be hidden
