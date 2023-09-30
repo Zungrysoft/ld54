@@ -34,6 +34,19 @@ export function lerpWrap(a, b, t, wrap = 1) {
   return (1 - t) * a + t * b
 }
 
+export function bend(v, f) {
+  return Math.pow(v, (1/f) - 1)
+}
+
+export function sCurve(x, k) {
+  if (x < 0.5) {
+    return Math.min(((k*2*x - 2*x) / (2*k*2*x - k - 1)) * 0.5, 0.5)
+  }
+  else {
+    return Math.max(((-k*2*(x-0.5)-2*(x-0.5)) / (2*-k*2*(x-0.5)+k-1))*0.5 + 0.5, 0.5)
+  }
+}
+
 export function clamp (n, min, max) {
   if (min < max) {
     return Math.min(Math.max(n, min), max)

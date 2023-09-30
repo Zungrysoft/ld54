@@ -226,21 +226,22 @@ export default class Player extends Thing {
       if (true || globals.powerup === 'shotgun') {
         // Animation and Timing
         this.after(24, () => {}, 'shoot')
-        this.after(30, () => {}, 'fire')
+        this.after(30, () => {
+          this.after(30, () => {}, 'shotgunFlip')
+        }, 'fire')
 
         look = vec3.scale(look, 0.8)
 
         // Create bullets
-        /*
         for (let i = 0; i < 6; i++) {
           const r = 0.015
-          let dir = vec3.add(look, [u.random(-r, r), u.random(-r, r), u.random(-r, r)])
+          let dir = vec3.add(look, [Math.random(-r, r), Math.random(-r, r), Math.random(-r, r)])
           dir = vec3.scale(vec3.normalize(dir), 0.1)
-          game.addThing(new Bullet(pos, vec3.add(dir, look), this))
+          game.addThing(new Bullet(pos, vec3.scale(vec3.add(dir, look), 2), this, 60))
         }
-        */
+
         // Guarantee that one bullet will go straight ahead
-        game.addThing(new Bullet(pos, look, this, 20))
+        game.addThing(new Bullet(pos, vec3.scale(look, 2), this, 20))
 
         // Sound effect
         /*
@@ -627,7 +628,7 @@ export default class Player extends Thing {
     gfx.set('viewMatrix', [
       1, 0, 0, 0,
       0, 0, 1, 0,
-      0, 1, 0, 0,
+      0, 2, 0, 0,
       0, 0, 0, 1
     ])
 
@@ -648,9 +649,15 @@ export default class Player extends Thing {
     globals.powerup = 'shotgun'
     // Animation
     if (globals.powerup === 'shotgun') {
+      let shotgunFlip = 0
+      if (!this.timer('fire') && this.timer('shotgunFlip')) {
+        let sf = this.timer('shotgunFlip')
+        let fac = u.sCurve(u.bend(sf, 0.6), 0.2)
+        shotgunFlip = u.map(fac, 0, 1, 0, Math.PI*2, true)
+      }
       gfx.set('modelMatrix', mat.getTransformation({
-        translation: [bobX - 2, -3 + knockback * 4, bobY - 2.3 - (knockback * 0.5)],
-        rotation: [Math.PI*1.5 + knockback*0.3, Math.PI, 0],
+        translation: [bobX - 2, -4 + knockback * 4, bobY - 2.3 - (knockback * 0.5)],
+        rotation: [Math.PI*1.5 + knockback*0.3 + shotgunFlip, Math.PI, 0],
         scale: 0.4
       }))
       gfx.setTexture(assets.textures.uv_shotgun)

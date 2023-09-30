@@ -64,11 +64,6 @@ export default class Wasp extends Thing {
 
     // Grow from zero
     this.growScale = Math.min(this.growScale + 0.03, 1.0)
-
-    // Die
-    if (this.health <= 0) {
-      this.dead = true
-    }
   }
 
   pickNearbyVoxel() {
@@ -135,8 +130,14 @@ export default class Wasp extends Thing {
     gfx.drawMesh(assets.meshes[frameModel])
   }
 
-  onDamage () {
-    this.after(10, null, 'damage')
+  takeDamage (dmg) {
+    if (dmg > 0) {
+      this.after(10, null, 'damage')
+    }
+    this.health -= dmg
+    if (this.health < 1) {
+      this.dead = true
+    }
   }
 
   // TODO: Finish this

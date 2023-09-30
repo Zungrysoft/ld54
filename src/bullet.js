@@ -40,9 +40,8 @@ export default class Bullet extends Thing {
       if (!('health' in thing)) continue
       if (thing === this.owner) continue
       const hitRadius = thing.hitRadius ?? 1.5
-      if (vec3.distance(this.position, thing.position) < hitRadius) {
-        thing.health -= this.damage
-        if (thing.onDamage) { thing.onDamage() }
+      if (vec3.distance(this.position, thing.position) < hitRadius && !thing.dead) {
+        if (thing.takeDamage) { thing.takeDamage(this.damage) }
         this.dead = true
       }
     }
