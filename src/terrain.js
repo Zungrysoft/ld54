@@ -28,13 +28,16 @@ export default class Terrain extends Thing {
     game.setThingName(this, 'terrain')
 
     const cartesian = (...a) => a.reduce((a, b) => a.flatMap(d => b.map(e => [d, e].flat())))
-    const dim = [0, 1, 2, 3, 4]
+    const dim = [0, 1, 2, 3, 4, 5]
     for (const coord of cartesian(dim, dim, dim)) {
       this.chunks[vox.ts(coord)] = vox.emptyChunk()
       this.chunkStates[vox.ts(coord)] = 'loaded'
     }
 
     // Spawn platform
+    //this.chunks[vox.ts([0,0,0])] = vox.emptyChunk()
+    //vox.mergeStructureIntoWorld(this.chunks, plat, [0, 0, 0])
+
     // let plat = procBasics.generateRectangularPrism({
     //   length: vox.CHUNK_SIZE,
     //   width: vox.CHUNK_SIZE,

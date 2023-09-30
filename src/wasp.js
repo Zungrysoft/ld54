@@ -17,6 +17,8 @@ import WaspGib from './waspgib.js'
 
 export default class Wasp extends Thing {
   time = 0
+  aabb = [-2, -2, 2, 2]
+  hitRadius = 2.5
 
   constructor (position = [0, 0, 0], angle = 0) {
     super()
@@ -33,6 +35,7 @@ export default class Wasp extends Thing {
   }
 
   update () {
+    super.update()
     let chunks = game.getThing("terrain").chunks
 
     this.time ++
@@ -111,16 +114,29 @@ export default class Wasp extends Thing {
       frameModel = "wasp3"
     }
 
+    const startle = this.timers.damage ? u.map((1 - this.timer('damage')) ** 2, 1, 0, 0, 1) : 1
     gfx.setShader(assets.shaders.default)
     game.getCamera3D().setUniforms()
-    gfx.set('color', [1.0, 0.0, 0.0, 1.0])
+    if (this.timer('damage')) {
+      gfx.set('color', [1,1,1,1])
+    } else {
+      gfx.set('color', [1,0,0,1])
+    }
     gfx.set('modelMatrix', mat.getTransformation({
       translation: [...this.position],
       rotation: [Math.PI/2, 0, this.lookAngle + Math.PI/2],
-      scale: this.growScale
+      scale: [
+        u.lerp(1.5, 1, startle) * this.growScale,
+        u.lerp(2.5, 1, startle) * this.growScale,
+        u.lerp(1.5, 1, startle) * this.growScale
+      ]
     }))
     gfx.setTexture(assets.textures.wasp)
     gfx.drawMesh(assets.meshes[frameModel])
+  }
+
+  onDamage () {
+    this.after(10, null, 'damage')
   }
 
   // TODO: Finish this
