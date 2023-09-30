@@ -12,7 +12,6 @@ import { assets } from './core/game.js'
 import * as vec3 from './core/vector3.js'
 import * as vec2 from './core/vector2.js'
 import * as vox from './voxel.js'
-import Wasp from './wasp.js'
 import Bullet from './bullet.js'
 
 export default class Player extends Thing {
