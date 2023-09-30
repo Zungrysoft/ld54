@@ -42,9 +42,10 @@ export default class Player extends Thing {
   emptyChunkSolid = false
   depth = 1000
   lives = 5
-  jetpack = 0
+  jetpack = 60
   jetpackMaximum = 60
   jetpackCanRecharge = true
+  jetpackRechargeRate = 1.0
   powerup = "pistol"
   ammo = 0
   akimbo = false
@@ -165,7 +166,7 @@ export default class Player extends Thing {
         this.jetpackCanRecharge = true
     }
     if (this.jetpackCanRecharge) {
-      this.jetpack = Math.min(this.jetpack + (this.onGround ? 0.5 : 0.2), this.jetpackMaximum)
+      this.jetpack = Math.min(this.jetpack + (this.onGround ? 0.1 : 0.05) * this.jetpackRechargeRate, this.jetpackMaximum)
     }
 
     const jump = () => {
@@ -209,35 +210,6 @@ export default class Player extends Thing {
     this.staircaseOffset = Math.max(this.staircaseOffset - 0.2, 0)
     this.disableAirControl = Math.max(this.disableAirControl - 1, 0)
     this.disableAirControl = Math.max(this.disableAirControl - 1, 0)
-
-    // Test voxel creation and destruction
-    // if (mouse.rightClick) {
-    //   const terrain = game.getThing("terrain")
-    //   const pos = game.getCamera3D().position
-    //   const ang = game.getCamera3D().lookVector
-    //   const hitData = terrain.traceLine(pos, vec3.subtract(pos, vec3.scale(ang, 128)))
-    //   // console.log (hitData)
-    //   vox.setVoxelSolid(terrain.chunks, hitData.voxel, false)
-    // }
-    // if (leftClicked) {
-    //   const terrain = game.getThing("terrain")
-    //   const pos = game.getCamera3D().position
-    //   const ang = game.getCamera3D().lookVector
-    //   const hitData = terrain.traceLine(pos, vec3.subtract(pos, vec3.scale(ang, 128)))
-    //   // console.log (hitData)
-    //   //vox.setVoxelSolid(terrain.chunks, vec3.add(hitData.voxel, hitData.normal), true)
-    //   // vox.setVoxelShade(terrain.chunks, vec3.add(hitData.voxel, hitData.normal), 'up', 128)
-    // }
-
-    if (game.keysPressed.KeyB) {
-      if (this.powerup == "pistol") {
-        this.akimbo = !this.akimbo
-      }
-      this.powerup = "pistol"
-    }
-    if (game.keysPressed.KeyN) {
-      this.powerup = "shotgun"
-    }
 
     // shooting
     if (game.mouse.leftButton && !this.timer('shoot')) {
