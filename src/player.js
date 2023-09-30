@@ -43,6 +43,8 @@ export default class Player extends Thing {
   emptyChunkSolid = false
   depth = 1000
   lives = 5
+  jetpack = 0
+  jetpackMaximum = 60
 
   constructor (position = [0, 0, 0], angle = 0) {
     super()
@@ -110,11 +112,15 @@ export default class Player extends Thing {
       this.velocity[0] *= friction
       this.velocity[1] *= friction
     } else {
+      // Quake air strafing
       moveAccel = airAccel
       const proj = xAccelNorm * this.velocity[0] + yAccelNorm * this.velocity[1]
       if (proj + moveAccel > maxSpeed) {
         moveAccel = Math.max(maxSpeed - proj, 0)
       }
+    }
+    if (this.usingJetpack) {
+      moveAccel *= 0.25
     }
 
     // Scale accel
@@ -148,9 +154,13 @@ export default class Player extends Thing {
     // falling and jumping
     if (game.keysPressed.Space) {
       this.wannaJump = 6
+      if (!this.onGround) {
+        this.usingJetpack = true
+      }
     }
     if (this.onGround) {
       this.coyoteFrames = 10
+      this.jetpack = Math.min(this.jetpack + 1, this.jetpackMaximum)
     }
 
     const jump = () => {
@@ -166,6 +176,12 @@ export default class Player extends Thing {
 
     if (this.wannaJump && this.coyoteFrames) {
       jump()
+    }
+
+    this.usingJetpack = this.usingJetpack && game.keysDown.Space
+    if (this.usingJetpack && !this.onGround && this.jetpack > 0) {
+      this.jetpack -= 1
+      this.velocity[2] = Math.max(this.velocity[2], 0.15)
     }
 
     if (this.wannaJump) {
