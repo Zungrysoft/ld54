@@ -49,7 +49,7 @@ export default class Player extends Thing {
   weapon = "pistol"
   ammo = 0
   akimbo = false
-
+  coins = 0
 
   constructor (position = [0, 0, 0], angle = 0) {
     super()
@@ -855,6 +855,14 @@ export default class Player extends Thing {
       ctx.arc(game.config.width * 2 / 4, game.config.height / 2, 38, 0, Math.PI * 2 * fuel)
       ctx.stroke()
       ctx.save()
+    }
+
+    // coin get
+    if (this.timer('coinget')) {
+      ctx.save()
+      ctx.fillStyle = 'rgba(255, 255, 0, 0.1)'
+      ctx.fillRect(0, 0, game.config.width, game.config.height)
+      ctx.restore()
     }
   }
 

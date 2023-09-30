@@ -6,6 +6,7 @@ import * as vec3 from './core/vector3.js'
 import * as vox from './voxel.js'
 import Thing from './core/thing.js'
 import Wasp from './wasp.js'
+import Coin from './coin.js'
 
 export default class WaveManager extends Thing {
   wave = 0
@@ -57,6 +58,7 @@ export default class WaveManager extends Thing {
   endWave () {
     for (const enemy of this.getEnemies()) {
       enemy.dead = true
+      enemy.spawnCoin = false
     }
     this.cancelTimer('spawn')
     this.waveActive = false
