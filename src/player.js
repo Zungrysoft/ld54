@@ -310,11 +310,11 @@ export default class Player extends Thing {
         // Fire animation and bullet
         if (this.akimboSide && globals.akimbo) {
           this.after(12, () => {}, 'fire2')
-          shootBullet(20, 2.0, -1, 0.2)
+          shootBullet(20, 2.0, -1, 0.25)
         }
         else {
           this.after(12, () => {}, 'fire')
-          shootBullet(20, 2.0, 1, 0.2)
+          shootBullet(20, 2.0, 1, 0.25)
         }
 
 
