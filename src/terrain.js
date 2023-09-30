@@ -8,7 +8,6 @@ import * as pal from './palette.js'
 import * as lit from './lighting.js'
 import * as procBasics from './procbasics.js'
 import * as procDungeon from './procdungeon.js'
-import * as procMansion from './procmansion.js'
 import * as procTerrain from './procterrain.js'
 import WorkerPool from './workerpool.js'
 import Thing from './core/thing.js'
@@ -28,8 +27,14 @@ export default class Terrain extends Thing {
     super()
     game.setThingName(this, 'terrain')
 
+    const cartesian = (...a) => a.reduce((a, b) => a.flatMap(d => b.map(e => [d, e].flat())))
+    const dim = [0, 1, 2, 3, 4]
+    for (const coord of cartesian(dim, dim, dim)) {
+      this.chunks[vox.ts(coord)] = vox.emptyChunk()
+    }
+
     // Spawn platform
-    this.chunks[vox.ts([0,0,0])] = vox.emptyChunk()
+    //this.chunks[vox.ts([0,0,0])] = vox.emptyChunk()
     this.chunkStates[vox.ts([0,0,0])] = 'loaded'
     let plat = procBasics.generateRectangularPrism({
       length: vox.CHUNK_SIZE,
@@ -43,6 +48,8 @@ export default class Terrain extends Thing {
       voxel2: {material: 'grass', solid: true},
     })
     vox.mergeStructureIntoWorld(this.chunks, plat, [0, 0, 0])
+
+    vox.mergeStructureIntoWorld(this.chunks, game.assets.json.test)
 
     // Palette test
     // let keyZ = 0
@@ -291,6 +298,11 @@ export default class Terrain extends Thing {
       // gfx.set('fogDistance', (this.loadDistance-1) * vox.CHUNK_SIZE * 1.0)
       gfx.set('fogDistance', 0.0)
       gfx.setTexture(assets.textures.colorMap)
+
+      // put noise texture in texture slot 1
+      gfx.set('noiseTexture', 1, 'int')
+      gfx.setTexture(assets.textures.noise, 1)
+
       gfx.set('modelMatrix', mat.getTransformation({
         translation: position,
       }))

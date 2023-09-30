@@ -17,6 +17,7 @@ await game.loadAssets({
     colorMap: 'images/color_map.png',
     crosshair: 'images/crosshair.png',
     wasp: 'images/square.png',
+    noise: 'images/noise1.png'
   },
 
   sounds: {

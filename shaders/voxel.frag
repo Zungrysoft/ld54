@@ -8,6 +8,7 @@ varying vec4 worldPosition;
 varying vec4 viewPosition;
 
 uniform sampler2D texture;
+uniform sampler2D noiseTexture;
 uniform vec3 fogColor;
 uniform float fogDistance;
 
@@ -31,6 +32,20 @@ void main() {
     vec4 fogColor = vec4(fogColor.rgb, 1.0);
     vec4 result = mix(diffuse, fogColor, fogFactor);
 
-    gl_FragColor = result;
+    vec4 noise;
+    float noiseScale = 1.0 / 256.0;
+    if (normal.z == 0.0) {
+      if (normal.y == 0.0) {
+        noise = texture2D(noiseTexture, worldPosition.yz * noiseScale + noiseScale / 2.0);
+      } else {
+        noise = texture2D(noiseTexture, worldPosition.xz * noiseScale + noiseScale / 2.0);
+      }
+    } else {
+      noise = texture2D(noiseTexture, worldPosition.xy * noiseScale + noiseScale / 2.0);
+    }
+    noise.rgb *= 1.0 / 12.0;
+    noise.rgb += 0.6;// - 1.0 / 16.0;
+
+    gl_FragColor = result * noise;
 }
 

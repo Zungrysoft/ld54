@@ -47,7 +47,7 @@ function buildNewChunk(chunkKeyStr, seed, workerIndex, params) {
   chunks[vox.ts([0,0,0])] = chunk
 
   // Build terrain
-  // buildChunkTerrain(chunks, chunkKeyStr, seed, params)
+  buildChunkTerrain(chunks, chunkKeyStr, seed, params)
 
   // Now that we've generated the chunk, we should create an initial mesh for it as well
   // This saves a step since now the main thread won't have to pass the chunk data back to a mesher worker

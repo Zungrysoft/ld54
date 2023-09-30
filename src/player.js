@@ -15,8 +15,8 @@ import * as vox from './voxel.js'
 import Wasp from './wasp.js'
 
 export default class Player extends Thing {
-  height = 2.8
-  cameraHeight = 2.5
+  height = 3.8
+  cameraHeight = 3.5
   onGround = false
   wasOnGround = false
   aabb = [-16, -16, 16, 16]
@@ -40,6 +40,7 @@ export default class Player extends Thing {
   lastPosition = [0, 0, 0]
   walkFrames = 0
   walkFrameAccel = 0
+  emptyChunkSolid = false
 
   constructor (position = [0, 0, 0], angle = 0) {
     super()
@@ -431,7 +432,7 @@ export default class Player extends Thing {
     for (let x = xMin; x <= xMax; x ++) {
       for (let y = yMin; y <= yMax; y ++) {
         for (let z = zMin; z <= zMax; z ++) {
-          if (vox.getVoxelSolid(game.getThing('terrain').chunks, [x, y, z], {emptyChunkSolid: true})) {
+          if (vox.getVoxelSolid(game.getThing('terrain').chunks, [x, y, z], {emptyChunkSolid: this.emptyChunkSolid})) {
             faces.push([[x + 0.5, y - 0.5, z - 0.5], [x + 0.5, y + 0.5, z + 0.5], [1, 0, 0], false])
             faces.push([[x - 0.5, y - 0.5, z - 0.5], [x - 0.5, y + 0.5, z + 0.5], [-1, 0, 0], true])
             faces.push([[x - 0.5, y + 0.5, z - 0.5], [x + 0.5, y + 0.5, z + 0.5], [0, 1, 0], false])
