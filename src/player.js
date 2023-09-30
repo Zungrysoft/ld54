@@ -227,7 +227,7 @@ export default class Player extends Thing {
         // Animation and Timing
         this.after(24, () => {}, 'shoot')
         this.after(30, () => {
-          this.after(30, () => {}, 'shotgunFlip')
+          this.after(27, () => {}, 'shotgunFlip')
         }, 'fire')
 
         look = vec3.scale(look, 0.8)
