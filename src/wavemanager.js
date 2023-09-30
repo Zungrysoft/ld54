@@ -60,6 +60,7 @@ export default class WaveManager extends Thing {
     }
     this.cancelTimer('spawn')
     this.waveActive = false
+    this.after(60 * 3, () => game.addThing(new BuildManager()))
     this.after(60 * 10, () => this.nextWave())
   }
 
