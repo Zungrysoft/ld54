@@ -5,6 +5,7 @@ import Player from './player.js'
 import WaveManager from './wavemanager.js'
 import Skybox from './skybox.js'
 import { flush } from './database.js'
+import ShotgunPickup from './pickupshotgun.js'
 
 game.config.width = 1024 // 640
 game.config.height = 576 // 360
@@ -22,6 +23,8 @@ await game.loadAssets({
     noise: 'images/noise1.png',
     uv_shotgun: 'images/uv_shotgun.png',
     uv_pistol: 'images/uv_pistol.png',
+    uv_shell: 'images/uv_shell.png',
+    uv_heart: 'images/uv_heart.png',
     miramar_bk: 'images/miramar_bk.jpg',
     miramar_dn: 'images/miramar_dn.jpg',
     miramar_ft: 'images/miramar_ft.jpg',
@@ -62,6 +65,8 @@ await game.loadAssets({
     gib: 'models/gib.obj',
     shotgun: 'models/shotgun.obj',
     pistol: 'models/pistol.obj',
+    shell: 'models/shell.obj',
+    heart: 'models/heart.obj',
   },
 
   json: {
@@ -105,5 +110,6 @@ flush(() => {
     game.addThing(new WaveManager())
     game.addThing(new Skybox())
     game.addThing(new Player([20.1, 20, 79]))
+    game.addThing(new ShotgunPickup([60, 20, 41]))
   })
 })
