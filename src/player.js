@@ -216,14 +216,14 @@ export default class Player extends Thing {
 
     // shooting
     if (game.mouse.leftButton && !this.timer('shoot')) {
-      this.after(16, () => {}, 'shoot')
-      this.after(12, () => {}, 'fire')
       let look = vec3.scale(game.getCamera3D().lookVector, -1)
       const side = vec3.crossProduct([0, 0, 1], look)
       let pos = vec3.add(this.position, vec3.scale(side, 0.25))
+      let pos2 = vec3.add(this.position, vec3.scale(side, -0.25))
       pos = vec3.add(pos, [0, 0, 3.25])
+      pos2 = vec3.add(pos2, [0, 0, 3.25])
 
-      if (true || globals.powerup === 'shotgun') {
+      if (globals.powerup === 'shotgun') {
         // Animation and Timing
         this.after(24, () => {}, 'shoot')
         this.after(30, () => {
@@ -241,7 +241,7 @@ export default class Player extends Thing {
         }
 
         // Guarantee that one bullet will go straight ahead
-        game.addThing(new Bullet(pos, vec3.scale(look, 2), this, 20))
+        game.addThing(new Bullet(pos, vec3.scale(look, 2), this, 60))
 
         // Sound effect
         /*
@@ -276,40 +276,32 @@ export default class Player extends Thing {
         this.velocity[0] -= look[0] * 0.9
         this.velocity[1] -= look[1] * 0.9
         this.velocity[2] -= look[2] * 0.5
-      } else if (globals.powerup === 'rifle') {
-        // Animation and Timing
-        this.after(24, () => {}, 'shoot')
-        this.after(30, () => {}, 'fire')
-
-        // Create bullet
-        game.addThing(new Bullet(pos, look, 90, this))
-        game.addThing(new Bullet(vec3.add(pos, vec3.scale(look, 10)), look, 90, this))
-        game.addThing(new Bullet(vec3.add(pos, vec3.scale(look, 20)), look, 90, this))
-        game.addThing(new Bullet(vec3.add(pos, vec3.scale(look, 30)), look, 90, this))
-        game.addThing(new Bullet(vec3.add(pos, vec3.scale(look, 40)), look, 90, this))
-
-        const sound = assets.sounds.machinegun
-        sound.playbackRate = u.random(1, 1.3)
-        sound.currentTime = 0
-        sound.volume = 0.6
-        sound.play()
-
-        this.velocity[0] -= look[0] * 3
-        this.velocity[1] -= look[1] * 3
-        this.velocity[2] -= look[2] * 1.5
       } else {
-        // Animation and Timing
-        this.after(16, () => {}, 'shoot')
-        this.after(12, () => {}, 'fire')
+        // Shoot timer
+        if (globals.akimbo) {
+          this.akimboSide = !this.akimboSide
+          this.after(8, () => {}, 'shoot')
+        }
+        else {
+          this.after(16, () => {}, 'shoot')
+        }
 
-        // Create bullet
-        game.addThing(new Bullet(pos, look, 28, this))
+        // Fire animation and bullet
+        if (this.akimboSide && globals.akimbo) {
+          this.after(12, () => {}, 'fire2')
+          game.addThing(new Bullet(pos2, vec3.scale(look, 2), this, 20))
+        }
+        else {
+          this.after(12, () => {}, 'fire')
+          game.addThing(new Bullet(pos, vec3.scale(look, 2), this, 20))
+        }
 
-        const sound = assets.sounds.machinegun
-        sound.playbackRate = u.random(1, 1.3)
-        sound.currentTime = 0
-        sound.volume = 0.6
-        sound.play()
+
+        // const sound = assets.sounds.machinegun
+        // sound.playbackRate = u.random(1, 1.3)
+        // sound.currentTime = 0
+        // sound.volume = 0.6
+        // sound.play()
         /*
         const sound = assets.sounds.pistolShoot
         sound.currentTime = 0
@@ -318,9 +310,10 @@ export default class Player extends Thing {
 
         */
 
-        this.velocity[0] -= look[0] * 3
-        this.velocity[1] -= look[1] * 3
-        this.velocity[2] -= look[2] * 1.5
+        // this.velocity[0] -= look[0] * 3
+        // this.velocity[1] -= look[1] * 3
+        // this.velocity[2] -= look[2] * 1.5
+
       }
     }
 
@@ -646,7 +639,7 @@ export default class Player extends Thing {
     if (knockback > 0) {
       this.walkFrames = 0
     }
-    globals.powerup = 'shotgun'
+
     // Animation
     if (globals.powerup === 'shotgun') {
       let shotgunFlip = 0
@@ -668,24 +661,30 @@ export default class Player extends Thing {
         rotation: [Math.PI*1.52 + knockback*0.1, Math.PI, 0.05],
         scale: 0.5
       }))
-      gfx.setTexture(assets.textures.machinegun)
+      gfx.setTexture(assets.textures.uv_machinegun)
       gfx.drawMesh(assets.meshes.machinegun)
-    } else if (globals.powerup === 'rifle') {
-      gfx.set('modelMatrix', mat.getTransformation({
-        translation: [bobX - 2, -5 + knockback * 3, bobY - 2.3 - (knockback * 0.5)],
-        rotation: [Math.PI*1.5 + knockback*0.4, Math.PI, 0],
-        scale: 0.4
-      }))
-      gfx.setTexture(assets.textures.rifle)
-      gfx.drawMesh(assets.meshes.rifle)
     } else {
       gfx.set('modelMatrix', mat.getTransformation({
         translation: [bobX - 2, -4 + knockback * 0.2, bobY - 2.3 - (knockback * 0.5)],
         rotation: [Math.PI*1.5 + knockback, Math.PI, 0],
         scale: 0.4
       }))
-      gfx.setTexture(assets.textures.pistol)
+      gfx.setTexture(assets.textures.uv_pistol)
       gfx.drawMesh(assets.meshes.pistol)
+
+      // Draw akimbo pistol
+      if (globals.akimbo) {
+        let knockback2 = this.timer('fire2') ? 1 - this.timer('fire2') : 0
+        knockback2 *= Math.PI / 4
+
+        gfx.set('modelMatrix', mat.getTransformation({
+          translation: [2 - bobX, -4 + knockback2 * 0.2, bobY - 2.3 - (knockback2 * 0.5)],
+          rotation: [Math.PI*1.5 + knockback2, Math.PI, 0],
+          scale: 0.4
+        }))
+        gfx.setTexture(assets.textures.uv_pistol)
+        gfx.drawMesh(assets.meshes.pistol)
+      }
     }
   }
 
