@@ -34,6 +34,10 @@ export function scale (vector, scale) {
   ]
 }
 
+export function angleBetween(v1, v2) {
+  return Math.atan2(v1[0] - v2[0], v1[1] - v2[1])
+}
+
 export function normalize (vector) {
   const magnitude = Math.sqrt(vector[0] ** 2 + vector[1] ** 2)
 
