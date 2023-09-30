@@ -14,8 +14,8 @@ import * as vec2 from './core/vector2.js'
 import * as vox from './voxel.js'
 
 export default class Player extends Thing {
-  height = 3.8
-  cameraHeight = 3.5
+  height = 2.8
+  cameraHeight = 2.5
   onGround = false
   wasOnGround = false
   aabb = [-16, -16, 16, 16]
