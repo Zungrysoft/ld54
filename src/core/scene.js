@@ -64,14 +64,12 @@ export default class Scene {
   }
 
   update () {
-    const paused = this.paused
-
     // update all things in the scene
     let i = 0
     while (i < this.things.length) {
       const thing = this.things[i]
 
-      if (!thing.dead && (!paused || this.pauseExcludedThings.includes(thing))) {
+      if (!thing.dead && (!this.paused || this.pauseExcludedThings.includes(thing))) {
         thing.update()
       }
 
@@ -126,7 +124,7 @@ export default class Scene {
   draw () {
     if (game.config.isWebglEnabled) {
       // FIXME this allocates memory every frame!
-      this.camera3D.updateMatrices()
+      //this.camera3D.updateMatrices()
     }
 
     const { ctx } = game

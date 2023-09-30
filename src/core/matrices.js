@@ -66,9 +66,9 @@ export function getTransformation ({ translation = [0, 0, 0], rotation = [0, 0, 
 
 export function getView ({ position = [0, 0, 0], target = [1, 0, 0], up = [0, 0, 1] } = {}) {
   const z = normalize([
-    target[0] - position[0],
-    target[1] - position[1],
-    target[2] - position[2]
+    position[0] - target[0],
+    position[1] - target[1],
+    position[2] - target[2]
   ])
   const x = normalize(crossProduct(up, z))
   const y = crossProduct(z, x)

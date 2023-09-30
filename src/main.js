@@ -72,6 +72,7 @@ await game.loadAssets({
 
   json: {
     starter: 'json/structures/main/starter.json',
+    redplat: 'json/structures/main/redplat.json',
   },
 })
 
