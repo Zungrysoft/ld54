@@ -3,6 +3,7 @@ import * as gfx from './core/webgl.js'
 import Terrain from './terrain.js'
 import Player from './player.js'
 import WaveManager from './wavemanager.js'
+import Skybox from './skybox.js'
 import { flush } from './database.js'
 
 game.config.width = 1024 // 640
@@ -21,6 +22,12 @@ await game.loadAssets({
     noise: 'images/noise1.png',
     uv_shotgun: 'images/uv_shotgun.png',
     uv_pistol: 'images/uv_pistol.png',
+    miramar_bk: 'images/miramar_bk.jpg',
+    miramar_dn: 'images/miramar_dn.jpg',
+    miramar_ft: 'images/miramar_ft.jpg',
+    miramar_lf: 'images/miramar_lf.jpg',
+    miramar_rt: 'images/miramar_rt.jpg',
+    miramar_up: 'images/miramar_up.jpg',
   },
 
   sounds: {
@@ -96,6 +103,7 @@ flush(() => {
   game.setScene(() => {
     game.addThing(new Terrain())
     game.addThing(new WaveManager())
+    game.addThing(new Skybox())
     game.addThing(new Player([20.1, 20, 79]))
   })
 })
