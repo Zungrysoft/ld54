@@ -12,7 +12,7 @@ import { assets } from './core/game.js'
 import * as vec3 from './core/vector3.js'
 import * as vec2 from './core/vector2.js'
 import * as vox from './voxel.js'
-import WaspBullet from './waspbullet.js'
+import Bullet from './bullet.js'
 import WaspGib from './waspgib.js'
 
 export default class Wasp extends Thing {
@@ -102,7 +102,7 @@ export default class Wasp extends Thing {
     // this.health -= Math.floor(Math.random() * 50)
     let bulletPos = [...this.position]
     let bulletVel = vec3.scale(vec3.normalize(vec3.subtract(this.targetPosition, this.position)), 0.3)
-    game.addThing(new WaspBullet(bulletPos, bulletVel))
+    game.addThing(new Bullet(bulletPos, bulletVel, this))
   }
 
   draw () {
