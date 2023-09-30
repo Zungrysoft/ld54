@@ -6,6 +6,7 @@ import WaveManager from './wavemanager.js'
 import Skybox from './skybox.js'
 import { flush } from './database.js'
 import ShotgunPickup from './pickupshotgun.js'
+import PistolPickup from './pickuppistol.js'
 
 game.config.width = 1024 // 640
 game.config.height = 576 // 360
@@ -111,5 +112,6 @@ flush(() => {
     game.addThing(new Skybox())
     game.addThing(new Player([20.1, 20, 79]))
     game.addThing(new ShotgunPickup([60, 20, 41]))
+    game.addThing(new PistolPickup([60, 60, 41]))
   })
 })
