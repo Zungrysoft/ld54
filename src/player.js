@@ -53,6 +53,9 @@ export default class Player extends Thing {
     game.getCamera3D().position = [...this.position]
     game.getCamera3D().lookVector = vec3.anglesToVector(angle, 0.25)
 
+    globals.powerup = "pistol"
+    globals.akimbo = false
+
     this.spawnPosition = [...this.position]
     this.velocity = [0, 0, 0]
     // this.direction = 0
@@ -63,10 +66,6 @@ export default class Player extends Thing {
 
   update () {
     this.time ++
-
-    if (game.keysPressed.KeyM) {
-      game.addThing(new Wasp([...this.position]))
-    }
 
     // Lock the mouse (allow mouse control of camera) if the user clicks
     let leftClicked = false
@@ -225,14 +224,29 @@ export default class Player extends Thing {
     //   // vox.setVoxelShade(terrain.chunks, vec3.add(hitData.voxel, hitData.normal), 'up', 128)
     // }
 
+    if (game.keysPressed.KeyB) {
+      if (globals.powerup == "pistol") {
+        globals.akimbo = !globals.akimbo
+      }
+      globals.powerup = "pistol"
+    }
+    if (game.keysPressed.KeyN) {
+      globals.powerup = "shotgun"
+    }
+
     // shooting
     if (game.mouse.leftButton && !this.timer('shoot')) {
-      let look = vec3.scale(game.getCamera3D().lookVector, -1)
-      const side = vec3.crossProduct([0, 0, 1], look)
-      let pos = vec3.add(this.position, vec3.scale(side, 0.25))
-      let pos2 = vec3.add(this.position, vec3.scale(side, -0.25))
-      pos = vec3.add(pos, [0, 0, 3.25])
-      pos2 = vec3.add(pos2, [0, 0, 3.25])
+
+      function shootBullet(position, damage, velocity=1.0, side=1, spread=0.1) {
+        let look = vec3.scale(game.getCamera3D().lookVector, -1)
+        const sideVec = vec3.crossProduct([0, 0, side], look)
+        let pos = vec3.add(position, vec3.scale(sideVec, 0.25))
+        pos = vec3.add(pos, [0, 0, 3.25])
+
+        let dir = vec3.add(look, [Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5])
+        dir = vec3.scale(vec3.normalize(dir), spread)
+        game.addThing(new Bullet(pos, vec3.scale(vec3.add(dir, look), velocity), this, damage))
+      }
 
       if (globals.powerup === 'shotgun') {
         // Animation and Timing
@@ -241,18 +255,13 @@ export default class Player extends Thing {
           this.after(27, () => {}, 'shotgunFlip')
         }, 'fire')
 
-        look = vec3.scale(look, 0.8)
-
         // Create bullets
         for (let i = 0; i < 6; i++) {
-          const r = 0.015
-          let dir = vec3.add(look, [Math.random(-r, r), Math.random(-r, r), Math.random(-r, r)])
-          dir = vec3.scale(vec3.normalize(dir), 0.1)
-          game.addThing(new Bullet(pos, vec3.scale(vec3.add(dir, look), 2), this, 60))
+          shootBullet(this.position, 60, 2.0, 1, 0.3)
         }
 
         // Guarantee that one bullet will go straight ahead
-        game.addThing(new Bullet(pos, vec3.scale(look, 2), this, 60))
+        shootBullet(this.position, 60, 2.0, 1, 0.0)
 
         // Sound effect
         /*
@@ -263,9 +272,10 @@ export default class Player extends Thing {
         sound.play()
         */
 
-        this.velocity[0] -= look[0] * 0.45
-        this.velocity[1] -= look[1] * 0.45
-        this.velocity[2] -= look[2] * 0.25
+        // const look = vec3.scale(game.getCamera3D().lookVector, -1)
+        // this.velocity[0] -= look[0] * 0.45
+        // this.velocity[1] -= look[1] * 0.45
+        // this.velocity[2] -= look[2] * 0.25
       } else if (globals.powerup === 'machinegun') {
         // Animation and Timing
         this.after(7, () => {}, 'shoot')
@@ -300,11 +310,11 @@ export default class Player extends Thing {
         // Fire animation and bullet
         if (this.akimboSide && globals.akimbo) {
           this.after(12, () => {}, 'fire2')
-          game.addThing(new Bullet(pos2, vec3.scale(look, 2), this, 20))
+          shootBullet(this.position, 20, 2.0, -1, 0.2)
         }
         else {
           this.after(12, () => {}, 'fire')
-          game.addThing(new Bullet(pos, vec3.scale(look, 2), this, 20))
+          shootBullet(this.position, 20, 2.0, 1, 0.2)
         }
 
 
