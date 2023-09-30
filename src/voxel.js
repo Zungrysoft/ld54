@@ -166,6 +166,7 @@ export function deserializeChunk (text) {
     bufferView[i] = value.voxels[i]
   }
   value.voxels = buffer
+  value.modified = true
   return value
 }
 
