@@ -4,8 +4,8 @@ import Terrain from './terrain.js'
 import Player from './player.js'
 import { flush } from './database.js'
 
-game.config.width = 640
-game.config.height = 360
+game.config.width = 1024 // 640
+game.config.height = 576 // 360
 game.config.threads = 8
 //game.config.isWebglEnabled = false
 document.title = 'Untitled Voxel Shooter'
@@ -17,6 +17,7 @@ await game.loadAssets({
     colorMap: 'images/color_map.png',
     crosshair: 'images/crosshair.png',
     wasp: 'images/square.png',
+    noise: 'images/noise1.png'
   },
 
   sounds: {
@@ -69,6 +70,7 @@ await game.loadAssets({
     structureFlat: 'json/structures/util/flat.json',
     structureAir: 'json/structures/util/air.json',
     structureAny: 'json/structures/util/any.json',
+    test: 'json/test1.json'
   },
 })
 
@@ -100,7 +102,7 @@ assets.meshes = Object.fromEntries(
 // console.log(assets)
 flush(() => {
   game.setScene(() => {
-    game.addThing(new Terrain())
+    const terrain = game.addThing(new Terrain())
     game.addThing(new Player([7.1, 7, 7]))
   })
 })
