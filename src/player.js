@@ -22,8 +22,6 @@ export default class Player extends Thing {
   onGround = false
   wasOnGround = false
   aabb = [-16, -16, 16, 16]
-  cameraTarget = [0, 0, 0]
-  cameraLookAhead = 64
   moveDirection = [1, 0, 0]
   forward = [1, 0, 0]
   width = 0.9
@@ -44,6 +42,7 @@ export default class Player extends Thing {
   walkFrameAccel = 0
   emptyChunkSolid = false
   depth = 1000
+  lives = 5
 
   constructor (position = [0, 0, 0], angle = 0) {
     super()
@@ -184,10 +183,6 @@ export default class Player extends Thing {
 
     if (!game.keysDown.Space && this.velocity[2] >= 0) {
       this.velocity[2] /= 1.25
-    }
-    if (this.position[2] < 0) {
-      // assets.sounds.playerSplash.play()
-      // resetScene()
     }
     this.wannaJump = Math.max(this.wannaJump - 1, 0)
     this.coyoteFrames = Math.max(this.coyoteFrames - 1, 0)
@@ -348,7 +343,9 @@ export default class Player extends Thing {
     }
 
     if (this.position[2] < -10) {
-      game.resetScene()
+      //game.resetScene()
+      this.position = [...this.spawnPosition]
+      this.lives -= 1
     }
 
     this.moveAndCollide()

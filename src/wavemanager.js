@@ -5,9 +5,11 @@ import * as mat from './core/matrices.js'
 import * as vec3 from './core/vector3.js'
 import * as vox from './voxel.js'
 import Thing from './core/thing.js'
+import Wasp from './wasp.js'
 
 export default class WaveManager extends Thing {
   wave = 0
+  time = 0
 
   constructor () {
     super()
@@ -15,9 +17,42 @@ export default class WaveManager extends Thing {
     this.nextWave()
   }
 
+  update () {
+    super.update()
+    this.time += 1
+    //if (this.time % 60 === 0 && this.getEnemyCount() === 0) {
+      //this.spawn()
+    //}
+  }
+
+  getEnemyCount () {
+    return game.getThings().filter(thing =>
+      ('health' in thing && thing != game.getThing('player'))
+    ).length
+  }
+
+  spawn () {
+    this.after(u.lerp(6, 10, Math.random()) * 60, () => this.spawn(), 'spawn')
+    if (this.getEnemyCount() > 12) {
+      return
+    }
+    const angle = u.lerp(0, Math.PI * 2, Math.random())
+    const x = Math.cos(angle) * 32 + 64
+    const y = Math.sin(angle) * 32 + 40
+    for (let i = 0; i < 4; i += 1) {
+      const position = [
+        x + u.lerp(-10, 10, Math.random()),
+        y + u.lerp(-10, 10, Math.random()),
+        u.lerp(45, 55, Math.random())
+      ]
+      game.addThing(new Wasp(position))
+    }
+  }
+
   nextWave () {
     this.wave += 1
     this.after(60 * 60, () => this.nextWave(), 'wave')
+    this.spawn()
   }
 
   draw () {
@@ -26,7 +61,7 @@ export default class WaveManager extends Thing {
     // wave counter
     ctx.save()
     ctx.fillStyle = 'black'
-    ctx.font = 'italic bold 48px Arial'
+    ctx.font = 'italic bold 48px Tahoma'
     ctx.textAlign = 'center'
     ctx.translate(game.config.width / 2, 38)
     ctx.scale(1, 0.65)
@@ -55,10 +90,19 @@ export default class WaveManager extends Thing {
     if (player) {
       ctx.save()
       ctx.fillStyle = 'black'
-      ctx.font = 'italic bold 48px Arial'
-      ctx.translate(64, game.config.height - 64)
+      ctx.font = 'italic bold 40px Tahoma'
+      ctx.textAlign = 'center'
+      ctx.translate(100, game.config.height - 48)
       ctx.scale(1, 0.65)
-      ctx.fillText(`LIVES 5`, 0, 0)
+      ctx.fillText(`LIVES`, 0, 0)
+      ctx.restore()
+
+      ctx.save()
+      ctx.fillStyle = 'black'
+      ctx.font = 'italic bold 72px Tahoma'
+      ctx.textAlign = 'center'
+      ctx.translate(100, game.config.height - 80)
+      ctx.fillText(String(player.lives), 0, 0)
       ctx.restore()
     }
   }

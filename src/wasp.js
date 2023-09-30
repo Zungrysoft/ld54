@@ -22,9 +22,6 @@ export default class Wasp extends Thing {
 
   constructor (position = [0, 0, 0], angle = 0) {
     super()
-
-    console.log("WASP")
-
     this.health = 100
     this.growScale = 0.0
     this.position = position
