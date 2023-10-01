@@ -326,3 +326,12 @@ export function checkAabbIntersection (aabb1, aabb2, x1 = 0, y1 = 0, x2 = 0, y2 
     aabb1[3] + y1 >= aabb2[1] + y2
   )
 }
+
+export function pointInsideAabb (xPoint, yPoint, aabb, xOffset, yOffset) {
+  return (
+    xPoint <= aabb[2] + xOffset &&
+    xPoint >= aabb[0] + xOffset &&
+    yPoint <= aabb[3] + yOffset &&
+    yPoint >= aabb[1] + yOffset
+  )
+}
