@@ -153,6 +153,7 @@ export default class Player extends Thing {
       this.cancelTimer('disableAirControl')
 
       // land
+      /*
       if (!this.wasOnGround && this.lastFallSpeed < -5) {
         const sound = assets.sounds.playerLand
         sound.volume = 0.1
@@ -160,6 +161,7 @@ export default class Player extends Thing {
         sound.currentTime = 0
         sound.play()
       }
+      */
     } else {
       this.lastFallSpeed = this.velocity[2]
     }
@@ -282,11 +284,13 @@ export default class Player extends Thing {
         game.addThing(new MachineGunBullet(pos, dir, 22, this))
 
         // Sound effect
+        /*
         const sound = assets.sounds.machinegun
         sound.playbackRate = u.random(1, 1.3)
         sound.currentTime = 0
         sound.volume = 0.6
         sound.play()
+        */
 
         this.velocity[0] -= look[0] * 0.9
         this.velocity[1] -= look[1] * 0.9

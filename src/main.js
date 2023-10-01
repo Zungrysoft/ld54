@@ -40,14 +40,6 @@ await game.loadAssets({
   },
 
   sounds: {
-    collect: 'sounds/collect.wav',
-    laser: 'sounds/laser2.wav',
-    laserHit: 'sounds/laser.wav',
-    shift: 'sounds/shift2.wav',
-    thump: 'sounds/thump.wav',
-    wind: 'sounds/wind.wav',
-    fail: 'sounds/fail.wav',
-    whoosh: 'sounds/whoosh.wav',
   },
 
   shaderSources: {
