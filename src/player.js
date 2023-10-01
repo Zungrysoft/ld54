@@ -13,6 +13,7 @@ import * as vec3 from './core/vector3.js'
 import * as vec2 from './core/vector2.js'
 import * as vox from './voxel.js'
 import Bullet from './bullet.js'
+import DeathAnim from './deathanim.js'
 
 export default class Player extends Thing {
   height = 3.8
@@ -358,6 +359,7 @@ export default class Player extends Thing {
       this.lives -= 1
       this.velocity = [0, 0, 0]
       this.jetpack = this.jetpackMaximum
+      game.addThing(new DeathAnim)
     }
 
     this.moveAndCollide()
@@ -636,7 +638,7 @@ export default class Player extends Thing {
   }
 
   draw () {
-    if (game.getThing('buildmanager')) {
+    if (game.getThing('buildmanager') || game.getThing('deathanim')) {
       return
     }
 
@@ -753,7 +755,7 @@ export default class Player extends Thing {
     //   return
     // }
 
-    if (game.getThing('buildmanager')) {
+    if (game.getThing('buildmanager') || game.getThing('deathanim')) {
       return
     }
 

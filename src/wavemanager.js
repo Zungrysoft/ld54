@@ -84,6 +84,10 @@ export default class WaveManager extends Thing {
   draw () {
     const { ctx, assets } = game
 
+    if (game.getThing('deathanim')) {
+      return
+    }
+
     // wave counter
     if (this.wave > 0) {
       ctx.save()
