@@ -73,14 +73,21 @@ export default class Player extends Thing {
     this.time ++
 
     // Lock the mouse (allow mouse control of camera) if the user clicks
+    // If the user regains pointerlock with left click, it should not cause left-click actions
     let leftClicked = false
+    let leftClicking = false
     if (mouse.leftClick) {
       if (!mouse.isLocked()) {
         mouse.lock()
+        this.disableLeftClick = true
       }
       else {
         leftClicked = true
+        this.disableLeftClick = false
       }
+    }
+    if (mouse.leftButton && !this.disableLeftClick) {
+      leftClicking = true
     }
 
     // Walking
@@ -215,7 +222,7 @@ export default class Player extends Thing {
     this.disableAirControl = Math.max(this.disableAirControl - 1, 0)
 
     // shooting
-    if (game.mouse.leftButton && !this.timer('shoot')) {
+    if (leftClicking && !this.timer('shoot')) {
 
       const shootBullet = (damage, velocity=1.0, side=1, spread=0.1) => {
         let look = game.getCamera3D().lookVector

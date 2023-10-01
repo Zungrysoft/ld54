@@ -11,6 +11,8 @@ import ShotgunPickup from './pickupshotgun.js'
 import BatteryPickup from './pickupbattery.js'
 import HeartPickup from './pickupheart.js'
 import PistolPickup from './pickuppistol.js'
+import Pickup from './pickup.js'
+import Player from './player.js'
 
 const cartesian = (...a) => a.reduce((a, b) => a.flatMap(d => b.map(e => [d, e].flat())))
 
@@ -305,9 +307,14 @@ class BuildManager extends Thing {
 
   update () {
     super.update()
-    //game.getCamera3D().lookVector = vec3.normalize([0.1, 0, -0.1])
-    //game.getCamera3D().updateMatrices()
     this.time += 1
+
+    // Manually tick up timer for players and items so they can animate while game is paused
+    const manualTickThings = game.getThings().filter(x => x instanceof Pickup || x instanceof Player)
+    for (const manualTickThing of manualTickThings) {
+      manualTickThing.time ++
+    }
+
     const angle = this.time / (60 * 6)
     const radius = 64
     game.getCamera3D().viewMatrix = mat.getView({
@@ -355,6 +362,8 @@ class BuildManager extends Thing {
         }
       }
     }
+
+    player.disableLeftClick = true
   }
 
   pickStructures() {

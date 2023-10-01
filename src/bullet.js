@@ -31,9 +31,19 @@ export default class Bullet extends Thing {
     let chunks = game.getThing('terrain').chunks
 
     this.time += 1
+
+    let prevPosition = [...this.position]
     this.position[0] += this.velocity[0]
     this.position[1] += this.velocity[1]
     this.position[2] += this.velocity[2]
+
+    // Check for wall
+    const traceResult = vox.traceLine(chunks, prevPosition, this.position)
+    if (traceResult.hit) {
+      this.position = traceResult.position
+      game.addThing(new Explosion(this.position, this.explosionRadius))
+      this.dead = true
+    }
 
     const player = game.getThing('player')
 
@@ -64,14 +74,6 @@ export default class Bullet extends Thing {
     }
 
     if (this.time > 600) {
-      this.dead = true
-    }
-
-    // Check for wall
-    let vPos = this.position.map(x => Math.round(x))
-    if (vox.getVoxelSolid(chunks, vPos)) {
-      //this.break(chunks, vPos)
-      game.addThing(new Explosion(vPos, this.explosionRadius))
       this.dead = true
     }
   }
