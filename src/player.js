@@ -663,6 +663,15 @@ export default class Player extends Thing {
     gfx.setTexture(assets.textures.uv_heart)
     gfx.drawMesh(assets.meshes.heart)
 
+    // Honeycomb
+    gfx.set('modelMatrix', mat.getTransformation({
+      translation: [5.4, -6.0, -1.8],
+      rotation: [0, 0, Math.PI*1 + Math.sin(this.time/50)*0.3],
+      scale: 0.13
+    }))
+    gfx.setTexture(assets.textures.uv_honeycomb)
+    gfx.drawMesh(assets.meshes.honeycomb)
+
     // Bobbing
     const t = this.walkFrames
     const bobX = Math.sin(t) * 2 * 0.15
@@ -691,7 +700,7 @@ export default class Player extends Thing {
 
       // Ammo
       gfx.set('modelMatrix', mat.getTransformation({
-        translation: [5.4, -6.0, -1.9],
+        translation: [5.4, -6.0, -1.1],
         rotation: [Math.PI * 0.4, Math.sin(this.time/50)*0.3, Math.PI/2],
         scale: 0.23
       }))
@@ -822,6 +831,29 @@ export default class Player extends Thing {
     }
     ctx.restore()
 
+    // honeycomb counter
+    ctx.save()
+    {
+      ctx.save()
+      ctx.fillStyle = 'black'
+      ctx.font = 'italic bold 56px Tahoma'
+      ctx.textAlign = 'center'
+      ctx.translate(110, game.config.height - 90)
+      ctx.fillText(String(this.coins), 0, 0)
+      ctx.restore()
+    }
+    ctx.translate(4, -4)
+    {
+      ctx.save()
+      ctx.fillStyle = 'white'
+      ctx.font = 'italic bold 56px Tahoma'
+      ctx.textAlign = 'center'
+      ctx.translate(110, game.config.height - 90)
+      ctx.fillText(String(this.coins), 0, 0)
+      ctx.restore()
+    }
+    ctx.restore()
+
     // ammo
     if (this.weapon !== "pistol") {
       ctx.save()
@@ -830,7 +862,7 @@ export default class Player extends Thing {
         ctx.fillStyle = 'black'
         ctx.font = 'italic bold 56px Tahoma'
         ctx.textAlign = 'center'
-        ctx.translate(110, game.config.height - 90)
+        ctx.translate(110, game.config.height - 165)
         ctx.fillText(String(this.ammo), 0, 0)
         ctx.restore()
       }
@@ -840,7 +872,7 @@ export default class Player extends Thing {
         ctx.fillStyle = 'white'
         ctx.font = 'italic bold 56px Tahoma'
         ctx.textAlign = 'center'
-        ctx.translate(110, game.config.height - 90)
+        ctx.translate(110, game.config.height - 165)
         ctx.fillText(String(this.ammo), 0, 0)
         ctx.restore()
       }

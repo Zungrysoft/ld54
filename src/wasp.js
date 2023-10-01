@@ -191,7 +191,7 @@ export default class Wasp extends Thing {
     if (this.spawnCoin) {
       if (game.globals.killsUntilDrop <= 1) {
         game.addThing(new HoneycombPickup([...this.position]))
-        game.globals.killsUntilDrop = Math.floor((Math.random() * 2) + 4)
+        game.globals.killsUntilDrop = Math.floor((Math.random() * 3) + 5)
       }
       else {
         game.globals.killsUntilDrop --
