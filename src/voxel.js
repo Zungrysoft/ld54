@@ -905,7 +905,7 @@ export function transformStructure(structure, transformations) {
 
   // Things
   if (structure.things) {
-    ret.things = [...structure.things]
+    ret.things = JSON.parse(JSON.stringify(structure.things))
     for (const thing of ret.things) {
       thing.position = transformPosition(thing.position, transformations)
     }

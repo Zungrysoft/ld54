@@ -16,9 +16,10 @@ export default class Pickup extends Thing {
   pickupSound = ""
   velocity = [0, 0, 0]
 
-  constructor (position) {
+  constructor (position, tentative=false) {
     super()
     this.position = position
+    this.tentative = tentative
   }
 
   update () {

@@ -150,13 +150,6 @@ export default class Terrain extends Thing {
       this.selectChunks(game.getThing('player').position)
     }
 
-    if (game.keysPressed.KeyY) {
-      this.saveChunks()
-    }
-    if (game.keysPressed.KeyU) {
-      this.loadSavedChunks()
-    }
-
     // Debug button
     if (game.keysPressed.KeyJ) {
       game.globals.debugPressed = true

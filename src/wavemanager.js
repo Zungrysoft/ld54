@@ -7,6 +7,10 @@ import * as vox from './voxel.js'
 import Thing from './core/thing.js'
 import Wasp from './wasp.js'
 import BigWasp from './bigwasp.js'
+import ShotgunPickup from './pickupshotgun.js'
+import BatteryPickup from './pickupbattery.js'
+import HeartPickup from './pickupheart.js'
+import PistolPickup from './pickuppistol.js'
 
 const cartesian = (...a) => a.reduce((a, b) => a.flatMap(d => b.map(e => [d, e].flat())))
 
@@ -184,6 +188,12 @@ export function loadAndModifyStructure(structure) {
       mode: 'translate',
       offset: [xShift, yShift, 0],
     })
+    transformations.push({
+      mode: 'rotate',
+      axis: 'z',
+      amount: Math.floor(Math.random()*4),
+      origin: [59.5, 39.5, 39.5],
+    })
   }
 
   // Perform the transformations
@@ -191,16 +201,28 @@ export function loadAndModifyStructure(structure) {
   return structure
 }
 
-export function shopPick(maxCost=512) {
+export function shopPick(maxCost=512, requireItem=false) {
   // maxCost has to be at least 1
   maxCost = Math.max(maxCost, 1)
 
+  // Get shop data
+  let list = game.assets.json.shop
+
   // Filter list by cost
-  let list = game.assets.json.shop.filter(x => x.cost <= maxCost)
+  list = list.filter(x => x.cost <= maxCost)
+
+  // Filter by item
+  if (requireItem) {
+    list = list.filter(x => x.things)
+  }
+
+  // Filter by wave
+  let curWave = game.getThing('wavemanager').wave
+  list = list.filter(x => !(x.minWave) || curWave >= x.minWave)
 
   // If list is empty, return an empty structure
   if (list.length === 0) {
-    return loadAndModifyStructure(list[0])
+    return loadAndModifyStructure(game.assets.json.shop[0])
   }
 
   // Determine the total weight
@@ -224,7 +246,38 @@ export function shopPick(maxCost=512) {
   return loadAndModifyStructure(list[0])
 }
 
+export function previewPickups(things) {
+  for (const thing of things) {
+    if (thing.name === "shotgun") {
+      game.addThing(new ShotgunPickup([...thing.position], true))
+    }
+    if (thing.name === "pistol") {
+      game.addThing(new PistolPickup([...thing.position], true))
+    }
+    else if (thing.name === "heart") {
+      game.addThing(new HeartPickup([...thing.position], true))
+    }
+    else if (thing.name === "battery") {
+      game.addThing(new BatteryPickup([...thing.position], true))
+    }
+  }
+}
 
+export function deleteTentativePickups() {
+  for (const thing of game.getThings()) {
+    if (thing.tentative) {
+      thing.dead = true
+    }
+  }
+}
+
+export function applyTentativePickups() {
+  for (const thing of game.getThings()) {
+    if (thing.tentative) {
+      thing.tentative = false
+    }
+  }
+}
 
 class BuildManager extends Thing {
   time = 0
@@ -263,14 +316,17 @@ class BuildManager extends Thing {
           player.coins -= this.builds[i].cost
           this.builds[i] = shopPick()
           terrain.saveChunks()
+          applyTentativePickups()
           this.previewing[i] = false
         }
         if (!this.previewing[i] && player.coins >= this.builds[i].cost) {
           vox.mergeStructureIntoWorld(terrain.chunks, this.builds[i], [0, 0, 0])
+          previewPickups(this.builds[i].things)
           this.previewing[i] = true
         }
       } else if (this.previewing[i] && !this.dead) {
         terrain.loadSavedChunks()
+        deleteTentativePickups()
         this.previewing[i] = false
       }
     }
@@ -298,8 +354,8 @@ class BuildManager extends Thing {
     this.builds = [
       shopPick(Math.min(player.coins, 5)),
       shopPick(player.coins),
-      shopPick(player.coins),
       shopPick(),
+      shopPick(10000, true),
     ]
   }
 

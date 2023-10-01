@@ -81,10 +81,14 @@ await game.loadAssets({
 
   json: {
     shop: 'json/shop.json',
+    arena1: 'json/structures/main/arena1.json',
     base: 'json/structures/main/base.json',
     beam: 'json/structures/main/beam.json',
     beams: 'json/structures/main/beams.json',
     blueroom: 'json/structures/main/blueroom.json',
+    itembattery: 'json/structures/main/itembattery.json',
+    itemheart: 'json/structures/main/itemheart.json',
+    itemshotgun: 'json/structures/main/itemshotgun.json',
     monolith: 'json/structures/main/monolith.json',
     planter1: 'json/structures/main/planter1.json',
     planter2: 'json/structures/main/planter2.json',
@@ -136,9 +140,5 @@ flush(() => {
     game.addThing(new WaveManager())
     game.addThing(new Skybox())
     game.addThing(new Player([20.1, 20, 79]))
-    game.addThing(new ShotgunPickup([60, 20, 41]))
-    game.addThing(new PistolPickup([60, 60, 41]))
-    game.addThing(new BatteryPickup([100, 60, 41]))
-    game.addThing(new HeartPickup([100, 20, 41]))
   })
 })

@@ -1,0 +1,636 @@
+{
+    "voxels": {
+        "59,40,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "61,37,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "60,37,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,37,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "58,37,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "57,37,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "58,40,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,40,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "58,40,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "61,41,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "60,41,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "59,41,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "58,41,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,40,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "61,38,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "60,38,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,38,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "58,38,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "57,38,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "60,40,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "61,41,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "60,41,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,41,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "58,41,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,39,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "60,39,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "61,39,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "58,39,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "61,39,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,39,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "61,37,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "60,37,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,37,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "58,37,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "57,37,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,39,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "61,38,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "61,38,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "60,38,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,38,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "58,38,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "57,38,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "57,39,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "60,38,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "61,39,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "60,39,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,39,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "58,39,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "57,39,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,39,36": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,39,37": {
+            "material": "metal",
+            "solid": true
+        },
+        "58,40,38": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,40,38": {
+            "material": "metal",
+            "solid": true
+        },
+        "60,40,38": {
+            "material": "metal",
+            "solid": true
+        },
+        "58,39,38": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,39,38": {
+            "material": "metal",
+            "solid": true
+        },
+        "60,39,38": {
+            "material": "metal",
+            "solid": true
+        },
+        "58,38,38": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,38,38": {
+            "material": "metal",
+            "solid": true
+        },
+        "60,38,38": {
+            "material": "metal",
+            "solid": true
+        },
+        "58,40,39": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,40,39": {
+            "material": "metal",
+            "solid": true
+        },
+        "60,40,39": {
+            "material": "metal",
+            "solid": true
+        },
+        "58,39,39": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,39,39": {
+            "material": "metal",
+            "solid": true
+        },
+        "60,39,39": {
+            "material": "metal",
+            "solid": true
+        },
+        "58,38,39": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,38,39": {
+            "material": "metal",
+            "solid": true
+        },
+        "60,38,39": {
+            "material": "metal",
+            "solid": true
+        },
+        "57,41,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "61,37,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "60,37,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "59,37,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "58,37,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,37,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,41,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "60,40,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,41,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "58,41,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,41,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "60,41,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "61,41,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "61,40,41": {
+            "material": "metal",
+            "solid": true
+        },
+        "61,40,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,40,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "58,40,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,40,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "60,40,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "61,40,40": {
+            "material": "metal",
+            "solid": true
+        },
+        "57,38,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "58,38,42": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,41,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "58,41,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "59,41,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "60,41,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "61,41,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,40,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "58,40,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "60,40,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "61,40,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,39,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "59,39,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "61,39,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,38,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "58,38,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "60,38,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "61,38,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,37,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "58,37,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "59,37,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "60,37,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "61,37,43": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,41,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "58,41,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "59,41,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "60,41,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "61,41,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,40,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "58,40,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "60,40,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "61,40,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,39,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "59,39,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "61,39,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,38,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "58,38,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "60,38,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "61,38,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,37,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "58,37,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "59,37,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "60,37,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "61,37,44": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,41,45": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "58,41,45": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "59,41,45": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "60,41,45": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "61,41,45": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,40,45": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "58,40,45": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,40,45": {
+            "material": "metal",
+            "solid": true
+        },
+        "60,40,45": {
+            "material": "metal",
+            "solid": true
+        },
+        "61,40,45": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,39,45": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "58,39,45": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,39,45": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "60,39,45": {
+            "material": "metal",
+            "solid": true
+        },
+        "61,39,45": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,38,45": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "58,38,45": {
+            "material": "metal",
+            "solid": true
+        },
+        "59,38,45": {
+            "material": "metal",
+            "solid": true
+        },
+        "60,38,45": {
+            "material": "metal",
+            "solid": true
+        },
+        "61,38,45": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "57,37,45": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "58,37,45": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "59,37,45": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "60,37,45": {
+            "material": "metalAccent",
+            "solid": true
+        },
+        "61,37,45": {
+            "material": "metalAccent",
+            "solid": true
+        }
+    }
+}

@@ -6,8 +6,8 @@ export default class HoneycombPickup extends Pickup {
   scale = 0.35
   pickupSound = ""
 
-  constructor (position) {
-    super(position)
+  constructor (position, tentative=false) {
+    super(position, tentative)
 
     this.velocity = [
       (Math.random()-0.5) * 0.2,

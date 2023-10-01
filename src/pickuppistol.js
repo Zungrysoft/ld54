@@ -6,10 +6,6 @@ export default class PistolPickup extends Pickup {
   scale = 0.2
   pickupSound = ""
 
-  constructor (position) {
-    super(position)
-  }
-
   onPickup (other) {
     other.akimbo = true
   }

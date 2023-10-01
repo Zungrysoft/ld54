@@ -97,6 +97,7 @@ export default class Wasp extends Thing {
     const searchDistance = 32
     const searchHeightHigh = 4
     const searchHeightLow = -32
+    const verticalChance = 0.05
     let x = 0
     let y = 0
 
@@ -119,14 +120,16 @@ export default class Wasp extends Thing {
       }
 
       for (let s = 0; s < steps; s ++) {
-        for (let z = searchHeightLow; z <= searchHeightHigh; z ++) {
-          const checkPos = vec3.add(thisPos, [x, y, z])
+        if (t < 4 * 6 || verticalChance > Math.random()) {
+          for (let z = searchHeightLow; z <= searchHeightHigh; z ++) {
+            const checkPos = vec3.add(thisPos, [x, y, z])
 
-          if (vox.getVoxelSolid(chunks, checkPos)) {
-            const airScore = getAirScore(chunks, checkPos)
-            if (airScore > bestScore) {
-              bestScore = airScore
-              bestPos = checkPos
+            if (vox.getVoxelSolid(chunks, checkPos)) {
+              const airScore = getAirScore(chunks, checkPos)
+              if (airScore > bestScore) {
+                bestScore = airScore
+                bestPos = checkPos
+              }
             }
           }
         }
