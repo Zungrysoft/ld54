@@ -16,6 +16,9 @@ import Player from './player.js'
 
 const cartesian = (...a) => a.reduce((a, b) => a.flatMap(d => b.map(e => [d, e].flat())))
 
+const shopButtonSize = [-200, -30, 200, 60]
+const shopButtonSize2 = [-200, -30, 400, 90]
+
 export default class WaveManager extends Thing {
   wave = 0
   time = 0
@@ -200,6 +203,20 @@ export function loadAndModifyStructure(structure) {
 
   // Perform the transformations
   structure = vox.transformStructure(structure, transformations)
+
+  // Add item text
+  if (structure.things && structure.things.length) {
+    structure.itemText = ""
+    for (const thing of structure.things) {
+      const name = thing.name
+      structure.itemText += name + ", "
+    }
+    structure.itemText = structure.itemText.substring(0, structure.itemText.length - 2);
+  }
+  else {
+    structure.itemText = "-"
+  }
+
   return structure
 }
 
@@ -301,7 +318,7 @@ class BuildManager extends Thing {
     game.getThing('terrain').saveChunks()
     const w = game.config.width
     const h = game.config.height
-    this.positionList = cartesian([w * 0.3, w * 0.7], [h * 0.3, h * 0.55])
+    this.positionList = cartesian([w * 0.27, w * 0.73], [h * 0.3, h * 0.55])
     game.mouse.unlock()
   }
 
@@ -325,7 +342,7 @@ class BuildManager extends Thing {
     const terrain = game.getThing('terrain')
     const player = game.getThing('player')
     for (let i = 0; i <= 3; i += 1) {
-      if (u.pointInsideAabb(...game.mouse.position, [-150, -30, 150, 30], ...this.positionList[i])) {
+      if (u.pointInsideAabb(...game.mouse.position, shopButtonSize, ...this.positionList[i])) {
         if (game.mouse.leftClick && player.coins >= this.builds[i].cost) {
           //this.dead = true
           player.coins -= this.builds[i].cost
@@ -347,13 +364,13 @@ class BuildManager extends Thing {
     }
 
     const { width: w, height: h } = game.config
-    if (u.pointInsideAabb(...game.mouse.position, [-100, -30, 100, 30], game.config.width * 0.75, game.config.height * 0.75)) {
+    if (u.pointInsideAabb(...game.mouse.position, [-100, -30, 100, 30], game.config.width * 0.75, game.config.height * 0.8)) {
       if (game.mouse.leftClick) {
         this.dead = true
       }
     }
 
-    if (u.pointInsideAabb(...game.mouse.position, [-100, -30, 100, 30], game.config.width * 0.5, game.config.height * 0.75)) {
+    if (u.pointInsideAabb(...game.mouse.position, [-100, -30, 100, 30], game.config.width * 0.5, game.config.height * 0.8)) {
       const rerollCost = 1
       if (player.coins >= rerollCost) {
         if (game.mouse.leftClick) {
@@ -400,33 +417,48 @@ class BuildManager extends Thing {
     const player = game.getThing('player')
     let i = 0
     for (let pos of this.positionList) {
+      // Border
       ctx.save()
       ctx.lineWidth = 3
       ctx.textAlign = 'left'
       ctx.strokeStyle = 'black'
       ctx.translate(pos[0], pos[1])
       ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'
-      ctx.fillRect(-150, -30, 300, 60)
+      ctx.fillRect(...shopButtonSize2)
       ctx.beginPath()
-      ctx.rect(-150, -30, 300, 60)
+      ctx.rect(...shopButtonSize2)
       ctx.stroke()
 
+      // Title
       ctx.font = 'italic bold 32px Tahoma'
       ctx.save()
-      ctx.translate(-140, 12)
+      ctx.translate(-190, 12)
       ctx.fillStyle = 'black'
       ctx.fillText(this.builds[i].title, 0, 0)
       ctx.fillStyle = player.coins >= this.builds[i].cost ? 'white' : 'gray'
       ctx.fillText(this.builds[i].title, 4, -4)
       ctx.restore()
 
-      ctx.font = 'italic bold 40px Tahoma'
+      // Cost
+      ctx.font = 'italic bold 50px Tahoma'
       ctx.save()
-      ctx.translate(80, 12)
+      ctx.translate(180, 32)
+      ctx.textAlign = 'right'
       ctx.fillStyle = player.coins >= this.builds[i].cost ? 'green' : 'black'
       ctx.fillText('$' + this.builds[i].cost, 0, 0)
       ctx.fillStyle = player.coins >= this.builds[i].cost ? 'white' : 'gray'
       ctx.fillText('$' + this.builds[i].cost, 4, -4)
+      ctx.restore()
+
+      // Items
+      ctx.font = 'italic bold 16px Tahoma'
+      ctx.save()
+      ctx.translate(-190, 50)
+      ctx.textAlign = 'left'
+      ctx.fillStyle = 'black'
+      ctx.fillText(this.builds[i].itemText, 0, 0)
+      ctx.fillStyle = player.coins >= this.builds[i].cost ? 'white' : 'gray'
+      ctx.fillText(this.builds[i].itemText, 3, -3)
       ctx.restore()
 
       ctx.restore()
@@ -437,7 +469,7 @@ class BuildManager extends Thing {
 
     {
       // done button
-      const pos = [w * 3 / 4, h * 3 / 4]
+      const pos = [w * 3 / 4, h * 0.8]
 
       ctx.save()
       ctx.lineWidth = 3
@@ -465,7 +497,7 @@ class BuildManager extends Thing {
 
     {
       // reroll button
-      const pos = [w * 1 / 2, h * 3 / 4]
+      const pos = [w * 1 / 2, h * 0.8]
 
       ctx.save()
       ctx.lineWidth = 3

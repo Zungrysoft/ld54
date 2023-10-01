@@ -221,7 +221,7 @@
     "structure": "pathway4",
     "title": "Wood Bridge",
     "weight": 50,
-    "cost": 1,
+    "cost": 2,
     "shiftRadius": 0,
     "things": [
       {
