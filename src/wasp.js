@@ -94,13 +94,13 @@ export default class Wasp extends Thing {
     }
 
     const thisPos = this.position.map(x => Math.round(x))
-    const searchDistance = 64
+    const searchDistance = 32
     const searchHeightHigh = 4
-    const searchHeightLow = -16
+    const searchHeightLow = -32
     let x = 0
     let y = 0
 
-    let bestScore = Number.MIN_VALUE
+    let bestScore = Number.NEGATIVE_INFINITY
     let bestPos = undefined
 
     const turns = (searchDistance * 4) + 1
@@ -119,7 +119,6 @@ export default class Wasp extends Thing {
       }
 
       for (let s = 0; s < steps; s ++) {
-        // If this horizontal position is within the load cylinder...
         for (let z = searchHeightLow; z <= searchHeightHigh; z ++) {
           const checkPos = vec3.add(thisPos, [x, y, z])
 

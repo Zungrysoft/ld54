@@ -63,7 +63,7 @@ export default class Bullet extends Thing {
       }
     }
 
-    if (this.time > 120) {
+    if (this.time > 600) {
       this.dead = true
     }
 

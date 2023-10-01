@@ -28,5 +28,17 @@
     "title": "Central Temple",
     "weight": 20,
     "cost": 20
+  },
+  {
+    "structure": "tunnel",
+    "title": "Tunnel",
+    "weight": 100,
+    "cost": 4
+  },
+  {
+    "structure": "monolith",
+    "title": "Monolith",
+    "weight": 60,
+    "cost": 3
   }
 ]

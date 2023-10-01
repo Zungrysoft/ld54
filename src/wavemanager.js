@@ -208,12 +208,10 @@ class BuildManager extends Thing {
         if (!this.previewing[i]) {
           vox.mergeStructureIntoWorld(terrain.chunks, game.assets.json[this.builds[i].structure], [0, 0, 0])
           this.previewing[i] = true
-          console.log("Merge")
         }
       } else if (this.previewing[i] && !this.dead) {
         terrain.loadSavedChunks()
         this.previewing[i] = false
-        console.log("LOAD")
       }
     }
   }
