@@ -142,9 +142,9 @@ function choose (things) {
 }
 
 const builds = [
-  ['Red Bridge', 10, 'redplat'],
-  ['Beams', 5, 'beams'],
-  ['Blue Room', 15, 'blueroom']
+  ['Red Bridge', 3, 'redplat'],
+  ['Beams', 6, 'beams'],
+  ['Blue Room', 5, 'blueroom']
 ]
 
 class BuildManager extends Thing {
@@ -153,7 +153,7 @@ class BuildManager extends Thing {
 
   constructor () {
     super()
-    this.builds = Array(4).fill(undefined).map(() => choose(builds))
+    this.builds = Array(4).fill(undefined).map(this.chooseBuild)
     game.setThingName(this, 'buildmanager')
     game.pause(this, game.getThing('skybox'))
     game.getThing('terrain').saveChunks()
@@ -161,6 +161,10 @@ class BuildManager extends Thing {
     const h = game.config.height
     this.positionList = cartesian([w * 0.3, w * 0.7], [h * 0.3, h * 0.55])
     game.mouse.unlock()
+  }
+
+  chooseBuild () {
+    return choose(builds)
   }
 
   update () {
@@ -176,12 +180,16 @@ class BuildManager extends Thing {
     })
 
     const terrain = game.getThing('terrain')
+    const player = game.getThing('player')
     for (let i = 0; i <= 3; i += 1) {
       if (u.pointInsideAabb(...game.mouse.position, [-150, -45, 150, 45], ...this.positionList[i])) {
-        if (game.mouse.leftButton) {
-          this.dead = true
+        if (game.mouse.leftButton && player.coins >= this.builds[i][1]) {
+          //this.dead = true
+          player.coins -= this.builds[i][1]
+          this.builds[i] = this.chooseBuild()
+          terrain.saveChunks()
         }
-        if (!this.previewing[i]) {
+        if (!this.previewing[i] && player.coins >= this.builds[i][1]) {
           vox.mergeStructureIntoWorld(terrain.chunks, game.assets.json[this.builds[i][2]], [0, 0, 0])
           this.previewing[i] = true
           console.log("Merge")
@@ -190,6 +198,13 @@ class BuildManager extends Thing {
         terrain.loadSavedChunks()
         this.previewing[i] = false
         console.log("LOAD")
+      }
+    }
+
+    const { width: w, height: h } = game.config
+    if (u.pointInsideAabb(...game.mouse.position, [-100, -30, 100, 30], game.config.width * 0.75, game.config.height * 0.75)) {
+      if (game.mouse.leftClick) {
+        this.dead = true
       }
     }
   }
@@ -215,6 +230,7 @@ class BuildManager extends Thing {
     ctx.restore()
     */
 
+    const player = game.getThing('player')
     let i = 0
     for (let pos of this.positionList) {
       ctx.save()
@@ -233,7 +249,7 @@ class BuildManager extends Thing {
       ctx.translate(-140, 12)
       ctx.fillStyle = 'black'
       ctx.fillText(this.builds[i][0], 0, 0)
-      ctx.fillStyle = 'white'
+      ctx.fillStyle = player.coins >= this.builds[i][1] ? 'white' : 'gray'
       ctx.fillText(this.builds[i][0], 4, -4)
       ctx.restore()
 
@@ -249,6 +265,57 @@ class BuildManager extends Thing {
       ctx.restore()
       i += 1
     }
+
+    const { width: w, height: h } = game.config
+    const pos = [w * 3 / 4, h * 3 / 4]
+
+    // done button
+    ctx.save()
+    ctx.lineWidth = 3
+    ctx.textAlign = 'left'
+    ctx.strokeStyle = 'black'
+    ctx.translate(pos[0], pos[1])
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'
+    ctx.fillRect(-100, -30, 200, 60)
+    ctx.beginPath()
+    ctx.rect(-100, -30, 200, 60)
+    ctx.stroke()
+    ctx.restore()
+
+    ctx.font = 'italic bold 32px Tahoma'
+    ctx.save()
+    ctx.translate(pos[0], pos[1])
+    ctx.translate(0, 12)
+    ctx.textAlign = 'center'
+    ctx.fillStyle = 'black'
+    ctx.fillText('Done', 0, 0)
+    ctx.fillStyle = 'white'
+    ctx.fillText('Done', 4, -4)
+    ctx.restore()
+
+    // honeycomb counter
+    ctx.save()
+    {
+      ctx.save()
+      ctx.fillStyle = 'black'
+      ctx.font = 'italic bold 56px Tahoma'
+      ctx.textAlign = 'left'
+      ctx.translate(100, game.config.height - 90)
+      ctx.fillText(String(player.coins), 0, 0)
+      ctx.restore()
+    }
+    ctx.translate(4, -4)
+    {
+      ctx.save()
+      ctx.fillStyle = 'white'
+      ctx.font = 'italic bold 56px Tahoma'
+      ctx.textAlign = 'left'
+      ctx.translate(100, game.config.height - 90)
+      ctx.fillText(String(player.coins), 0, 0)
+      ctx.restore()
+    }
+    ctx.restore()
+
   }
 
   onDeath () {

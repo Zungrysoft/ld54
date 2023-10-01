@@ -50,7 +50,7 @@ export default class Player extends Thing {
   weapon = "pistol"
   ammo = 0
   akimbo = false
-  coins = 0
+  coins = 10
 
   constructor (position = [0, 0, 0], angle = 0) {
     super()
@@ -638,7 +638,7 @@ export default class Player extends Thing {
   }
 
   draw () {
-    if (game.getThing('buildmanager') || game.getThing('deathanim')) {
+    if (game.getThing('deathanim')) {
       return
     }
 
@@ -684,6 +684,10 @@ export default class Player extends Thing {
     const bobY = Math.cos(2 * t) * -0.5 * 0.15
     if (knockback > 0) {
       this.walkFrames = 0
+    }
+
+    if (game.getThing('buildmanager')) {
+      return
     }
 
     // Animation
@@ -755,7 +759,7 @@ export default class Player extends Thing {
     //   return
     // }
 
-    if (game.getThing('buildmanager') || game.getThing('deathanim')) {
+    if (game.getThing('deathanim')) {
       return
     }
 
