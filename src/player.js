@@ -234,8 +234,8 @@ export default class Player extends Thing {
         }, 'fire')
 
         // Create bullets
-        for (let i = 0; i < 6; i++) {
-          shootBullet(60, 2.0, 1, 0.3)
+        for (let i = 0; i < 9; i++) {
+          shootBullet(75, 2.0, 1, 0.3)
         }
 
         // Guarantee that one bullet will go straight ahead
@@ -654,9 +654,9 @@ export default class Player extends Thing {
 
     // Heart
     gfx.set('modelMatrix', mat.getTransformation({
-      translation: [5.2, -6.0, -2.4],
+      translation: [5.4, -6.0, -2.6],
       rotation: [Math.PI * 0.5, Math.sin(this.time/50)*0.3, Math.PI/4],
-      scale: 0.4
+      scale: 0.3
     }))
     gfx.setTexture(assets.textures.uv_heart)
     gfx.drawMesh(assets.meshes.heart)
@@ -689,9 +689,9 @@ export default class Player extends Thing {
 
       // Ammo
       gfx.set('modelMatrix', mat.getTransformation({
-        translation: [5.2, -6.0, -1.4],
+        translation: [5.4, -6.0, -1.9],
         rotation: [Math.PI * 0.4, Math.sin(this.time/50)*0.3, Math.PI/2],
-        scale: 0.3
+        scale: 0.23
       }))
       gfx.setTexture(assets.textures.uv_shell)
       gfx.drawMesh(assets.meshes.shell)
@@ -802,9 +802,9 @@ export default class Player extends Thing {
     {
       ctx.save()
       ctx.fillStyle = 'black'
-      ctx.font = 'italic bold 72px Tahoma'
+      ctx.font = 'italic bold 56px Tahoma'
       ctx.textAlign = 'center'
-      ctx.translate(140, game.config.height - 30)
+      ctx.translate(110, game.config.height - 15)
       ctx.fillText(String(this.lives), 0, 0)
       ctx.restore()
     }
@@ -812,9 +812,9 @@ export default class Player extends Thing {
     {
       ctx.save()
       ctx.fillStyle = 'white'
-      ctx.font = 'italic bold 72px Tahoma'
+      ctx.font = 'italic bold 56px Tahoma'
       ctx.textAlign = 'center'
-      ctx.translate(140, game.config.height - 30)
+      ctx.translate(110, game.config.height - 15)
       ctx.fillText(String(this.lives), 0, 0)
       ctx.restore()
     }
@@ -826,9 +826,9 @@ export default class Player extends Thing {
       {
         ctx.save()
         ctx.fillStyle = 'black'
-        ctx.font = 'italic bold 72px Tahoma'
+        ctx.font = 'italic bold 56px Tahoma'
         ctx.textAlign = 'center'
-        ctx.translate(140, game.config.height - 140)
+        ctx.translate(110, game.config.height - 90)
         ctx.fillText(String(this.ammo), 0, 0)
         ctx.restore()
       }
@@ -836,9 +836,9 @@ export default class Player extends Thing {
       {
         ctx.save()
         ctx.fillStyle = 'white'
-        ctx.font = 'italic bold 72px Tahoma'
+        ctx.font = 'italic bold 56px Tahoma'
         ctx.textAlign = 'center'
-        ctx.translate(140, game.config.height - 140)
+        ctx.translate(110, game.config.height - 90)
         ctx.fillText(String(this.ammo), 0, 0)
         ctx.restore()
       }
