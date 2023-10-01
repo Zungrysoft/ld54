@@ -32,7 +32,7 @@ export default class Terrain extends Thing {
     }
 
     // Spawn platform
-    vox.mergeStructureIntoWorld(this.chunks, assets.json.beam, [0, 0, 0])
+    vox.mergeStructureIntoWorld(this.chunks, assets.json.starter, [0, 0, 0])
 
     // =====================
     // Set up worker threads
