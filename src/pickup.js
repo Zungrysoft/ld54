@@ -45,7 +45,6 @@ export default class Pickup extends Thing {
     }
     // Stuck in wall
     if (vox.getVoxelSolid(chunks, vec3.add(vPos, [0, 0, 1]))) {
-      console.log("STUCK")
       this.position[2] += 1
     }
 

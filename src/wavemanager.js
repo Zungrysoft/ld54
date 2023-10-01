@@ -141,11 +141,35 @@ function choose (things) {
   return result
 }
 
-const builds = [
-  ['Red Bridge', 10, 'redplat'],
-  ['Beams', 5, 'beams'],
-  ['Blue Room', 15, 'blueroom']
-]
+export function shopPick(maxCost) {
+  // Filter list by cost
+  let list = game.assets.json.shop.filter(x => x.cost <= maxCost)
+
+  // If list is empty, return an empty structure
+  if (list.length === 0) {
+    return list[0]
+  }
+
+  // Determine the total weight
+  let total = 0
+  for (const item of list) {
+    total += item.weight
+  }
+
+  // Generate a random number based on the total
+  let selection = Math.random() * total
+
+  // Use the random number to make a selection
+  for (const item of list) {
+    selection -= item.weight
+    if (selection < 0) {
+      return item
+    }
+  }
+
+  // Default return; shouldn't be needed
+  return list[0]
+}
 
 class BuildManager extends Thing {
   time = 0
@@ -153,7 +177,7 @@ class BuildManager extends Thing {
 
   constructor () {
     super()
-    this.builds = Array(4).fill(undefined).map(() => choose(builds))
+    this.builds = Array(4).fill(undefined).map(() => shopPick(10))
     game.setThingName(this, 'buildmanager')
     game.pause(this, game.getThing('skybox'))
     game.getThing('terrain').saveChunks()
@@ -182,7 +206,7 @@ class BuildManager extends Thing {
           this.dead = true
         }
         if (!this.previewing[i]) {
-          vox.mergeStructureIntoWorld(terrain.chunks, game.assets.json[this.builds[i][2]], [0, 0, 0])
+          vox.mergeStructureIntoWorld(terrain.chunks, game.assets.json[this.builds[i].structure], [0, 0, 0])
           this.previewing[i] = true
           console.log("Merge")
         }
@@ -232,18 +256,18 @@ class BuildManager extends Thing {
       ctx.save()
       ctx.translate(-140, 12)
       ctx.fillStyle = 'black'
-      ctx.fillText(this.builds[i][0], 0, 0)
+      ctx.fillText(this.builds[i].title, 0, 0)
       ctx.fillStyle = 'white'
-      ctx.fillText(this.builds[i][0], 4, -4)
+      ctx.fillText(this.builds[i].title, 4, -4)
       ctx.restore()
 
       ctx.font = 'italic bold 40px Tahoma'
       ctx.save()
       ctx.translate(80, 12)
       ctx.fillStyle = 'green'
-      ctx.fillText('$' + this.builds[i][1], 0, 0)
+      ctx.fillText('$' + this.builds[i].cost, 0, 0)
       ctx.fillStyle = 'white'
-      ctx.fillText('$' + this.builds[i][1], 4, -4)
+      ctx.fillText('$' + this.builds[i].cost, 4, -4)
       ctx.restore()
 
       ctx.restore()

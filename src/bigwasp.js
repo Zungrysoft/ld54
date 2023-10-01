@@ -25,9 +25,11 @@ export default class BigWasp extends Wasp {
       game.addThing(new WaspGib([...this.position], -this.health))
     }
 
-    // Always spawn at least one honeycomb
+    // Can spawn additional honeycomb
     if (this.spawnCoin) {
-      game.addThing(new HoneycombPickup([...this.position]))
+      if (0.4 > Math.random()) {
+        game.addThing(new HoneycombPickup([...this.position]))
+      }
     }
   }
 }
