@@ -285,7 +285,7 @@ class BuildManager extends Thing {
 
   constructor () {
     super()
-    this.pickStructures()
+    this.pickStructures(true)
     game.setThingName(this, 'buildmanager')
     game.pause(this, game.getThing('skybox'))
     game.getThing('terrain').saveChunks()
@@ -349,13 +349,13 @@ class BuildManager extends Thing {
     }
   }
 
-  pickStructures() {
+  pickStructures(requireItem=false) {
     const player = game.getThing('player')
     this.builds = [
       shopPick(Math.min(player.coins, 5)),
       shopPick(player.coins),
+      shopPick(player.coins, requireItem),
       shopPick(),
-      shopPick(10000, true),
     ]
   }
 
