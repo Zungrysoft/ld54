@@ -67,6 +67,14 @@ function* GameOver() {
   const {width, height} = game.config
   const {ctx, globals} = game
 
+  // Determine wave
+  const wave = game.getThing("wavemanager").wave
+
+  // Pick a death screen tip
+  const tips = game.assets.json.tips.filter(x => wave >= x.minWave && wave < x.maxWave)
+  const tip = tips[Math.floor(Math.random() * tips.length)].text
+  const tipLines = tip.split("\n").reverse()
+
   for (let i=0; i<15; i++) {
     ctx.fillStyle = `rgba(255, 0, 0, 0.35)`
     ctx.fillRect(0, 0, width, height)
@@ -94,24 +102,36 @@ function* GameOver() {
     ctx.restore()
 
     const subTime = 30
-    if (true || globals.level > 1) {
+    if (wave > 0) {
       ctx.save()
       ctx.translate(width/2, height/2 + 64)
       ctx.textAlign = "center"
       ctx.fillStyle = `rgba(255, 255, 255, ${u.map(i, subTime, subTime+10, 0, 0.8, true)})`
       // console.log(ctx.fillStyle)
       ctx.font = "italic 32px Times New Roman"
-      ctx.fillText(`Made it to level ${globals.level}`, 0, 0)
+      ctx.fillText(`Made it to Wave ${wave}`, 0, 0)
       ctx.restore()
     }
 
+    // Retry text
     ctx.save()
-    ctx.translate(width - 64, height - 64)
+    ctx.translate(width - 48, height - 48)
     ctx.textAlign = "right"
     ctx.fillStyle = `rgba(255, 255, 255, ${u.map(i, subTime+10, subTime+30, 0, 0.5, true)})`
-    // console.log(ctx.fillStyle)
     ctx.font = "32px Times New Roman"
     ctx.fillText("Press any button to try again...", 0, 0)
+    ctx.restore()
+
+    // Tip
+    ctx.save()
+    ctx.translate(32, height - 32)
+    ctx.textAlign = "left"
+    ctx.fillStyle = `rgba(255, 255, 255, ${u.map(i, subTime+10, subTime+30, 0, 0.5, true)})`
+    ctx.font = "20px Times New Roman"
+    for (const line of tipLines) {
+      ctx.fillText(line, 0, 0)
+      ctx.translate(0, -20)
+    }
     ctx.restore()
 
     if ((Object.keys(game.keysPressed).length || game.mouse.button) && i > subTime + 10) {
@@ -135,6 +155,7 @@ export default class DeathAnim extends Thing {
     } else {
       this.anim = GameOver()
     }
+
     game.pause(this)
   }
 

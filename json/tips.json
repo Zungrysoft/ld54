@@ -1,32 +1,47 @@
 [
-  "Wait for many wasps to build up before you collect the shotgun. It's best against large swarms.",
-  "Pay attention to which items come with each structure. They can be key to your survival!",
-  "The pistol is extremely powerful. It doubles your damage for the rest of the run!",
-  "The shotgun has an obscene amount of firepower. Use it when you need to clean house!",
-  "You can only have two pistols at once. Collecting a second pistol doesn't help you.",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
+  {
+    "text": "Batteries increase the recharge rate of\nyour jetpack.",
+    "minWave": 0,
+    "maxWave": 3
+  },
+  {
+    "text": "Be conservative with your jetpack fuel. You never\nknow when you'll need to make a quick escape!",
+    "minWave": 0,
+    "maxWave": 99999
+  },
+  {
+    "text": "The shotgun has an obscene amount of firepower.\nUse it when you need to clean house!",
+    "minWave": 0,
+    "maxWave": 99999
+  },
+  {
+    "text": "Wait for many wasps to build up before you\ncollect the shotgun. It's best against large swarms.",
+    "minWave": 1,
+    "maxWave": 99999
+  },
+  {
+    "text": "Pay attention to which items come with each\nstructure. They can be key to your survival!",
+    "minWave": 1,
+    "maxWave": 4
+  },
+  {
+    "text": "Big wasps are extremely destructive.\nKill them before they do too much damage!",
+    "minWave": 2,
+    "maxWave": 99999
+  },
+  {
+    "text": "Some structures contain an extra life.",
+    "minWave": 2,
+    "maxWave": 99999
+  },
+  {
+    "text": "The pistol is extremely powerful. It doubles\nyour damage for the rest of the run!",
+    "minWave": 3,
+    "maxWave": 99999
+  },
+  {
+    "text": "You can only have two pistols at once.\nCollecting a second pistol doesn't help you.",
+    "minWave": 3,
+    "maxWave": 99999
+  }
 ]
