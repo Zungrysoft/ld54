@@ -120,7 +120,7 @@ class Explosion extends Thing {
       for (let y = -radius; y <= radius; y ++) {
         for (let z = -radius; z <= radius; z ++) {
           let newPos = vec3.add(vPos, [x, y, z])
-          let breakChance = (radius - vec3.distance(newPos, vPos)) / radius
+          let breakChance = ((radius - vec3.distance(newPos, vPos)) / radius) * 1.6
           if (breakChance > Math.random()) {
             vox.setVoxelSolid(chunks, newPos, false)
           }
