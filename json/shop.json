@@ -3,7 +3,7 @@
     "structure": "redplat",
     "title": "Red Bridge",
     "weight": 100,
-    "cost": 3,
+    "cost": 2,
     "shiftRadius": -1,
     "things": [
       {
@@ -16,21 +16,21 @@
     "structure": "beams",
     "title": "Metal Beam Lattice",
     "weight": 20,
-    "cost": 12,
+    "cost": 9,
     "shiftRadius": 0
   },
   {
     "structure": "beam",
     "title": "Metal Beam",
     "weight": 80,
-    "cost": 6,
+    "cost": 4,
     "shiftRadius": 0
   },
   {
     "structure": "blueroom",
     "title": "Corner Office",
     "weight": 100,
-    "cost": 7,
+    "cost": 5,
     "minWave": 1,
     "shiftRadius": 0,
     "things": [
@@ -44,7 +44,7 @@
     "structure": "temple",
     "title": "Central Temple",
     "weight": 20,
-    "cost": 10,
+    "cost": 7,
     "shiftRadius": 4,
     "things": [
       {
@@ -57,7 +57,7 @@
     "structure": "tunnel",
     "title": "Tunnel",
     "weight": 30,
-    "cost": 3,
+    "cost": 2,
     "shiftRadius": 30
   },
   {
@@ -78,21 +78,21 @@
     "structure": "planter1",
     "title": "Planter Box",
     "weight": 15,
-    "cost": 2,
+    "cost": 1,
     "shiftRadius": -1
   },
   {
     "structure": "planter2",
     "title": "Planter Box",
     "weight": 15,
-    "cost": 2,
+    "cost": 1,
     "shiftRadius": -1
   },
   {
     "structure": "arena1",
     "title": "Mausoleum",
     "weight": 40,
-    "cost": 7,
+    "cost": 5,
     "minWave": 1,
     "shiftRadius": 0,
     "things": [
@@ -106,7 +106,7 @@
     "structure": "building1",
     "title": "Factory",
     "weight": 100,
-    "cost": 8,
+    "cost": 6,
     "minWave": 3,
     "shiftRadius": 0,
     "things": [
@@ -120,7 +120,7 @@
     "structure": "building2",
     "title": "Steps",
     "weight": 100,
-    "cost": 7,
+    "cost": 5,
     "minWave": 3,
     "shiftRadius": 0,
     "things": [
@@ -131,10 +131,28 @@
     ]
   },
   {
+    "structure": "building3",
+    "title": "Brutalist",
+    "weight": 70,
+    "cost": 8,
+    "minWave": 1,
+    "shiftRadius": 0,
+    "things": [
+      {
+        "position": [51, 39, 58],
+        "name": "shotgun"
+      },
+      {
+        "position": [60, 39, 41],
+        "name": "heart"
+      }
+    ]
+  },
+  {
     "structure": "scaffolding",
     "title": "Scaffolding",
     "weight": 30,
-    "cost": 5,
+    "cost": 4,
     "minWave": 1,
     "shiftRadius": 0,
     "things": [
@@ -148,7 +166,7 @@
     "structure": "scaffolding2",
     "title": "Raised Area",
     "weight": 30,
-    "cost": 4,
+    "cost": 3,
     "shiftRadius": 0,
     "things": [
       {
@@ -161,7 +179,7 @@
     "structure": "stairs",
     "title": "Crossway",
     "weight": 90,
-    "cost": 10,
+    "cost": 7,
     "shiftRadius": 10,
     "things": [
       {
@@ -174,7 +192,7 @@
     "structure": "corner",
     "title": "Corner Garden",
     "weight": 50,
-    "cost": 13,
+    "cost": 10,
     "shiftRadius": 8,
     "minWave": 3,
     "things": [
@@ -192,7 +210,7 @@
     "structure": "pillars",
     "title": "Stone Pillars",
     "weight": 100,
-    "cost": 3,
+    "cost": 2,
     "minWave": 1,
     "shiftRadius": 15,
     "things": [
@@ -206,7 +224,7 @@
     "structure": "plate",
     "title": "Serving Platter",
     "weight": 5,
-    "cost": 15,
+    "cost": 11,
     "minWave": 4,
     "shiftRadius": 5,
     "things": [

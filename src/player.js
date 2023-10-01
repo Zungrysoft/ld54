@@ -42,7 +42,7 @@ export default class Player extends Thing {
   walkFrameAccel = 0
   emptyChunkSolid = false
   depth = 1000
-  lives = 5
+  lives = 3
   jetpack = 60
   jetpackMaximum = 60
   jetpackCanRecharge = true
@@ -50,7 +50,7 @@ export default class Player extends Thing {
   weapon = "pistol"
   ammo = 0
   akimbo = false
-  coins = 5
+  coins = 10
 
   constructor (position = [0, 0, 0], angle = 0) {
     super()

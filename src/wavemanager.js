@@ -181,15 +181,15 @@ export function loadAndModifyStructure(structure) {
     if (structure.shiftRadius === -1) {
       xRadius = 50
       yRadius = 30
+      transformations.push({
+        mode: 'rotate',
+        axis: 'z',
+        amount: Math.floor(Math.random()*4),
+        origin: [59.5, 39.5, 39.5],
+      })
     }
     let xShift = Math.floor((Math.random()-0.5) * 2 * xRadius)
     let yShift = Math.floor((Math.random()-0.5) * 2 * yRadius)
-    transformations.push({
-      mode: 'rotate',
-      axis: 'z',
-      amount: Math.floor(Math.random()*4),
-      origin: [59.5, 39.5, 39.5],
-    })
     transformations.push({
       mode: 'translate',
       offset: [xShift, yShift, 0],
