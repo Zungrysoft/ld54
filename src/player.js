@@ -634,6 +634,10 @@ export default class Player extends Thing {
   }
 
   draw () {
+    if (game.getThing('buildmanager')) {
+      return
+    }
+
     const { ctx, gl } = game
 
     // Viewmodel
@@ -737,6 +741,10 @@ export default class Player extends Thing {
     // if (!this.showGui) {
     //   return
     // }
+
+    if (game.getThing('buildmanager')) {
+      return
+    }
 
     // Get screen width and height
     const width = game.config.width

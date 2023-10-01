@@ -8,6 +8,8 @@ import Thing from './core/thing.js'
 import Wasp from './wasp.js'
 import Coin from './coin.js'
 
+const cartesian = (...a) => a.reduce((a, b) => a.flatMap(d => b.map(e => [d, e].flat())))
+
 export default class WaveManager extends Thing {
   wave = 0
   time = 0
@@ -16,7 +18,8 @@ export default class WaveManager extends Thing {
   constructor () {
     super()
     game.setThingName(this, 'wavemanager')
-    this.after(60 * 3, () => this.nextWave())
+    this.after(60 * 3.125, () => game.addThing(new BuildManager()))
+    this.after(60 * 5, () => this.nextWave())
   }
 
   update () {
@@ -123,24 +126,32 @@ export default class WaveManager extends Thing {
   }
 }
 
-function choose (...things) {
-  const index = Math.floor(Math.random(0, things.length - 0.001))
+function choose (things) {
+  const index = Math.floor(u.lerp(0, things.length - 0.001, Math.random()))
   const result = things[index]
   return result
 }
 
 const builds = [
-  'redplat'
+  ['Red Bridge', 10, 'redplat'],
+  ['Beams', 5, 'beams'],
+  ['Blue Room', 15, 'blueroom']
 ]
 
 class BuildManager extends Thing {
   time = 0
+  previewing = [false, false, false, false]
 
   constructor () {
     super()
     this.builds = Array(4).fill(undefined).map(() => choose(builds))
     game.setThingName(this, 'buildmanager')
     game.pause(this, game.getThing('skybox'))
+    game.getThing('terrain').saveChunks()
+    const w = game.config.width
+    const h = game.config.height
+    this.positionList = cartesian([w * 0.3, w * 0.7], [h * 0.3, h * 0.55])
+    game.mouse.unlock()
   }
 
   update () {
@@ -148,17 +159,27 @@ class BuildManager extends Thing {
     //game.getCamera3D().lookVector = vec3.normalize([0.1, 0, -0.1])
     //game.getCamera3D().updateMatrices()
     this.time += 1
-    const angle = this.time / (60 * 5)
+    const angle = this.time / (60 * 6)
     const radius = 64
     game.getCamera3D().viewMatrix = mat.getView({
-      position: [Math.cos(angle) * radius + 64, Math.sin(angle) * radius + 40, 70],
+      position: [Math.cos(angle) * radius + 64, Math.sin(angle) * radius + 40, 90],
       target: [64, 40, 40]
     })
 
-    if (game.keysPressed.Space) {
-      this.dead = true
-      const terrain = game.getThing('terrain')
-      vox.mergeStructureIntoWorld(terrain.chunks, game.assets.json[this.builds[0]], [0, 0, 0])
+    const terrain = game.getThing('terrain')
+    for (let i = 0; i <= 3; i += 1) {
+      if (u.pointInsideAabb(...game.mouse.position, [-150, -100, 150, 100], ...this.positionList[i])) {
+        if (game.mouse.leftButton) {
+          this.dead = true
+        }
+        if (!this.previewing[i]) {
+          vox.mergeStructureIntoWorld(terrain.chunks, game.assets.json[this.builds[i][2]], [0, 0, 0])
+          this.previewing[i] = true
+        }
+      } else if (this.previewing[i] && !this.dead) {
+        terrain.loadSavedChunks()
+        this.previewing[i] = false
+      }
     }
   }
 
@@ -170,18 +191,57 @@ class BuildManager extends Thing {
     ctx.fillRect(0, 0, game.config.width, game.config.height)
     ctx.restore()
 
+    /*
     ctx.save()
     ctx.fillStyle = 'black'
-    ctx.font = '80px Tahoma'
+    ctx.textAlign = 'center'
+    ctx.font = 'italic bold 48px Tahoma'
     let i = 1
     for (const build of this.builds) {
-      ctx.fillText(build, 80, 80 * i)
+      ctx.fillText(build[0] + ' $' + build[1], 80, 80 * i)
       i += 1
     }
     ctx.restore()
+    */
+
+    let i = 0
+    for (let pos of this.positionList) {
+      ctx.save()
+      ctx.lineWidth = 3
+      ctx.textAlign = 'left'
+      ctx.strokeStyle = 'black'
+      ctx.translate(pos[0], pos[1])
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'
+      ctx.fillRect(-150, -30, 300, 60)
+      ctx.beginPath()
+      ctx.rect(-150, -30, 300, 60)
+      ctx.stroke()
+
+      ctx.font = 'italic bold 32px Tahoma'
+      ctx.save()
+      ctx.translate(-140, 12)
+      ctx.fillStyle = 'black'
+      ctx.fillText(this.builds[i][0], 0, 0)
+      ctx.fillStyle = 'white'
+      ctx.fillText(this.builds[i][0], 4, -4)
+      ctx.restore()
+
+      ctx.font = 'italic bold 40px Tahoma'
+      ctx.save()
+      ctx.translate(80, 12)
+      ctx.fillStyle = 'green'
+      ctx.fillText('$' + this.builds[i][1], 0, 0)
+      ctx.fillStyle = 'white'
+      ctx.fillText('$' + this.builds[i][1], 4, -4)
+      ctx.restore()
+
+      ctx.restore()
+      i += 1
+    }
   }
 
   onDeath () {
     game.unpause()
+    game.mouse.lock()
   }
 }
