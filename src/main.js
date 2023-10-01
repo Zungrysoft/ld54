@@ -88,6 +88,7 @@ await game.loadAssets({
     blueroom: 'json/structures/main/blueroom.json',
     building1: 'json/structures/main/building1.json',
     building2: 'json/structures/main/building2.json',
+    corner: 'json/structures/main/corner.json',
     monolith: 'json/structures/main/monolith.json',
     pillars: 'json/structures/main/pillars.json',
     planter1: 'json/structures/main/planter1.json',

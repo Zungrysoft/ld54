@@ -171,6 +171,24 @@
     ]
   },
   {
+    "structure": "corner",
+    "title": "Corner Garden",
+    "weight": 50,
+    "cost": 13,
+    "shiftRadius": 8,
+    "minWave": 3,
+    "things": [
+      {
+        "position": [48, 51, 41],
+        "name": "battery"
+      },
+      {
+        "position": [72, 37, 41],
+        "name": "shotgun"
+      }
+    ]
+  },
+  {
     "structure": "pillars",
     "title": "Stone Pillars",
     "weight": 100,
