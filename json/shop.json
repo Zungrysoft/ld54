@@ -3,13 +3,13 @@
     "structure": "redplat",
     "title": "Red Bridge",
     "weight": 100,
-    "cost": 9
+    "cost": 6
   },
   {
     "structure": "beams",
     "title": "Metal Beam Lattice",
     "weight": 30,
-    "cost": 12
+    "cost": 30
   },
   {
     "structure": "beam",
@@ -21,7 +21,7 @@
     "structure": "blueroom",
     "title": "Corner Office",
     "weight": 100,
-    "cost": 7
+    "cost": 10
   },
   {
     "structure": "temple",
@@ -33,12 +33,18 @@
     "structure": "tunnel",
     "title": "Tunnel",
     "weight": 100,
-    "cost": 4
+    "cost": 5
   },
   {
     "structure": "monolith",
     "title": "Monolith",
     "weight": 60,
-    "cost": 3
+    "cost": 2
+  },
+  {
+    "structure": "thinplatform",
+    "title": "Thin Platform",
+    "weight": 100,
+    "cost": 1
   }
 ]

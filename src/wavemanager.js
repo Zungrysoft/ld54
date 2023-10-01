@@ -147,18 +147,18 @@ export function loadAndModifyStructure(structure) {
     [{
       mode: 'mirror',
       axis: 'x',
-      origin: [60, 40, 40],
+      origin: [59.5, 39.5, 39.5],
     }],
     [{
       mode: 'mirror',
       axis: 'y',
-      origin: [60, 40, 40],
+      origin: [59.5, 39.5, 39.5],
     }],
     [{
       mode: 'rotate',
       axis: 'z',
       amount: 2,
-      origin: [60, 40, 40],
+      origin: [59.5, 39.5, 39.5],
     }],
   ]
   for (const transformation of transformations) {
@@ -234,11 +234,12 @@ class BuildManager extends Thing {
     const player = game.getThing('player')
     for (let i = 0; i <= 3; i += 1) {
       if (u.pointInsideAabb(...game.mouse.position, [-150, -45, 150, 45], ...this.positionList[i])) {
-        if (game.mouse.leftButton && player.coins >= this.builds[i].cost) {
+        if (game.mouse.leftClick && player.coins >= this.builds[i].cost) {
           //this.dead = true
           player.coins -= this.builds[i].cost
           this.builds[i] = shopPick()
           terrain.saveChunks()
+          this.previewing[i] = false
         }
         if (!this.previewing[i] && player.coins >= this.builds[i].cost) {
           vox.mergeStructureIntoWorld(terrain.chunks, this.builds[i], [0, 0, 0])

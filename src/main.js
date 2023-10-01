@@ -89,6 +89,7 @@ await game.loadAssets({
     blueroom: 'json/structures/main/blueroom.json',
     tunnel: 'json/structures/main/tunnel.json',
     monolith: 'json/structures/main/monolith.json',
+    thinplatform: 'json/structures/main/thinplatform.json',
   },
 })
 
