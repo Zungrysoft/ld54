@@ -12,6 +12,7 @@ export default class BigWasp extends Wasp {
   scale = 1.9
   health = 300
   color = [0.62,0,0,1]
+  bulletScale = 3.2
 
   constructor (position = [0, 0, 0], angle = 0) {
     super(position, angle)

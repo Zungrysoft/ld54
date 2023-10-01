@@ -25,6 +25,7 @@ export default class Wasp extends Thing {
   scale = 1.0
   health = 100
   color = [1,0,0,1]
+  bulletScale = 1.0
 
   constructor (position = [0, 0, 0], angle = 0) {
     super()
@@ -70,6 +71,12 @@ export default class Wasp extends Thing {
 
     // checkShoot again after a random amount of time
     this.after(Math.floor(45 + Math.random()*30), () => this.checkShoot())
+  }
+
+  shoot() {
+    let bulletPos = [...this.position]
+    let bulletVel = vec3.scale(vec3.normalize(vec3.subtract(this.targetPosition, this.position)), 0.3)
+    game.addThing(new Bullet(bulletPos, bulletVel, this, 20, this.explosionPower, this.bulletScale))
   }
 
   pickNearbyVoxel() {
@@ -134,14 +141,6 @@ export default class Wasp extends Thing {
     }
 
     return bestPos
-  }
-
-
-
-  shoot() {
-    let bulletPos = [...this.position]
-    let bulletVel = vec3.scale(vec3.normalize(vec3.subtract(this.targetPosition, this.position)), 0.3)
-    game.addThing(new Bullet(bulletPos, bulletVel, this, 20, this.explosionPower))
   }
 
   draw () {
