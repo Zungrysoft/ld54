@@ -54,5 +54,19 @@
     "weight": 100,
     "cost": 1,
     "shiftRadius": -1
+  },
+  {
+    "structure": "planter1",
+    "title": "Planter Box",
+    "weight": 15,
+    "cost": 3,
+    "shiftRadius": -1
+  },
+  {
+    "structure": "planter2",
+    "title": "Planter Box",
+    "weight": 15,
+    "cost": 3,
+    "shiftRadius": -1
   }
 ]

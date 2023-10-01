@@ -81,15 +81,18 @@ await game.loadAssets({
 
   json: {
     shop: 'json/shop.json',
-    starter: 'json/structures/main/starter.json',
-    redplat: 'json/structures/main/redplat.json',
-    beams: 'json/structures/main/beams.json',
+    base: 'json/structures/main/base.json',
     beam: 'json/structures/main/beam.json',
-    temple: 'json/structures/main/temple.json',
+    beams: 'json/structures/main/beams.json',
     blueroom: 'json/structures/main/blueroom.json',
-    tunnel: 'json/structures/main/tunnel.json',
     monolith: 'json/structures/main/monolith.json',
+    planter1: 'json/structures/main/planter1.json',
+    planter2: 'json/structures/main/planter2.json',
+    redplat: 'json/structures/main/redplat.json',
+    starter: 'json/structures/main/starter.json',
+    temple: 'json/structures/main/temple.json',
     thinplatform: 'json/structures/main/thinplatform.json',
+    tunnel: 'json/structures/main/tunnel.json',
   },
 })
 

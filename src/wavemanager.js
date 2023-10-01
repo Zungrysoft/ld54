@@ -192,6 +192,9 @@ export function loadAndModifyStructure(structure) {
 }
 
 export function shopPick(maxCost=512) {
+  // maxCost has to be at least 1
+  maxCost = Math.max(maxCost, 1)
+
   // Filter list by cost
   let list = game.assets.json.shop.filter(x => x.cost <= maxCost)
 
@@ -229,7 +232,7 @@ class BuildManager extends Thing {
 
   constructor () {
     super()
-    this.builds = Array(4).fill(undefined).map(() => shopPick())
+    this.pickStructures()
     game.setThingName(this, 'buildmanager')
     game.pause(this, game.getThing('skybox'))
     game.getThing('terrain').saveChunks()
@@ -254,7 +257,7 @@ class BuildManager extends Thing {
     const terrain = game.getThing('terrain')
     const player = game.getThing('player')
     for (let i = 0; i <= 3; i += 1) {
-      if (u.pointInsideAabb(...game.mouse.position, [-150, -45, 150, 45], ...this.positionList[i])) {
+      if (u.pointInsideAabb(...game.mouse.position, [-150, -30, 150, 30], ...this.positionList[i])) {
         if (game.mouse.leftClick && player.coins >= this.builds[i].cost) {
           //this.dead = true
           player.coins -= this.builds[i].cost
@@ -278,6 +281,26 @@ class BuildManager extends Thing {
         this.dead = true
       }
     }
+
+    if (u.pointInsideAabb(...game.mouse.position, [-100, -30, 100, 30], game.config.width * 0.5, game.config.height * 0.75)) {
+      const rerollCost = 1
+      if (player.coins >= rerollCost) {
+        if (game.mouse.leftClick) {
+          player.coins -= rerollCost
+          this.pickStructures()
+        }
+      }
+    }
+  }
+
+  pickStructures() {
+    const player = game.getThing('player')
+    this.builds = [
+      shopPick(Math.min(player.coins, 5)),
+      shopPick(player.coins),
+      shopPick(player.coins),
+      shopPick(),
+    ]
   }
 
   draw () {
@@ -327,9 +350,9 @@ class BuildManager extends Thing {
       ctx.font = 'italic bold 40px Tahoma'
       ctx.save()
       ctx.translate(80, 12)
-      ctx.fillStyle = 'green'
+      ctx.fillStyle = player.coins >= this.builds[i].cost ? 'green' : 'black'
       ctx.fillText('$' + this.builds[i].cost, 0, 0)
-      ctx.fillStyle = 'white'
+      ctx.fillStyle = player.coins >= this.builds[i].cost ? 'white' : 'gray'
       ctx.fillText('$' + this.builds[i].cost, 4, -4)
       ctx.restore()
 
@@ -338,54 +361,85 @@ class BuildManager extends Thing {
     }
 
     const { width: w, height: h } = game.config
-    const pos = [w * 3 / 4, h * 3 / 4]
 
-    // done button
-    ctx.save()
-    ctx.lineWidth = 3
-    ctx.textAlign = 'left'
-    ctx.strokeStyle = 'black'
-    ctx.translate(pos[0], pos[1])
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'
-    ctx.fillRect(-100, -30, 200, 60)
-    ctx.beginPath()
-    ctx.rect(-100, -30, 200, 60)
-    ctx.stroke()
-    ctx.restore()
+    {
+      // done button
+      const pos = [w * 3 / 4, h * 3 / 4]
 
-    ctx.font = 'italic bold 32px Tahoma'
-    ctx.save()
-    ctx.translate(pos[0], pos[1])
-    ctx.translate(0, 12)
-    ctx.textAlign = 'center'
-    ctx.fillStyle = 'black'
-    ctx.fillText('Done', 0, 0)
-    ctx.fillStyle = 'white'
-    ctx.fillText('Done', 4, -4)
-    ctx.restore()
+      ctx.save()
+      ctx.lineWidth = 3
+      ctx.textAlign = 'left'
+      ctx.strokeStyle = 'black'
+      ctx.translate(pos[0], pos[1])
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'
+      ctx.fillRect(-100, -30, 200, 60)
+      ctx.beginPath()
+      ctx.rect(-100, -30, 200, 60)
+      ctx.stroke()
+      ctx.restore()
+
+      ctx.font = 'italic bold 32px Tahoma'
+      ctx.save()
+      ctx.translate(pos[0], pos[1])
+      ctx.translate(0, 12)
+      ctx.textAlign = 'center'
+      ctx.fillStyle = 'black'
+      ctx.fillText('Done', 0, 0)
+      ctx.fillStyle = 'white'
+      ctx.fillText('Done', 4, -4)
+      ctx.restore()
+    }
+
+    {
+      // reroll button
+      const pos = [w * 1 / 2, h * 3 / 4]
+
+      ctx.save()
+      ctx.lineWidth = 3
+      ctx.textAlign = 'left'
+      ctx.strokeStyle = 'black'
+      ctx.translate(pos[0], pos[1])
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'
+      ctx.fillRect(-100, -30, 200, 60)
+      ctx.beginPath()
+      ctx.rect(-100, -30, 200, 60)
+      ctx.stroke()
+      ctx.restore()
+
+      ctx.font = 'italic bold 32px Tahoma'
+      ctx.save()
+      ctx.translate(pos[0], pos[1])
+      ctx.translate(0, 12)
+      ctx.textAlign = 'center'
+      ctx.fillStyle = 'black'
+      ctx.fillText('Reroll: $1', 0, 0)
+      ctx.fillStyle = player.coins >= 1 ? 'white' : 'gray'
+      ctx.fillText('Reroll: $1', 4, -4)
+      ctx.restore()
+    }
 
     // honeycomb counter
-    ctx.save()
-    {
-      ctx.save()
-      ctx.fillStyle = 'black'
-      ctx.font = 'italic bold 56px Tahoma'
-      ctx.textAlign = 'left'
-      ctx.translate(100, game.config.height - 90)
-      ctx.fillText(String(player.coins), 0, 0)
-      ctx.restore()
-    }
-    ctx.translate(4, -4)
-    {
-      ctx.save()
-      ctx.fillStyle = 'white'
-      ctx.font = 'italic bold 56px Tahoma'
-      ctx.textAlign = 'left'
-      ctx.translate(100, game.config.height - 90)
-      ctx.fillText(String(player.coins), 0, 0)
-      ctx.restore()
-    }
-    ctx.restore()
+    // ctx.save()
+    // {
+    //   ctx.save()
+    //   ctx.fillStyle = 'black'
+    //   ctx.font = 'italic bold 56px Tahoma'
+    //   ctx.textAlign = 'left'
+    //   ctx.translate(100, game.config.height - 90)
+    //   ctx.fillText(String(player.coins), 0, 0)
+    //   ctx.restore()
+    // }
+    // ctx.translate(4, -4)
+    // {
+    //   ctx.save()
+    //   ctx.fillStyle = 'white'
+    //   ctx.font = 'italic bold 56px Tahoma'
+    //   ctx.textAlign = 'left'
+    //   ctx.translate(100, game.config.height - 90)
+    //   ctx.fillText(String(player.coins), 0, 0)
+    //   ctx.restore()
+    // }
+    // ctx.restore()
 
   }
 

@@ -50,7 +50,7 @@ export default class Player extends Thing {
   weapon = "pistol"
   ammo = 0
   akimbo = false
-  coins = 10
+  coins = 5
 
   constructor (position = [0, 0, 0], angle = 0) {
     super()
