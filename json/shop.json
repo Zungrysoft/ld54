@@ -1,0 +1,20 @@
+[
+  {
+    "structure": "redplat",
+    "title": "Red Bridge",
+    "weight": 100,
+    "cost": 7
+  },
+  {
+    "structure": "beams",
+    "title": "Full Metal Beams",
+    "weight": 30,
+    "cost": 12
+  },
+  {
+    "structure": "blueroom",
+    "title": "Corner Office",
+    "weight": 100,
+    "cost": 7
+  }
+]

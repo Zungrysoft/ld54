@@ -4,6 +4,7 @@ import * as gfx from './core/webgl.js'
 import * as game from './core/game.js'
 import * as mat from './core/matrices.js'
 import * as vec3 from './core/vector3.js'
+import * as vox from './voxel.js'
 import { ItemParticle } from './particle.js'
 
 export default class Pickup extends Thing {
@@ -13,6 +14,7 @@ export default class Pickup extends Thing {
   mesh = "cube"
   scale = 1.0
   pickupSound = ""
+  velocity = [0, 0, 0]
 
   constructor (position) {
     super()
@@ -26,10 +28,33 @@ export default class Pickup extends Thing {
     const player = game.getThing('player')
     this.player = player
 
+    // Falling
+    this.position = vec3.add(this.position, this.velocity)
+    const friction = 0.975
+    this.velocity[0] *= friction
+    this.velocity[1] *= friction
+    this.velocity[2] = Math.max(this.velocity[2] - 0.001, -0.04)
+
+    // Check for wall
+    let chunks = game.getThing("terrain").chunks
+    let vPos = this.position.map(x => Math.round(x))
+    vPos[2] -= 1
+    // Floor
+    if (vox.getVoxelSolid(chunks, vPos)) {
+      this.velocity[2] = 0
+    }
+    // Stuck in wall
+    if (vox.getVoxelSolid(chunks, vec3.add(vPos, [0, 0, 1]))) {
+      this.position[2] += 1
+    }
+
+
+    // Particles
     if (this.time % 16 === 0) {
       game.addThing(new ItemParticle(this.position))
     }
 
+    // Hit detection
     if (vec3.distance(this.position, vec3.add(player.position, [0, 0, 2])) < 5) {
       this.onPickup(player)
       this.dead = true
