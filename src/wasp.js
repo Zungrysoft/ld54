@@ -48,10 +48,20 @@ export default class Wasp extends Thing {
       this.lookAngle = vec2.lerpAngles(this.lookAngle, vec2.angleBetween(this.position, this.targetPosition), 0.1)
 
       // Move toward target if too far away
-      if (vec3.distance(this.position, this.targetPosition) > 16) {
-
+      if (vec2.distance(this.position, this.targetPosition) > 10) {
+        let delta = [
+          this.targetPosition[0] - this.position[0],
+          this.targetPosition[1] - this.position[1],
+          0,
+        ]
+        this.velocity = vec3.add(this.velocity, vec3.scale(vec3.normalize(delta), 0.01))
       }
     }
+
+    // Friction
+    const friction = 0.1
+    this.velocity = vec3.scale(this.velocity, 1-friction)
+    this.position = vec3.add(this.position, this.velocity)
 
     // Grow from zero
     this.growScale = Math.min(this.growScale + 0.03, 1.0)
