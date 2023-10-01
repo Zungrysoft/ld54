@@ -32,7 +32,7 @@ export default class Terrain extends Thing {
     }
 
     // Spawn platform
-    vox.mergeStructureIntoWorld(this.chunks, assets.json.starter, [0, 0, 0])
+    vox.mergeStructureIntoWorld(this.chunks, assets.json.beam, [0, 0, 0])
 
     // =====================
     // Set up worker threads
@@ -148,66 +148,6 @@ export default class Terrain extends Thing {
     // Chunk loading and unloading
     if (this.time % 60 === 0) {
       this.selectChunks(game.getThing('player').position)
-    }
-
-    // Debug button
-    if (game.keysPressed.KeyJ) {
-      game.globals.debugPressed = true
-
-      let counter = 0
-      for (let i = 0; i < 30; i ++) {
-        counter += meshChunk(this.chunks[vox.ts([0,0,0])], pal.palette).byteLength
-      }
-      console.log(counter)
-
-      // const playerPos = game.getThing('player').position
-      // console.log(this.chunks[vox.ts(vox.positionToChunkKey(playerPos))])
-      // console.log(this.chunkMeshes[vox.ts(vox.positionToChunkKey(playerPos))])
-
-      // Mansion
-      // const tileScale = 5
-      // const mansion = procMansion.generateMansion({
-      //   width: 125,
-      //   length: 125,
-      //   height: 15,
-      //   roomWidth: tileScale,
-      //   roomLength: tileScale,
-      //   roomHeight: tileScale,
-      //   possibilities: [
-      //     assets.json.structureArchesBottomCenter,
-      //     assets.json.structureArchesBottomEdge,
-      //     assets.json.structureArchesBottomEdgePillar,
-      //     assets.json.structureArchesBottomCornerPillar,
-      //     assets.json.structureArchesBottomJunctionPillar,
-      //     assets.json.structureArchesTopEdge,
-      //     assets.json.structureArchesTopEdgePillar,
-      //     assets.json.structureArchesTopCornerPillar,
-      //     assets.json.structureArchesTopJunctionPillar,
-      //     assets.json.structureArchesRoofCorner,
-      //     assets.json.structureArchesRoofEdge,
-      //     assets.json.structureArchesRoofJunction,
-      //     assets.json.structureArchesRoofCenterEnd,
-      //     assets.json.structureArchesRoofCenterQuad,
-      //     assets.json.structureArchesRoofCenterStraight,
-      //     assets.json.structureArchesRoofCenterTee,
-      //     assets.json.structureArchesRoofCenterTurn,
-      //     assets.json.structureAir,
-      //     assets.json.structureFlat,
-      //     // assets.json.structureAny,
-      //   ],
-      // })
-      // vox.mergeStructureIntoWorld(this.chunks, mansion, [92, 55, -10])
-      // for (let x = 0; x < 35; x ++) {
-      //   for (let y = 0; y < 35; y ++) {
-      //     let mansionPlat = procBasics.generateRectangularPrism({
-      //       width: tileScale,
-      //       length: tileScale,
-      //       height: 1,
-      //       voxel: {material: x%2 === y%2 ? 'grass' : 'leaves', solid: true},
-      //     })
-      //     vox.mergeStructureIntoWorld(this.chunks, mansionPlat, vec3.add([92, 55, -10], vec3.scale([x, y, 0], tileScale)))
-      //   }
-      // }
     }
   }
 

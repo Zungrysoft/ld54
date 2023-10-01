@@ -73,6 +73,10 @@ export default class Wasp extends Thing {
     // If the targeted voxel is destroyed, find a new voxel to target
     if (!this.targetPosition || !vox.getVoxelSolid(chunks, this.targetPosition, {index:0})) {
       this.targetPosition = this.pickNearbyVoxel()
+      // If we didn't find a target, borrow a target from a nearby wasp
+      if (!this.targetPosition) {
+        this.targetPosition = this.borrowTarget()
+      }
     }
     // Otherwise, shoot it!
     else {
@@ -105,8 +109,8 @@ export default class Wasp extends Thing {
 
     const thisPos = this.position.map(x => Math.round(x))
     const searchDistance = 32
-    const searchHeightHigh = 4
-    const searchHeightLow = -32
+    const searchHeightHigh = 12
+    const searchHeightLow = -24
     const verticalChance = 0.05
     let x = 0
     let y = 0
@@ -153,6 +157,24 @@ export default class Wasp extends Thing {
     }
 
     return bestPos
+  }
+
+  borrowTarget() {
+    // Find another wasp that has a target and steal it
+    let wasps = game.getThings().filter(x => x instanceof Wasp && x.targetPosition)
+
+    let closestDist = Number.POSITIVE_INFINITY
+    let closestTarget = undefined
+
+    for (const wasp of wasps) {
+      const dist = vec3.distance(this.position, wasp.position)
+      if (dist < closestDist) {
+        closestDist = dist
+        closestTarget = wasp.targetPosition
+      }
+    }
+
+    return closestTarget
   }
 
   draw () {
