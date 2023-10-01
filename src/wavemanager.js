@@ -173,17 +173,19 @@ class BuildManager extends Thing {
 
     const terrain = game.getThing('terrain')
     for (let i = 0; i <= 3; i += 1) {
-      if (u.pointInsideAabb(...game.mouse.position, [-150, -100, 150, 100], ...this.positionList[i])) {
+      if (u.pointInsideAabb(...game.mouse.position, [-150, -45, 150, 45], ...this.positionList[i])) {
         if (game.mouse.leftButton) {
           this.dead = true
         }
         if (!this.previewing[i]) {
           vox.mergeStructureIntoWorld(terrain.chunks, game.assets.json[this.builds[i][2]], [0, 0, 0])
           this.previewing[i] = true
+          console.log("Merge")
         }
       } else if (this.previewing[i] && !this.dead) {
         terrain.loadSavedChunks()
         this.previewing[i] = false
+        console.log("LOAD")
       }
     }
   }
