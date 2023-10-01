@@ -14,7 +14,7 @@
   },
   {
     "structure": "beams",
-    "title": "Metal Beam Lattice",
+    "title": "Metal Beams",
     "weight": 20,
     "cost": 9,
     "shiftRadius": 0

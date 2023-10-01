@@ -31,7 +31,7 @@ export default class Terrain extends Thing {
       this.chunkStates[vox.ts(coord)] = 'loaded'
     }
 
-    // Spawn platform
+    // Starting structure
     vox.mergeStructureIntoWorld(this.chunks, assets.json.starter, [0, 0, 0])
 
     // =====================
@@ -46,6 +46,12 @@ export default class Terrain extends Thing {
       (message) => {
         // Save the chunk mesh
         let vertsView = new Float32Array(message.verts);
+
+        // let verts = []
+        // for (let i = 0; i < vertsView.length; i += 8) {
+        //   verts.push([vertsView[i+5], vertsView[i+6], vertsView[i+7]])
+        // }
+        // console.log(verts)
 
         // Make sure this mesh isn't outdated (prevent race conditions)
         let meshTimestamp = message.meshTimestamp

@@ -1,5 +1,4 @@
 import * as u from "./core/utils.js"
-import * as vec2 from "./core/vector2.js"
 import * as game from "./core/game.js"
 import Thing from "./core/thing.js"
 

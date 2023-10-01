@@ -67,7 +67,7 @@ export default class Bullet extends Thing {
 
       if (hit) {
         if (thing.takeDamage) {
-          thing.takeDamage(this.damage, vec3.add(vec3.scale(this.velocity, 2), [0, 0, 1.5]))
+          thing.takeDamage(this.damage, vec3.add(vec3.scale(this.velocity, 2), [0, 0, 0.2]))
         }
         this.dead = true
       }
@@ -129,20 +129,20 @@ class Explosion extends Thing {
         }
       }
     }
-  }
-
-  update () {
-    super.update()
-    this.time += 1
 
     const player = game.getThing('player')
     const playerPosition = [player.position[0], player.position[1], player.position[2] + 2]
     if (u.distance(this.position, playerPosition) <= this.radius + 2) {
       const push = vec3.normalize(vec3.subtract(playerPosition, this.position))
-      player.velocity[0] += push[0] * 0.25
-      player.velocity[1] += push[1] * 0.25
-      player.velocity[2] += push[2] * 0.5
+      player.velocity[0] += push[0] * 0.3
+      player.velocity[1] += push[1] * 0.3
+      player.velocity[2] += push[2] * 0.6
     }
+  }
+
+  update () {
+    super.update()
+    this.time += 1
   }
 
   draw () {

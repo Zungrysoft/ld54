@@ -47,5 +47,6 @@ void main() {
     noise.rgb += 0.6;// - 1.0 / 16.0;
 
     gl_FragColor = result * noise;
+    // gl_FragColor = vec4(abs(normal.x), abs(normal.y), abs(normal.z), 1.0);
 }
 

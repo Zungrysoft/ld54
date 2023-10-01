@@ -52,12 +52,11 @@ export default class Player extends Thing {
   akimbo = false
   coins = 10
 
-  constructor (position = [0, 0, 0], angle = 0) {
+  constructor (position = [0, 0, 0]) {
     super()
 
     this.position = position
     game.getCamera3D().position = [...this.position]
-    game.getCamera3D().lookVector = vec3.anglesToVector(angle, 0.25)
 
     game.globals.killsUntilDrop = 3
 
@@ -67,6 +66,8 @@ export default class Player extends Thing {
     // this.lookDirection = 0
 
     game.setThingName(this, 'player')
+
+    this.respawn()
   }
 
   update () {
@@ -362,10 +363,10 @@ export default class Player extends Thing {
 
     if (this.position[2] < -10) {
       //game.resetScene()
-      this.position = [...this.spawnPosition]
+      this.respawn()
       this.lives -= 1
-      this.velocity = [0, 0, 0]
       this.jetpack = this.jetpackMaximum
+      this.jetpackCanRecharge = true
       game.addThing(new DeathAnim)
     }
 
@@ -642,6 +643,18 @@ export default class Player extends Thing {
     this.velocity[0] += knockback[0]
     this.velocity[1] += knockback[1]
     this.velocity[2] += knockback[2]
+  }
+
+  respawn() {
+    // Create platform
+    const terrain = game.getThing('terrain')
+    vox.mergeStructureIntoWorld(terrain.chunks, assets.json.spawnplat, [117, 37, 50])
+
+    // Move player
+    this.position = [120.1, 40.1, 53.1]
+    this.velocity = [0, 0, 0]
+    this.disableLeftClick = true
+    game.getCamera3D().lookVector = vec3.anglesToVector(Math.PI, -Math.PI*(1/16))
   }
 
   draw () {

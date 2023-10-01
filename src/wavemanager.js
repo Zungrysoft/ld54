@@ -366,6 +366,7 @@ class BuildManager extends Thing {
     const { width: w, height: h } = game.config
     if (u.pointInsideAabb(...game.mouse.position, [-100, -30, 100, 30], game.config.width * 0.75, game.config.height * 0.8)) {
       if (game.mouse.leftClick) {
+        player.respawn()
         this.dead = true
       }
     }
@@ -379,8 +380,6 @@ class BuildManager extends Thing {
         }
       }
     }
-
-    player.disableLeftClick = true
   }
 
   pickStructures() {

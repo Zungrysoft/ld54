@@ -103,6 +103,7 @@ await game.loadAssets({
     redplat: 'json/structures/main/redplat.json',
     scaffolding: 'json/structures/main/scaffolding.json',
     scaffolding2: 'json/structures/main/scaffolding2.json',
+    spawnplat: 'json/structures/main/spawnplat.json',
     stairs: 'json/structures/main/stairs.json',
     starter: 'json/structures/main/starter.json',
     starterold: 'json/structures/main/starterold.json',
