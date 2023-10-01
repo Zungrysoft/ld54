@@ -169,7 +169,7 @@ export default class Player extends Thing {
         this.jetpackCanRecharge = true
     }
     if (this.jetpackCanRecharge) {
-      this.jetpack = Math.min(this.jetpack + (this.onGround ? 0.1 : 0.05) * this.jetpackRechargeRate, this.jetpackMaximum)
+      this.jetpack = Math.min(this.jetpack + 0.05*this.jetpackRechargeRate, this.jetpackMaximum)
     }
 
     const jump = () => {
@@ -895,15 +895,13 @@ export default class Player extends Thing {
 
     // jetpack
     const fuel = Math.min(Math.max(this.jetpack / this.jetpackMaximum, 0), 1)
-    if (this.jetpack < this.jetpackMaximum) {
-      ctx.save()
-      ctx.lineWidth = 6
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.75)'
-      ctx.beginPath()
-      ctx.arc(game.config.width * 2 / 4, game.config.height / 2, 38, 0, Math.PI * 2 * fuel)
-      ctx.stroke()
-      ctx.save()
-    }
+    ctx.save()
+    ctx.lineWidth = 4
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.75)'
+    ctx.beginPath()
+    ctx.arc(game.config.width * 2 / 4, game.config.height / 2, 20, Math.PI*(1/6), Math.PI*(1/6) + Math.PI * 2 * (1/3) * fuel, false)
+    ctx.stroke()
+    ctx.save()
 
     // coin get
     if (this.timer('coinget')) {
