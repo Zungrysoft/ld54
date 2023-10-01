@@ -14,7 +14,7 @@ import * as vec2 from './core/vector2.js'
 import * as vox from './voxel.js'
 import Bullet from './bullet.js'
 import WaspGib from './waspgib.js'
-import Coin from './coin.js'
+import HoneycombPickup from './pickuphoneycomb.js'
 
 export default class Wasp extends Thing {
   time = 0
@@ -189,8 +189,12 @@ export default class Wasp extends Thing {
       game.addThing(new WaspGib([...this.position], -this.health))
     }
     if (this.spawnCoin) {
-      for (let i = 0; i < 1; i ++) {
-        game.addThing(new Coin([...this.position]))
+      if (game.globals.killsUntilDrop <= 1) {
+        game.addThing(new HoneycombPickup([...this.position]))
+        game.globals.killsUntilDrop = Math.floor((Math.random() * 2) + 4)
+      }
+      else {
+        game.globals.killsUntilDrop --
       }
     }
   }

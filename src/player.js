@@ -58,6 +58,8 @@ export default class Player extends Thing {
     game.getCamera3D().position = [...this.position]
     game.getCamera3D().lookVector = vec3.anglesToVector(angle, 0.25)
 
+    game.globals.killsUntilDrop = 3
+
     this.spawnPosition = [...this.position]
     this.velocity = [0, 0, 0]
     // this.direction = 0
