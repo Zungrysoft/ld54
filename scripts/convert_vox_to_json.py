@@ -79,8 +79,8 @@ def convert_vox_to_json(input_filename, output_filename):
 
     # Read existing output file data
     data = {}
-    with open(output_filename, 'r') as output_file:
-        data = json.load(output_file)
+    # with open(output_filename, 'r') as output_file:
+    #     data = json.load(output_file)
 
     # Put new voxel data into structure
     data["voxels"] = {}

@@ -3,18 +3,30 @@
     "structure": "redplat",
     "title": "Red Bridge",
     "weight": 100,
-    "cost": 7
+    "cost": 9
   },
   {
     "structure": "beams",
-    "title": "Full Metal Beams",
+    "title": "Metal Beam Lattice",
     "weight": 30,
     "cost": 12
+  },
+  {
+    "structure": "beam",
+    "title": "Metal Beam",
+    "weight": 80,
+    "cost": 10
   },
   {
     "structure": "blueroom",
     "title": "Corner Office",
     "weight": 100,
     "cost": 7
+  },
+  {
+    "structure": "temple",
+    "title": "Central Temple",
+    "weight": 20,
+    "cost": 20
   }
 ]

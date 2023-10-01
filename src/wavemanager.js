@@ -177,7 +177,7 @@ class BuildManager extends Thing {
 
   constructor () {
     super()
-    this.builds = Array(4).fill(undefined).map(() => shopPick(10))
+    this.builds = Array(4).fill(undefined).map(() => shopPick(10000))
     game.setThingName(this, 'buildmanager')
     game.pause(this, game.getThing('skybox'))
     game.getThing('terrain').saveChunks()
