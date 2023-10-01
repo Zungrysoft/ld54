@@ -103,6 +103,74 @@
     ]
   },
   {
+    "structure": "building1",
+    "title": "Factory",
+    "weight": 100,
+    "cost": 8,
+    "minWave": 3,
+    "shiftRadius": 0,
+    "things": [
+      {
+        "position": [59, 39, 50],
+        "name": "pistol"
+      }
+    ]
+  },
+  {
+    "structure": "building2",
+    "title": "Steps",
+    "weight": 100,
+    "cost": 7,
+    "minWave": 3,
+    "shiftRadius": 0,
+    "things": [
+      {
+        "position": [60, 28, 46],
+        "name": "pistol"
+      }
+    ]
+  },
+  {
+    "structure": "scaffolding",
+    "title": "Scaffolding",
+    "weight": 30,
+    "cost": 5,
+    "minWave": 1,
+    "shiftRadius": 0,
+    "things": [
+      {
+        "position": [79, 57, 49],
+        "name": "heart"
+      }
+    ]
+  },
+  {
+    "structure": "scaffolding2",
+    "title": "Raised Area",
+    "weight": 30,
+    "cost": 4,
+    "shiftRadius": 0,
+    "things": [
+      {
+        "position": [55, 48, 49],
+        "name": "shotgun"
+      }
+    ]
+  },
+  {
+    "structure": "stairs",
+    "title": "Crossway",
+    "weight": 90,
+    "cost": 10,
+    "shiftRadius": 10,
+    "things": [
+      {
+        "position": [66, 43, 50],
+        "name": "heart"
+      }
+    ]
+  },
+  {
     "structure": "pillars",
     "title": "Stone Pillars",
     "weight": 100,
