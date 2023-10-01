@@ -14,12 +14,14 @@ import * as vec2 from './core/vector2.js'
 import * as vox from './voxel.js'
 import Bullet from './bullet.js'
 import WaspGib from './waspgib.js'
+import Coin from './coin.js'
 
 export default class Wasp extends Thing {
   time = 0
   aabb = [-2, -2, 2, 2]
   hitRadius = 2.5
   explosionPower = 5
+  spawnCoin = true
 
   constructor (position = [0, 0, 0], angle = 0) {
     super()
@@ -185,6 +187,11 @@ export default class Wasp extends Thing {
     // Throw gibs
     for (let i = 0; i < 7; i ++) {
       game.addThing(new WaspGib([...this.position], -this.health))
+    }
+    if (this.spawnCoin) {
+      for (let i = 0; i < 1; i ++) {
+        game.addThing(new Coin([...this.position]))
+      }
     }
   }
 }
