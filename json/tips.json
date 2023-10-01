@@ -1,5 +1,10 @@
 [
   {
+    "text": "Collect wasp honey from dead wasps to\nbuy new structures.",
+    "minWave": 0,
+    "maxWave": 3
+  },
+  {
     "text": "Batteries increase the recharge rate of\nyour jetpack.",
     "minWave": 0,
     "maxWave": 3
@@ -15,6 +20,11 @@
     "maxWave": 99999
   },
   {
+    "text": "Your jetpack can come in handy for collecting falling honey.",
+    "minWave": 1,
+    "maxWave": 4
+  },
+  {
     "text": "Wait for many wasps to build up before you\ncollect the shotgun. It's best against large swarms.",
     "minWave": 1,
     "maxWave": 99999
@@ -23,6 +33,11 @@
     "text": "Pay attention to which items come with each\nstructure. They can be key to your survival!",
     "minWave": 1,
     "maxWave": 4
+  },
+  {
+    "text": "Try to build structures that connect things together. You can save jetpack fuel this way.",
+    "minWave": 2,
+    "maxWave": 99999
   },
   {
     "text": "Big wasps are extremely destructive.\nKill them before they do too much damage!",

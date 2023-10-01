@@ -7,6 +7,6 @@ export default class BatteryPickup extends Pickup {
   pickupSound = ""
 
   onPickup (other) {
-    other.jetpackRechargeRate += 0.75
+    other.jetpackRechargeRate += 0.5
   }
 }

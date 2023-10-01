@@ -167,7 +167,7 @@
     "title": "Raised Area",
     "weight": 30,
     "cost": 3,
-    "shiftRadius": 0,
+    "shiftRadius": 10,
     "things": [
       {
         "position": [55, 48, 49],

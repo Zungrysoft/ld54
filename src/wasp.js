@@ -35,7 +35,7 @@ export default class Wasp extends Thing {
     this.spawnPosition = [...this.position]
     this.velocity = [0, 0, 0]
     this.lookAngle = 0
-    this.checkShoot()
+    this.checkShoot(60)
   }
 
   update () {
@@ -67,7 +67,7 @@ export default class Wasp extends Thing {
     this.growScale = Math.min(this.growScale + 0.03, 1.0)
   }
 
-  checkShoot() {
+  checkShoot(additionalDelay=0) {
     let chunks = game.getThing("terrain").chunks
 
     // If the targeted voxel is destroyed, find a new voxel to target
@@ -84,7 +84,7 @@ export default class Wasp extends Thing {
     }
 
     // checkShoot again after a random amount of time
-    this.after(Math.floor(45 + Math.random()*30), () => this.checkShoot())
+    this.after(Math.floor(45 + additionalDelay + Math.random()*30), () => this.checkShoot())
   }
 
   shoot() {

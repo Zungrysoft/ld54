@@ -678,6 +678,18 @@ export default class Player extends Thing {
     gfx.setTexture(assets.textures.uv_honeycomb)
     gfx.drawMesh(assets.meshes.honeycomb)
 
+    // Shell
+    if (this.weapon === "shotgun") {
+      // Ammo
+      gfx.set('modelMatrix', mat.getTransformation({
+        translation: [5.4, -6.0, -1.1],
+        rotation: [Math.PI * 0.4, Math.sin(this.time/50)*0.3, Math.PI/2],
+        scale: 0.23
+      }))
+      gfx.setTexture(assets.textures.uv_shell)
+      gfx.drawMesh(assets.meshes.shell)
+    }
+
     // Bobbing
     const t = this.walkFrames
     const bobX = Math.sin(t) * 2 * 0.15
@@ -686,6 +698,7 @@ export default class Player extends Thing {
       this.walkFrames = 0
     }
 
+    // Don't draw viewmodel in build menu
     if (game.getThing('buildmanager')) {
       return
     }
@@ -707,15 +720,6 @@ export default class Player extends Thing {
       }))
       gfx.setTexture(assets.textures.uv_shotgun)
       gfx.drawMesh(assets.meshes.shotgun)
-
-      // Ammo
-      gfx.set('modelMatrix', mat.getTransformation({
-        translation: [5.4, -6.0, -1.1],
-        rotation: [Math.PI * 0.4, Math.sin(this.time/50)*0.3, Math.PI/2],
-        scale: 0.23
-      }))
-      gfx.setTexture(assets.textures.uv_shell)
-      gfx.drawMesh(assets.meshes.shell)
     }
     // Machinegun
     else if (this.weapon === 'machinegun') {
@@ -754,72 +758,9 @@ export default class Player extends Thing {
   }
 
   postDraw () {
-    // Exit if GUI should be hidden
-    // if (!this.showGui) {
-    //   return
-    // }
-
+    // Don't draw GUI in death screen
     if (game.getThing('deathanim')) {
       return
-    }
-
-    // Get screen width and height
-    const width = game.config.width
-    const height = game.config.height
-
-    // Crosshair
-    ctx.drawImage(assets.images.crosshair, width / 2 - 16, height / 2 - 16)
-
-    // Coordinates
-    if (game.globals.debugMode) {
-      const margin = 16
-      const pos = this.position
-      const vPos = pos.map(x => Math.round(x))
-      ctx.save()
-      ctx.font = 'italic 16px Times New Roman'
-      ctx.translate(margin, margin)
-      {
-        const str = 'Position: [' + pos[0].toFixed(2) + ', ' + pos[1].toFixed(2) + ', ' + pos[2].toFixed(2) + ']'
-        ctx.fillStyle = 'darkBlue'
-        ctx.fillText(str, 0, 0)
-        ctx.fillStyle = 'white'
-        ctx.fillText(str, 2, -2)
-      }
-      ctx.translate(0, margin)
-      {
-        const str = 'Voxel: [' + vPos + ']'
-        ctx.fillStyle = 'darkBlue'
-        ctx.fillText(str, 0, 0)
-        ctx.fillStyle = 'white'
-        ctx.fillText(str, 2, -2)
-      }
-      ctx.translate(0, margin)
-      {
-        const str = 'Chunk: [' + vox.positionToChunkKey(vPos) + ']'
-        ctx.fillStyle = 'darkBlue'
-        ctx.fillText(str, 0, 0)
-        ctx.fillStyle = 'white'
-        ctx.fillText(str, 2, -2)
-      }
-      ctx.translate(0, margin)
-      {
-        // Look direction
-        const possibilities = [[1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1]]
-        const mapping = {
-          "1,0,0": "East (+X)",
-          "-1,0,0": "West (-X)",
-          "0,1,0": "South (+Y)",
-          "0,-1,0": "North (-Y)",
-          "0,0,1": "Up (+Z)",
-          "0,0,-1": "Down (-Z)",
-        }
-        const str = "Facing " + mapping[vec3.findMostSimilarVector(game.getCamera3D().lookVector, possibilities)]
-        ctx.fillStyle = 'darkBlue'
-        ctx.fillText(str, 0, 0)
-        ctx.fillStyle = 'white'
-        ctx.fillText(str, 2, -2)
-      }
-      ctx.restore()
     }
 
     // lives counter
@@ -889,6 +830,70 @@ export default class Player extends Thing {
         ctx.translate(100, game.config.height - 165)
         ctx.fillText(String(this.ammo), 0, 0)
         ctx.restore()
+      }
+      ctx.restore()
+    }
+
+    // Don't draw crosshairs in build menu
+    if (game.getThing('buildmanager')) {
+      return
+    }
+
+    // Get screen width and height
+    const width = game.config.width
+    const height = game.config.height
+
+    // Crosshair
+    ctx.drawImage(assets.images.crosshair, width / 2 - 16, height / 2 - 16)
+
+    // Coordinates
+    if (game.globals.debugMode) {
+      const margin = 16
+      const pos = this.position
+      const vPos = pos.map(x => Math.round(x))
+      ctx.save()
+      ctx.font = 'italic 16px Times New Roman'
+      ctx.translate(margin, margin)
+      {
+        const str = 'Position: [' + pos[0].toFixed(2) + ', ' + pos[1].toFixed(2) + ', ' + pos[2].toFixed(2) + ']'
+        ctx.fillStyle = 'darkBlue'
+        ctx.fillText(str, 0, 0)
+        ctx.fillStyle = 'white'
+        ctx.fillText(str, 2, -2)
+      }
+      ctx.translate(0, margin)
+      {
+        const str = 'Voxel: [' + vPos + ']'
+        ctx.fillStyle = 'darkBlue'
+        ctx.fillText(str, 0, 0)
+        ctx.fillStyle = 'white'
+        ctx.fillText(str, 2, -2)
+      }
+      ctx.translate(0, margin)
+      {
+        const str = 'Chunk: [' + vox.positionToChunkKey(vPos) + ']'
+        ctx.fillStyle = 'darkBlue'
+        ctx.fillText(str, 0, 0)
+        ctx.fillStyle = 'white'
+        ctx.fillText(str, 2, -2)
+      }
+      ctx.translate(0, margin)
+      {
+        // Look direction
+        const possibilities = [[1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1]]
+        const mapping = {
+          "1,0,0": "East (+X)",
+          "-1,0,0": "West (-X)",
+          "0,1,0": "South (+Y)",
+          "0,-1,0": "North (-Y)",
+          "0,0,1": "Up (+Z)",
+          "0,0,-1": "Down (-Z)",
+        }
+        const str = "Facing " + mapping[vec3.findMostSimilarVector(game.getCamera3D().lookVector, possibilities)]
+        ctx.fillStyle = 'darkBlue'
+        ctx.fillText(str, 0, 0)
+        ctx.fillStyle = 'white'
+        ctx.fillText(str, 2, -2)
       }
       ctx.restore()
     }
