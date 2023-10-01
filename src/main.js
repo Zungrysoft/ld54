@@ -19,6 +19,7 @@ await game.loadAssets({
   images: {
     background: 'images/bg1.png',
     square: 'images/square.png',
+    circle: 'images/circle.png',
     colorMap: 'images/color_map.png',
     crosshair: 'images/crosshair.png',
     wasp: 'images/square.png',
@@ -28,6 +29,7 @@ await game.loadAssets({
     uv_shell: 'images/uv_shell.png',
     uv_heart: 'images/uv_heart.png',
     uv_battery: 'images/uv_battery.png',
+    uv_honeycomb: 'images/uv_honeycomb.png',
     miramar_bk: 'images/miramar_bk.jpg',
     miramar_dn: 'images/miramar_dn.jpg',
     miramar_ft: 'images/miramar_ft.jpg',
@@ -53,6 +55,8 @@ await game.loadAssets({
 
     shadingFrag: 'shaders/shading.frag',
 
+    billboard: 'shaders/billboard.vert',
+
     voxelFrag: 'shaders/voxel.frag',
     voxelVert: 'shaders/voxel.vert',
   },
@@ -71,6 +75,7 @@ await game.loadAssets({
     shell: 'models/shell.obj',
     heart: 'models/heart.obj',
     battery: 'models/battery.obj',
+    honeycomb: 'models/honeycomb.obj',
   },
 
   json: {
@@ -95,6 +100,10 @@ assets.shaders = {
   voxel: gfx.createShader(
     assets.shaderSources.voxelVert,
     assets.shaderSources.voxelFrag
+  ),
+  billboard: gfx.createShader(
+    assets.shaderSources.billboard,
+    assets.shaderSources.defaultFrag
   ),
 }
 
