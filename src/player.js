@@ -814,8 +814,8 @@ export default class Player extends Thing {
       ctx.save()
       ctx.fillStyle = 'black'
       ctx.font = 'italic bold 56px Tahoma'
-      ctx.textAlign = 'center'
-      ctx.translate(110, game.config.height - 15)
+      ctx.textAlign = 'left'
+      ctx.translate(100, game.config.height - 15)
       ctx.fillText(String(this.lives), 0, 0)
       ctx.restore()
     }
@@ -824,8 +824,8 @@ export default class Player extends Thing {
       ctx.save()
       ctx.fillStyle = 'white'
       ctx.font = 'italic bold 56px Tahoma'
-      ctx.textAlign = 'center'
-      ctx.translate(110, game.config.height - 15)
+      ctx.textAlign = 'left'
+      ctx.translate(100, game.config.height - 15)
       ctx.fillText(String(this.lives), 0, 0)
       ctx.restore()
     }
@@ -837,8 +837,8 @@ export default class Player extends Thing {
       ctx.save()
       ctx.fillStyle = 'black'
       ctx.font = 'italic bold 56px Tahoma'
-      ctx.textAlign = 'center'
-      ctx.translate(110, game.config.height - 90)
+      ctx.textAlign = 'left'
+      ctx.translate(100, game.config.height - 90)
       ctx.fillText(String(this.coins), 0, 0)
       ctx.restore()
     }
@@ -847,8 +847,8 @@ export default class Player extends Thing {
       ctx.save()
       ctx.fillStyle = 'white'
       ctx.font = 'italic bold 56px Tahoma'
-      ctx.textAlign = 'center'
-      ctx.translate(110, game.config.height - 90)
+      ctx.textAlign = 'left'
+      ctx.translate(100, game.config.height - 90)
       ctx.fillText(String(this.coins), 0, 0)
       ctx.restore()
     }
@@ -861,8 +861,8 @@ export default class Player extends Thing {
         ctx.save()
         ctx.fillStyle = 'black'
         ctx.font = 'italic bold 56px Tahoma'
-        ctx.textAlign = 'center'
-        ctx.translate(110, game.config.height - 165)
+        ctx.textAlign = 'left'
+        ctx.translate(100, game.config.height - 165)
         ctx.fillText(String(this.ammo), 0, 0)
         ctx.restore()
       }
@@ -871,8 +871,8 @@ export default class Player extends Thing {
         ctx.save()
         ctx.fillStyle = 'white'
         ctx.font = 'italic bold 56px Tahoma'
-        ctx.textAlign = 'center'
-        ctx.translate(110, game.config.height - 165)
+        ctx.textAlign = 'left'
+        ctx.translate(100, game.config.height - 165)
         ctx.fillText(String(this.ammo), 0, 0)
         ctx.restore()
       }

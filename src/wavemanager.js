@@ -6,7 +6,7 @@ import * as vec3 from './core/vector3.js'
 import * as vox from './voxel.js'
 import Thing from './core/thing.js'
 import Wasp from './wasp.js'
-import Coin from './coin.js'
+import BigWasp from './bigwasp.js'
 
 export default class WaveManager extends Thing {
   wave = 0
@@ -51,7 +51,12 @@ export default class WaveManager extends Thing {
         y + u.lerp(-10, 10, Math.random()),
         u.lerp(45, 55, Math.random())
       ]
-      game.addThing(new Wasp(position))
+      if (0.2 > Math.random()) {
+        game.addThing(new BigWasp(position))
+      }
+      else {
+        game.addThing(new Wasp(position))
+      }
     }
   }
 
