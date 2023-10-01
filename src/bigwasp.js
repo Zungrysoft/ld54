@@ -7,7 +7,7 @@ export default class BigWasp extends Wasp {
   time = 0
   aabb = [-3, -3, 3, 3]
   hitRadius = 4
-  explosionPower = 9
+  explosionPower = 8
   spawnCoin = true
   scale = 1.9
   health = 300

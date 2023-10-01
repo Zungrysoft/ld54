@@ -193,6 +193,7 @@
     "title": "Stone Pillars",
     "weight": 100,
     "cost": 3,
+    "minWave": 1,
     "shiftRadius": 15,
     "things": [
       {
