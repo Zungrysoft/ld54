@@ -1,1750 +1,1750 @@
 {
     "voxels": {
-        "54,44,39": {
+        "36,44,40": {
             "material": "bark",
             "solid": true
         },
-        "53,44,39": {
+        "37,44,40": {
             "material": "bark",
             "solid": true
         },
-        "52,44,39": {
+        "38,44,40": {
             "material": "bark",
             "solid": true
         },
-        "51,44,39": {
+        "39,44,40": {
             "material": "bark",
             "solid": true
         },
-        "50,44,39": {
+        "40,44,40": {
             "material": "bark",
             "solid": true
         },
-        "49,44,39": {
+        "41,44,40": {
             "material": "bark",
             "solid": true
         },
-        "48,44,39": {
+        "42,44,40": {
             "material": "bark",
             "solid": true
         },
-        "47,44,39": {
+        "43,44,40": {
             "material": "bark",
             "solid": true
         },
-        "46,44,39": {
+        "44,44,40": {
             "material": "bark",
             "solid": true
         },
-        "45,44,39": {
+        "45,44,40": {
             "material": "bark",
             "solid": true
         },
-        "54,35,39": {
+        "46,44,40": {
             "material": "bark",
             "solid": true
         },
-        "53,35,39": {
-            "material": "wood",
-            "solid": true
-        },
-        "52,35,39": {
-            "material": "wood",
-            "solid": true
-        },
-        "51,35,39": {
-            "material": "wood",
+        "47,44,40": {
+            "material": "bark",
             "solid": true
         },
-        "50,35,39": {
-            "material": "wood",
+        "48,44,40": {
+            "material": "bark",
             "solid": true
         },
-        "49,35,39": {
-            "material": "wood",
+        "49,44,40": {
+            "material": "bark",
             "solid": true
         },
-        "48,35,39": {
-            "material": "wood",
+        "50,44,40": {
+            "material": "bark",
             "solid": true
         },
-        "47,35,39": {
-            "material": "wood",
+        "51,44,40": {
+            "material": "bark",
             "solid": true
         },
-        "46,35,39": {
-            "material": "wood",
+        "52,44,40": {
+            "material": "bark",
             "solid": true
         },
-        "45,35,39": {
+        "53,44,40": {
             "material": "bark",
             "solid": true
         },
-        "54,43,39": {
+        "54,44,40": {
             "material": "bark",
             "solid": true
         },
-        "53,43,39": {
-            "material": "wood",
+        "36,43,40": {
+            "material": "bark",
             "solid": true
         },
-        "52,43,39": {
+        "37,43,40": {
             "material": "wood",
             "solid": true
         },
-        "51,43,39": {
+        "38,43,40": {
             "material": "wood",
             "solid": true
         },
-        "50,43,39": {
+        "39,43,40": {
             "material": "wood",
             "solid": true
         },
-        "49,43,39": {
+        "40,43,40": {
             "material": "wood",
             "solid": true
         },
-        "48,43,39": {
+        "41,43,40": {
             "material": "wood",
             "solid": true
         },
-        "47,43,39": {
+        "42,43,40": {
             "material": "wood",
             "solid": true
         },
-        "46,43,39": {
+        "43,43,40": {
             "material": "wood",
             "solid": true
         },
-        "45,43,39": {
+        "44,43,40": {
             "material": "bark",
             "solid": true
         },
-        "54,36,39": {
+        "45,43,40": {
             "material": "bark",
             "solid": true
         },
-        "53,36,39": {
+        "46,43,40": {
             "material": "wood",
             "solid": true
         },
-        "52,36,39": {
+        "47,43,40": {
             "material": "wood",
             "solid": true
         },
-        "51,36,39": {
+        "48,43,40": {
             "material": "wood",
             "solid": true
         },
-        "50,36,39": {
+        "49,43,40": {
             "material": "wood",
             "solid": true
         },
-        "49,36,39": {
+        "50,43,40": {
             "material": "wood",
             "solid": true
         },
-        "48,36,39": {
+        "51,43,40": {
             "material": "wood",
             "solid": true
         },
-        "47,36,39": {
+        "52,43,40": {
             "material": "wood",
             "solid": true
         },
-        "46,36,39": {
+        "53,43,40": {
             "material": "wood",
             "solid": true
         },
-        "45,36,39": {
+        "54,43,40": {
             "material": "bark",
             "solid": true
         },
-        "54,42,39": {
+        "36,42,40": {
             "material": "bark",
-            "solid": true
-        },
-        "53,42,39": {
-            "material": "wood",
             "solid": true
         },
-        "52,42,39": {
+        "37,42,40": {
             "material": "wood",
             "solid": true
         },
-        "51,42,39": {
+        "38,42,40": {
             "material": "wood",
             "solid": true
         },
-        "50,42,39": {
+        "39,42,40": {
             "material": "wood",
             "solid": true
         },
-        "49,42,39": {
+        "40,42,40": {
             "material": "wood",
             "solid": true
         },
-        "48,42,39": {
+        "41,42,40": {
             "material": "wood",
             "solid": true
         },
-        "47,42,39": {
+        "42,42,40": {
             "material": "wood",
             "solid": true
         },
-        "46,42,39": {
+        "43,42,40": {
             "material": "wood",
             "solid": true
         },
-        "45,42,39": {
+        "44,42,40": {
             "material": "bark",
             "solid": true
         },
-        "54,37,39": {
+        "45,42,40": {
             "material": "bark",
             "solid": true
         },
-        "53,37,39": {
+        "46,42,40": {
             "material": "wood",
             "solid": true
         },
-        "52,37,39": {
+        "47,42,40": {
             "material": "wood",
             "solid": true
         },
-        "51,37,39": {
+        "48,42,40": {
             "material": "wood",
             "solid": true
         },
-        "50,37,39": {
+        "49,42,40": {
             "material": "wood",
             "solid": true
         },
-        "49,37,39": {
+        "50,42,40": {
             "material": "wood",
             "solid": true
         },
-        "48,37,39": {
+        "51,42,40": {
             "material": "wood",
             "solid": true
         },
-        "47,37,39": {
+        "52,42,40": {
             "material": "wood",
             "solid": true
         },
-        "46,37,39": {
+        "53,42,40": {
             "material": "wood",
             "solid": true
         },
-        "45,37,39": {
+        "54,42,40": {
             "material": "bark",
             "solid": true
         },
-        "54,41,39": {
+        "36,41,40": {
             "material": "bark",
             "solid": true
         },
-        "53,41,39": {
+        "37,41,40": {
             "material": "bark",
             "solid": true
         },
-        "52,41,39": {
+        "38,41,40": {
             "material": "bark",
             "solid": true
         },
-        "51,41,39": {
+        "39,41,40": {
             "material": "bark",
             "solid": true
         },
-        "50,41,39": {
+        "40,41,40": {
             "material": "bark",
             "solid": true
         },
-        "49,41,39": {
+        "41,41,40": {
             "material": "bark",
             "solid": true
         },
-        "48,41,39": {
+        "42,41,40": {
             "material": "bark",
             "solid": true
         },
-        "47,41,39": {
+        "43,41,40": {
             "material": "bark",
             "solid": true
         },
-        "46,41,39": {
+        "44,41,40": {
             "material": "bark",
             "solid": true
         },
-        "45,41,39": {
+        "45,41,40": {
             "material": "bark",
             "solid": true
         },
-        "54,38,39": {
+        "46,41,40": {
             "material": "bark",
             "solid": true
         },
-        "53,38,39": {
-            "material": "wood",
+        "47,41,40": {
+            "material": "bark",
+            "solid": true
+        },
+        "48,41,40": {
+            "material": "bark",
+            "solid": true
+        },
+        "49,41,40": {
+            "material": "bark",
             "solid": true
         },
-        "52,38,39": {
+        "50,41,40": {
+            "material": "bark",
+            "solid": true
+        },
+        "51,41,40": {
+            "material": "bark",
+            "solid": true
+        },
+        "52,41,40": {
+            "material": "bark",
+            "solid": true
+        },
+        "53,41,40": {
+            "material": "bark",
+            "solid": true
+        },
+        "54,41,40": {
+            "material": "bark",
+            "solid": true
+        },
+        "36,40,40": {
+            "material": "bark",
+            "solid": true
+        },
+        "37,40,40": {
             "material": "wood",
             "solid": true
         },
-        "51,38,39": {
+        "38,40,40": {
             "material": "wood",
             "solid": true
         },
-        "50,38,39": {
+        "39,40,40": {
             "material": "wood",
             "solid": true
         },
-        "49,38,39": {
+        "40,40,40": {
             "material": "wood",
             "solid": true
         },
-        "48,38,39": {
+        "41,40,40": {
             "material": "wood",
             "solid": true
         },
-        "47,38,39": {
+        "42,40,40": {
             "material": "wood",
             "solid": true
         },
-        "46,38,39": {
+        "43,40,40": {
             "material": "wood",
             "solid": true
         },
-        "45,38,39": {
+        "44,40,40": {
             "material": "bark",
             "solid": true
         },
-        "54,40,39": {
+        "45,40,40": {
             "material": "bark",
             "solid": true
         },
-        "53,40,39": {
+        "46,40,40": {
             "material": "wood",
             "solid": true
         },
-        "52,40,39": {
+        "47,40,40": {
             "material": "wood",
             "solid": true
         },
-        "51,40,39": {
+        "48,40,40": {
             "material": "wood",
             "solid": true
         },
-        "50,40,39": {
+        "49,40,40": {
             "material": "wood",
             "solid": true
         },
-        "49,40,39": {
+        "50,40,40": {
             "material": "wood",
             "solid": true
         },
-        "48,40,39": {
+        "51,40,40": {
             "material": "wood",
             "solid": true
         },
-        "47,40,39": {
+        "52,40,40": {
             "material": "wood",
             "solid": true
         },
-        "46,40,39": {
+        "53,40,40": {
             "material": "wood",
             "solid": true
         },
-        "45,40,39": {
+        "54,40,40": {
             "material": "bark",
             "solid": true
         },
-        "54,39,39": {
+        "36,39,40": {
             "material": "bark",
             "solid": true
         },
-        "53,39,39": {
+        "37,39,40": {
             "material": "wood",
             "solid": true
         },
-        "52,39,39": {
+        "38,39,40": {
             "material": "wood",
             "solid": true
         },
-        "51,39,39": {
+        "39,39,40": {
             "material": "wood",
             "solid": true
         },
-        "50,39,39": {
+        "40,39,40": {
             "material": "wood",
             "solid": true
         },
-        "49,39,39": {
+        "41,39,40": {
             "material": "wood",
             "solid": true
         },
-        "48,39,39": {
+        "42,39,40": {
             "material": "wood",
             "solid": true
         },
-        "47,39,39": {
+        "43,39,40": {
             "material": "wood",
             "solid": true
         },
-        "46,39,39": {
-            "material": "wood",
+        "44,39,40": {
+            "material": "bark",
             "solid": true
         },
-        "45,39,39": {
+        "45,39,40": {
             "material": "bark",
             "solid": true
         },
-        "47,34,39": {
+        "46,39,40": {
             "material": "wood",
             "solid": true
         },
-        "47,33,39": {
+        "47,39,40": {
             "material": "wood",
             "solid": true
         },
-        "47,32,39": {
+        "48,39,40": {
             "material": "wood",
             "solid": true
         },
-        "47,31,39": {
+        "49,39,40": {
             "material": "wood",
             "solid": true
         },
-        "47,30,39": {
+        "50,39,40": {
             "material": "wood",
             "solid": true
         },
-        "47,29,39": {
+        "51,39,40": {
             "material": "wood",
             "solid": true
         },
-        "47,28,39": {
+        "52,39,40": {
             "material": "wood",
             "solid": true
         },
-        "47,27,39": {
+        "53,39,40": {
             "material": "wood",
             "solid": true
         },
-        "47,26,39": {
-            "material": "wood",
+        "54,39,40": {
+            "material": "bark",
             "solid": true
         },
-        "47,25,39": {
+        "36,38,40": {
             "material": "bark",
             "solid": true
         },
-        "47,24,39": {
+        "37,38,40": {
             "material": "wood",
             "solid": true
         },
-        "47,23,39": {
+        "38,38,40": {
             "material": "wood",
             "solid": true
         },
-        "47,22,39": {
-            "material": "bark",
+        "39,38,40": {
+            "material": "wood",
             "solid": true
         },
-        "46,34,39": {
+        "40,38,40": {
             "material": "wood",
             "solid": true
         },
-        "46,33,39": {
+        "41,38,40": {
             "material": "wood",
             "solid": true
         },
-        "46,32,39": {
+        "42,38,40": {
             "material": "wood",
             "solid": true
         },
-        "46,31,39": {
+        "43,38,40": {
             "material": "wood",
+            "solid": true
+        },
+        "44,38,40": {
+            "material": "bark",
             "solid": true
         },
-        "46,30,39": {
+        "45,38,40": {
+            "material": "bark",
+            "solid": true
+        },
+        "46,38,40": {
             "material": "wood",
             "solid": true
         },
-        "46,29,39": {
+        "47,38,40": {
             "material": "wood",
             "solid": true
         },
-        "46,28,39": {
+        "48,38,40": {
             "material": "wood",
             "solid": true
         },
-        "46,27,39": {
+        "49,38,40": {
             "material": "wood",
             "solid": true
         },
-        "46,26,39": {
+        "50,38,40": {
             "material": "wood",
             "solid": true
         },
-        "46,25,39": {
-            "material": "bark",
+        "51,38,40": {
+            "material": "wood",
             "solid": true
         },
-        "46,24,39": {
+        "52,38,40": {
             "material": "wood",
             "solid": true
         },
-        "46,23,39": {
+        "53,38,40": {
             "material": "wood",
             "solid": true
         },
-        "46,22,39": {
+        "54,38,40": {
             "material": "bark",
             "solid": true
         },
-        "48,34,39": {
-            "material": "wood",
+        "36,37,40": {
+            "material": "bark",
             "solid": true
         },
-        "48,33,39": {
+        "37,37,40": {
             "material": "wood",
             "solid": true
         },
-        "48,32,39": {
+        "38,37,40": {
             "material": "wood",
             "solid": true
         },
-        "48,31,39": {
+        "39,37,40": {
             "material": "wood",
             "solid": true
         },
-        "48,30,39": {
+        "40,37,40": {
             "material": "wood",
             "solid": true
         },
-        "48,29,39": {
+        "41,37,40": {
             "material": "wood",
             "solid": true
         },
-        "48,28,39": {
+        "42,37,40": {
             "material": "wood",
             "solid": true
         },
-        "48,27,39": {
+        "43,37,40": {
             "material": "wood",
             "solid": true
         },
-        "48,26,39": {
-            "material": "wood",
+        "44,37,40": {
+            "material": "bark",
             "solid": true
         },
-        "48,25,39": {
+        "45,37,40": {
             "material": "bark",
             "solid": true
         },
-        "48,24,39": {
+        "46,37,40": {
             "material": "wood",
             "solid": true
         },
-        "48,23,39": {
+        "47,37,40": {
             "material": "wood",
-            "solid": true
-        },
-        "48,22,39": {
-            "material": "bark",
             "solid": true
         },
-        "45,34,39": {
-            "material": "bark",
+        "48,37,40": {
+            "material": "wood",
             "solid": true
         },
-        "45,33,39": {
-            "material": "bark",
+        "49,37,40": {
+            "material": "wood",
             "solid": true
         },
-        "45,32,39": {
-            "material": "bark",
+        "50,37,40": {
+            "material": "wood",
             "solid": true
         },
-        "45,31,39": {
-            "material": "bark",
+        "51,37,40": {
+            "material": "wood",
             "solid": true
         },
-        "45,30,39": {
-            "material": "bark",
+        "52,37,40": {
+            "material": "wood",
             "solid": true
         },
-        "45,29,39": {
-            "material": "bark",
+        "53,37,40": {
+            "material": "wood",
             "solid": true
         },
-        "45,28,39": {
+        "54,37,40": {
             "material": "bark",
             "solid": true
         },
-        "45,27,39": {
+        "36,36,40": {
             "material": "bark",
             "solid": true
         },
-        "45,26,39": {
-            "material": "bark",
+        "37,36,40": {
+            "material": "wood",
             "solid": true
         },
-        "45,25,39": {
-            "material": "bark",
+        "38,36,40": {
+            "material": "wood",
             "solid": true
         },
-        "45,24,39": {
-            "material": "bark",
+        "39,36,40": {
+            "material": "wood",
             "solid": true
         },
-        "45,23,39": {
-            "material": "bark",
+        "40,36,40": {
+            "material": "wood",
             "solid": true
         },
-        "45,22,39": {
-            "material": "bark",
+        "41,36,40": {
+            "material": "wood",
             "solid": true
         },
-        "49,34,39": {
+        "42,36,40": {
             "material": "wood",
             "solid": true
         },
-        "49,33,39": {
+        "43,36,40": {
             "material": "wood",
             "solid": true
         },
-        "49,32,39": {
-            "material": "wood",
+        "44,36,40": {
+            "material": "bark",
             "solid": true
         },
-        "49,31,39": {
-            "material": "wood",
+        "45,36,40": {
+            "material": "bark",
             "solid": true
         },
-        "49,30,39": {
+        "46,36,40": {
             "material": "wood",
             "solid": true
         },
-        "49,29,39": {
+        "47,36,40": {
             "material": "wood",
             "solid": true
         },
-        "49,28,39": {
+        "48,36,40": {
             "material": "wood",
             "solid": true
         },
-        "49,27,39": {
+        "49,36,40": {
             "material": "wood",
             "solid": true
         },
-        "49,26,39": {
+        "50,36,40": {
             "material": "wood",
             "solid": true
         },
-        "49,25,39": {
-            "material": "bark",
+        "51,36,40": {
+            "material": "wood",
             "solid": true
         },
-        "49,24,39": {
+        "52,36,40": {
             "material": "wood",
             "solid": true
         },
-        "49,23,39": {
+        "53,36,40": {
             "material": "wood",
             "solid": true
         },
-        "49,22,39": {
+        "54,36,40": {
             "material": "bark",
             "solid": true
         },
-        "50,34,39": {
-            "material": "wood",
+        "36,35,40": {
+            "material": "bark",
             "solid": true
         },
-        "50,33,39": {
+        "37,35,40": {
             "material": "wood",
             "solid": true
         },
-        "50,32,39": {
+        "38,35,40": {
             "material": "wood",
             "solid": true
         },
-        "50,31,39": {
+        "39,35,40": {
             "material": "wood",
             "solid": true
         },
-        "50,30,39": {
+        "40,35,40": {
             "material": "wood",
             "solid": true
         },
-        "50,29,39": {
+        "41,35,40": {
             "material": "wood",
             "solid": true
         },
-        "50,28,39": {
+        "42,35,40": {
             "material": "wood",
             "solid": true
         },
-        "50,27,39": {
+        "43,35,40": {
             "material": "wood",
             "solid": true
         },
-        "50,26,39": {
-            "material": "wood",
+        "44,35,40": {
+            "material": "bark",
             "solid": true
         },
-        "50,25,39": {
+        "45,35,40": {
             "material": "bark",
             "solid": true
         },
-        "50,24,39": {
+        "46,35,40": {
             "material": "wood",
             "solid": true
         },
-        "50,23,39": {
+        "47,35,40": {
             "material": "wood",
             "solid": true
         },
-        "50,22,39": {
-            "material": "bark",
+        "48,35,40": {
+            "material": "wood",
             "solid": true
         },
-        "51,34,39": {
+        "49,35,40": {
             "material": "wood",
             "solid": true
         },
-        "51,33,39": {
+        "50,35,40": {
             "material": "wood",
             "solid": true
         },
-        "51,32,39": {
+        "51,35,40": {
             "material": "wood",
             "solid": true
         },
-        "51,31,39": {
+        "52,35,40": {
             "material": "wood",
             "solid": true
         },
-        "51,30,39": {
+        "53,35,40": {
             "material": "wood",
+            "solid": true
+        },
+        "54,35,40": {
+            "material": "bark",
+            "solid": true
+        },
+        "36,34,40": {
+            "material": "bark",
             "solid": true
         },
-        "51,29,39": {
+        "37,34,40": {
             "material": "wood",
             "solid": true
         },
-        "51,28,39": {
+        "38,34,40": {
             "material": "wood",
             "solid": true
         },
-        "51,27,39": {
+        "39,34,40": {
             "material": "wood",
             "solid": true
         },
-        "51,26,39": {
+        "40,34,40": {
             "material": "wood",
             "solid": true
         },
-        "51,25,39": {
-            "material": "bark",
+        "41,34,40": {
+            "material": "wood",
             "solid": true
         },
-        "51,24,39": {
+        "42,34,40": {
             "material": "wood",
             "solid": true
         },
-        "51,23,39": {
+        "43,34,40": {
             "material": "wood",
             "solid": true
         },
-        "51,22,39": {
+        "44,34,40": {
             "material": "bark",
             "solid": true
         },
-        "52,34,39": {
-            "material": "wood",
+        "45,34,40": {
+            "material": "bark",
             "solid": true
         },
-        "52,33,39": {
+        "46,34,40": {
             "material": "wood",
             "solid": true
         },
-        "52,32,39": {
+        "47,34,40": {
             "material": "wood",
             "solid": true
         },
-        "52,31,39": {
+        "48,34,40": {
             "material": "wood",
             "solid": true
         },
-        "52,30,39": {
+        "49,34,40": {
             "material": "wood",
             "solid": true
         },
-        "52,29,39": {
+        "50,34,40": {
             "material": "wood",
             "solid": true
         },
-        "52,28,39": {
+        "51,34,40": {
             "material": "wood",
             "solid": true
         },
-        "52,27,39": {
+        "52,34,40": {
             "material": "wood",
             "solid": true
         },
-        "52,26,39": {
+        "53,34,40": {
             "material": "wood",
             "solid": true
         },
-        "52,25,39": {
+        "54,34,40": {
             "material": "bark",
             "solid": true
         },
-        "52,24,39": {
-            "material": "wood",
+        "36,33,40": {
+            "material": "bark",
             "solid": true
         },
-        "52,23,39": {
+        "37,33,40": {
             "material": "wood",
             "solid": true
         },
-        "52,22,39": {
-            "material": "bark",
+        "38,33,40": {
+            "material": "wood",
             "solid": true
         },
-        "53,34,39": {
+        "39,33,40": {
             "material": "wood",
             "solid": true
         },
-        "53,33,39": {
+        "40,33,40": {
             "material": "wood",
             "solid": true
         },
-        "53,32,39": {
+        "41,33,40": {
             "material": "wood",
             "solid": true
         },
-        "53,31,39": {
+        "42,33,40": {
             "material": "wood",
             "solid": true
         },
-        "53,30,39": {
+        "43,33,40": {
             "material": "wood",
             "solid": true
         },
-        "53,29,39": {
-            "material": "wood",
+        "44,33,40": {
+            "material": "bark",
             "solid": true
         },
-        "53,28,39": {
-            "material": "wood",
+        "45,33,40": {
+            "material": "bark",
             "solid": true
         },
-        "53,27,39": {
+        "46,33,40": {
             "material": "wood",
             "solid": true
         },
-        "53,26,39": {
+        "47,33,40": {
             "material": "wood",
             "solid": true
         },
-        "53,25,39": {
-            "material": "bark",
+        "48,33,40": {
+            "material": "wood",
             "solid": true
         },
-        "53,24,39": {
+        "49,33,40": {
             "material": "wood",
             "solid": true
         },
-        "53,23,39": {
+        "50,33,40": {
             "material": "wood",
             "solid": true
         },
-        "53,22,39": {
-            "material": "bark",
+        "51,33,40": {
+            "material": "wood",
             "solid": true
         },
-        "54,34,39": {
-            "material": "bark",
+        "52,33,40": {
+            "material": "wood",
             "solid": true
         },
-        "54,33,39": {
-            "material": "bark",
+        "53,33,40": {
+            "material": "wood",
             "solid": true
         },
-        "54,32,39": {
+        "54,33,40": {
             "material": "bark",
             "solid": true
         },
-        "54,31,39": {
+        "36,32,40": {
             "material": "bark",
             "solid": true
         },
-        "54,30,39": {
-            "material": "bark",
+        "37,32,40": {
+            "material": "wood",
             "solid": true
         },
-        "54,29,39": {
-            "material": "bark",
+        "38,32,40": {
+            "material": "wood",
             "solid": true
         },
-        "54,28,39": {
-            "material": "bark",
+        "39,32,40": {
+            "material": "wood",
             "solid": true
         },
-        "54,27,39": {
-            "material": "bark",
+        "40,32,40": {
+            "material": "wood",
             "solid": true
         },
-        "54,26,39": {
-            "material": "bark",
+        "41,32,40": {
+            "material": "wood",
             "solid": true
         },
-        "54,25,39": {
-            "material": "bark",
+        "42,32,40": {
+            "material": "wood",
             "solid": true
         },
-        "54,24,39": {
-            "material": "bark",
+        "43,32,40": {
+            "material": "wood",
             "solid": true
         },
-        "54,23,39": {
+        "44,32,40": {
             "material": "bark",
             "solid": true
         },
-        "54,22,39": {
+        "45,32,40": {
             "material": "bark",
             "solid": true
         },
-        "36,37,39": {
-            "material": "bark",
+        "46,32,40": {
+            "material": "wood",
             "solid": true
         },
-        "37,37,39": {
+        "47,32,40": {
             "material": "wood",
             "solid": true
         },
-        "38,37,39": {
+        "48,32,40": {
             "material": "wood",
             "solid": true
         },
-        "39,37,39": {
+        "49,32,40": {
             "material": "wood",
             "solid": true
         },
-        "40,37,39": {
+        "50,32,40": {
             "material": "wood",
             "solid": true
         },
-        "41,37,39": {
+        "51,32,40": {
             "material": "wood",
             "solid": true
         },
-        "42,37,39": {
+        "52,32,40": {
             "material": "wood",
             "solid": true
         },
-        "43,37,39": {
+        "53,32,40": {
             "material": "wood",
             "solid": true
         },
-        "44,37,39": {
+        "54,32,40": {
             "material": "bark",
             "solid": true
         },
-        "36,38,39": {
+        "36,31,40": {
             "material": "bark",
             "solid": true
         },
-        "37,38,39": {
+        "37,31,40": {
             "material": "wood",
             "solid": true
         },
-        "38,38,39": {
+        "38,31,40": {
             "material": "wood",
             "solid": true
         },
-        "39,38,39": {
+        "39,31,40": {
             "material": "wood",
             "solid": true
         },
-        "40,38,39": {
+        "40,31,40": {
             "material": "wood",
             "solid": true
         },
-        "41,38,39": {
+        "41,31,40": {
             "material": "wood",
             "solid": true
         },
-        "42,38,39": {
+        "42,31,40": {
             "material": "wood",
             "solid": true
         },
-        "43,38,39": {
+        "43,31,40": {
             "material": "wood",
             "solid": true
         },
-        "44,38,39": {
+        "44,31,40": {
             "material": "bark",
             "solid": true
         },
-        "36,36,39": {
+        "45,31,40": {
             "material": "bark",
+            "solid": true
+        },
+        "46,31,40": {
+            "material": "wood",
             "solid": true
         },
-        "37,36,39": {
+        "47,31,40": {
             "material": "wood",
             "solid": true
         },
-        "38,36,39": {
+        "48,31,40": {
             "material": "wood",
             "solid": true
         },
-        "39,36,39": {
+        "49,31,40": {
             "material": "wood",
             "solid": true
         },
-        "40,36,39": {
+        "50,31,40": {
             "material": "wood",
             "solid": true
         },
-        "41,36,39": {
+        "51,31,40": {
             "material": "wood",
             "solid": true
         },
-        "42,36,39": {
+        "52,31,40": {
             "material": "wood",
             "solid": true
         },
-        "43,36,39": {
+        "53,31,40": {
             "material": "wood",
             "solid": true
         },
-        "44,36,39": {
+        "54,31,40": {
             "material": "bark",
             "solid": true
         },
-        "36,39,39": {
+        "36,30,40": {
             "material": "bark",
             "solid": true
         },
-        "37,39,39": {
+        "37,30,40": {
             "material": "wood",
             "solid": true
         },
-        "38,39,39": {
+        "38,30,40": {
             "material": "wood",
             "solid": true
         },
-        "39,39,39": {
+        "39,30,40": {
             "material": "wood",
             "solid": true
         },
-        "40,39,39": {
+        "40,30,40": {
             "material": "wood",
             "solid": true
         },
-        "41,39,39": {
+        "41,30,40": {
             "material": "wood",
             "solid": true
         },
-        "42,39,39": {
+        "42,30,40": {
             "material": "wood",
             "solid": true
         },
-        "43,39,39": {
+        "43,30,40": {
             "material": "wood",
             "solid": true
         },
-        "44,39,39": {
+        "44,30,40": {
             "material": "bark",
             "solid": true
         },
-        "36,35,39": {
+        "45,30,40": {
             "material": "bark",
+            "solid": true
+        },
+        "46,30,40": {
+            "material": "wood",
             "solid": true
         },
-        "37,35,39": {
+        "47,30,40": {
             "material": "wood",
             "solid": true
         },
-        "38,35,39": {
+        "48,30,40": {
             "material": "wood",
             "solid": true
         },
-        "39,35,39": {
+        "49,30,40": {
             "material": "wood",
             "solid": true
         },
-        "40,35,39": {
+        "50,30,40": {
             "material": "wood",
             "solid": true
         },
-        "41,35,39": {
+        "51,30,40": {
             "material": "wood",
             "solid": true
         },
-        "42,35,39": {
+        "52,30,40": {
             "material": "wood",
             "solid": true
         },
-        "43,35,39": {
+        "53,30,40": {
             "material": "wood",
             "solid": true
         },
-        "44,35,39": {
+        "54,30,40": {
             "material": "bark",
             "solid": true
         },
-        "36,40,39": {
+        "36,29,40": {
             "material": "bark",
             "solid": true
         },
-        "37,40,39": {
+        "37,29,40": {
             "material": "wood",
             "solid": true
         },
-        "38,40,39": {
+        "38,29,40": {
             "material": "wood",
             "solid": true
         },
-        "39,40,39": {
+        "39,29,40": {
             "material": "wood",
             "solid": true
         },
-        "40,40,39": {
+        "40,29,40": {
             "material": "wood",
             "solid": true
         },
-        "41,40,39": {
+        "41,29,40": {
             "material": "wood",
             "solid": true
         },
-        "42,40,39": {
+        "42,29,40": {
             "material": "wood",
             "solid": true
         },
-        "43,40,39": {
+        "43,29,40": {
             "material": "wood",
             "solid": true
         },
-        "44,40,39": {
+        "44,29,40": {
             "material": "bark",
             "solid": true
         },
-        "36,34,39": {
+        "45,29,40": {
             "material": "bark",
             "solid": true
         },
-        "37,34,39": {
+        "46,29,40": {
             "material": "wood",
             "solid": true
         },
-        "38,34,39": {
+        "47,29,40": {
             "material": "wood",
             "solid": true
         },
-        "39,34,39": {
+        "48,29,40": {
             "material": "wood",
             "solid": true
         },
-        "40,34,39": {
+        "49,29,40": {
             "material": "wood",
             "solid": true
         },
-        "41,34,39": {
+        "50,29,40": {
             "material": "wood",
             "solid": true
         },
-        "42,34,39": {
+        "51,29,40": {
             "material": "wood",
             "solid": true
         },
-        "43,34,39": {
+        "52,29,40": {
             "material": "wood",
             "solid": true
         },
-        "44,34,39": {
-            "material": "bark",
+        "53,29,40": {
+            "material": "wood",
             "solid": true
         },
-        "36,41,39": {
+        "54,29,40": {
             "material": "bark",
             "solid": true
         },
-        "37,41,39": {
+        "36,28,40": {
             "material": "bark",
             "solid": true
         },
-        "38,41,39": {
-            "material": "bark",
+        "37,28,40": {
+            "material": "wood",
             "solid": true
         },
-        "39,41,39": {
-            "material": "bark",
+        "38,28,40": {
+            "material": "wood",
             "solid": true
         },
-        "40,41,39": {
-            "material": "bark",
+        "39,28,40": {
+            "material": "wood",
             "solid": true
         },
-        "41,41,39": {
-            "material": "bark",
+        "40,28,40": {
+            "material": "wood",
             "solid": true
         },
-        "42,41,39": {
-            "material": "bark",
+        "41,28,40": {
+            "material": "wood",
             "solid": true
         },
-        "43,41,39": {
-            "material": "bark",
+        "42,28,40": {
+            "material": "wood",
             "solid": true
         },
-        "44,41,39": {
+        "43,28,40": {
+            "material": "wood",
+            "solid": true
+        },
+        "44,28,40": {
             "material": "bark",
             "solid": true
         },
-        "36,33,39": {
+        "45,28,40": {
             "material": "bark",
+            "solid": true
+        },
+        "46,28,40": {
+            "material": "wood",
             "solid": true
         },
-        "37,33,39": {
+        "47,28,40": {
             "material": "wood",
             "solid": true
         },
-        "38,33,39": {
+        "48,28,40": {
             "material": "wood",
             "solid": true
         },
-        "39,33,39": {
+        "49,28,40": {
             "material": "wood",
             "solid": true
         },
-        "40,33,39": {
+        "50,28,40": {
             "material": "wood",
             "solid": true
         },
-        "41,33,39": {
+        "51,28,40": {
             "material": "wood",
             "solid": true
         },
-        "42,33,39": {
+        "52,28,40": {
             "material": "wood",
             "solid": true
         },
-        "43,33,39": {
+        "53,28,40": {
             "material": "wood",
             "solid": true
         },
-        "44,33,39": {
+        "54,28,40": {
             "material": "bark",
             "solid": true
         },
-        "36,42,39": {
+        "36,27,40": {
             "material": "bark",
             "solid": true
         },
-        "37,42,39": {
+        "37,27,40": {
             "material": "wood",
             "solid": true
         },
-        "38,42,39": {
+        "38,27,40": {
             "material": "wood",
             "solid": true
         },
-        "39,42,39": {
+        "39,27,40": {
             "material": "wood",
             "solid": true
         },
-        "40,42,39": {
+        "40,27,40": {
             "material": "wood",
             "solid": true
         },
-        "41,42,39": {
+        "41,27,40": {
             "material": "wood",
             "solid": true
         },
-        "42,42,39": {
+        "42,27,40": {
             "material": "wood",
             "solid": true
         },
-        "43,42,39": {
+        "43,27,40": {
             "material": "wood",
             "solid": true
         },
-        "44,42,39": {
+        "44,27,40": {
             "material": "bark",
             "solid": true
         },
-        "36,32,39": {
+        "45,27,40": {
             "material": "bark",
+            "solid": true
+        },
+        "46,27,40": {
+            "material": "wood",
             "solid": true
         },
-        "37,32,39": {
+        "47,27,40": {
             "material": "wood",
             "solid": true
         },
-        "38,32,39": {
+        "48,27,40": {
             "material": "wood",
             "solid": true
         },
-        "39,32,39": {
+        "49,27,40": {
             "material": "wood",
             "solid": true
         },
-        "40,32,39": {
+        "50,27,40": {
             "material": "wood",
             "solid": true
         },
-        "41,32,39": {
+        "51,27,40": {
             "material": "wood",
             "solid": true
         },
-        "42,32,39": {
+        "52,27,40": {
             "material": "wood",
             "solid": true
         },
-        "43,32,39": {
+        "53,27,40": {
             "material": "wood",
             "solid": true
         },
-        "44,32,39": {
+        "54,27,40": {
             "material": "bark",
             "solid": true
         },
-        "36,43,39": {
+        "36,26,40": {
             "material": "bark",
             "solid": true
         },
-        "37,43,39": {
+        "37,26,40": {
             "material": "wood",
             "solid": true
         },
-        "38,43,39": {
+        "38,26,40": {
             "material": "wood",
             "solid": true
         },
-        "39,43,39": {
+        "39,26,40": {
             "material": "wood",
             "solid": true
         },
-        "40,43,39": {
+        "40,26,40": {
             "material": "wood",
             "solid": true
         },
-        "41,43,39": {
+        "41,26,40": {
             "material": "wood",
             "solid": true
         },
-        "42,43,39": {
+        "42,26,40": {
             "material": "wood",
             "solid": true
         },
-        "43,43,39": {
+        "43,26,40": {
             "material": "wood",
             "solid": true
         },
-        "44,43,39": {
+        "44,26,40": {
             "material": "bark",
             "solid": true
         },
-        "36,31,39": {
+        "45,26,40": {
             "material": "bark",
+            "solid": true
+        },
+        "46,26,40": {
+            "material": "wood",
             "solid": true
         },
-        "37,31,39": {
+        "47,26,40": {
             "material": "wood",
             "solid": true
         },
-        "38,31,39": {
+        "48,26,40": {
             "material": "wood",
             "solid": true
         },
-        "39,31,39": {
+        "49,26,40": {
             "material": "wood",
             "solid": true
         },
-        "40,31,39": {
+        "50,26,40": {
             "material": "wood",
             "solid": true
         },
-        "41,31,39": {
+        "51,26,40": {
             "material": "wood",
             "solid": true
         },
-        "42,31,39": {
+        "52,26,40": {
             "material": "wood",
             "solid": true
         },
-        "43,31,39": {
+        "53,26,40": {
             "material": "wood",
             "solid": true
         },
-        "44,31,39": {
+        "54,26,40": {
             "material": "bark",
             "solid": true
         },
-        "36,44,39": {
+        "36,25,40": {
             "material": "bark",
             "solid": true
         },
-        "37,44,39": {
+        "37,25,40": {
             "material": "bark",
             "solid": true
         },
-        "38,44,39": {
+        "38,25,40": {
             "material": "bark",
             "solid": true
         },
-        "39,44,39": {
+        "39,25,40": {
             "material": "bark",
             "solid": true
         },
-        "40,44,39": {
+        "40,25,40": {
             "material": "bark",
             "solid": true
         },
-        "41,44,39": {
+        "41,25,40": {
             "material": "bark",
             "solid": true
         },
-        "42,44,39": {
+        "42,25,40": {
             "material": "bark",
             "solid": true
         },
-        "43,44,39": {
+        "43,25,40": {
             "material": "bark",
             "solid": true
         },
-        "44,44,39": {
+        "44,25,40": {
             "material": "bark",
             "solid": true
         },
-        "36,30,39": {
+        "45,25,40": {
             "material": "bark",
             "solid": true
         },
-        "37,30,39": {
-            "material": "wood",
+        "46,25,40": {
+            "material": "bark",
             "solid": true
         },
-        "38,30,39": {
-            "material": "wood",
+        "47,25,40": {
+            "material": "bark",
             "solid": true
         },
-        "39,30,39": {
-            "material": "wood",
+        "48,25,40": {
+            "material": "bark",
             "solid": true
         },
-        "40,30,39": {
-            "material": "wood",
+        "49,25,40": {
+            "material": "bark",
             "solid": true
         },
-        "41,30,39": {
-            "material": "wood",
+        "50,25,40": {
+            "material": "bark",
             "solid": true
         },
-        "42,30,39": {
-            "material": "wood",
+        "51,25,40": {
+            "material": "bark",
             "solid": true
         },
-        "43,30,39": {
-            "material": "wood",
+        "52,25,40": {
+            "material": "bark",
+            "solid": true
+        },
+        "53,25,40": {
+            "material": "bark",
             "solid": true
         },
-        "44,30,39": {
+        "54,25,40": {
             "material": "bark",
             "solid": true
         },
-        "36,29,39": {
+        "36,24,40": {
             "material": "bark",
             "solid": true
         },
-        "37,29,39": {
+        "37,24,40": {
             "material": "wood",
             "solid": true
         },
-        "38,29,39": {
+        "38,24,40": {
             "material": "wood",
             "solid": true
         },
-        "39,29,39": {
+        "39,24,40": {
             "material": "wood",
             "solid": true
         },
-        "40,29,39": {
+        "40,24,40": {
             "material": "wood",
             "solid": true
         },
-        "41,29,39": {
+        "41,24,40": {
             "material": "wood",
             "solid": true
         },
-        "42,29,39": {
+        "42,24,40": {
             "material": "wood",
             "solid": true
         },
-        "43,29,39": {
+        "43,24,40": {
             "material": "wood",
             "solid": true
         },
-        "44,29,39": {
+        "44,24,40": {
             "material": "bark",
             "solid": true
         },
-        "36,28,39": {
+        "45,24,40": {
             "material": "bark",
+            "solid": true
+        },
+        "46,24,40": {
+            "material": "wood",
             "solid": true
         },
-        "37,28,39": {
+        "47,24,40": {
             "material": "wood",
             "solid": true
         },
-        "38,28,39": {
+        "48,24,40": {
             "material": "wood",
             "solid": true
         },
-        "39,28,39": {
+        "49,24,40": {
             "material": "wood",
             "solid": true
         },
-        "40,28,39": {
+        "50,24,40": {
             "material": "wood",
             "solid": true
         },
-        "41,28,39": {
+        "51,24,40": {
             "material": "wood",
             "solid": true
         },
-        "42,28,39": {
+        "52,24,40": {
             "material": "wood",
             "solid": true
         },
-        "43,28,39": {
+        "53,24,40": {
             "material": "wood",
             "solid": true
         },
-        "44,28,39": {
+        "54,24,40": {
             "material": "bark",
             "solid": true
         },
-        "36,27,39": {
+        "36,23,40": {
             "material": "bark",
             "solid": true
         },
-        "37,27,39": {
+        "37,23,40": {
             "material": "wood",
             "solid": true
         },
-        "38,27,39": {
+        "38,23,40": {
             "material": "wood",
             "solid": true
         },
-        "39,27,39": {
+        "39,23,40": {
             "material": "wood",
             "solid": true
         },
-        "40,27,39": {
+        "40,23,40": {
             "material": "wood",
             "solid": true
         },
-        "41,27,39": {
+        "41,23,40": {
             "material": "wood",
             "solid": true
         },
-        "42,27,39": {
+        "42,23,40": {
             "material": "wood",
             "solid": true
         },
-        "43,27,39": {
+        "43,23,40": {
             "material": "wood",
             "solid": true
         },
-        "44,27,39": {
+        "44,23,40": {
             "material": "bark",
             "solid": true
         },
-        "36,26,39": {
+        "45,23,40": {
             "material": "bark",
             "solid": true
         },
-        "37,26,39": {
+        "46,23,40": {
             "material": "wood",
             "solid": true
         },
-        "38,26,39": {
+        "47,23,40": {
             "material": "wood",
             "solid": true
         },
-        "39,26,39": {
+        "48,23,40": {
             "material": "wood",
             "solid": true
         },
-        "40,26,39": {
+        "49,23,40": {
             "material": "wood",
             "solid": true
         },
-        "41,26,39": {
+        "50,23,40": {
             "material": "wood",
             "solid": true
         },
-        "42,26,39": {
+        "51,23,40": {
             "material": "wood",
             "solid": true
         },
-        "43,26,39": {
+        "52,23,40": {
             "material": "wood",
-            "solid": true
-        },
-        "44,26,39": {
-            "material": "bark",
             "solid": true
         },
-        "36,25,39": {
-            "material": "bark",
-            "solid": true
-        },
-        "37,25,39": {
-            "material": "bark",
+        "53,23,40": {
+            "material": "wood",
             "solid": true
         },
-        "38,25,39": {
+        "54,23,40": {
             "material": "bark",
             "solid": true
         },
-        "39,25,39": {
+        "36,22,40": {
             "material": "bark",
             "solid": true
         },
-        "40,25,39": {
+        "37,22,40": {
             "material": "bark",
             "solid": true
         },
-        "41,25,39": {
+        "38,22,40": {
             "material": "bark",
             "solid": true
         },
-        "42,25,39": {
+        "39,22,40": {
             "material": "bark",
             "solid": true
         },
-        "43,25,39": {
+        "40,22,40": {
             "material": "bark",
             "solid": true
         },
-        "44,25,39": {
+        "41,22,40": {
             "material": "bark",
             "solid": true
         },
-        "36,24,39": {
+        "42,22,40": {
             "material": "bark",
-            "solid": true
-        },
-        "37,24,39": {
-            "material": "wood",
-            "solid": true
-        },
-        "38,24,39": {
-            "material": "wood",
-            "solid": true
-        },
-        "39,24,39": {
-            "material": "wood",
-            "solid": true
-        },
-        "40,24,39": {
-            "material": "wood",
-            "solid": true
-        },
-        "41,24,39": {
-            "material": "wood",
-            "solid": true
-        },
-        "42,24,39": {
-            "material": "wood",
             "solid": true
         },
-        "43,24,39": {
-            "material": "wood",
-            "solid": true
-        },
-        "44,24,39": {
+        "43,22,40": {
             "material": "bark",
             "solid": true
         },
-        "36,23,39": {
+        "44,22,40": {
             "material": "bark",
-            "solid": true
-        },
-        "37,23,39": {
-            "material": "wood",
-            "solid": true
-        },
-        "38,23,39": {
-            "material": "wood",
-            "solid": true
-        },
-        "39,23,39": {
-            "material": "wood",
-            "solid": true
-        },
-        "40,23,39": {
-            "material": "wood",
-            "solid": true
-        },
-        "41,23,39": {
-            "material": "wood",
-            "solid": true
-        },
-        "42,23,39": {
-            "material": "wood",
-            "solid": true
-        },
-        "43,23,39": {
-            "material": "wood",
             "solid": true
         },
-        "44,23,39": {
+        "45,22,40": {
             "material": "bark",
             "solid": true
         },
-        "36,22,39": {
+        "46,22,40": {
             "material": "bark",
             "solid": true
         },
-        "37,22,39": {
+        "47,22,40": {
             "material": "bark",
             "solid": true
         },
-        "38,22,39": {
+        "48,22,40": {
             "material": "bark",
             "solid": true
         },
-        "39,22,39": {
+        "49,22,40": {
             "material": "bark",
             "solid": true
         },
-        "40,22,39": {
+        "50,22,40": {
             "material": "bark",
             "solid": true
         },
-        "41,22,39": {
+        "51,22,40": {
             "material": "bark",
             "solid": true
         },
-        "42,22,39": {
+        "52,22,40": {
             "material": "bark",
             "solid": true
         },
-        "43,22,39": {
+        "53,22,40": {
             "material": "bark",
             "solid": true
         },
-        "44,22,39": {
+        "54,22,40": {
             "material": "bark",
             "solid": true
         }

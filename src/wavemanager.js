@@ -143,30 +143,51 @@ function choose (things) {
 
 export function loadAndModifyStructure(structure) {
   structure.voxels = game.assets.json[structure.structure].voxels
-  let transformations = [
-    [{
+  let possibleTransformations = [
+    {
       mode: 'mirror',
       axis: 'x',
       origin: [59.5, 39.5, 39.5],
-    }],
-    [{
+    },
+    {
       mode: 'mirror',
       axis: 'y',
       origin: [59.5, 39.5, 39.5],
-    }],
-    [{
+    },
+    {
       mode: 'rotate',
       axis: 'z',
       amount: 2,
       origin: [59.5, 39.5, 39.5],
-    }],
+    },
   ]
-  for (const transformation of transformations) {
+
+  // Randomly decide transformations
+  let transformations = []
+  for (const transformation of possibleTransformations) {
     if (0.5 > Math.random()) {
-      structure = vox.transformStructure(structure, transformation)
+      transformations.push(transformation)
     }
   }
 
+  // Add shift transformation
+  if (structure.shiftRadius) {
+    let xRadius = structure.shiftRadius
+    let yRadius = structure.shiftRadius
+    if (structure.shiftRadius === -1) {
+      xRadius = 50
+      yRadius = 30
+    }
+    let xShift = Math.floor((Math.random()-0.5) * 2 * xRadius)
+    let yShift = Math.floor((Math.random()-0.5) * 2 * yRadius)
+    transformations.push({
+      mode: 'translate',
+      offset: [xShift, yShift, 0],
+    })
+  }
+
+  // Perform the transformations
+  structure = vox.transformStructure(structure, transformations)
   return structure
 }
 
