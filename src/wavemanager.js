@@ -185,14 +185,14 @@ export function loadAndModifyStructure(structure) {
     let xShift = Math.floor((Math.random()-0.5) * 2 * xRadius)
     let yShift = Math.floor((Math.random()-0.5) * 2 * yRadius)
     transformations.push({
-      mode: 'translate',
-      offset: [xShift, yShift, 0],
-    })
-    transformations.push({
       mode: 'rotate',
       axis: 'z',
       amount: Math.floor(Math.random()*4),
       origin: [59.5, 39.5, 39.5],
+    })
+    transformations.push({
+      mode: 'translate',
+      offset: [xShift, yShift, 0],
     })
   }
 
@@ -285,7 +285,7 @@ class BuildManager extends Thing {
 
   constructor () {
     super()
-    this.pickStructures(true)
+    this.pickStructures()
     game.setThingName(this, 'buildmanager')
     game.pause(this, game.getThing('skybox'))
     game.getThing('terrain').saveChunks()
@@ -349,12 +349,12 @@ class BuildManager extends Thing {
     }
   }
 
-  pickStructures(requireItem=false) {
+  pickStructures() {
     const player = game.getThing('player')
     this.builds = [
       shopPick(Math.min(player.coins, 5)),
       shopPick(player.coins),
-      shopPick(player.coins, requireItem),
+      shopPick(player.coins, true),
       shopPick(),
     ]
   }

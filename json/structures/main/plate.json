@@ -1,0 +1,1176 @@
+{
+    "voxels": {
+        "62,48,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "61,48,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "60,48,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "59,48,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "58,48,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "57,48,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "56,48,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "64,47,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "63,47,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "62,47,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "61,47,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "60,47,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "59,47,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "58,47,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "57,47,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "56,47,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "55,47,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "54,47,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "65,46,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "64,46,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "63,46,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "62,46,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "61,46,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "60,46,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "59,46,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "58,46,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "57,46,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "56,46,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "55,46,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "54,46,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "53,46,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "66,45,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "65,45,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "64,45,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "63,45,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "62,45,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "61,45,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "60,45,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "59,45,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "58,45,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "57,45,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "56,45,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "55,45,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "54,45,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "53,45,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "52,45,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "67,44,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "66,44,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "65,44,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "64,44,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "63,44,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "62,44,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "61,44,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "60,44,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "59,44,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "58,44,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "57,44,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "56,44,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "55,44,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "54,44,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "53,44,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "52,44,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "51,44,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "67,43,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "66,43,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "65,43,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "64,43,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "63,43,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "62,43,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "61,43,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "60,43,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "59,43,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "58,43,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "57,43,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "56,43,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "55,43,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "54,43,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "53,43,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "52,43,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "51,43,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "68,42,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "67,42,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "66,42,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "65,42,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "64,42,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "63,42,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "62,42,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "61,42,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "60,42,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "59,42,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "58,42,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "57,42,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "56,42,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "55,42,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "54,42,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "53,42,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "52,42,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "51,42,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "50,42,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "68,41,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "67,41,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "66,41,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "65,41,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "64,41,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "63,41,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "62,41,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "61,41,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "60,41,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "59,41,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "58,41,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "57,41,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "56,41,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "55,41,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "54,41,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "53,41,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "52,41,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "51,41,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "50,41,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "68,40,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "67,40,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "66,40,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "65,40,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "64,40,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "63,40,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "62,40,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "61,40,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "60,40,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "59,40,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "58,40,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "57,40,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "56,40,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "55,40,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "54,40,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "53,40,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "52,40,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "51,40,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "50,40,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "68,39,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "67,39,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "66,39,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "65,39,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "64,39,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "63,39,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "62,39,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "61,39,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "60,39,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "59,39,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "58,39,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "57,39,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "56,39,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "55,39,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "54,39,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "53,39,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "52,39,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "51,39,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "50,39,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "68,38,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "67,38,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "66,38,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "65,38,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "64,38,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "63,38,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "62,38,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "61,38,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "60,38,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "59,38,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "58,38,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "57,38,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "56,38,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "55,38,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "54,38,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "53,38,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "52,38,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "51,38,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "50,38,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "68,37,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "67,37,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "66,37,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "65,37,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "64,37,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "63,37,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "62,37,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "61,37,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "60,37,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "59,37,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "58,37,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "57,37,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "56,37,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "55,37,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "54,37,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "53,37,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "52,37,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "51,37,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "50,37,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "68,36,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "67,36,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "66,36,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "65,36,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "64,36,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "63,36,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "62,36,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "61,36,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "60,36,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "59,36,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "58,36,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "57,36,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "56,36,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "55,36,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "54,36,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "53,36,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "52,36,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "51,36,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "50,36,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "67,35,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "66,35,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "65,35,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "64,35,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "63,35,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "62,35,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "61,35,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "60,35,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "59,35,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "58,35,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "57,35,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "56,35,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "55,35,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "54,35,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "53,35,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "52,35,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "51,35,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "67,34,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "66,34,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "65,34,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "64,34,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "63,34,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "62,34,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "61,34,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "60,34,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "59,34,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "58,34,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "57,34,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "56,34,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "55,34,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "54,34,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "53,34,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "52,34,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "51,34,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "66,33,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "65,33,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "64,33,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "63,33,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "62,33,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "61,33,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "60,33,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "59,33,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "58,33,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "57,33,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "56,33,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "55,33,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "54,33,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "53,33,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "52,33,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "65,32,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "64,32,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "63,32,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "62,32,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "61,32,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "60,32,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "59,32,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "58,32,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "57,32,40": {
+            "material": "bone",
+            "solid": true
+        },
+        "56,32,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "55,32,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "54,32,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "53,32,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "64,31,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "63,31,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "62,31,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "61,31,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "60,31,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "59,31,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "58,31,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "57,31,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "56,31,41": {
+            "material": "bone",
+            "solid": true
+        },
+        "55,31,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "54,31,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "62,30,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "61,30,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "60,30,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "59,30,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "58,30,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "57,30,41": {
+            "material": "wood",
+            "solid": true
+        },
+        "56,30,41": {
+            "material": "wood",
+            "solid": true
+        }
+    }
+}

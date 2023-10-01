@@ -86,7 +86,7 @@ def convert_vox_to_json(input_filename, output_filename):
     data["voxels"] = {}
     voidVoxels = set()
     for x, y, z, color_index in voxels:
-        voxelKey = f"{x},{(size_y-1)-y},{z}"
+        voxelKey = f"{x},{y},{z}"
         if color_index == 255:
             voidVoxels.add(voxelKey)
         else:
@@ -100,7 +100,7 @@ def convert_vox_to_json(input_filename, output_filename):
         for x in range(size_x):
             for y in range(size_y):
                 for z in range(size_z):
-                    voxelKey = f"{x},{(size_y-1)-y},{z}"
+                    voxelKey = f"{x},{y},{z}"
                     if not (voxelKey in data["voxels"]) and not (voxelKey) in voidVoxels:
                         data["voxels"][voxelKey] = {
                             "solid": False,

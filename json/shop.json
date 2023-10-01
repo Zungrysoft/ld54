@@ -1,85 +1,63 @@
 [
   {
-    "structure": "itemshotgun",
-    "title": "Shotgun",
-    "weight": 20,
-    "cost": 3,
-    "minWave": 1,
-    "shiftRadius": -1,
-    "things": [
-      {
-        "position": [59, 40, 47],
-        "name": "shotgun"
-      }
-    ]
-  },
-  {
-    "structure": "itemheart",
-    "title": "Extra Life",
-    "weight": 10,
-    "cost": 5,
-    "minWave": 2,
-    "shiftRadius": -1,
-    "things": [
-      {
-        "position": [59, 40, 44],
-        "name": "heart"
-      }
-    ]
-  },
-  {
-    "structure": "itembattery",
-    "title": "Jetpack Charge",
-    "weight": 20,
+    "structure": "redplat",
+    "title": "Red Bridge",
+    "weight": 100,
     "cost": 3,
     "shiftRadius": -1,
     "things": [
       {
-        "position": [59, 40, 44],
+        "position": [56, 40, 41],
         "name": "battery"
       }
     ]
   },
   {
-    "structure": "redplat",
-    "title": "Red Bridge",
-    "weight": 100,
-    "cost": 4,
-    "shiftRadius": -1
-  },
-  {
     "structure": "beams",
     "title": "Metal Beam Lattice",
     "weight": 20,
-    "cost": 20,
+    "cost": 12,
     "shiftRadius": 0
   },
   {
     "structure": "beam",
     "title": "Metal Beam",
     "weight": 80,
-    "cost": 10,
+    "cost": 6,
     "shiftRadius": 0
   },
   {
     "structure": "blueroom",
     "title": "Corner Office",
     "weight": 100,
-    "cost": 8,
-    "shiftRadius": 0
+    "cost": 7,
+    "minWave": 1,
+    "shiftRadius": 0,
+    "things": [
+      {
+        "position": [13, 13, 55],
+        "name": "shotgun"
+      }
+    ]
   },
   {
     "structure": "temple",
     "title": "Central Temple",
     "weight": 20,
-    "cost": 12,
-    "shiftRadius": 4
+    "cost": 10,
+    "shiftRadius": 4,
+    "things": [
+      {
+        "position": [65, 23, 45],
+        "name": "heart"
+      }
+    ]
   },
   {
     "structure": "tunnel",
     "title": "Tunnel",
-    "weight": 100,
-    "cost": 4,
+    "weight": 30,
+    "cost": 3,
     "shiftRadius": 30
   },
   {
@@ -100,21 +78,67 @@
     "structure": "planter1",
     "title": "Planter Box",
     "weight": 15,
-    "cost": 3,
+    "cost": 2,
     "shiftRadius": -1
   },
   {
     "structure": "planter2",
     "title": "Planter Box",
     "weight": 15,
-    "cost": 3,
+    "cost": 2,
     "shiftRadius": -1
   },
   {
     "structure": "arena1",
-    "title": "Stone Pillars",
+    "title": "Mausoleum",
     "weight": 40,
-    "cost": 8,
-    "shiftRadius": 0
+    "cost": 7,
+    "minWave": 1,
+    "shiftRadius": 0,
+    "things": [
+      {
+        "position": [65, 44, 41],
+        "name": "shotgun"
+      }
+    ]
+  },
+  {
+    "structure": "pillars",
+    "title": "Stone Pillars",
+    "weight": 100,
+    "cost": 3,
+    "shiftRadius": 15,
+    "things": [
+      {
+        "position": [58, 39, 55],
+        "name": "battery"
+      }
+    ]
+  },
+  {
+    "structure": "plate",
+    "title": "Serving Platter",
+    "weight": 5,
+    "cost": 15,
+    "minWave": 4,
+    "shiftRadius": 5,
+    "things": [
+      {
+        "position": [56, 43, 42],
+        "name": "shotgun"
+      },
+      {
+        "position": [62, 42, 42],
+        "name": "heart"
+      },
+      {
+        "position": [59, 34, 42],
+        "name": "battery"
+      },
+      {
+        "position": [54, 40, 42],
+        "name": "pistol"
+      }
+    ]
   }
 ]
