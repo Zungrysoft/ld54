@@ -904,25 +904,17 @@ export function transformStructure(structure, transformations) {
   }
 
   // Things
-  ret.things = [...structure.things]
-  for (const thing of ret.things) {
-    thing.position = transformPosition(thing.position, transformations)
+  if (structure.things) {
+    ret.things = [...structure.things]
+    for (const thing of ret.things) {
+      thing.position = transformPosition(thing.position, transformations)
+    }
   }
-
-  // Doorways
-  ret.doorways = [...structure.doorways]
-  for (const doorway of ret.doorways) {
-    doorway.position = transformPosition(doorway.position, transformations)
-  }
-
-  // Connections
-  ret.connections = transformConnections(structure.connections, transformations)
-
-  // Asset name
-  ret.assetName = structure.assetName + "TRANSFORMED"
 
   // Weight
   ret.weight = structure.weight
+  ret.cost = structure.cost
+  ret.title = structure.title
 
   return ret
 }

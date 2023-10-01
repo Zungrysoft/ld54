@@ -141,13 +141,42 @@ function choose (things) {
   return result
 }
 
-export function shopPick(maxCost) {
+export function loadAndModifyStructure(structure) {
+  structure.voxels = game.assets.json[structure.structure].voxels
+  let transformations = [
+    [{
+      mode: 'mirror',
+      axis: 'x',
+      origin: [60, 40, 40],
+    }],
+    [{
+      mode: 'mirror',
+      axis: 'y',
+      origin: [60, 40, 40],
+    }],
+    [{
+      mode: 'rotate',
+      axis: 'z',
+      amount: 2,
+      origin: [60, 40, 40],
+    }],
+  ]
+  for (const transformation of transformations) {
+    if (0.5 > Math.random()) {
+      structure = vox.transformStructure(structure, transformation)
+    }
+  }
+
+  return structure
+}
+
+export function shopPick(maxCost=512) {
   // Filter list by cost
   let list = game.assets.json.shop.filter(x => x.cost <= maxCost)
 
   // If list is empty, return an empty structure
   if (list.length === 0) {
-    return list[0]
+    return loadAndModifyStructure(list[0])
   }
 
   // Determine the total weight
@@ -163,13 +192,15 @@ export function shopPick(maxCost) {
   for (const item of list) {
     selection -= item.weight
     if (selection < 0) {
-      return item
+      return loadAndModifyStructure(item)
     }
   }
 
   // Default return; shouldn't be needed
-  return list[0]
+  return loadAndModifyStructure(list[0])
 }
+
+
 
 class BuildManager extends Thing {
   time = 0
@@ -177,7 +208,7 @@ class BuildManager extends Thing {
 
   constructor () {
     super()
-    this.builds = Array(4).fill(undefined).map(() => shopPick(10000))
+    this.builds = Array(4).fill(undefined).map(() => shopPick())
     game.setThingName(this, 'buildmanager')
     game.pause(this, game.getThing('skybox'))
     game.getThing('terrain').saveChunks()
@@ -206,11 +237,11 @@ class BuildManager extends Thing {
         if (game.mouse.leftButton && player.coins >= this.builds[i].cost) {
           //this.dead = true
           player.coins -= this.builds[i].cost
-          this.builds[i] = shopPick(10)
+          this.builds[i] = shopPick()
           terrain.saveChunks()
         }
         if (!this.previewing[i] && player.coins >= this.builds[i].cost) {
-          vox.mergeStructureIntoWorld(terrain.chunks, game.assets.json[this.builds[i].structure], [0, 0, 0])
+          vox.mergeStructureIntoWorld(terrain.chunks, this.builds[i], [0, 0, 0])
           this.previewing[i] = true
         }
       } else if (this.previewing[i] && !this.dead) {
