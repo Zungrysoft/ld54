@@ -16,7 +16,7 @@ export default class Bullet extends Thing {
   damage = 20
   explosionRadius = 2
 
-  constructor (position = [0, 0, 0], velocity = [0, 0, 0], owner, damage = 20, explosionRadius=2) {
+  constructor (position = [0, 0, 0], velocity = [0, 0, 0], owner, damage = 20, explosionRadius=2, scale=1.0) {
     super()
     this.position = [...position]
     this.velocity = [...velocity]
@@ -24,6 +24,7 @@ export default class Bullet extends Thing {
     this.spawnPosition = [...this.position]
     this.damage = damage
     this.explosionRadius = explosionRadius
+    this.scale = scale
   }
 
   update () {
@@ -83,7 +84,7 @@ export default class Bullet extends Thing {
     gfx.set('modelMatrix', mat.getTransformation({
       translation: [...this.position],
       rotation: [Math.PI/2, 0, 0],
-      scale: 0.3
+      scale: 0.3 * this.scale
     }))
     gfx.drawMesh(assets.meshes.sphere)
 
@@ -93,7 +94,7 @@ export default class Bullet extends Thing {
       gfx.set('modelMatrix', mat.getTransformation({
         translation: p,
         rotation: [Math.PI/2, 0, 0],
-        scale: u.map(i, 0, 7, 0.3, 0.1)
+        scale: u.map(i, 0, 7, 0.3, 0.1) * this.scale
       }))
       gfx.drawMesh(assets.meshes.sphere)
     }
@@ -119,7 +120,7 @@ class Explosion extends Thing {
       for (let y = -radius; y <= radius; y ++) {
         for (let z = -radius; z <= radius; z ++) {
           let newPos = vec3.add(vPos, [x, y, z])
-          let breakChance = (radius - vec3.distance(newPos, vPos)) / radius
+          let breakChance = ((radius - vec3.distance(newPos, vPos)) / radius) * 1.6
           if (breakChance > Math.random()) {
             vox.setVoxelSolid(chunks, newPos, false)
           }

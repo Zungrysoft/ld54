@@ -8,6 +8,7 @@ import { flush } from './database.js'
 import ShotgunPickup from './pickupshotgun.js'
 import PistolPickup from './pickuppistol.js'
 import BatteryPickup from './pickupbattery.js'
+import HeartPickup from './pickupheart.js'
 
 game.config.width = 1024 // 640
 game.config.height = 576 // 360
@@ -129,5 +130,6 @@ flush(() => {
     game.addThing(new ShotgunPickup([60, 20, 41]))
     game.addThing(new PistolPickup([60, 60, 41]))
     game.addThing(new BatteryPickup([100, 60, 41]))
+    game.addThing(new HeartPickup([100, 20, 41]))
   })
 })

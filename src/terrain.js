@@ -17,6 +17,7 @@ export default class Terrain extends Thing {
   chunks = {}
   chunkStates = {}
   chunkMeshes = {}
+  chunkMeshTimestamps = {}
   fogColor = [0.267, 0.533, 1]
 
   constructor () {
@@ -70,12 +71,18 @@ export default class Terrain extends Thing {
       (message) => {
         // Save the chunk mesh
         let vertsView = new Float32Array(message.verts);
-        if (vertsView.length > 0) {
-          this.chunkMeshes[message.chunkKeyStr] = gfx.createMesh(vertsView)
-        }
-        // If the mesh is empty, delete its entry in the dict instead
-        else {
-          delete this.chunkMeshes[message.chunkKeyStr]
+
+        // Make sure this mesh isn't outdated (prevent race conditions)
+        let meshTimestamp = message.meshTimestamp
+        if (!this.chunkMeshTimestamps[message.chunkKeyStr] || this.chunkMeshTimestamps[message.chunkKeyStr] < meshTimestamp) {
+          this.chunkMeshTimestamps[message.chunkKeyStr] = meshTimestamp
+          if (vertsView.length > 0) {
+            this.chunkMeshes[message.chunkKeyStr] = gfx.createMesh(vertsView)
+          }
+          // If the mesh is empty, delete its entry in the dict instead
+          else {
+            delete this.chunkMeshes[message.chunkKeyStr]
+          }
         }
       },
     )
@@ -295,6 +302,7 @@ export default class Terrain extends Thing {
             mode: this.chunks[chunkKeyStr].mode,
           },
           chunkKeyStr: chunkKeyStr,
+          meshTimestamp: Date.now(),
         })
       }
     }

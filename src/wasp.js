@@ -22,10 +22,13 @@ export default class Wasp extends Thing {
   hitRadius = 2.5
   explosionPower = 5
   spawnCoin = true
+  scale = 1.0
+  health = 100
+  color = [1,0,0,1]
+  bulletScale = 1.0
 
   constructor (position = [0, 0, 0], angle = 0) {
     super()
-    this.health = 100
     this.growScale = 0.0
     this.position = position
     this.targetPosition = undefined
@@ -68,6 +71,12 @@ export default class Wasp extends Thing {
 
     // checkShoot again after a random amount of time
     this.after(Math.floor(45 + Math.random()*30), () => this.checkShoot())
+  }
+
+  shoot() {
+    let bulletPos = [...this.position]
+    let bulletVel = vec3.scale(vec3.normalize(vec3.subtract(this.targetPosition, this.position)), 0.3)
+    game.addThing(new Bullet(bulletPos, bulletVel, this, 20, this.explosionPower, this.bulletScale))
   }
 
   pickNearbyVoxel() {
@@ -134,14 +143,6 @@ export default class Wasp extends Thing {
     return bestPos
   }
 
-
-
-  shoot() {
-    let bulletPos = [...this.position]
-    let bulletVel = vec3.scale(vec3.normalize(vec3.subtract(this.targetPosition, this.position)), 0.3)
-    game.addThing(new Bullet(bulletPos, bulletVel, this, 20, this.explosionPower))
-  }
-
   draw () {
     let frameModel = "wasp2"
     if (this.time % 4 === 0) {
@@ -157,15 +158,15 @@ export default class Wasp extends Thing {
     if (this.timer('damage')) {
       gfx.set('color', [1,1,1,1])
     } else {
-      gfx.set('color', [1,0,0,1])
+      gfx.set('color', this.color)
     }
     gfx.set('modelMatrix', mat.getTransformation({
       translation: [...this.position],
       rotation: [Math.PI/2, 0, this.lookAngle + Math.PI/2],
       scale: [
-        u.lerp(1.5, 1, startle) * this.growScale,
-        u.lerp(2.5, 1, startle) * this.growScale,
-        u.lerp(1.5, 1, startle) * this.growScale
+        u.lerp(1.5, 1, startle) * this.growScale * this.scale,
+        u.lerp(2.5, 1, startle) * this.growScale * this.scale,
+        u.lerp(1.5, 1, startle) * this.growScale * this.scale,
       ]
     }))
     gfx.setTexture(assets.textures.wasp)

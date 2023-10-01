@@ -6,7 +6,7 @@ import * as vec3 from './core/vector3.js'
 import * as vox from './voxel.js'
 import Thing from './core/thing.js'
 import Wasp from './wasp.js'
-import Coin from './coin.js'
+import BigWasp from './bigwasp.js'
 
 const cartesian = (...a) => a.reduce((a, b) => a.flatMap(d => b.map(e => [d, e].flat())))
 
@@ -54,7 +54,12 @@ export default class WaveManager extends Thing {
         y + u.lerp(-10, 10, Math.random()),
         u.lerp(45, 55, Math.random())
       ]
-      game.addThing(new Wasp(position))
+      if (0.2 > Math.random()) {
+        game.addThing(new BigWasp(position))
+      }
+      else {
+        game.addThing(new Wasp(position))
+      }
     }
   }
 
@@ -172,17 +177,19 @@ class BuildManager extends Thing {
 
     const terrain = game.getThing('terrain')
     for (let i = 0; i <= 3; i += 1) {
-      if (u.pointInsideAabb(...game.mouse.position, [-150, -100, 150, 100], ...this.positionList[i])) {
+      if (u.pointInsideAabb(...game.mouse.position, [-150, -45, 150, 45], ...this.positionList[i])) {
         if (game.mouse.leftButton) {
           this.dead = true
         }
         if (!this.previewing[i]) {
           vox.mergeStructureIntoWorld(terrain.chunks, game.assets.json[this.builds[i][2]], [0, 0, 0])
           this.previewing[i] = true
+          console.log("Merge")
         }
       } else if (this.previewing[i] && !this.dead) {
         terrain.loadSavedChunks()
         this.previewing[i] = false
+        console.log("LOAD")
       }
     }
   }
