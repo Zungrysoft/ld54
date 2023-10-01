@@ -176,6 +176,87 @@
     ]
   },
   {
+    "structure": "pathway",
+    "title": "Wood Bridge",
+    "weight": 100,
+    "cost": 2,
+    "minWave": 1,
+    "shiftRadius": 0,
+    "things": [
+      {
+        "position": [50, 59, 48],
+        "name": "shotgun"
+      }
+    ]
+  },
+  {
+    "structure": "pathway2",
+    "title": "Wood Bridge",
+    "weight": 100,
+    "cost": 2,
+    "minWave": 2,
+    "shiftRadius": 0,
+    "things": [
+      {
+        "position": [20, 59, 48],
+        "name": "heart"
+      }
+    ]
+  },
+  {
+    "structure": "pathway3",
+    "title": "Wood Bridge",
+    "weight": 100,
+    "cost": 2,
+    "minWave": 3,
+    "shiftRadius": 0,
+    "things": [
+      {
+        "position": [80, 58, 48],
+        "name": "pistol"
+      }
+    ]
+  },
+  {
+    "structure": "pathway4",
+    "title": "Wood Bridge",
+    "weight": 50,
+    "cost": 1,
+    "shiftRadius": 0,
+    "things": [
+      {
+        "position": [59, 39, 48],
+        "name": "battery"
+      }
+    ]
+  },
+  {
+    "structure": "trail",
+    "title": "Trail",
+    "weight": 100,
+    "cost": 4,
+    "shiftRadius": 15,
+    "things": [
+      {
+        "position": [56, 33, 43],
+        "name": "shotgun"
+      }
+    ]
+  },
+  {
+    "structure": "trail2",
+    "title": "Park",
+    "weight": 100,
+    "cost": 7,
+    "shiftRadius": 15,
+    "things": [
+      {
+        "position": [64, 35, 41],
+        "name": "heart"
+      }
+    ]
+  },
+  {
     "structure": "stairs",
     "title": "Crossway",
     "weight": 90,

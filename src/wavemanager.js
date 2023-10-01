@@ -220,6 +220,14 @@ export function shopPick(maxCost=512, requireItem=false) {
   let curWave = game.getThing('wavemanager').wave
   list = list.filter(x => !(x.minWave) || curWave >= x.minWave)
 
+  // Filter to remove structures with a heart on it if the player already has 3 hearts
+  let player = game.getThing("player")
+  let heartsOnMap = game.getThings().filter(x => x instanceof HeartPickup).length
+  let totalHearts = player.lives + heartsOnMap
+  if (totalHearts >= 3) {
+    list = list.filter(x => !x.things || x.things.filter(y => y.name === "heart").length === 0)
+  }
+
   // If list is empty, return an empty structure
   if (list.length === 0) {
     return loadAndModifyStructure(game.assets.json.shop[0])

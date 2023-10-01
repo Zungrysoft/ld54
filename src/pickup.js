@@ -36,6 +36,11 @@ export default class Pickup extends Thing {
     this.velocity[1] *= friction
     this.velocity[2] = Math.max(this.velocity[2] - 0.001, -0.04)
 
+    // Kill if fell out of world
+    if (this.position[2] < -20) {
+      this.dead = true
+    }
+
     // Check for wall
     let chunks = game.getThing("terrain").chunks
     let vPos = this.position.map(x => Math.round(x))
