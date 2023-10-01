@@ -32,32 +32,7 @@ export default class Terrain extends Thing {
     }
 
     // Spawn platform
-    //this.chunks[vox.ts([0,0,0])] = vox.emptyChunk()
-    //vox.mergeStructureIntoWorld(this.chunks, plat, [0, 0, 0])
-
-    // let plat = procBasics.generateRectangularPrism({
-    //   length: vox.CHUNK_SIZE,
-    //   width: vox.CHUNK_SIZE,
-    //   height: 7,
-    //   voxel: {material: 'structure', solid: true},
-    // })
-    // plat = procBasics.applyPattern(plat, {
-    //   pattern: 'checker',
-    //   voxel1: {material: 'dirt', solid: true},
-    //   voxel2: {material: 'grass', solid: true},
-    // })
     vox.mergeStructureIntoWorld(this.chunks, assets.json.starter, [0, 0, 0])
-
-    // Palette test
-    // let keyZ = 0
-    // for (const key in this.palette) {
-    //   for (let i = 0; i < 16; i ++) {
-    //     const s = u.map(i, 0, 16-1, 0, 1.0)
-    //     const v1 = {material: key, solid: true, shades: [s, s, s, s, s, s]}
-    //     vox.editVoxel(this.chunks, [27 + i, -keyZ-6, 3], v1)
-    //   }
-    //   keyZ ++
-    // }
 
     // =====================
     // Set up worker threads
