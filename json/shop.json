@@ -391,7 +391,7 @@
     "structure": "spiral2",
     "title": "Red Stairs",
     "weight": 40,
-    "cost": 1,
+    "cost": 2,
     "shiftRadius": 20,
     "things": [
       {
