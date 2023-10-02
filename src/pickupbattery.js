@@ -10,5 +10,8 @@ export default class BatteryPickup extends Pickup {
   onPickup (other) {
     other.jetpackRechargeRate += 0.5
     soundmanager.playSound('pickup2', 0.15, [0.7, 0.9])
+    if (other.printMessage) {
+      other.printMessage("+Jetpack Recharge Rate")
+    }
   }
 }

@@ -52,6 +52,7 @@ export default class Player extends Thing {
   ammo = 0
   akimbo = false
   coins = 5
+  message = ""
 
   constructor (position = [0, 0, 0]) {
     super()
@@ -633,6 +634,11 @@ export default class Player extends Thing {
     game.getCamera3D().lookVector = vec3.anglesToVector(Math.PI, -Math.PI*(1/16))
   }
 
+  printMessage(message) {
+    this.message = message
+    this.after(120, null, "message")
+  }
+
   draw () {
     if (game.getThing('deathanim')) {
       return
@@ -825,6 +831,21 @@ export default class Player extends Thing {
         ctx.textAlign = 'left'
         ctx.translate(100, game.config.height - 165)
         ctx.fillText(String(this.ammo), 0, 0)
+        ctx.restore()
+      }
+      ctx.restore()
+    }
+
+    if (this.timers.message) {
+      ctx.save()
+      {
+        ctx.save()
+        ctx.fillStyle = `rgba(255, 255, 255, ${u.squareMap(this.timer('message'), 1, 0, 0, 1, true)})`
+        ctx.font = 'italic bold 20px Tahoma'
+        ctx.textAlign = 'right'
+        const shift = u.squareMap(this.timer('message'), 1, 0, 50, 0, true)
+        ctx.translate(game.config.width - 50, game.config.height - 50 - shift)
+        ctx.fillText(this.message, 0, 0)
         ctx.restore()
       }
       ctx.restore()
