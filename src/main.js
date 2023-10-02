@@ -39,8 +39,12 @@ await game.loadAssets({
   },
 
   sounds: {
-    boom1: 'sounds/boom1.wav',
-    boom2: 'sounds/boom1.wav',
+    boom1a: 'sounds/boom1.wav',
+    boom1b: 'sounds/boom1.wav',
+    boom1c: 'sounds/boom1.wav',
+    boom2a: 'sounds/boom2.wav',
+    boom2b: 'sounds/boom2.wav',
+    boom2c: 'sounds/boom2.wav',
     buttonclick: 'sounds/buttonclick.wav',
     buttonhover: 'sounds/buttonhover.wav',
     buttondone: 'sounds/buttondone.wav',
@@ -61,10 +65,12 @@ await game.loadAssets({
     pickup: 'sounds/pickup.wav',
     pickup2: 'sounds/pickup2.wav',
     pickup3: 'sounds/pickup3.wav',
+    drop: 'sounds/drop.wav',
     hit: 'sounds/hit.wav',
     hit2: 'sounds/hit2.wav',
     hit3: 'sounds/hit2.wav',
-    drop: 'sounds/drop.wav',
+    kill: 'sounds/kill.wav',
+    warn: 'sounds/warn.wav',
   },
 
   shaderSources: {

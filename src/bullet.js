@@ -51,7 +51,7 @@ export default class Bullet extends Thing {
     for (const thing of this.getAllThingCollisions()) {
       if (!('health' in thing)) continue
       if (thing === this.owner) continue
-      if (this.owner instanceof Wasp && thing instanceof Wasp) continue
+      if (this.owner instanceof Wasp && !(thing instanceof Player)) continue
 
       let hit = false
       if (thing === player &&
@@ -120,7 +120,10 @@ export class Explosion extends Thing {
     if (player) {
       const volume = Math.max(1 - u.distance(player.position, this.position) / 80, 0) ** 2
       const p = u.map(radius, 2, 4, 1, 0.9)
-      soundmanager.playSound(['boom1', 'boom2'], u.lerp(0, 0.1, volume), [p * 0.9, p * 1.1])
+      soundmanager.playSound(['boom1a','boom1b','boom1c'], u.lerp(0, 0.1, volume), [p * 0.9, p * 1.1])
+      if (radius >= 10) {
+        soundmanager.playSound(['boom2a','boom2b','boom2c'], u.lerp(0.1, 0.3, volume), [0.9, 1.0])
+      }
     }
     vPos = vPos.map(Math.round)
     this.radius = radius

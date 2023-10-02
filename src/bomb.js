@@ -47,10 +47,10 @@ export default class Bomb extends Thing {
 
     // Move toward target
     if (this.targetPosition) {
-      if (this.time % 5 == 0 && vec3.distance(this.position, this.targetPosition) < 2) {
+      if (this.time % 5 == 0 && vec3.distance(this.position, this.targetPosition) < 3) {
         // If reached destination, explode!
         this.targetPosition = undefined
-        this.after(40, () => this.prepareToExplode(), "prepare")
+        this.prepareToExplode()
       }
       else {
         const vel = vec3.scale(vec3.normalize(vec3.subtract(this.targetPosition, this.position)), 0.04)
@@ -63,13 +63,18 @@ export default class Bomb extends Thing {
   }
 
   prepareToExplode() {
-    if (this.explosionAnims <= 1) {
+    if (this.explosionAnims <= 0) {
       // Explode!
       this.shouldGib = false
       this.dead = true
       game.addThing(new Explosion([...this.position], this.explosionPower))
     }
     else {
+      const player = game.getThing('player')
+      if (player) {
+        const v = player.scaleVolume(this.position)
+        soundmanager.playSound('warn', 0.2 * v + 0.1, [1.2, 1.2])
+      }
       this.explosionAnims --
       this.after(40, () => this.prepareToExplode(), "prepare")
     }
@@ -164,6 +169,7 @@ export default class Bomb extends Thing {
   onDeath () {
     // Throw gibs
     if (this.shouldGib) {
+      soundmanager.playSound('kill', 0.3, [0.7, 1.1])
       for (let i = 0; i < this.gibCount; i ++) {
         game.addThing(new WaspGib([...this.position], -this.health, this.color))
       }
