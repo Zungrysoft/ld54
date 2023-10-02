@@ -72,6 +72,41 @@
     ]
   },
   {
+    "structure": "bunker2",
+    "title": "Stronghold",
+    "weight": 120,
+    "cost": 15,
+    "minWave": 5,
+    "shiftRadius": 0,
+    "things": [
+      {
+        "position": [28, 28, 41],
+        "name": "shotgun"
+      },
+      {
+        "position": [91, 28, 41],
+        "name": "shotgun"
+      },
+      {
+        "position": [60, 40, 41],
+        "name": "battery"
+      }
+    ]
+  },
+  {
+    "structure": "pyramid",
+    "title": "Pyramid",
+    "weight": 30,
+    "cost": 2,
+    "shiftRadius": -1,
+    "things": [
+      {
+        "position": [60, 39, 50],
+        "name": "battery"
+      }
+    ]
+  },
+  {
     "structure": "tunnel",
     "title": "Tunnel",
     "weight": 30,
