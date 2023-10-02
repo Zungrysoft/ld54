@@ -25,12 +25,12 @@ export default class HoneycombPickup extends Pickup {
     // Magnet towards player
     const player = game.getThing('player')
     if (player) {
-      const maxDistance = 16
+      const maxDistance = 14
       const pPos = vec3.add(player.position, [0, 0, -0.5])
       const distance = vec3.distance(this.position, pPos)
       if (distance < maxDistance) {
         const delta = vec3.normalize(vec3.subtract(pPos, this.position))
-        this.velocity = vec3.add(this.velocity, vec3.scale(delta, ((maxDistance-distance)/maxDistance) * 0.06))
+        this.velocity = vec3.add(this.velocity, vec3.scale(delta, ((maxDistance-distance)/maxDistance) * 0.08))
       }
     }
 
