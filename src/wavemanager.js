@@ -128,7 +128,7 @@ export default class WaveManager extends Thing {
   draw () {
     const { ctx, assets } = game
 
-    if (game.getThing('deathanim')) {
+    if (game.getThing('deathanim') || game.getThing('buildmanager')) {
       return
     }
 
@@ -350,6 +350,8 @@ export function applyTentativePickups() {
 class BuildManager extends Thing {
   time = 0
   previewing = [false, false, false, false]
+  hoveringReroll = false
+  hoveringDone = false
 
   constructor () {
     super()
@@ -412,14 +414,24 @@ class BuildManager extends Thing {
 
     const { width: w, height: h } = game.config
     if (u.pointInsideAabb(...game.mouse.position, [-100, -30, 100, 30], game.config.width * 0.75, game.config.height * 0.8)) {
+      if (!this.hoveringDone) {
+        soundmanager.playSound('buttonhover', 0.2, [0.8, 0.8])
+      }
+      this.hoveringDone = true
       if (game.mouse.leftClick) {
         soundmanager.playSound('buttondone', 0.2, [0.8, 0.8])
         player.respawn()
         this.dead = true
       }
+    } else {
+      this.hoveringDone = false
     }
 
     if (u.pointInsideAabb(...game.mouse.position, [-100, -30, 100, 30], game.config.width * 0.5, game.config.height * 0.8)) {
+      if (!this.hoveringReroll) {
+        soundmanager.playSound('buttonhover', 0.2, [0.8, 0.8])
+      }
+      this.hoveringReroll = true
       const rerollCost = 1
       if (player.coins >= rerollCost) {
         if (game.mouse.leftClick) {
@@ -428,6 +440,8 @@ class BuildManager extends Thing {
           this.pickStructures()
         }
       }
+    } else {
+      this.hoveringReroll = false
     }
   }
 
@@ -469,9 +483,9 @@ class BuildManager extends Thing {
       ctx.save()
       ctx.lineWidth = 3
       ctx.textAlign = 'left'
-      ctx.strokeStyle = 'black'
+      ctx.strokeStyle = this.previewing[i] ? 'white' : 'black'
       ctx.translate(pos[0], pos[1])
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'
+      ctx.fillStyle = this.previewing[i] ? 'rgba(100, 100, 100, 0.2)' : 'rgba(0, 0, 0, 0.2)'
       ctx.fillRect(...shopButtonSize2)
       ctx.beginPath()
       ctx.rect(...shopButtonSize2)
@@ -503,10 +517,14 @@ class BuildManager extends Thing {
       ctx.save()
       ctx.translate(-190, 50)
       ctx.textAlign = 'left'
-      ctx.fillStyle = 'black'
-      ctx.fillText(this.builds[i].itemText, 0, 0)
-      ctx.fillStyle = player.coins >= this.builds[i].cost ? 'white' : 'gray'
-      ctx.fillText(this.builds[i].itemText, 3, -3)
+      let itemText = this.builds[i].itemText
+      if (itemText !== '-') {
+        itemText = `Includes: ${itemText}`
+        ctx.fillStyle = 'black'
+        ctx.fillText(itemText, 0, 0)
+        ctx.fillStyle = player.coins >= this.builds[i].cost ? 'white' : 'gray'
+        ctx.fillText(itemText, 3, -3)
+      }
       ctx.restore()
 
       ctx.restore()
@@ -522,9 +540,9 @@ class BuildManager extends Thing {
       ctx.save()
       ctx.lineWidth = 3
       ctx.textAlign = 'left'
-      ctx.strokeStyle = 'black'
+      ctx.strokeStyle = this.hoveringDone ? 'white' : 'black'
       ctx.translate(pos[0], pos[1])
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'
+      ctx.fillStyle = this.hoveringDone ? 'rgba(100, 100, 100, 0.2)' : 'rgba(0, 0, 0, 0.2)'
       ctx.fillRect(-100, -30, 200, 60)
       ctx.beginPath()
       ctx.rect(-100, -30, 200, 60)
@@ -550,9 +568,9 @@ class BuildManager extends Thing {
       ctx.save()
       ctx.lineWidth = 3
       ctx.textAlign = 'left'
-      ctx.strokeStyle = 'black'
+      ctx.strokeStyle = this.hoveringReroll ? 'white' : 'black'
       ctx.translate(pos[0], pos[1])
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'
+      ctx.fillStyle = this.hoveringReroll ? 'rgba(100, 100, 100, 0.2)' : 'rgba(0, 0, 0, 0.2)'
       ctx.fillRect(-100, -30, 200, 60)
       ctx.beginPath()
       ctx.rect(-100, -30, 200, 60)
@@ -569,6 +587,33 @@ class BuildManager extends Thing {
       ctx.fillStyle = player.coins >= 1 ? 'white' : 'gray'
       ctx.fillText('Reroll: $1', 4, -4)
       ctx.restore()
+    }
+
+    // Shop title
+    {
+      ctx.save()
+      ctx.font = 'italic bold 64px Tahoma'
+      ctx.textAlign = 'center'
+      const title = 'BUILD SHOP'
+      ctx.translate(0, 80)
+      {
+        ctx.save()
+        ctx.fillStyle = 'black'
+        ctx.translate(game.config.width / 2, 0)
+        ctx.scale(1, 0.8)
+        ctx.fillText(title, 0, 0)
+        ctx.restore()
+      }
+      ctx.translate(4, -4)
+      {
+        ctx.save()
+        ctx.fillStyle = 'white'
+        ctx.translate(game.config.width / 2, 0)
+        ctx.scale(1, 0.8)
+        ctx.fillText(title, 0, 0)
+        ctx.restore()
+        ctx.restore()
+      }
     }
 
     // honeycomb counter
