@@ -523,7 +523,7 @@
   {
     "structure": "quad",
     "title": "Fortress",
-    "weight": 250,
+    "weight": 200,
     "cost": 8,
     "minWave": 3,
     "shiftRadius": 0,
