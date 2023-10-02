@@ -53,6 +53,7 @@ export default class Player extends Thing {
   akimbo = false
   coins = 5
   message = ""
+  mouseSensitivity = 5
 
   constructor (position = [0, 0, 0]) {
     super()
@@ -91,6 +92,16 @@ export default class Player extends Thing {
     }
     if (mouse.leftButton && !this.disableLeftClick) {
       leftClicking = true
+    }
+
+    // Sensitivity change
+    if (game.keysPressed.Equal) {
+      this.mouseSensitivity = Math.min(this.mouseSensitivity+1, 10)
+      this.printMessage("Mouse Sensitivity: " + this.mouseSensitivity)
+    }
+    if (game.keysPressed.Minus) {
+      this.mouseSensitivity = Math.max(this.mouseSensitivity-1, 0)
+      this.printMessage("Mouse Sensitivity: " + this.mouseSensitivity)
     }
 
     // Walking
@@ -589,7 +600,7 @@ export default class Player extends Thing {
     // Camera control
     if (mouse.isLocked()) {
       const sensRange = 1.3
-      const sens = 0.002 * Math.pow(sensRange, (globals.mouseSensitivity||5)-5)
+      const sens = 0.002 * Math.pow(sensRange, this.mouseSensitivity-5)
 
       let yaw, pitch
       ;[yaw, pitch] = vec3.vectorToAngles(game.getCamera3D().lookVector)
