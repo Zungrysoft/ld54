@@ -117,7 +117,7 @@ export default class Bomb extends Thing {
       const checkPos = [
         Math.floor(Math.random()*80) + 20,
         Math.floor(Math.random()*40) + 20,
-        Math.floor(Math.random()*10) + 35,
+        Math.floor(Math.random()*10) + 38,
       ]
 
       // Make sure the voxel is solid and that it won't explode too soon after spawning
