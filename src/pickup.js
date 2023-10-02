@@ -62,7 +62,7 @@ export default class Pickup extends Thing {
     }
 
     // Hit detection
-    if (vec3.distance(this.position, vec3.add(player.position, [0, 0, 2])) < 5) {
+    if (vec3.distance(this.position, vec3.add(player.position, [0, 0, 2])) < 4) {
       this.onPickup(player)
       this.dead = true
     }
