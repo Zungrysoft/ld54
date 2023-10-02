@@ -546,7 +546,7 @@
     "structure": "plate",
     "title": "Serving Platter",
     "weight": 20,
-    "cost": 10,
+    "cost": 6,
     "minWave": 6,
     "shiftRadius": 5,
     "things": [
