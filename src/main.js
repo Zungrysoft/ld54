@@ -68,6 +68,7 @@ await game.loadAssets({
     kill: 'sounds/kill.wav',
     warn: 'sounds/warn.wav',
     appear: 'sounds/appear.wav',
+    damage: 'sounds/damage.wav',
   },
 
   shaderSources: {

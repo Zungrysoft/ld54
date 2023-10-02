@@ -618,6 +618,7 @@ export default class Player extends Thing {
     this.velocity[0] += knockback[0]
     this.velocity[1] += knockback[1]
     this.velocity[2] += knockback[2]
+    soundmanager.playSound(['damage'], 0.2, [0.4, 0.5])
   }
 
   respawn() {
