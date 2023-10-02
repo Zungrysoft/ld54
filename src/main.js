@@ -10,7 +10,7 @@ game.config.width = 1024 // 640
 game.config.height = 576 // 360
 game.config.threads = 8
 //game.config.isWebglEnabled = false
-document.title = 'Sky Architect'
+document.title = 'Air-Raid Architect'
 
 await game.loadAssets({
   images: {
@@ -67,6 +67,7 @@ await game.loadAssets({
     hit3: 'sounds/hit2.wav',
     kill: 'sounds/kill.wav',
     warn: 'sounds/warn.wav',
+    appear: 'sounds/appear.wav',
   },
 
   shaderSources: {
