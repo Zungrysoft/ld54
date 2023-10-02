@@ -5,16 +5,12 @@ import Player from './player.js'
 import WaveManager from './wavemanager.js'
 import Skybox from './skybox.js'
 import { flush } from './database.js'
-import ShotgunPickup from './pickupshotgun.js'
-import PistolPickup from './pickuppistol.js'
-import BatteryPickup from './pickupbattery.js'
-import HeartPickup from './pickupheart.js'
 
 game.config.width = 1024 // 640
 game.config.height = 576 // 360
 game.config.threads = 8
 //game.config.isWebglEnabled = false
-document.title = 'Untitled Voxel Shooter'
+document.title = 'Sky Architect'
 
 await game.loadAssets({
   images: {
