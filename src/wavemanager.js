@@ -421,7 +421,7 @@ class BuildManager extends Thing {
         soundmanager.playSound('buttonhover', 0.2, [0.8, 0.8])
       }
       this.hoveringDone = true
-      if (game.mouse.leftClick) {
+      if (game.mouse.leftClick && this.time > 30) {
         soundmanager.playSound('buttondone', 0.2, [0.8, 0.8])
         player.respawn()
         this.dead = true
