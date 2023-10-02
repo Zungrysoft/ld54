@@ -77,6 +77,20 @@
     "bigWaspChance": 1.0
   },
   {
+    "waveDuration": 110,
+    "swarmTimes": [6, 8, 12, 18, 24, 28, 32, 36, 40, 42, 45, 55, 65, 75, 85, 90],
+    "radius": 1.0,
+    "bombChance": 0.7,
+    "bigWaspChance": 1.0
+  },
+  {
+    "waveDuration": 90,
+    "swarmTimes": [6, 12, 18, 24, 28, 32, 36, 40, 42, 45, 55, 65, 75],
+    "radius": 1.0,
+    "bombChance": 1.0,
+    "bigWaspChance": 0.0
+  },
+  {
     "waveDuration": 120,
     "swarmPeriod": 3,
     "radius": 1.0,
