@@ -37,7 +37,7 @@ export default class Wasp extends Thing {
     this.spawnPosition = [...this.position]
     this.velocity = [0, 0, 0]
     this.lookAngle = 0
-    this.checkShoot(60)
+    this.checkShoot(90)
 
     // Sound effect
     const player = game.getThing('player')

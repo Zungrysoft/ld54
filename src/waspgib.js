@@ -55,7 +55,7 @@ export default class WaspGib extends Thing {
       this.dead = true
     }
 
-    if (this.time > 300) {
+    if (this.time > 300 || this.position[2] < -50) {
       this.dead = true
     }
   }

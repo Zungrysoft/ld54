@@ -29,7 +29,7 @@ export default class WaveManager extends Thing {
   constructor () {
     super()
     game.setThingName(this, 'wavemanager')
-    this.after(2, () => game.addThing(new BuildManager()))
+    this.after(2, () => game.addThing(game.globals.pastTitleScreen ? new BuildManager() : new TitleScreen()))
     this.after(60 * 5, () => this.nextWave())
   }
 
@@ -128,7 +128,7 @@ export default class WaveManager extends Thing {
   draw () {
     const { ctx, assets } = game
 
-    if (game.getThing('deathanim') || game.getThing('buildmanager')) {
+    if (game.getThing('deathanim') || game.getThing('buildmanager') || game.getThing('titlescreen')) {
       return
     }
 
@@ -363,6 +363,9 @@ class BuildManager extends Thing {
     const h = game.config.height
     this.positionList = cartesian([w * 0.27, w * 0.73], [h * 0.3, h * 0.55])
     game.mouse.unlock()
+
+    // Fixes a jetpack sound effect bug
+    game.assets.sounds.engine.pause()
   }
 
   update () {
@@ -615,29 +618,156 @@ class BuildManager extends Thing {
         ctx.restore()
       }
     }
+  }
 
-    // honeycomb counter
-    // ctx.save()
-    // {
-    //   ctx.save()
-    //   ctx.fillStyle = 'black'
-    //   ctx.font = 'italic bold 56px Tahoma'
-    //   ctx.textAlign = 'left'
-    //   ctx.translate(100, game.config.height - 90)
-    //   ctx.fillText(String(player.coins), 0, 0)
-    //   ctx.restore()
-    // }
-    // ctx.translate(4, -4)
-    // {
-    //   ctx.save()
-    //   ctx.fillStyle = 'white'
-    //   ctx.font = 'italic bold 56px Tahoma'
-    //   ctx.textAlign = 'left'
-    //   ctx.translate(100, game.config.height - 90)
-    //   ctx.fillText(String(player.coins), 0, 0)
-    //   ctx.restore()
-    // }
-    // ctx.restore()
+  onDeath () {
+    game.unpause()
+    game.mouse.lock()
+  }
+}
+
+export class TitleScreen extends Thing {
+  time = 0
+  hoveringStart = false
+
+  constructor () {
+    super()
+
+    if (game.globals.pastTitleScreen) {
+      this.dead = true
+      return
+    }
+
+    // Create random starting structure
+    const terrain = game.getThing('terrain')
+    for (let i = 0; i < 15; i ++) {
+      const structure = shopPick()
+      vox.mergeStructureIntoWorld(terrain.chunks, structure)
+    }
+
+    game.setThingName(this, 'titlescreen')
+    game.pause(this, game.getThing('skybox'))
+    game.mouse.unlock()
+  }
+
+  update () {
+    super.update()
+    this.time += 1
+
+    // Manually tick up timer for players and items so they can animate while game is paused
+    const manualTickThings = game.getThings().filter(x => x instanceof Pickup || x instanceof Player)
+    for (const manualTickThing of manualTickThings) {
+      manualTickThing.time ++
+    }
+
+    const angle = this.time / (60 * 6)
+    const radius = 64
+    game.getCamera3D().viewMatrix = mat.getView({
+      position: [Math.cos(angle) * radius + 64, Math.sin(angle) * radius + 40, 90],
+      target: [64, 40, 40]
+    })
+
+    if (u.pointInsideAabb(...game.mouse.position, [-100, -30, 100, 30], game.config.width * 0.5, game.config.height * 0.8)) {
+      if (!this.hoveringStart) {
+        soundmanager.playSound('buttonhover', 0.2, [0.8, 0.8])
+      }
+      this.hoveringStart = true
+      if (game.mouse.leftClick) {
+        soundmanager.playSound('buttondone', 0.2, [0.8, 0.8])
+        game.globals.pastTitleScreen = true
+        game.resetScene()
+      }
+    } else {
+      this.hoveringStart = false
+    }
+  }
+
+  draw () {
+    const { ctx, assets } = game
+
+    const { width: w, height: h } = game.config
+
+    {
+      // start button
+      const pos = [w * 1 / 2, h * 0.8]
+
+      ctx.save()
+      ctx.lineWidth = 3
+      ctx.textAlign = 'left'
+      ctx.strokeStyle = this.hoveringStart ? 'white' : 'black'
+      ctx.translate(pos[0], pos[1])
+      ctx.fillStyle = this.hoveringStart ? 'rgba(100, 100, 100, 0.2)' : 'rgba(0, 0, 0, 0.2)'
+      ctx.fillRect(-100, -30, 200, 60)
+      ctx.beginPath()
+      ctx.rect(-100, -30, 200, 60)
+      ctx.stroke()
+      ctx.restore()
+
+      ctx.font = 'italic bold 32px Tahoma'
+      ctx.save()
+      ctx.translate(pos[0], pos[1])
+      ctx.translate(0, 12)
+      ctx.textAlign = 'center'
+      ctx.fillStyle = 'black'
+      ctx.fillText('Start', 0, 0)
+      ctx.fillStyle = 'white'
+      ctx.fillText('Start', 4, -4)
+      ctx.restore()
+    }
+
+    // Main title
+    {
+      ctx.save()
+      ctx.font = 'italic bold 64px Tahoma'
+      ctx.textAlign = 'center'
+      const title = 'Air-Raid Architect'
+      ctx.translate(0, 80)
+      {
+        ctx.save()
+        ctx.fillStyle = 'black'
+        ctx.translate(game.config.width / 2, 0)
+        ctx.scale(1, 0.8)
+        ctx.fillText(title, 0, 0)
+        ctx.restore()
+      }
+      ctx.translate(4, -4)
+      {
+        ctx.save()
+        ctx.fillStyle = 'white'
+        ctx.translate(game.config.width / 2, 0)
+        ctx.scale(1, 0.8)
+        ctx.fillText(title, 0, 0)
+        ctx.restore()
+        ctx.restore()
+      }
+    }
+
+    // Main title
+    {
+      ctx.save()
+      ctx.font = 'italic bold 20px Tahoma'
+      ctx.textAlign = 'center'
+      const title = 'Made by ZungryWare and Groverburger in 72 hours for Ludum Dare 54.'
+      ctx.translate(0, h-20)
+      {
+        ctx.save()
+        ctx.fillStyle = 'black'
+        ctx.translate(game.config.width / 2, 0)
+        ctx.scale(1, 0.8)
+        ctx.fillText(title, 0, 0)
+        ctx.restore()
+      }
+      ctx.translate(2, -2)
+      {
+        ctx.save()
+        ctx.fillStyle = 'white'
+        ctx.translate(game.config.width / 2, 0)
+        ctx.scale(1, 0.8)
+        ctx.fillText(title, 0, 0)
+        ctx.restore()
+        ctx.restore()
+      }
+    }
 
   }
 

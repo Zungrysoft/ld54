@@ -201,7 +201,7 @@ export default class Player extends Thing {
     }
 
     this.usingJetpack = this.usingJetpack && game.keysDown.Space
-    if (!this.usingJetpack || this.jetpack <= 0 || this.onGround || game.getThing('buildmanager')) {
+    if (!this.usingJetpack || this.jetpack <= 0 || this.onGround) {
       game.assets.sounds.engine.pause()
     } else {
       game.assets.sounds.engine.playbackRate = u.lerp(
@@ -637,7 +637,7 @@ export default class Player extends Thing {
   }
 
   draw () {
-    if (game.getThing('deathanim')) {
+    if (game.getThing('deathanim') || game.getThing('titlescreen')) {
       return
     }
 
@@ -755,7 +755,7 @@ export default class Player extends Thing {
 
   postDraw () {
     // Don't draw GUI in death screen
-    if (game.getThing('deathanim')) {
+    if (game.getThing('deathanim') || game.getThing('titlescreen')) {
       return
     }
 

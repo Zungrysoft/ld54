@@ -2,7 +2,7 @@ import * as game from './core/game.js'
 import * as gfx from './core/webgl.js'
 import Terrain from './terrain.js'
 import Player from './player.js'
-import WaveManager from './wavemanager.js'
+import WaveManager, { TitleScreen } from './wavemanager.js'
 import Skybox from './skybox.js'
 import { flush } from './database.js'
 
