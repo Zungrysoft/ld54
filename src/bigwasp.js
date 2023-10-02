@@ -7,7 +7,7 @@ export default class BigWasp extends Wasp {
   time = 0
   aabb = [-3, -3, 3, 3]
   hitRadius = 4
-  explosionPower = 9
+  explosionPower = 7
   spawnCoin = true
   scale = 1.9
   health = 300
@@ -22,7 +22,7 @@ export default class BigWasp extends Wasp {
     super.onDeath()
     // Throw even more gibs
     for (let i = 0; i < 5; i ++) {
-      game.addThing(new WaspGib([...this.position], -this.health))
+      game.addThing(new WaspGib([...this.position], -this.health, this.color))
     }
 
     // Can spawn additional honeycomb

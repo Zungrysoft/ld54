@@ -20,7 +20,7 @@ export default class Wasp extends Thing {
   time = 0
   aabb = [-2, -2, 2, 2]
   hitRadius = 2.5
-  explosionPower = 4
+  explosionPower = 3
   spawnCoin = true
   scale = 1.0
   health = 100
@@ -72,7 +72,7 @@ export default class Wasp extends Thing {
 
     // If the targeted voxel is destroyed, find a new voxel to target
     if (!this.targetPosition || !vox.getVoxelSolid(chunks, this.targetPosition, {index:0})) {
-      this.targetPosition = this.pickNearbyVoxel()
+      this.targetPosition = this.chooseTarget()
       // If we didn't find a target, borrow a target from a nearby wasp
       if (!this.targetPosition) {
         this.targetPosition = this.borrowTarget()
@@ -93,7 +93,7 @@ export default class Wasp extends Thing {
     game.addThing(new Bullet(bulletPos, bulletVel, this, 20, this.explosionPower, this.bulletScale))
   }
 
-  pickNearbyVoxel() {
+  chooseTarget() {
     let chunks = game.getThing("terrain").chunks
 
     function getAirScore(chunks, pos) {
@@ -203,7 +203,7 @@ export default class Wasp extends Thing {
         u.lerp(1.5, 1, startle) * this.growScale * this.scale,
       ]
     }))
-    gfx.setTexture(assets.textures.wasp)
+    gfx.setTexture(assets.textures.square)
     gfx.drawMesh(assets.meshes[frameModel])
   }
 
