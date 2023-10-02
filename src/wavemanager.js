@@ -22,7 +22,7 @@ const shopButtonSize = [-200, -30, 200, 60]
 const shopButtonSize2 = [-200, -30, 400, 90]
 
 export default class WaveManager extends Thing {
-  wave = 0
+  wave = 1
   time = 0
   waveActive = false
 
@@ -110,12 +110,14 @@ export default class WaveManager extends Thing {
     }
     this.cancelTimer('spawn')
     this.waveActive = false
-    this.after(60 * 3, () => game.addThing(new BuildManager()))
-    this.after(60 * 10, () => this.nextWave())
+    this.after(60 * 3, () => {
+      this.wave += 1
+      game.addThing(new BuildManager())
+    })
+    this.after(60 * 7, () => this.nextWave())
   }
 
   nextWave () {
-    this.wave += 1
     this.waveActive = true
     const waveDuration = this.getWaveData().waveDuration
     this.swarmIndex = 0
