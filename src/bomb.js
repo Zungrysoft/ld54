@@ -21,6 +21,7 @@ export default class Bomb extends Thing {
   color = [0.9,0,0.3,1]
   explosionAnims = 3
   shouldGib = true
+  gibCount = 7
 
   constructor (position = [0, 0, 0], angle = 0) {
     super()
@@ -157,7 +158,7 @@ export default class Bomb extends Thing {
   onDeath () {
     // Throw gibs
     if (this.shouldGib) {
-      for (let i = 0; i < 12; i ++) {
+      for (let i = 0; i < this.gibCount; i ++) {
         game.addThing(new WaspGib([...this.position], -this.health, this.color))
       }
     }

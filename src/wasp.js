@@ -26,6 +26,7 @@ export default class Wasp extends Thing {
   health = 100
   color = [1,0,0,1]
   bulletScale = 1.0
+  gibCount = 7
 
   constructor (position = [0, 0, 0], angle = 0) {
     super()
@@ -220,8 +221,8 @@ export default class Wasp extends Thing {
   // TODO: Finish this
   onDeath () {
     // Throw gibs
-    for (let i = 0; i < 7; i ++) {
-      game.addThing(new WaspGib([...this.position], -this.health))
+    for (let i = 0; i < this.gibCount; i ++) {
+      game.addThing(new WaspGib([...this.position], -this.health, this.color))
     }
     if (this.spawnCoin) {
       if (game.globals.killsUntilDrop <= 1) {
