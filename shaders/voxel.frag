@@ -34,8 +34,8 @@ void main() {
 
     vec4 noise;
     float noiseScale = 1.0 / 256.0;
-    if (normal.z == 0.0) {
-      if (normal.y == 0.0) {
+    if (origNormal.z == 0.0) {
+      if (origNormal.y == 0.0) {
         noise = texture2D(noiseTexture, worldPosition.yz * noiseScale + noiseScale / 2.0);
       } else {
         noise = texture2D(noiseTexture, worldPosition.xz * noiseScale + noiseScale / 2.0);
@@ -47,6 +47,5 @@ void main() {
     noise.rgb += 0.6;// - 1.0 / 16.0;
 
     gl_FragColor = result * noise;
-    // gl_FragColor = vec4(abs(normal.x), abs(normal.y), abs(normal.z), 1.0);
 }
 

@@ -104,7 +104,6 @@ export default class Bullet extends Thing {
     }
   }
 
-  // TODO: Finish this
   onDeath () {
 
   }
