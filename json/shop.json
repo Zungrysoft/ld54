@@ -62,11 +62,11 @@
     "shiftRadius": 0,
     "things": [
       {
-        "position": [14, 40, 49],
+        "position": [14, 52, 49],
         "name": "shotgun"
       },
       {
-        "position": [24, 39, 49],
+        "position": [24, 26, 49],
         "name": "shotgun"
       }
     ]
