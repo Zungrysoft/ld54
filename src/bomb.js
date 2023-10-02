@@ -33,6 +33,13 @@ export default class Bomb extends Thing {
     this.lookAngle = 0
     this.angle1 = Math.random() * Math.PI * 2
     this.angle2 = Math.random() * Math.PI * 2
+
+    // Sound effect
+    const player = game.getThing('player')
+    if (player) {
+      const v = player.scaleVolume(this.position)
+      soundmanager.playSound('appear', 0.5 * v, [0.8, 1.0])
+    }
   }
 
   update () {
