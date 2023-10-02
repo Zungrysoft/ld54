@@ -208,9 +208,9 @@ export default class Player extends Thing {
       game.assets.sounds.engine.pause()
     } else {
       game.assets.sounds.engine.playbackRate = u.lerp(
-        jetpackPitch * 0.9,
-        jetpackPitch,
-        (this.jetpack / this.jetpackMaximum) ** 3
+        jetpackPitch * 1.1,
+        jetpackPitch * 0.7,
+        (1-(this.jetpack / this.jetpackMaximum)) ** 3
       )
     }
     if (this.usingJetpack && !this.onGround && this.jetpack > 0) {
