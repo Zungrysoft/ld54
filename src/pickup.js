@@ -5,6 +5,7 @@ import * as game from './core/game.js'
 import * as mat from './core/matrices.js'
 import * as vec3 from './core/vector3.js'
 import * as vox from './voxel.js'
+import * as soundmanager from './core/soundmanager.js'
 import { ItemParticle } from './particle.js'
 
 export default class Pickup extends Thing {

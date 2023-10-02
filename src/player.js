@@ -11,6 +11,7 @@ import * as u from './core/utils.js'
 import { assets } from './core/game.js'
 import * as vec3 from './core/vector3.js'
 import * as vec2 from './core/vector2.js'
+import * as soundmanager from './core/soundmanager.js'
 import * as vox from './voxel.js'
 import Bullet from './bullet.js'
 import DeathAnim from './deathanim.js'
@@ -166,17 +167,22 @@ export default class Player extends Thing {
       this.lastFallSpeed = this.velocity[2]
     }
 
+    const jetpackPitch = 1.9
+
     // falling and jumping
     if (game.keysPressed.Space) {
       this.wannaJump = 6
       if (this.coyoteFrames <= 0) {
         this.usingJetpack = true
         this.jetpackCanRecharge = false
+        game.assets.sounds.engine.loop = true
+        const p = jetpackPitch
+        soundmanager.playSound('engine', 0.03, [p, p])
       }
     }
     if (this.onGround) {
       this.coyoteFrames = 10
-        this.jetpackCanRecharge = true
+      this.jetpackCanRecharge = true
     }
     if (this.jetpackCanRecharge) {
       this.jetpack = Math.min(this.jetpack + 0.05*this.jetpackRechargeRate, this.jetpackMaximum)
@@ -198,6 +204,15 @@ export default class Player extends Thing {
     }
 
     this.usingJetpack = this.usingJetpack && game.keysDown.Space
+    if (!this.usingJetpack || this.jetpack <= 0) {
+      game.assets.sounds.engine.pause()
+    } else {
+      game.assets.sounds.engine.playbackRate = u.lerp(
+        jetpackPitch * 0.9,
+        jetpackPitch,
+        (this.jetpack / this.jetpackMaximum) ** 3
+      )
+    }
     if (this.usingJetpack && !this.onGround && this.jetpack > 0) {
       this.jetpack -= 1
       this.velocity[2] = Math.max(this.velocity[2], 0.15)
@@ -236,6 +251,7 @@ export default class Player extends Thing {
         let dir = vec3.add(look, [Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5])
         dir = vec3.scale(vec3.normalize(dir), spread)
         game.addThing(new Bullet(pos, vec3.scale(vec3.add(dir, look), velocity), this, damage))
+        soundmanager.playSound(['pshoot1', 'pshoot2'], 0.04)
       }
 
       // Shotgun

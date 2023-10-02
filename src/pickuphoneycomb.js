@@ -1,3 +1,4 @@
+import * as soundmanager from './core/soundmanager.js'
 import Pickup from './pickup.js'
 
 export default class HoneycombPickup extends Pickup {
@@ -27,5 +28,6 @@ export default class HoneycombPickup extends Pickup {
   onPickup (other) {
     other.coins ++
     other.after(10, null, 'coinget')
+    soundmanager.playSound('powerup', 0.2, [1, 1])
   }
 }

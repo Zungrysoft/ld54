@@ -39,6 +39,20 @@ await game.loadAssets({
   },
 
   sounds: {
+    boom1: 'sounds/boom1.wav',
+    boom2: 'sounds/boom1.wav',
+    buttonclick: 'sounds/buttonclick.wav',
+    buttonhover: 'sounds/buttonhover.wav',
+    edeath1: 'sounds/edeath1.wav',
+    eshoot1: 'sounds/eshoot1.wav',
+    eshoot2: 'sounds/eshoot1.wav',
+    eshoot3: 'sounds/eshoot1.wav',
+    eshoot4: 'sounds/eshoot1.wav',
+    powerup: 'sounds/powerup.wav',
+    pshoot1: 'sounds/pshoot1.wav',
+    pshoot2: 'sounds/pshoot1.wav',
+    timerclick: 'sounds/timerclick.wav',
+    engine: 'sounds/engine.wav',
   },
 
   shaderSources: {
