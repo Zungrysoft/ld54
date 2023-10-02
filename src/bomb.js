@@ -88,26 +88,6 @@ export default class Bomb extends Thing {
     }
   }
 
-  checkInVoxel() {
-    const vPos = this.position.map(x => Math.round(x))
-    let chunks = game.getThing("terrain").chunks
-
-    const deltas =  [
-      [1, 0, 0],
-      [-1, 0, 0],
-      [0, 1, 0],
-      [0, -1, 0],
-      [0, 0, 1],
-      [0, 0, -1],
-    ]
-    for (const delta of deltas) {
-      if (vox.getVoxelSolid(chunks, vec3.add(vPos, delta))) {
-        return true
-      }
-    }
-    return false
-  }
-
   chooseTarget() {
     // Choose a random solid voxel near the center of the map
 
@@ -118,7 +98,7 @@ export default class Bomb extends Thing {
       const checkPos = [
         Math.floor(Math.random()*80) + 20,
         Math.floor(Math.random()*40) + 20,
-        Math.floor(Math.random()*10) + 38,
+        Math.floor(Math.random()*10) + 39,
       ]
 
       // Make sure the voxel is solid and that it won't explode too soon after spawning
