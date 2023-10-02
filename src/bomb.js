@@ -9,6 +9,7 @@ import * as vox from './voxel.js'
 import WaspGib from './waspgib.js'
 import HoneycombPickup from './pickuphoneycomb.js'
 import { Explosion } from './bullet.js'
+import Wasp from './wasp.js'
 
 export default class Bomb extends Thing {
   time = 0
@@ -98,7 +99,7 @@ export default class Bomb extends Thing {
 
     let chunks = game.getThing("terrain").chunks
 
-    const iterations = 200
+    const iterations = 600
     for (let i = 0; i < iterations; i ++) {
       const checkPos = [
         Math.floor(Math.random()*80) + 20,
@@ -115,7 +116,10 @@ export default class Bomb extends Thing {
       }
     }
 
-    return [60, 40, 40]
+    // Could not find a valid target. Kill self and replace with wasp
+    this.dead = true
+    this.shouldGib = false
+    game.addThing(new Wasp(this.position))
   }
 
   draw () {

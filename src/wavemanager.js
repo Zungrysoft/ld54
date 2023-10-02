@@ -28,7 +28,7 @@ export default class WaveManager extends Thing {
   constructor () {
     super()
     game.setThingName(this, 'wavemanager')
-    this.after(60 * 3.125, () => game.addThing(new BuildManager()))
+    this.after(2, () => game.addThing(new BuildManager()))
     this.after(60 * 5, () => this.nextWave())
   }
 
@@ -52,7 +52,7 @@ export default class WaveManager extends Thing {
 
   spawn () {
     this.after(u.lerp(6, 10, Math.random()) * 60, () => this.spawn(), 'spawn')
-    if (this.getEnemyCount() > 12) {
+    if (this.getEnemyCount() > 20) {
       return
     }
     const angle = u.lerp(0, Math.PI * 2, Math.random())

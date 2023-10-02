@@ -20,7 +20,7 @@ export default class Wasp extends Thing {
   time = 0
   aabb = [-2, -2, 2, 2]
   hitRadius = 2.5
-  explosionPower = 3
+  explosionPower = 4
   spawnCoin = true
   scale = 1.0
   health = 100

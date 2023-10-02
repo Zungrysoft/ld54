@@ -181,6 +181,7 @@
     "weight": 100,
     "cost": 3,
     "shiftRadius": 0,
+    "minWave": 1,
     "things": [
       {
         "position": [50, 59, 48],
