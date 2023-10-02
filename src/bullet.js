@@ -51,6 +51,7 @@ export default class Bullet extends Thing {
     for (const thing of this.getAllThingCollisions()) {
       if (!('health' in thing)) continue
       if (thing === this.owner) continue
+      if (this.owner instanceof Wasp && thing instanceof Wasp) continue
 
       let hit = false
       if (thing === player &&

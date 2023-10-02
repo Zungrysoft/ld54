@@ -1,4 +1,5 @@
 import Pickup from './pickup.js'
+import * as soundmanager from './core/soundmanager.js'
 
 export default class HeartPickup extends Pickup {
   texture = "uv_heart"
@@ -8,5 +9,6 @@ export default class HeartPickup extends Pickup {
 
   onPickup (other) {
     other.lives ++
+    soundmanager.playSound('pickup3', 0.2, [1.2, 1.2])
   }
 }

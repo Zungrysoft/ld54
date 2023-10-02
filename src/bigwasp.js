@@ -24,7 +24,7 @@ export default class BigWasp extends Wasp {
     // Can spawn additional honeycomb
     if (this.spawnCoin) {
       if (0.4 > Math.random()) {
-        game.addThing(new HoneycombPickup([...this.position]))
+        this.dropCoin()
       }
     }
   }

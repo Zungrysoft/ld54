@@ -222,6 +222,18 @@ export default class Wasp extends Thing {
     if (this.health < 1) {
       this.dead = true
     }
+
+    soundmanager.playSound(['hit', 'hit2'], 0.18, [0.8, 0.9])
+  }
+
+  dropCoin() {
+    game.addThing(new HoneycombPickup([...this.position]))
+
+    const player = game.getThing('player')
+    if (player) {
+      const v = player.scaleVolume(this.position)
+      soundmanager.playSound('drop', 0.1 * v, [0.8, 0.9])
+    }
   }
 
   // TODO: Finish this
@@ -232,7 +244,7 @@ export default class Wasp extends Thing {
     }
     if (this.spawnCoin) {
       if (game.globals.killsUntilDrop <= 1) {
-        game.addThing(new HoneycombPickup([...this.position]))
+        this.dropCoin()
         game.globals.killsUntilDrop = Math.floor((Math.random() * 3) + 3)
       }
       else {

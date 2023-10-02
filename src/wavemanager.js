@@ -4,6 +4,7 @@ import * as gfx from './core/webgl.js'
 import * as mat from './core/matrices.js'
 import * as vec3 from './core/vector3.js'
 import * as vox from './voxel.js'
+import * as soundmanager from './core/soundmanager.js'
 import Thing from './core/thing.js'
 import Wasp from './wasp.js'
 import BigWasp from './bigwasp.js'
@@ -354,7 +355,11 @@ class BuildManager extends Thing {
     for (let i = 0; i <= 3; i += 1) {
       if (u.pointInsideAabb(...game.mouse.position, shopButtonSize, ...this.positionList[i])) {
         if (game.mouse.leftClick && player.coins >= this.builds[i].cost) {
-          //this.dead = true
+          // Sound effect
+          const p = u.map(this.builds[i].cost, 1, 12, 1.1, 0.4)
+          soundmanager.playSound('build', 0.3, [p, p])
+          soundmanager.playSound('buttonclick', 0.15, [p, p])
+
           player.coins -= this.builds[i].cost
           this.builds[i] = shopPick()
           terrain.saveChunks()
@@ -362,6 +367,8 @@ class BuildManager extends Thing {
           this.previewing[i] = false
         }
         if (!this.previewing[i] && player.coins >= this.builds[i].cost) {
+          soundmanager.playSound('buttonhover', 0.2, [0.8, 0.8])
+
           vox.mergeStructureIntoWorld(terrain.chunks, this.builds[i], [0, 0, 0])
           previewPickups(this.builds[i].things)
           this.previewing[i] = true
@@ -376,6 +383,7 @@ class BuildManager extends Thing {
     const { width: w, height: h } = game.config
     if (u.pointInsideAabb(...game.mouse.position, [-100, -30, 100, 30], game.config.width * 0.75, game.config.height * 0.8)) {
       if (game.mouse.leftClick) {
+        soundmanager.playSound('buttondone', 0.2, [0.8, 0.8])
         player.respawn()
         this.dead = true
       }
@@ -385,6 +393,7 @@ class BuildManager extends Thing {
       const rerollCost = 1
       if (player.coins >= rerollCost) {
         if (game.mouse.leftClick) {
+          soundmanager.playSound('buttonswitch', 0.2, [0.8, 0.8])
           player.coins -= rerollCost
           this.pickStructures()
         }

@@ -6,6 +6,7 @@ import * as u from './core/utils.js'
 import { assets } from './core/game.js'
 import * as vec3 from './core/vector3.js'
 import * as vox from './voxel.js'
+import * as soundmanager from './core/soundmanager.js'
 import WaspGib from './waspgib.js'
 import HoneycombPickup from './pickuphoneycomb.js'
 import { Explosion } from './bullet.js'
@@ -156,6 +157,7 @@ export default class Bomb extends Thing {
     if (this.health < 1) {
       this.dead = true
     }
+    soundmanager.playSound('hit3', 0.2, [0.9, 1.1])
   }
 
   // TODO: Finish this

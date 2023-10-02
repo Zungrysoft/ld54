@@ -251,7 +251,6 @@ export default class Player extends Thing {
         let dir = vec3.add(look, [Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5])
         dir = vec3.scale(vec3.normalize(dir), spread)
         game.addThing(new Bullet(pos, vec3.scale(vec3.add(dir, look), velocity), this, damage))
-        soundmanager.playSound(['pshoot1', 'pshoot2'], 0.04)
       }
 
       // Shotgun
@@ -259,6 +258,9 @@ export default class Player extends Thing {
         // Animation and Timing
         this.after(24, () => {}, 'shoot')
         this.after(30, () => {
+          if (this.ammo > 0) {
+            soundmanager.playSound(['twirl'], 0.2, [0.8, 0.8])
+          }
           this.after(27, () => {}, 'shotgunFlip')
         }, 'fire')
 
@@ -273,44 +275,7 @@ export default class Player extends Thing {
         // Reduce ammo
         this.ammo --
 
-        // Sound effect
-        /*
-        const sound = assets.sounds.shotgun
-        sound.playbackRate = u.random(1, 1.3)
-        sound.currentTime = 0
-        sound.volume = 0.6
-        sound.play()
-        */
-
-        // const look = vec3.scale(game.getCamera3D().lookVector, -1)
-        // this.velocity[0] -= look[0] * 0.45
-        // this.velocity[1] -= look[1] * 0.45
-        // this.velocity[2] -= look[2] * 0.25
-      }
-      // Machinegun
-      else if (this.weapon === 'machinegun' && this.ammo > 0) {
-        // Animation and Timing
-        this.after(7, () => {}, 'shoot')
-        this.after(4, () => {}, 'fire')
-
-        // Create bullet
-        const r = 0.1
-        let dir = vec3.add(look, [u.random(-r, r), u.random(-r, r), u.random(-r, r)])
-        dir = vec3.normalize(dir)
-        game.addThing(new MachineGunBullet(pos, dir, 22, this))
-
-        // Sound effect
-        /*
-        const sound = assets.sounds.machinegun
-        sound.playbackRate = u.random(1, 1.3)
-        sound.currentTime = 0
-        sound.volume = 0.6
-        sound.play()
-        */
-
-        this.velocity[0] -= look[0] * 0.9
-        this.velocity[1] -= look[1] * 0.9
-        this.velocity[2] -= look[2] * 0.5
+        soundmanager.playSound(['shotgun'], 0.1, [1.1, 1.1])
       }
       // Pistol
       else {
@@ -333,22 +298,7 @@ export default class Player extends Thing {
           shootBullet(20, 2.0, 1, 0.23)
         }
 
-        // const sound = assets.sounds.machinegun
-        // sound.playbackRate = u.random(1, 1.3)
-        // sound.currentTime = 0
-        // sound.volume = 0.6
-        // sound.play()
-        /*
-        const sound = assets.sounds.pistolShoot
-        sound.currentTime = 0
-        sound.playbackRate = u.random(0.9, 1.1)
-        sound.play()
-
-        */
-
-        // this.velocity[0] -= look[0] * 3
-        // this.velocity[1] -= look[1] * 3
-        // this.velocity[2] -= look[2] * 1.5
+        soundmanager.playSound(['pshoot1', 'pshoot2'], 0.04)
 
       }
     }
@@ -393,6 +343,11 @@ export default class Player extends Thing {
     this.moveAndCollide()
     this.updateTimers()
     this.cameraUpdate()
+  }
+
+  scaleVolume(position) {
+    const volume = Math.max(1 - u.distance(position, this.position) / 80, 0) ** 2
+    return volume
   }
 
   moveAndCollide () {
