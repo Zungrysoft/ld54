@@ -37673,11 +37673,11 @@
             "solid": true
         },
         "63,38,48": {
-            "material": "stoneRoof",
+            "material": "stone",
             "solid": true
         },
         "63,41,48": {
-            "material": "stoneRoof",
+            "material": "stone",
             "solid": true
         },
         "57,38,48": {
@@ -37737,11 +37737,11 @@
             "solid": true
         },
         "63,39,48": {
-            "material": "stoneRoof",
+            "material": "stone",
             "solid": true
         },
         "63,40,48": {
-            "material": "stoneRoof",
+            "material": "stone",
             "solid": true
         },
         "57,39,48": {
@@ -37800,11 +37800,11 @@
             "material": "stone",
             "solid": true
         },
-        "63,39,49": {
+        "60,40,56": {
             "material": "stone",
             "solid": true
         },
-        "63,40,49": {
+        "60,39,56": {
             "material": "stone",
             "solid": true
         },
@@ -37816,11 +37816,11 @@
             "material": "stone",
             "solid": true
         },
-        "63,38,49": {
+        "59,40,56": {
             "material": "stone",
             "solid": true
         },
-        "63,41,49": {
+        "59,39,56": {
             "material": "stone",
             "solid": true
         },
@@ -37912,11 +37912,11 @@
             "material": "stone",
             "solid": true
         },
-        "63,39,50": {
+        "61,40,56": {
             "material": "stone",
             "solid": true
         },
-        "63,40,50": {
+        "61,39,56": {
             "material": "stone",
             "solid": true
         },
@@ -37928,11 +37928,11 @@
             "material": "stone",
             "solid": true
         },
-        "63,38,50": {
+        "58,40,56": {
             "material": "stone",
             "solid": true
         },
-        "63,41,50": {
+        "58,39,56": {
             "material": "stone",
             "solid": true
         },
@@ -38024,11 +38024,11 @@
             "material": "stone",
             "solid": true
         },
-        "63,39,51": {
+        "62,40,56": {
             "material": "stone",
             "solid": true
         },
-        "63,40,51": {
+        "62,39,56": {
             "material": "stone",
             "solid": true
         },
@@ -38040,11 +38040,11 @@
             "material": "stone",
             "solid": true
         },
-        "63,38,51": {
+        "57,40,56": {
             "material": "stone",
             "solid": true
         },
-        "63,41,51": {
+        "57,39,56": {
             "material": "stone",
             "solid": true
         },
@@ -38136,12 +38136,12 @@
             "material": "stone",
             "solid": true
         },
-        "63,39,52": {
-            "material": "stone",
+        "63,40,56": {
+            "material": "stoneRoof",
             "solid": true
         },
-        "63,40,52": {
-            "material": "stone",
+        "63,39,56": {
+            "material": "stoneRoof",
             "solid": true
         },
         "56,38,52": {
@@ -38152,12 +38152,12 @@
             "material": "stone",
             "solid": true
         },
-        "63,38,52": {
-            "material": "stone",
+        "56,40,56": {
+            "material": "stoneRoof",
             "solid": true
         },
-        "63,41,52": {
-            "material": "stone",
+        "56,39,56": {
+            "material": "stoneRoof",
             "solid": true
         },
         "56,37,52": {
@@ -38248,11 +38248,11 @@
             "material": "stone",
             "solid": true
         },
-        "63,39,53": {
+        "60,41,56": {
             "material": "stone",
             "solid": true
         },
-        "63,40,53": {
+        "60,38,56": {
             "material": "stone",
             "solid": true
         },
@@ -38264,11 +38264,11 @@
             "material": "stone",
             "solid": true
         },
-        "63,38,53": {
+        "59,41,56": {
             "material": "stone",
             "solid": true
         },
-        "63,41,53": {
+        "59,38,56": {
             "material": "stone",
             "solid": true
         },
@@ -38752,83 +38752,115 @@
             "material": "stone",
             "solid": true
         },
-        "59,38,56": {
+        "64,36,48": {
             "material": "stone",
             "solid": true
         },
-        "59,41,56": {
+        "64,37,48": {
             "material": "stone",
             "solid": true
         },
-        "60,38,56": {
+        "64,36,49": {
             "material": "stone",
             "solid": true
         },
-        "60,41,56": {
+        "64,37,49": {
             "material": "stone",
             "solid": true
         },
-        "56,39,56": {
-            "material": "stoneRoof",
-            "solid": true
-        },
-        "56,40,56": {
-            "material": "stoneRoof",
-            "solid": true
-        },
-        "63,39,56": {
-            "material": "stoneRoof",
-            "solid": true
-        },
-        "63,40,56": {
-            "material": "stoneRoof",
-            "solid": true
-        },
-        "57,39,56": {
+        "64,36,50": {
             "material": "stone",
             "solid": true
         },
-        "57,40,56": {
+        "64,37,50": {
             "material": "stone",
             "solid": true
         },
-        "62,39,56": {
+        "64,42,48": {
             "material": "stone",
             "solid": true
         },
-        "62,40,56": {
+        "64,43,48": {
             "material": "stone",
             "solid": true
         },
-        "58,39,56": {
+        "64,42,49": {
             "material": "stone",
             "solid": true
         },
-        "58,40,56": {
+        "64,43,49": {
             "material": "stone",
             "solid": true
         },
-        "61,39,56": {
+        "64,42,50": {
             "material": "stone",
             "solid": true
         },
-        "61,40,56": {
+        "64,43,50": {
             "material": "stone",
             "solid": true
         },
-        "59,39,56": {
+        "65,36,49": {
             "material": "stone",
             "solid": true
         },
-        "59,40,56": {
+        "65,36,48": {
             "material": "stone",
             "solid": true
         },
-        "60,39,56": {
+        "65,36,50": {
             "material": "stone",
             "solid": true
         },
-        "60,40,56": {
+        "65,37,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,37,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,37,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,43,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,43,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,42,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,43,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,42,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,42,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,36,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,37,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,42,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,43,51": {
             "material": "stone",
             "solid": true
         }

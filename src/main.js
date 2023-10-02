@@ -113,6 +113,7 @@ await game.loadAssets({
     building1: 'json/structures/main/building1.json',
     building2: 'json/structures/main/building2.json',
     building3: 'json/structures/main/building3.json',
+    bunker: 'json/structures/main/bunker.json',
     cabin: 'json/structures/main/cabin.json',
     clouds: 'json/structures/main/clouds.json',
     corner: 'json/structures/main/corner.json',
