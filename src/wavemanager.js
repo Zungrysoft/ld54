@@ -80,8 +80,8 @@ export default class WaveManager extends Thing {
 
     // Determine spawn location
     const angle = u.lerp(0, Math.PI * 2, Math.random())
-    const x = Math.cos(angle) * 32 * waveData.radius + 40
-    const y = Math.sin(angle) * 48 * waveData.radius + 40
+    const x = Math.cos(angle) * 48 * waveData.radius + 60
+    const y = Math.sin(angle) * 32 * waveData.radius + 40
     for (let i = 0; i < 4; i += 1) {
       if (this.getEnemyCount() > 20) {
         continue
