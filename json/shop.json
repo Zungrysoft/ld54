@@ -15,21 +15,21 @@
   {
     "structure": "beams",
     "title": "Metal Beams",
-    "weight": 20,
-    "cost": 9,
+    "weight": 50,
+    "cost": 7,
     "shiftRadius": 0
   },
   {
     "structure": "beam",
     "title": "Metal Beam",
-    "weight": 80,
+    "weight": 120,
     "cost": 4,
     "shiftRadius": 0
   },
   {
     "structure": "blueroom",
     "title": "Corner Office",
-    "weight": 100,
+    "weight": 160,
     "cost": 5,
     "minWave": 2,
     "shiftRadius": 0,
@@ -42,14 +42,32 @@
   },
   {
     "structure": "temple",
-    "title": "Central Temple",
-    "weight": 20,
+    "title": "Temple",
+    "weight": 30,
     "cost": 7,
     "shiftRadius": 4,
     "things": [
       {
         "position": [65, 23, 45],
         "name": "heart"
+      }
+    ]
+  },
+  {
+    "structure": "bunker",
+    "title": "Bunker",
+    "weight": 120,
+    "cost": 13,
+    "minWave": 5,
+    "shiftRadius": 0,
+    "things": [
+      {
+        "position": [14, 40, 49],
+        "name": "shotgun"
+      },
+      {
+        "position": [24, 39, 49],
+        "name": "shotgun"
       }
     ]
   },
@@ -353,7 +371,7 @@
   {
     "structure": "cabin",
     "title": "Log Cabin",
-    "weight": 70,
+    "weight": 30,
     "cost": 2,
     "shiftRadius": -1,
     "things": [

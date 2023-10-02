@@ -35,7 +35,7 @@
     "maxWave": 4
   },
   {
-    "text": "Try to build structures that connect things together. You can save jetpack fuel this way.",
+    "text": "Try to build structures that connect things\ntogether. You can save jetpack fuel this way.",
     "minWave": 2,
     "maxWave": 99999
   },
