@@ -680,18 +680,6 @@ export default class Player extends Thing {
     gfx.setTexture(assets.textures.uv_honeycomb)
     gfx.drawMesh(assets.meshes.honeycomb)
 
-    // Shell
-    if (this.weapon === "shotgun") {
-      // Ammo
-      gfx.set('modelMatrix', mat.getTransformation({
-        translation: [5.4, -6.0, -1.1],
-        rotation: [Math.PI * 0.4, Math.sin(this.time/50)*0.3, Math.PI/2],
-        scale: 0.23
-      }))
-      gfx.setTexture(assets.textures.uv_shell)
-      gfx.drawMesh(assets.meshes.shell)
-    }
-
     // Bobbing
     const t = this.walkFrames
     const bobX = Math.sin(t) * 2 * 0.15
@@ -722,6 +710,15 @@ export default class Player extends Thing {
       }))
       gfx.setTexture(assets.textures.uv_shotgun)
       gfx.drawMesh(assets.meshes.shotgun)
+
+      // Ammo
+      gfx.set('modelMatrix', mat.getTransformation({
+        translation: [5.4, -6.0, -1.1],
+        rotation: [Math.PI * 0.4, Math.sin(this.time/50)*0.3, Math.PI/2],
+        scale: 0.23
+      }))
+      gfx.setTexture(assets.textures.uv_shell)
+      gfx.drawMesh(assets.meshes.shell)
     }
     // Machinegun
     else if (this.weapon === 'machinegun') {
@@ -764,6 +761,10 @@ export default class Player extends Thing {
     if (game.getThing('deathanim')) {
       return
     }
+
+    // Get screen width and height
+    const width = game.config.width
+    const height = game.config.height
 
     // lives counter
     ctx.save()
@@ -811,6 +812,11 @@ export default class Player extends Thing {
     }
     ctx.restore()
 
+    // Don't draw anything past here when in the build GUI
+    if (game.getThing('buildmanager')) {
+      return
+    }
+
     // ammo
     if (this.weapon !== "pistol") {
       ctx.save()
@@ -836,6 +842,7 @@ export default class Player extends Thing {
       ctx.restore()
     }
 
+    // Message
     if (this.timers.message) {
       ctx.save()
       {
@@ -850,15 +857,6 @@ export default class Player extends Thing {
       }
       ctx.restore()
     }
-
-    // Don't draw crosshairs in build menu
-    if (game.getThing('buildmanager')) {
-      return
-    }
-
-    // Get screen width and height
-    const width = game.config.width
-    const height = game.config.height
 
     // Crosshair
     ctx.drawImage(assets.images.crosshair, width / 2 - 16, height / 2 - 16)
