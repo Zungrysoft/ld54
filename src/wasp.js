@@ -12,6 +12,7 @@ import { assets } from './core/game.js'
 import * as vec3 from './core/vector3.js'
 import * as vec2 from './core/vector2.js'
 import * as vox from './voxel.js'
+import * as soundmanager from './core/soundmanager.js'
 import Bullet from './bullet.js'
 import WaspGib from './waspgib.js'
 import HoneycombPickup from './pickuphoneycomb.js'
@@ -91,6 +92,11 @@ export default class Wasp extends Thing {
     let bulletPos = [...this.position]
     let bulletVel = vec3.scale(vec3.normalize(vec3.subtract(this.targetPosition, this.position)), 0.3)
     game.addThing(new Bullet(bulletPos, bulletVel, this, 20, this.explosionPower, this.bulletScale))
+    const player = game.getThing('player')
+    if (player) {
+      const volume = Math.max(1 - u.distance(player.position, this.position) / 50, 0) ** 2
+      soundmanager.playSound(['eshoot1', 'eshoot2', 'eshoot3', 'eshoot4'], u.lerp(0, 0.1, volume), [0.7, 0.8])
+    }
   }
 
   pickNearbyVoxel() {

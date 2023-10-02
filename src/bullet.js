@@ -7,6 +7,7 @@ import { assets } from './core/game.js'
 import * as vec3 from './core/vector3.js'
 import * as vec2 from './core/vector2.js'
 import * as vox from './voxel.js'
+import * as soundmanager from './core/soundmanager.js'
 import Wasp from './wasp.js'
 import Player from './player.js'
 
@@ -114,6 +115,12 @@ class Explosion extends Thing {
   constructor (vPos, radius = 2) {
     super()
     this.position = vPos
+    const player = game.getThing('player')
+    if (player) {
+      const volume = Math.max(1 - u.distance(player.position, this.position) / 80, 0) ** 2
+      const p = u.map(radius, 2, 4, 1, 0.9)
+      soundmanager.playSound(['boom1', 'boom2'], u.lerp(0, 0.1, volume), [p * 0.9, p * 1.1])
+    }
     vPos = vPos.map(Math.round)
     this.radius = radius
     this.after(15, () => { this.dead = true }, 'time')
@@ -130,7 +137,6 @@ class Explosion extends Thing {
       }
     }
 
-    const player = game.getThing('player')
     const playerPosition = [player.position[0], player.position[1], player.position[2] + 2]
     if (u.distance(this.position, playerPosition) <= this.radius + 2) {
       const push = vec3.normalize(vec3.subtract(playerPosition, this.position))
