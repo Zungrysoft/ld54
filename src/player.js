@@ -193,11 +193,7 @@ export default class Player extends Thing {
       this.velocity[2] = 0.29
       this.wannaJump = 0
       this.coyoteFrames = 0
-      // const sound = assets.sounds.playerJump
-      // sound.volume = 0.2
-      // sound.playbackRate = u.random(1, 1.2)
-      // sound.currentTime = 0
-      // sound.play()
+      soundmanager.playSound(['jump', 'jump2', 'jump3'], 0.13, [0.8, 0.9])
     }
 
     if (this.wannaJump && this.coyoteFrames) {

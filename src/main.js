@@ -69,6 +69,9 @@ await game.loadAssets({
     warn: 'sounds/warn.wav',
     appear: 'sounds/appear.wav',
     damage: 'sounds/damage.wav',
+    jump: 'sounds/jump.wav',
+    jump2: 'sounds/jump2.wav',
+    jump3: 'sounds/jump3.wav',
   },
 
   shaderSources: {
