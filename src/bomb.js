@@ -80,7 +80,8 @@ export default class Bomb extends Thing {
       const player = game.getThing('player')
       if (player) {
         const v = player.scaleVolume(this.position)
-        soundmanager.playSound('warn', 0.35 * v + 0.1, [1.2, 1.2])
+        soundmanager.playSound(['warn1a', 'warn1b'], 0.35 * v + 0.1, [1.2, 1.2])
+        soundmanager.playSound(['warn2a', 'warn2b'], 0.15 * v + 0.04, [1.2, 1.2])
       }
       this.explosionAnims --
       this.after(50, () => this.prepareToExplode(), "prepare")
