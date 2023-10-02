@@ -22,7 +22,6 @@ export default class Bomb extends Thing {
   health = 100
   color = [0.9,0,0.3,1]
   explosionAnims = 3
-  shouldGib = true
   gibCount = 7
 
   constructor (position = [0, 0, 0], angle = 0) {
@@ -65,7 +64,7 @@ export default class Bomb extends Thing {
   prepareToExplode() {
     if (this.explosionAnims <= 0) {
       // Explode!
-      this.shouldGib = false
+      this.gibCount = 0
       this.dead = true
       game.addThing(new Explosion([...this.position], this.explosionPower))
     }
@@ -165,13 +164,32 @@ export default class Bomb extends Thing {
     soundmanager.playSound('hit3', 0.2, [0.9, 1.1])
   }
 
+  dropCoin() {
+    game.addThing(new HoneycombPickup([...this.position]))
+
+    const player = game.getThing('player')
+    if (player) {
+      const v = player.scaleVolume(this.position)
+      soundmanager.playSound('drop', 0.1 * v, [0.8, 0.9])
+    }
+  }
+
   // TODO: Finish this
   onDeath () {
     // Throw gibs
-    if (this.shouldGib) {
+    if (this.gibCount > 0) {
       soundmanager.playSound('kill', 0.3, [0.7, 1.1])
       for (let i = 0; i < this.gibCount; i ++) {
         game.addThing(new WaspGib([...this.position], -this.health, this.color))
+      }
+    }
+    if (this.spawnCoin) {
+      if (game.globals.killsUntilDrop <= 1) {
+        this.dropCoin()
+        game.globals.killsUntilDrop = Math.floor((Math.random() * 3) + 3)
+      }
+      else {
+        game.globals.killsUntilDrop --
       }
     }
   }
