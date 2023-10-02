@@ -120,6 +120,7 @@ await game.loadAssets({
     discs: 'json/structures/main/discs.json',
     highway: 'json/structures/main/highway.json',
     monolith: 'json/structures/main/monolith.json',
+    outpost: 'json/structures/main/outpost.json',
     pathway: 'json/structures/main/pathway.json',
     pathway2: 'json/structures/main/pathway2.json',
     pathway3: 'json/structures/main/pathway3.json',

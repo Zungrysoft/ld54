@@ -121,6 +121,24 @@
     ]
   },
   {
+    "structure": "outpost",
+    "title": "Outpost",
+    "weight": 130,
+    "cost": 6,
+    "minWave": 2,
+    "shiftRadius": 0,
+    "things": [
+      {
+        "position": [18, 40, 47],
+        "name": "shotgun"
+      },
+      {
+        "position": [24, 29, 47],
+        "name": "battery"
+      }
+    ]
+  },
+  {
     "structure": "building1",
     "title": "Factory",
     "weight": 100,
