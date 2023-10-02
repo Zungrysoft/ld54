@@ -1,5 +1,7 @@
 import * as soundmanager from './core/soundmanager.js'
 import Pickup from './pickup.js'
+import * as game from './core/game.js'
+import * as vec3 from './core/vector3.js'
 
 export default class HoneycombPickup extends Pickup {
   texture = "uv_honeycomb"
@@ -19,6 +21,18 @@ export default class HoneycombPickup extends Pickup {
 
   update () {
     super.update()
+
+    // Magnet towards player
+    const player = game.getThing('player')
+    if (player) {
+      const maxDistance = 12
+      const pPos = vec3.add(player.position, [0, 0, -0.5])
+      const distance = vec3.distance(this.position, pPos)
+      if (distance < maxDistance) {
+        const delta = vec3.normalize(vec3.subtract(pPos, this.position))
+        this.velocity = vec3.add(this.velocity, vec3.scale(delta, ((maxDistance-distance)/maxDistance) * 0.05))
+      }
+    }
 
     if (this.time > 60 * 30) {
       this.dead = true

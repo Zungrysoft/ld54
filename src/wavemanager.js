@@ -391,7 +391,7 @@ class BuildManager extends Thing {
       if (u.pointInsideAabb(...game.mouse.position, shopButtonSize, ...this.positionList[i])) {
         if (game.mouse.leftClick && player.coins >= this.builds[i].cost) {
           // Sound effect
-          const p = u.map(this.builds[i].cost, 1, 12, 1.1, 0.4)
+          const p = u.map(this.builds[i].cost, 1, 12, 1.1, 0.6)
           soundmanager.playSound('build', 0.3, [p, p])
           soundmanager.playSound('buttonclick', 0.15, [p, p])
 

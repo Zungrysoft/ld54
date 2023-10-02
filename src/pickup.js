@@ -35,7 +35,12 @@ export default class Pickup extends Thing {
     const friction = 0.975
     this.velocity[0] *= friction
     this.velocity[1] *= friction
-    this.velocity[2] = Math.max(this.velocity[2] - 0.001, -0.04)
+    if (this.velocity[2] > -0.04) {
+      this.velocity[2] -= 0.001
+    }
+    if (this.velocity[2] < -0.06) {
+      this.velocity[2] += 0.001
+    }
 
     // Kill if fell out of world
     if (this.position[2] < -20) {
