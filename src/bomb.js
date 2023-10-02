@@ -176,7 +176,6 @@ export default class Bomb extends Thing {
     }
   }
 
-  // TODO: Finish this
   onDeath () {
     // Throw gibs
     if (this.gibCount > 0) {
@@ -192,6 +191,13 @@ export default class Bomb extends Thing {
       }
       else {
         game.globals.killsUntilDrop --
+      }
+
+      // Can spawn additional honeycomb
+      if (this.spawnCoin) {
+        if (0.25 > Math.random()) {
+          this.dropCoin()
+        }
       }
     }
   }

@@ -88,7 +88,6 @@ export default class WaspGib extends Thing {
     gfx.drawMesh(assets.meshes.gib)
   }
 
-  // TODO: Finish this
   onDeath () {
 
   }

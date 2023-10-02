@@ -238,8 +238,6 @@ export default class Terrain extends Thing {
     gl.enable(gl.CULL_FACE)
     gl.cullFace(gl.BACK)
 
-    // TODO: Fog skybox
-
     // Chunk meshes
     for (const chunkKeyStr in this.chunkMeshes) {
       const chunkMesh = this.chunkMeshes[chunkKeyStr]

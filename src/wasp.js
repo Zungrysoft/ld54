@@ -236,7 +236,6 @@ export default class Wasp extends Thing {
     }
   }
 
-  // TODO: Finish this
   onDeath () {
     soundmanager.playSound('kill', 0.3, [0.7, 1.1])
 

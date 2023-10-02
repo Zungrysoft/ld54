@@ -613,7 +613,6 @@ export default class Player extends Thing {
   }
 
   takeDamage (dmg, knockback) {
-    console.log('take damage')
     //this.health -= dmg
     this.velocity[0] += knockback[0]
     this.velocity[1] += knockback[1]
@@ -914,7 +913,6 @@ export default class Player extends Thing {
     }
   }
 
-  // TODO: Finish this
   onDeath () {
     console.log("DEAD")
   }

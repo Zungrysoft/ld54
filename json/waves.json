@@ -49,6 +49,34 @@
     "bigWaspChance": 0.6
   },
   {
+    "waveDuration": 60,
+    "swarmTimes": [6, 8, 12, 18, 24, 28, 32, 36, 40, 42, 45],
+    "radius": 1.0,
+    "bombChance": 0.5,
+    "bigWaspChance": 0.6
+  },
+  {
+    "waveDuration": 70,
+    "swarmTimes": [6, 8, 12, 18, 24, 28, 32, 36, 40, 42, 45, 55],
+    "radius": 1.0,
+    "bombChance": 0.5,
+    "bigWaspChance": 0.8
+  },
+  {
+    "waveDuration": 80,
+    "swarmTimes": [6, 8, 12, 18, 24, 28, 32, 36, 40, 42, 45, 55, 65],
+    "radius": 1.0,
+    "bombChance": 0.5,
+    "bigWaspChance": 1.0
+  },
+  {
+    "waveDuration": 100,
+    "swarmTimes": [6, 8, 12, 18, 24, 28, 32, 36, 40, 42, 45, 55, 65, 75, 85],
+    "radius": 1.0,
+    "bombChance": 0.5,
+    "bigWaspChance": 1.0
+  },
+  {
     "waveDuration": 120,
     "swarmPeriod": 3,
     "radius": 1.0,

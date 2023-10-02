@@ -60,7 +60,7 @@
     "maxWave": 99999
   },
   {
-    "text": "You can only have two pistols at once.\nCollecting a second pistol doesn't help you.",
+    "text": "There is no benefit to having more than two pistols.",
     "minWave": 4,
     "maxWave": 99999
   }

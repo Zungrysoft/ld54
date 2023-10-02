@@ -305,7 +305,7 @@
   },
   {
     "structure": "spiral",
-    "title": "Red Stairs",
+    "title": "Red Tower",
     "weight": 50,
     "cost": 4,
     "shiftRadius": 10,
@@ -351,6 +351,73 @@
     "shiftRadius": 3
   },
   {
+    "structure": "cabin",
+    "title": "Log Cabin",
+    "weight": 70,
+    "cost": 2,
+    "shiftRadius": -1,
+    "things": [
+      {
+        "position": [52, 36, 42],
+        "name": "battery"
+      }
+    ]
+  },
+  {
+    "structure": "rocks",
+    "title": "Canyon",
+    "weight": 70,
+    "cost": 6,
+    "minWave": 4,
+    "shiftRadius": 20,
+    "things": [
+      {
+        "position": [59, 35, 44],
+        "name": "pistol"
+      },
+      {
+        "position": [48, 43, 52],
+        "name": "battery"
+      }
+    ]
+  },
+  {
+    "structure": "tubes",
+    "title": "Tubes",
+    "weight": 20,
+    "cost": 6,
+    "minWave": 3,
+    "shiftRadius": 0,
+    "things": [
+      {
+        "position": [64, 2, 52],
+        "name": "shotgun"
+      },
+      {
+        "position": [75, 77, 42],
+        "name": "battery"
+      }
+    ]
+  },
+  {
+    "structure": "discs",
+    "title": "Dual Platforms",
+    "weight": 40,
+    "cost": 6,
+    "minWave": 2,
+    "shiftRadius": 15,
+    "things": [
+      {
+        "position": [80, 40, 43],
+        "name": "shotgun"
+      },
+      {
+        "position": [40, 40, 43],
+        "name": "heart"
+      }
+    ]
+  },
+  {
     "structure": "bridge",
     "title": "Fancy Bridge",
     "weight": 150,
@@ -379,6 +446,28 @@
       {
         "position": [38, 54, 57],
         "name": "pistol"
+      }
+    ]
+  },
+  {
+    "structure": "quad",
+    "title": "Fortress",
+    "weight": 250,
+    "cost": 8,
+    "minWave": 3,
+    "shiftRadius": 0,
+    "things": [
+      {
+        "position": [60, 40, 50],
+        "name": "shotgun"
+      },
+      {
+        "position": [60, 20, 49],
+        "name": "battery"
+      },
+      {
+        "position": [60, 60, 49],
+        "name": "battery"
       }
     ]
   },
