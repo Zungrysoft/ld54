@@ -426,24 +426,32 @@ class BuildManager extends Thing {
         player.respawn()
         this.dead = true
       }
-    } else {
+    }
+    else {
       this.hoveringDone = false
     }
 
     if (u.pointInsideAabb(...game.mouse.position, [-100, -30, 100, 30], game.config.width * 0.5, game.config.height * 0.8)) {
-      if (!this.hoveringReroll) {
-        soundmanager.playSound('buttonhover', 0.2, [0.8, 0.8])
-      }
-      this.hoveringReroll = true
       const rerollCost = 1
       if (player.coins >= rerollCost) {
+        if (!this.hoveringReroll) {
+          if (this.time > 3) {
+            soundmanager.playSound('buttonhover', 0.2, [0.8, 0.8])
+          }
+          this.hoveringReroll = true
+        }
+
         if (game.mouse.leftClick) {
           soundmanager.playSound('buttonswitch', 0.2, [0.8, 0.8])
           player.coins -= rerollCost
           this.pickStructures()
         }
       }
-    } else {
+      else {
+        this.hoveringReroll = false
+      }
+    }
+    else {
       this.hoveringReroll = false
     }
   }
