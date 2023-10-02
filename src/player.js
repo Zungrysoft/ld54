@@ -201,7 +201,7 @@ export default class Player extends Thing {
     }
 
     this.usingJetpack = this.usingJetpack && game.keysDown.Space
-    if (!this.usingJetpack || this.jetpack <= 0) {
+    if (!this.usingJetpack || this.jetpack <= 0 || this.onGround || game.getThing('buildmanager')) {
       game.assets.sounds.engine.pause()
     } else {
       game.assets.sounds.engine.playbackRate = u.lerp(
