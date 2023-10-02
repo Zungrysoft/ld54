@@ -179,8 +179,7 @@
     "structure": "pathway",
     "title": "Wood Bridge",
     "weight": 100,
-    "cost": 2,
-    "minWave": 1,
+    "cost": 3,
     "shiftRadius": 0,
     "things": [
       {
@@ -235,6 +234,7 @@
     "title": "Trail",
     "weight": 100,
     "cost": 4,
+    "minWave": 2,
     "shiftRadius": 15,
     "things": [
       {

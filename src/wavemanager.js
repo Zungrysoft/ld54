@@ -13,6 +13,7 @@ import HeartPickup from './pickupheart.js'
 import PistolPickup from './pickuppistol.js'
 import Pickup from './pickup.js'
 import Player from './player.js'
+import Bomb from './bomb.js'
 
 const cartesian = (...a) => a.reduce((a, b) => a.flatMap(d => b.map(e => [d, e].flat())))
 
@@ -65,6 +66,9 @@ export default class WaveManager extends Thing {
       ]
       if (0.2 > Math.random()) {
         game.addThing(new BigWasp(position))
+      }
+      else if (0.2 > Math.random()) {
+        game.addThing(new Bomb(position))
       }
       else {
         game.addThing(new Wasp(position))
@@ -245,6 +249,12 @@ export function shopPick(maxCost=512, requireItem=false) {
   let totalHearts = player.lives + heartsOnMap
   if (totalHearts >= 3) {
     list = list.filter(x => !x.things || x.things.filter(y => y.name === "heart").length === 0)
+  }
+
+  // Filter to remove structures with a shotgun on it if there is already a shotgun on the map
+  let totalShotguns = game.getThings().filter(x => x instanceof ShotgunPickup).length
+  if (totalShotguns >= 1) {
+    list = list.filter(x => !x.things || x.things.filter(y => y.name === "shotgun").length === 0)
   }
 
   // If list is empty, return an empty structure

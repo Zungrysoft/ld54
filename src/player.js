@@ -385,8 +385,8 @@ export default class Player extends Thing {
       //game.resetScene()
       this.respawn()
       this.lives -= 1
-      this.jetpack = this.jetpackMaximum
-      this.jetpackCanRecharge = true
+      this.weapon = "pistol"
+      this.ammo = 0
       game.addThing(new DeathAnim)
     }
 
@@ -575,7 +575,7 @@ export default class Player extends Thing {
       ])
 
       const stepHeight = this.onGround ? 1.5 : 0.5
-      for (let h = stepHeight; h <= 3; h += 0.5) {
+      for (let h = stepHeight; h <= 4; h += 0.5) {
         const position = [...this.position]
         // position[2] += h - this.height
         position[2] += h
@@ -674,6 +674,8 @@ export default class Player extends Thing {
     this.position = [120.1, 40.1, 53.1]
     this.velocity = [0, 0, 0]
     this.disableLeftClick = true
+    this.jetpack = this.jetpackMaximum
+    this.jetpackCanRecharge = true
     game.getCamera3D().lookVector = vec3.anglesToVector(Math.PI, -Math.PI*(1/16))
   }
 

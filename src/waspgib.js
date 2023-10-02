@@ -16,7 +16,7 @@ import * as vox from './voxel.js'
 export default class WaspGib extends Thing {
   time = 0
 
-  constructor (position = [0, 0, 0], power = 100) {
+  constructor (position = [0, 0, 0], power = 100, color = [1.0, 0.0, 0.0, 1.0]) {
     super()
 
     power += 90
@@ -26,6 +26,8 @@ export default class WaspGib extends Thing {
     this.rot1 = Math.PI * 2 * Math.random()
     this.rot2 = Math.PI * 2 * Math.random()
     this.rotv = (Math.random() - 0.5) * 0.4
+
+    this.color = color
 
     this.position = position
     this.velocity = [
@@ -76,13 +78,13 @@ export default class WaspGib extends Thing {
   draw () {
     gfx.setShader(assets.shaders.default)
     game.getCamera3D().setUniforms()
-    gfx.set('color', [1.0, 0.0, 0.0, 1.0])
+    gfx.set('color', this.color)
     gfx.set('modelMatrix', mat.getTransformation({
       translation: [...this.position],
       rotation: [this.rot1, this.rot2, 0],
       scale: 0.7
     }))
-    gfx.setTexture(assets.textures.wasp)
+    gfx.setTexture(assets.textures.square)
     gfx.drawMesh(assets.meshes.gib)
   }
 

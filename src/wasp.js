@@ -21,12 +21,13 @@ export default class Wasp extends Thing {
   time = 0
   aabb = [-2, -2, 2, 2]
   hitRadius = 2.5
-  explosionPower = 4
+  explosionPower = 3
   spawnCoin = true
   scale = 1.0
   health = 100
   color = [1,0,0,1]
   bulletScale = 1.0
+  gibCount = 7
 
   constructor (position = [0, 0, 0], angle = 0) {
     super()
@@ -73,7 +74,7 @@ export default class Wasp extends Thing {
 
     // If the targeted voxel is destroyed, find a new voxel to target
     if (!this.targetPosition || !vox.getVoxelSolid(chunks, this.targetPosition, {index:0})) {
-      this.targetPosition = this.pickNearbyVoxel()
+      this.targetPosition = this.chooseTarget()
       // If we didn't find a target, borrow a target from a nearby wasp
       if (!this.targetPosition) {
         this.targetPosition = this.borrowTarget()
@@ -99,7 +100,7 @@ export default class Wasp extends Thing {
     }
   }
 
-  pickNearbyVoxel() {
+  chooseTarget() {
     let chunks = game.getThing("terrain").chunks
 
     function getAirScore(chunks, pos) {
@@ -209,7 +210,7 @@ export default class Wasp extends Thing {
         u.lerp(1.5, 1, startle) * this.growScale * this.scale,
       ]
     }))
-    gfx.setTexture(assets.textures.wasp)
+    gfx.setTexture(assets.textures.square)
     gfx.drawMesh(assets.meshes[frameModel])
   }
 
@@ -226,8 +227,8 @@ export default class Wasp extends Thing {
   // TODO: Finish this
   onDeath () {
     // Throw gibs
-    for (let i = 0; i < 7; i ++) {
-      game.addThing(new WaspGib([...this.position], -this.health))
+    for (let i = 0; i < this.gibCount; i ++) {
+      game.addThing(new WaspGib([...this.position], -this.health, this.color))
     }
     if (this.spawnCoin) {
       if (game.globals.killsUntilDrop <= 1) {
