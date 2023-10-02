@@ -52,7 +52,7 @@ export default class Bomb extends Thing {
         this.prepareToExplode()
       }
       else {
-        const vel = vec3.scale(vec3.normalize(vec3.subtract(this.targetPosition, this.position)), 0.04)
+        const vel = vec3.scale(vec3.normalize(vec3.subtract(this.targetPosition, this.position)), 0.06)
         this.position = vec3.add(this.position, vel)
       }
     }
@@ -65,6 +65,7 @@ export default class Bomb extends Thing {
     if (this.explosionAnims <= 0) {
       // Explode!
       this.gibCount = 0
+      this.spawnCoin = false
       this.dead = true
       game.addThing(new Explosion([...this.position], this.explosionPower))
     }
@@ -75,7 +76,7 @@ export default class Bomb extends Thing {
         soundmanager.playSound('warn', 0.2 * v + 0.1, [1.2, 1.2])
       }
       this.explosionAnims --
-      this.after(40, () => this.prepareToExplode(), "prepare")
+      this.after(50, () => this.prepareToExplode(), "prepare")
     }
   }
 
@@ -123,7 +124,8 @@ export default class Bomb extends Thing {
 
     // Could not find a valid target. Kill self and replace with wasp
     this.dead = true
-    this.shouldGib = false
+    this.gibCount = 0
+    this.spawnCoin = false
     game.addThing(new Wasp(this.position))
   }
 

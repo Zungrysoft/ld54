@@ -167,6 +167,7 @@
     "title": "Raised Area",
     "weight": 30,
     "cost": 3,
+    "minWave": 1,
     "shiftRadius": 10,
     "things": [
       {
@@ -301,6 +302,53 @@
         "name": "battery"
       }
     ]
+  },
+  {
+    "structure": "spiral",
+    "title": "Red Stairs",
+    "weight": 50,
+    "cost": 4,
+    "shiftRadius": 10,
+    "things": [
+      {
+        "position": [20, 20, 53],
+        "name": "battery"
+      }
+    ]
+  },
+  {
+    "structure": "spiral2",
+    "title": "Red Stairs",
+    "weight": 40,
+    "cost": 1,
+    "shiftRadius": 20,
+    "things": [
+      {
+        "position": [80, 40, 41],
+        "name": "heart"
+      }
+    ]
+  },
+  {
+    "structure": "spiral3",
+    "title": "Red Stairs",
+    "weight": 50,
+    "cost": 2,
+    "shiftRadius": 10,
+    "things": [
+      {
+        "position": [30, 49, 53],
+        "name": "battery"
+      }
+    ]
+  },
+  {
+    "structure": "highway",
+    "title": "Highway",
+    "weight": 200,
+    "cost": 3,
+    "minWave": 4,
+    "shiftRadius": 3
   },
   {
     "structure": "plate",

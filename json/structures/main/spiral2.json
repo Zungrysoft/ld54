@@ -1,0 +1,4884 @@
+{
+    "voxels": {
+        "60,36,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,36,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,36,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,36,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "56,36,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,36,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,35,44": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "59,35,44": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "58,35,44": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "57,35,44": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "56,35,44": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "55,35,44": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "62,42,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,42,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,42,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,42,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,42,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,42,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,41,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,41,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,41,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,41,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,41,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,41,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,40,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,40,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,40,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,40,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,40,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,40,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,39,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,39,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,39,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,39,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,39,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,39,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,38,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,38,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,38,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,38,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,38,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,38,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,37,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,37,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,37,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,37,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,37,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,37,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,36,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,36,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,36,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,36,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,36,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,36,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,35,43": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "61,35,43": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "60,35,43": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "59,35,43": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "58,35,43": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "57,35,43": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "64,42,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,42,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,42,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,42,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,42,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,42,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,41,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,41,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,41,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,41,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,41,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,41,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,40,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,40,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,40,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,40,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,40,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,40,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,39,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,39,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,39,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,39,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,39,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,39,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,38,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,38,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,38,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,38,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,38,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,38,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,37,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,37,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,37,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,37,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,37,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,37,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,36,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,36,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,36,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,36,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,36,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,36,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,35,42": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "63,35,42": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "62,35,42": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "61,35,42": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "60,35,42": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "59,35,42": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "66,42,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,42,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,42,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,42,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,42,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,42,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,41,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,41,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,41,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,41,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,41,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,41,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,40,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,40,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,40,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,40,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,40,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,40,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,39,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,39,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,39,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,39,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,39,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,39,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,38,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,38,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,38,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,38,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,38,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,38,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,37,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,37,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,37,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,37,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,37,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,37,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,36,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,36,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,36,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,36,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,36,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,36,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,35,41": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "65,35,41": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "64,35,41": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "63,35,41": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "62,35,41": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "61,35,41": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,44,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "42,44,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "41,44,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "40,44,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "39,44,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "38,44,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "37,44,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "36,44,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "35,44,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,44,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "42,44,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "41,44,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "40,44,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "39,44,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "38,44,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "37,44,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "36,44,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "35,44,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,43,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "42,43,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "41,43,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "40,43,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "39,43,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "38,43,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "37,43,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "36,43,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "35,43,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,43,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "42,43,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "41,43,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "40,43,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "39,43,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "38,43,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "37,43,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "36,43,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "35,43,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,42,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "42,42,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "41,42,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "40,42,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "39,42,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "38,42,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "37,42,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "36,42,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "35,42,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,42,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "42,42,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "41,42,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "40,42,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "39,42,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "38,42,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "37,42,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "36,42,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "35,42,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,41,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "42,41,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "41,41,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "40,41,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "39,41,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "38,41,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "37,41,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "36,41,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "35,41,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,41,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "42,41,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "41,41,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "40,41,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "39,41,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "38,41,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "37,41,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "36,41,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "35,41,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,40,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "42,40,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "41,40,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "40,40,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "39,40,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "38,40,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "37,40,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "36,40,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "35,40,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,40,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "42,40,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "41,40,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "40,40,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "39,40,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "38,40,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "37,40,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "36,40,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "35,40,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,39,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "42,39,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "41,39,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "40,39,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "39,39,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "38,39,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "37,39,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "36,39,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "35,39,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,35,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "42,35,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "41,35,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "40,35,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "39,35,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "38,35,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "37,35,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "36,35,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "35,35,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "76,35,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "47,38,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "74,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "50,36,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,36,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,36,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,36,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,36,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,36,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,35,49": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "49,35,49": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "48,35,49": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,39,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "42,39,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "41,39,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "40,39,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "39,39,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "38,39,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "37,39,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "36,39,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "35,39,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,35,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "42,35,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "41,35,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "40,35,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "39,35,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "38,35,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "37,35,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "36,35,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "35,35,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,38,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "42,38,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "41,38,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "40,38,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "39,38,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "38,38,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "37,38,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "36,38,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "35,38,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,36,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "42,36,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "41,36,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "40,36,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "39,36,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "38,36,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "37,36,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "36,36,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "35,36,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,38,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "42,38,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "41,38,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "40,38,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "39,38,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "38,38,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "37,38,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "36,38,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "35,38,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,36,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "42,36,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "41,36,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,35,49": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "46,35,49": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "45,35,49": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "52,42,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,42,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,42,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,42,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,42,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,42,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,41,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,41,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,41,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "40,36,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "39,36,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "38,36,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "37,36,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "36,36,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "35,36,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,37,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "42,37,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "41,37,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "40,37,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "39,37,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "38,37,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "37,37,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "36,37,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "35,37,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "43,37,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "42,37,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "41,37,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "40,37,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "39,37,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "38,37,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "37,37,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "36,37,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "35,37,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "49,41,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,41,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,41,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "76,36,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "76,37,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "76,38,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "76,39,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "76,40,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "76,41,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "76,42,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "76,43,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "76,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "50,42,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "44,44,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "49,42,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "44,43,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "44,42,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "44,41,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "44,40,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "44,39,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "44,38,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "44,37,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "44,36,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "44,35,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "44,44,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "44,43,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "44,42,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "44,41,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "44,40,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "44,39,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "44,38,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "44,37,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "44,36,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "44,35,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "54,44,47": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "53,44,47": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "54,43,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,43,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,43,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,43,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,44,46": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "52,44,46": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "49,43,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,43,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,43,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,43,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,44,47": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "50,44,47": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "51,44,47": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "52,44,47": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "47,43,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,43,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,43,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,43,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "56,44,46": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "55,44,46": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "54,44,46": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "53,44,46": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "56,43,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,43,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,40,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,40,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,40,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,40,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,40,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,40,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,39,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,39,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,39,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "75,36,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "75,37,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "75,38,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,43,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,43,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,43,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,43,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,44,48": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "48,44,48": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "49,44,48": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "50,44,48": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "51,44,48": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "52,44,48": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "45,43,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,43,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,43,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,43,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,43,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,43,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,44,49": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "46,44,49": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "47,44,49": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "48,44,49": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "49,44,49": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "50,44,49": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "45,35,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "46,35,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "75,39,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "75,40,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "75,41,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "75,42,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "75,43,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "75,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "49,39,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,39,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,39,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,38,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,38,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,38,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,42,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,35,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "47,42,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,35,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "45,36,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,36,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,36,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,36,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,37,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,37,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,37,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,37,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,44,45": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "57,44,45": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "56,44,45": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "55,44,45": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "54,44,45": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "53,44,45": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "58,43,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,43,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "56,43,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,43,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,43,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,43,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,38,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,38,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,38,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "77,36,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "77,37,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "77,38,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "77,39,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "77,40,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "77,41,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "77,42,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "77,43,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "77,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "46,42,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,38,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,42,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,38,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,38,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,38,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,39,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,39,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,39,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,39,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,40,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,40,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,40,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,40,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,41,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,41,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,41,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,41,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,42,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,42,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,42,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,42,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,43,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,43,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,43,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,43,50": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,44,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "46,44,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "47,44,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "48,44,50": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "45,35,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "46,35,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "45,36,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,36,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,37,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,37,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,38,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,38,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,39,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,39,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,40,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,40,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,41,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,41,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,42,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,42,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,43,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,43,51": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,37,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,37,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,37,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,37,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,37,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,37,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,36,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,36,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,36,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "76,36,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "76,37,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "76,38,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "76,39,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "76,40,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "76,41,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "76,42,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "76,43,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "76,44,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "49,36,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,36,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,36,48": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,35,48": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "51,35,48": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "50,35,48": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "45,44,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "46,44,51": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "60,44,44": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "59,44,44": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "58,44,44": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "57,44,44": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "56,44,44": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "55,44,44": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "60,43,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,43,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,43,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,43,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "56,43,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,43,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "83,40,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "57,39,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "56,39,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,36,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,37,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,38,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,37,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,39,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,37,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,39,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,35,48": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "48,35,48": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "47,35,48": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "74,36,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "74,37,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "74,38,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "74,39,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "74,40,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "74,41,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "74,42,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "74,43,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "74,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "50,41,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,40,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,41,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,38,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "83,41,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "54,40,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,40,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "56,40,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,40,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,40,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "72,44,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "72,43,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "72,42,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "72,41,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "72,40,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "78,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "72,39,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "72,38,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "72,37,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "72,36,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,41,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,41,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "79,41,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,41,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,42,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,42,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,42,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,42,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,42,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,42,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,41,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,41,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,41,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "75,36,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "75,37,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "75,38,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,41,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "56,41,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,41,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,41,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,41,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,42,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,42,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "79,40,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,40,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,41,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,42,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,43,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "55,39,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "79,39,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,39,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,39,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,38,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,44,43": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "59,44,43": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "58,44,43": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "57,44,43": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "60,43,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,43,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,43,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,43,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,38,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "56,38,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,38,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "79,38,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "83,42,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "56,42,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,41,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "83,43,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "45,41,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "83,44,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "45,38,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,38,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,38,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "79,37,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,38,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,38,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,36,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,37,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,38,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,39,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "79,36,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,40,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,41,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,42,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,43,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,44,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "58,37,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "56,38,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,37,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "56,37,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,37,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,37,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,37,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,36,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,38,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,44,42": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "59,44,42": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "60,43,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,43,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,37,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,42,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,37,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "79,44,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "79,43,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "79,42,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,37,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,36,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "56,36,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "82,36,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "82,37,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "82,38,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "82,39,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,37,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "82,40,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "75,39,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "75,40,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "75,41,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "75,42,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "75,43,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "75,44,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "51,41,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,41,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,41,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,40,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,40,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,40,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,40,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,40,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,40,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "78,36,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "78,37,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "78,38,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "78,39,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "78,40,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "78,41,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "78,42,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "78,43,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "78,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "82,41,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,44,43": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "61,44,43": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "62,43,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,43,43": {
+            "material": "stone",
+            "solid": true
+        },
+        "82,42,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "82,43,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "82,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "55,36,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,37,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,36,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,36,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,35,45": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "57,35,45": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "56,35,45": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "55,35,45": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "57,37,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,35,45": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "53,35,45": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "81,36,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,37,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,44,42": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "63,44,42": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "62,44,42": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "54,39,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,39,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,39,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,39,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,39,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,39,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,38,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,38,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,38,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "77,36,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "77,37,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "77,38,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "77,39,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "77,40,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "77,41,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "77,42,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "77,43,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "77,44,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "51,38,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,38,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,38,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,37,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,37,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,37,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,40,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,44,42": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "49,40,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,43,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,43,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,43,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,43,42": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,38,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,39,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "56,37,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,40,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,41,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,42,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,43,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,44,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "60,42,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,37,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,42,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,42,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,42,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "56,42,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,42,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,41,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "51,37,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,37,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,37,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "73,36,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "73,37,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "73,38,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "73,39,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "73,40,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "73,41,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "73,42,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "73,43,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "73,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "48,40,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,41,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "47,40,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,41,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "83,36,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "83,37,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "83,38,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "83,39,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "80,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "83,40,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "83,41,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "83,42,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "83,43,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "83,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "57,41,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "82,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "56,41,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,44,41": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "65,44,41": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "64,44,41": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "63,44,41": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "62,44,41": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "61,44,41": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "66,43,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,43,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,43,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,43,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "62,43,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,40,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "61,43,41": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,40,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,41,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,40,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "59,40,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,40,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,40,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "81,35,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "56,40,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,40,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "82,36,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "82,37,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "82,38,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "82,39,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "79,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "82,40,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "82,41,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "82,42,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "82,43,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "82,44,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "60,39,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,35,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "59,39,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,39,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "57,39,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "56,39,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,39,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "60,38,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "83,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "79,35,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "83,35,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "77,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "78,35,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "76,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "77,35,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "75,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "59,38,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,38,44": {
+            "material": "stone",
+            "solid": true
+        },
+        "83,36,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "83,37,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "83,38,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "83,39,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "82,35,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "57,42,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "58,42,45": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,44,40": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "67,44,40": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "66,44,40": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "65,44,40": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "64,44,40": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "63,44,40": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "68,43,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,43,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,43,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,43,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,36,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,36,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,36,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,36,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,36,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,37,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,36,47": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,37,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,35,46": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "54,35,47": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "53,35,47": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "52,35,47": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "74,36,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "74,37,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "74,38,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "74,39,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "74,40,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "74,41,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "74,42,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "74,43,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "74,44,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "51,35,47": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "50,35,47": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "49,35,47": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "64,43,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,43,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,42,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,42,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,42,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,42,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,42,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,42,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,41,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,41,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,41,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,41,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,41,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,41,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,40,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,40,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,40,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,40,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,40,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,40,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,39,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,39,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,39,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,39,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "56,42,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,42,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,42,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,42,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,42,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,42,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "79,36,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "79,37,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "79,38,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "79,39,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "79,40,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "79,41,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "79,42,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "79,43,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "79,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "56,41,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,41,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,41,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,41,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,41,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,41,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "56,40,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,40,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,40,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,39,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,39,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,39,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,39,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,38,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,38,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,38,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,38,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,38,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,38,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,37,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,37,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,37,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,37,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,37,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,37,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,36,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,36,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,36,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,36,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "64,36,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "63,36,40": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,35,40": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "67,35,40": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "78,36,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "78,37,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "78,38,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "78,39,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "78,40,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "78,41,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "78,42,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "78,43,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "78,44,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "53,40,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,40,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,40,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "56,39,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,39,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,39,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,39,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,39,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,39,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "72,36,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "72,37,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "72,38,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "72,39,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "72,40,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "72,41,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "48,39,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,35,40": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "47,39,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,35,40": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "64,35,40": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "63,35,40": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "68,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "67,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "66,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "65,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "68,43,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,43,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,43,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,43,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,42,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,42,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,42,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,42,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,41,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,41,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,41,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,41,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,40,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,40,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,40,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,40,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,39,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,39,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "46,39,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,39,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "45,39,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,39,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,38,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,38,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,38,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,38,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,37,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,37,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,37,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,37,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,36,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,36,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "66,36,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "65,36,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "67,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "66,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "65,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "68,44,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "67,44,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "68,43,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,43,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,42,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,42,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,41,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,41,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,40,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,40,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,39,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,39,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,38,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,38,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,37,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,37,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,36,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "67,36,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "68,35,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "67,35,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "70,40,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "69,40,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "69,39,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "70,39,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "70,40,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "69,40,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "69,39,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "70,39,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "70,41,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "69,41,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "69,38,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "70,38,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "70,41,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "69,41,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "69,38,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "70,38,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "70,44,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "69,44,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "69,37,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "70,37,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "70,42,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "69,42,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "69,37,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "70,37,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "70,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "69,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "69,36,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "70,36,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "70,42,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "69,42,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "69,36,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "70,36,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "70,43,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "69,43,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "69,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "70,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "70,43,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "69,43,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "69,35,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "70,35,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "71,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "71,43,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "71,42,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "71,41,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "72,42,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "72,43,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "72,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "56,38,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,38,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,38,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,38,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,38,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,38,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "56,37,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,37,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,37,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "73,36,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "73,37,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "73,38,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "73,39,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "73,40,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "73,41,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "73,42,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "73,43,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "73,44,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "53,37,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,37,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,37,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "50,38,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "71,40,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "49,38,49": {
+            "material": "stone",
+            "solid": true
+        },
+        "71,39,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "71,38,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "71,37,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "71,36,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "71,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "71,44,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "71,43,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "71,42,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "71,41,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "71,40,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "71,39,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "71,38,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "71,37,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "71,36,38": {
+            "material": "stone",
+            "solid": true
+        },
+        "71,35,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "72,35,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "73,35,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "72,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "74,35,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "73,35,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "75,35,38": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "56,36,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "55,36,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "54,36,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "53,36,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "52,36,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "51,36,46": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,36,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,37,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,38,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,39,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,40,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,41,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,42,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,43,39": {
+            "material": "stone",
+            "solid": true
+        },
+        "80,44,39": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "56,35,46": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "55,35,46": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "54,35,46": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "53,35,46": {
+            "material": "stoneRoof",
+            "solid": true
+        },
+        "52,35,46": {
+            "material": "stoneRoof",
+            "solid": true
+        }
+    }
+}

@@ -51,7 +51,7 @@ export default class Player extends Thing {
   weapon = "pistol"
   ammo = 0
   akimbo = false
-  coins = 10
+  coins = 5
 
   constructor (position = [0, 0, 0]) {
     super()
@@ -59,7 +59,7 @@ export default class Player extends Thing {
     this.position = position
     game.getCamera3D().position = [...this.position]
 
-    game.globals.killsUntilDrop = 3
+    game.globals.killsUntilDrop = 4
 
     this.spawnPosition = [...this.position]
     this.velocity = [0, 0, 0]

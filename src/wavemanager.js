@@ -51,25 +51,51 @@ export default class WaveManager extends Thing {
     )
   }
 
+  getWaveData () {
+    const selectedWave = Math.min(this.wave-1, game.assets.json.waves.length-1)
+    return game.assets.json.waves[selectedWave]
+  }
+
   spawn () {
-    this.after(u.lerp(6, 10, Math.random()) * 60, () => this.spawn(), 'spawn')
-    if (this.getEnemyCount() > 20) {
-      return
+    // Get wave data
+    const waveData = this.getWaveData()
+
+    // Set up next swarm
+    let nextSwarmSeconds = 5
+    if (waveData.swarmPeriod) {
+      nextSwarmSeconds = waveData.swarmPeriod
     }
+    if (waveData.swarmTimes) {
+      if (waveData.swarmTimes.length > this.swarmIndex) {
+        let prevSwarmTime = this.swarmIndex > 0 ? waveData.swarmTimes[this.swarmIndex-1] : 0
+        let curSwarmTime = waveData.swarmTimes[this.swarmIndex]
+        nextSwarmSeconds = curSwarmTime - prevSwarmTime
+      }
+      else {
+        nextSwarmSeconds = 99999999
+      }
+    }
+    this.after(Math.floor(nextSwarmSeconds * 60), () => this.spawn(), 'spawn')
+    this.swarmIndex ++
+
+    // Determine spawn location
     const angle = u.lerp(0, Math.PI * 2, Math.random())
-    const x = Math.cos(angle) * 32 + 64
-    const y = Math.sin(angle) * 32 + 40
+    const x = Math.cos(angle) * 32 * waveData.radius + 40
+    const y = Math.sin(angle) * 48 * waveData.radius + 40
     for (let i = 0; i < 4; i += 1) {
+      if (this.getEnemyCount() > 20) {
+        continue
+      }
       const position = [
         x + u.lerp(-10, 10, Math.random()),
         y + u.lerp(-10, 10, Math.random()),
         u.lerp(45, 55, Math.random())
       ]
-      if (0.2 > Math.random()) {
-        game.addThing(new BigWasp(position))
-      }
-      else if (0.2 > Math.random()) {
+      if (waveData.bombChance > Math.random()) {
         game.addThing(new Bomb(position))
+      }
+      else if (waveData.bigWaspChance > Math.random()) {
+        game.addThing(new BigWasp(position))
       }
       else {
         game.addThing(new Wasp(position))
@@ -91,7 +117,9 @@ export default class WaveManager extends Thing {
   nextWave () {
     this.wave += 1
     this.waveActive = true
-    this.after(60 * 60, () => this.endWave(), 'wave')
+    const waveDuration = this.getWaveData().waveDuration
+    this.swarmIndex = 0
+    this.after(Math.floor(waveDuration * 60), () => this.endWave(), 'wave')
     this.spawn()
   }
 

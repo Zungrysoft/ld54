@@ -1,5 +1,3 @@
-import * as game from './core/game.js'
-import HoneycombPickup from './pickuphoneycomb.js'
 import Wasp from "./wasp.js"
 
 export default class BigWasp extends Wasp {
@@ -23,7 +21,7 @@ export default class BigWasp extends Wasp {
 
     // Can spawn additional honeycomb
     if (this.spawnCoin) {
-      if (0.4 > Math.random()) {
+      if (0.5 > Math.random()) {
         this.dropCoin()
       }
     }

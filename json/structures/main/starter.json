@@ -28111,6 +28111,4006 @@
         "46,9,41": {
             "material": "stone",
             "solid": true
+        },
+        "39,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "39,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "38,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "40,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "37,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "41,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "36,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "42,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "35,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "43,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "44,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "29,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "29,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "29,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "29,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "29,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "29,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "29,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "29,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "29,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "29,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "28,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "28,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "28,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "28,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "28,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "28,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "28,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "28,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "28,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "28,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "30,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "30,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "30,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "30,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "30,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "30,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "30,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "30,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "30,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "30,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "27,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "27,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "27,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "27,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "27,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "27,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "27,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "27,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "27,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "27,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "31,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "31,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "31,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "31,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "31,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "31,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "31,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "31,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "31,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "31,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "26,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "26,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "26,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "26,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "26,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "26,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "26,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "26,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "26,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "26,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "32,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "32,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "32,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "32,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "32,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "32,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "32,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "32,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "32,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "32,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "25,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "25,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "25,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "25,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "25,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "25,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "25,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "25,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "25,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "25,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "33,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "33,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "33,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "33,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "33,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "33,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "33,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "33,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "33,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "33,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "34,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "34,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "34,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "34,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "34,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "34,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "34,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "34,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "34,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "34,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "49,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "49,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "49,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "49,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "49,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "49,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "49,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "49,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "49,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "49,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "48,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "48,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "48,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "48,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "48,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "48,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "48,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "48,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "48,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "48,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "50,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "50,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "50,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "50,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "50,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "50,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "50,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "50,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "50,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "50,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "47,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "47,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "47,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "47,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "47,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "47,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "47,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "47,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "47,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "47,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "51,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "51,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "51,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "51,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "51,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "51,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "51,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "51,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "51,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "51,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "46,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "46,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "46,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "46,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "46,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "46,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "46,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "46,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "46,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "46,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "52,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "52,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "52,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "52,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "52,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "52,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "52,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "52,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "52,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "52,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "45,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "45,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "45,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "45,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "45,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "45,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "45,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "45,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "45,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "45,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "53,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "53,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "53,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "53,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "53,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "53,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "53,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "53,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "53,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "53,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "54,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "54,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "54,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "54,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "54,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "54,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "54,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "54,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "54,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "54,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,45,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,46,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,47,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,48,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,49,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,50,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,51,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,52,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,53,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,54,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "77,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "76,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "78,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "75,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "79,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "74,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "74,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "74,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "74,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "74,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "74,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "74,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "74,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "74,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "74,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "80,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "73,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "73,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "73,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "73,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "73,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "73,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "73,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "73,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "73,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "73,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "81,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "72,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "72,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "72,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "72,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "72,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "72,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "72,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "72,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "72,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "72,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "82,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "71,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "71,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "71,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "71,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "71,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "71,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "71,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "71,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "71,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "71,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "83,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "70,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "70,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "70,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "70,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "70,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "70,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "70,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "70,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "70,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "70,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,25,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,26,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,27,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,28,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,29,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,30,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,31,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,32,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,33,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,34,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "84,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "69,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "69,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "69,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "69,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "69,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "69,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "69,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "69,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "69,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "69,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "85,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "85,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "85,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "85,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "85,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "85,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "85,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "85,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "85,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "85,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "68,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "68,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "68,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "68,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "68,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "68,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "68,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "68,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "68,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "68,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "86,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "86,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "86,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "86,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "86,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "86,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "86,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "86,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "86,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "86,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "67,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "67,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "67,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "67,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "67,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "67,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "67,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "67,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "67,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "67,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "87,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "87,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "87,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "87,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "87,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "87,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "87,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "87,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "87,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "87,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "66,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "66,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "66,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "66,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "66,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "66,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "66,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "66,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "66,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "66,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "88,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "88,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "88,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "88,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "88,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "88,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "88,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "88,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "88,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "88,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "65,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "65,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "65,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "65,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "65,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "65,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "65,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "65,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "65,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "65,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "89,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "89,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "89,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "89,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "89,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "89,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "89,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "89,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "89,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "89,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "90,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "90,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "90,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "90,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "90,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "90,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "90,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "90,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "90,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "90,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "91,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "91,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "91,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "91,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "91,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "91,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "91,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "91,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "91,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "91,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "92,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "92,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "92,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "92,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "92,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "92,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "92,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "92,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "92,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "92,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "93,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "93,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "93,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "93,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "93,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "93,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "93,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "93,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "93,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "93,44,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "94,35,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "94,36,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "94,37,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "94,38,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "94,39,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "94,40,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "94,41,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "94,42,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "94,43,39": {
+            "material": "grass",
+            "solid": true
+        },
+        "94,44,39": {
+            "material": "grass",
+            "solid": true
         }
     }
 }
