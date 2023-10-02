@@ -84,7 +84,7 @@ export default class Bomb extends Thing {
         soundmanager.playSound(['warn2a', 'warn2b'], 0.15 * v + 0.04, [1.2, 1.2])
       }
       this.explosionAnims --
-      this.after(50, () => this.prepareToExplode(), "prepare")
+      this.after(60, () => this.prepareToExplode(), "prepare")
     }
   }
 
