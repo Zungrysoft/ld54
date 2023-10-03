@@ -195,6 +195,9 @@ function update () {
   mouse.leftClick = false
   mouse.rightClick = false
 
+  // Update sound panning
+  soundmanager.updateSoundPan(getCamera3D().position, getCamera3D().lookVector)
+
   // successfully updated, we should rerender
   return true
 }

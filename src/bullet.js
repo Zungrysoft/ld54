@@ -115,15 +115,14 @@ export class Explosion extends Thing {
   constructor (vPos, radius = 2) {
     super()
     this.position = vPos
-    const player = game.getThing('player')
-    if (player) {
-      const volume = Math.max(1 - u.distance(player.position, this.position) / 80, 0) ** 2
-      const p = u.map(radius, 2, 4, 1, 0.9)
-      soundmanager.playSound(['boom1a','boom1b','boom1c'], u.lerp(0, 0.1, volume), [p * 0.9, p * 1.1])
-      if (radius >= 10) {
-        soundmanager.playSound(['boom2a','boom2b','boom2c'], u.lerp(0.1, 0.3, volume), [0.9, 1.0])
-      }
+
+    // Sound effect
+    const p = u.map(radius, 2, 4, 1, 0.9)
+    soundmanager.playSound(['boom1a','boom1b','boom1c'], 0.1, [p * 0.9, p * 1.1], this.position, 1)
+    if (radius >= 10) {
+      soundmanager.playSound(['boom2a','boom2b','boom2c'], 0.3, [0.9, 1.0], this.position)
     }
+
     vPos = vPos.map(Math.round)
     this.radius = radius
     this.after(15, () => { this.dead = true }, 'time')
@@ -140,12 +139,15 @@ export class Explosion extends Thing {
       }
     }
 
-    const playerPosition = [player.position[0], player.position[1], player.position[2] + 2]
-    if (u.distance(this.position, playerPosition) <= this.radius + 2) {
-      const push = vec3.normalize(vec3.subtract(playerPosition, this.position))
-      player.velocity[0] += push[0] * 0.3
-      player.velocity[1] += push[1] * 0.3
-      player.velocity[2] += push[2] * 0.6
+    const player = game.getThing('player')
+    if (player) {
+      const playerPosition = [player.position[0], player.position[1], player.position[2] + 2]
+      if (u.distance(this.position, playerPosition) <= this.radius + 2) {
+        const push = vec3.normalize(vec3.subtract(playerPosition, this.position))
+        player.velocity[0] += push[0] * 0.3
+        player.velocity[1] += push[1] * 0.3
+        player.velocity[2] += push[2] * 0.6
+      }
     }
   }
 

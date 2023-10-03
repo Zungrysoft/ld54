@@ -60,7 +60,6 @@ export default class Pickup extends Thing {
       this.position[2] += 1
     }
 
-
     // Particles
     if (this.time % 16 === 0) {
       game.addThing(new ItemParticle(this.position))

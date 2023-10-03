@@ -35,11 +35,7 @@ export default class Bomb extends Thing {
     this.angle2 = Math.random() * Math.PI * 2
 
     // Sound effect
-    const player = game.getThing('player')
-    if (player) {
-      const v = player.scaleVolume(this.position)
-      soundmanager.playSound('appear', 0.5 * v, [0.8, 1.0])
-    }
+    soundmanager.playSound('appear', 0.5, [0.8, 1.0], this.position, 40)
   }
 
   update () {
@@ -77,12 +73,8 @@ export default class Bomb extends Thing {
       game.addThing(new Explosion([...this.position], this.explosionPower))
     }
     else {
-      const player = game.getThing('player')
-      if (player) {
-        const v = player.scaleVolume(this.position)
-        soundmanager.playSound(['warn1a', 'warn1b'], 0.35 * v + 0.1, [1.2, 1.2])
-        soundmanager.playSound(['warn2a', 'warn2b'], 0.15 * v + 0.04, [1.2, 1.2])
-      }
+      soundmanager.playSound(['warn1a', 'warn1b'], 0.5, [1.2, 1.2], this.position, 40)
+      soundmanager.playSound(['warn2a', 'warn2b'], 0.3, [1.2, 1.2], this.position, 40)
       this.explosionAnims --
       this.after(60, () => this.prepareToExplode(), "prepare")
     }
@@ -156,12 +148,7 @@ export default class Bomb extends Thing {
 
   dropCoin() {
     game.addThing(new HoneycombPickup([...this.position]))
-
-    const player = game.getThing('player')
-    if (player) {
-      const v = player.scaleVolume(this.position)
-      soundmanager.playSound('drop', 0.1 * v, [0.8, 0.9])
-    }
+    soundmanager.playSound('drop', 0.1, [0.8, 0.9], this.position, 40)
   }
 
   onDeath () {

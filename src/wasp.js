@@ -40,11 +40,7 @@ export default class Wasp extends Thing {
     this.checkShoot(90)
 
     // Sound effect
-    const player = game.getThing('player')
-    if (player) {
-      const v = player.scaleVolume(this.position)
-      soundmanager.playSound('appear', 0.5 * v, [0.8, 1.0])
-    }
+    soundmanager.playSound('appear', 0.5, [0.8, 1.0], this.position, 40)
   }
 
   update () {
@@ -100,11 +96,7 @@ export default class Wasp extends Thing {
     let bulletPos = [...this.position]
     let bulletVel = vec3.scale(vec3.normalize(vec3.subtract(this.targetPosition, this.position)), 0.3)
     game.addThing(new Bullet(bulletPos, bulletVel, this, 20, this.explosionPower, this.bulletScale))
-    const player = game.getThing('player')
-    if (player) {
-      const volume = Math.max(1 - u.distance(player.position, this.position) / 50, 0) ** 2
-      soundmanager.playSound(['eshoot1', 'eshoot2', 'eshoot3', 'eshoot4'], u.lerp(0, 0.1, volume), [0.7, 0.8])
-    }
+    soundmanager.playSound(['eshoot1', 'eshoot2', 'eshoot3', 'eshoot4'], 0.1, [0.7, 0.8], this.position)
   }
 
   chooseTarget() {
@@ -235,12 +227,7 @@ export default class Wasp extends Thing {
 
   dropCoin() {
     game.addThing(new HoneycombPickup([...this.position]))
-
-    const player = game.getThing('player')
-    if (player) {
-      const v = player.scaleVolume(this.position)
-      soundmanager.playSound('drop', 0.1 * v, [0.8, 0.9])
-    }
+    soundmanager.playSound('drop', 0.1, [0.8, 0.9], this.position, 40)
   }
 
   onDeath () {

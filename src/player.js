@@ -15,6 +15,7 @@ import * as soundmanager from './core/soundmanager.js'
 import * as vox from './voxel.js'
 import Bullet from './bullet.js'
 import DeathAnim from './deathanim.js'
+import { ItemParticle } from './particle.js'
 
 export default class Player extends Thing {
   height = 3.8
@@ -351,11 +352,6 @@ export default class Player extends Thing {
     this.moveAndCollide()
     this.updateTimers()
     this.cameraUpdate()
-  }
-
-  scaleVolume(position) {
-    const volume = Math.max(1 - u.distance(position, this.position) / 80, 0) ** 2
-    return volume
   }
 
   moveAndCollide () {

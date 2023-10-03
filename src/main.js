@@ -1,5 +1,6 @@
 import * as game from './core/game.js'
 import * as gfx from './core/webgl.js'
+import * as soundmanager from './core/soundmanager.js'
 import Terrain from './terrain.js'
 import Player from './player.js'
 import WaveManager, { TitleScreen } from './wavemanager.js'
@@ -159,6 +160,24 @@ await game.loadAssets({
   },
 })
 
+soundmanager.configurePositionalSound([
+  'boom1a',
+  'boom1b',
+  'boom1c',
+  'boom2a',
+  'boom2b',
+  'boom2c',
+  'eshoot1',
+  'eshoot2',
+  'eshoot3',
+  'eshoot4',
+  'warn1a',
+  'warn1b',
+  'warn2a',
+  'warn2b',
+  'drop',
+  'appear',
+])
 
 const { assets } = game
 assets.shaders = {
