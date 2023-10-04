@@ -45,8 +45,8 @@ export default class Player extends Thing {
   emptyChunkSolid = false
   depth = 1000
   lives = 3
-  jetpack = 60
-  jetpackMaximum = 60
+  jetpack = 90
+  jetpackMaximum = 90
   jetpackCanRecharge = true
   jetpackRechargeRate = 1.0
   weapon = "pistol"

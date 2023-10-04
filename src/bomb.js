@@ -21,7 +21,7 @@ export default class Bomb extends Thing {
   scale = 0.5
   health = 100
   color = [0.9,0,0.3,1]
-  explosionAnims = 3
+  explosionAnims = 5
   gibCount = 7
 
   constructor (position = [0, 0, 0], angle = 0) {
@@ -44,8 +44,11 @@ export default class Bomb extends Thing {
     this.time ++
 
     // Rotate
-    this.angle1 += 0.01
-    this.angle2 += 0.03
+    const rotateRate = u.map(this.explosionAnims - (this.timer('warn') || 0), 5, 0, 1, 40)
+    this.angle1 += 0.01 * rotateRate
+    if (this.explosionAnims === 0) {
+      this.angle2 += 0.03
+    }
 
     // Move toward target
     if (this.targetPosition) {
@@ -55,7 +58,7 @@ export default class Bomb extends Thing {
         this.prepareToExplode()
       }
       else {
-        const vel = vec3.scale(vec3.normalize(vec3.subtract(this.targetPosition, this.position)), 0.06)
+        const vel = vec3.scale(vec3.normalize(vec3.subtract(this.targetPosition, this.position)), 0.08)
         this.position = vec3.add(this.position, vel)
       }
     }
@@ -73,10 +76,14 @@ export default class Bomb extends Thing {
       game.addThing(new Explosion([...this.position], this.explosionPower))
     }
     else {
-      soundmanager.playSound(['warn1a', 'warn1b'], 0.5, [1.2, 1.2], this.position, 40)
-      soundmanager.playSound(['warn2a', 'warn2b'], 0.3, [1.2, 1.2], this.position, 40)
+      // Play sound effect
+      const p = u.map(this.explosionAnims, 5, 1, 1.0, 1.3)
+      soundmanager.playSound(['warn1a', 'warn1b'], 0.5, [p, p], this.position, 40)
+      soundmanager.playSound(['warn2a', 'warn2b'], 0.3, [p, p], this.position, 40)
+
+      // Set up next warn
+      this.after(60, () => this.prepareToExplode(), 'warn')
       this.explosionAnims --
-      this.after(60, () => this.prepareToExplode(), "prepare")
     }
   }
 
@@ -111,11 +118,12 @@ export default class Bomb extends Thing {
 
   draw () {
     const startle = this.timers.damage ? u.map((1 - this.timer('damage')) ** 2, 1, 0, 0, 1) : 1
-    const prepare = this.timers.prepare ? u.map((1 - this.timer('prepare')) ** 2, 1, 0, 0, 1) : 1
+    const warn = this.timers.warn ? u.map((1 - this.timer('warn')) ** 2, 1, 0, 0, 1) : 1
+    const warnSize = u.map(this.explosionAnims, 4, 0, 1.5, 2.5)
     gfx.setShader(assets.shaders.default)
     game.getCamera3D().setUniforms()
 
-    const lerpedColor = vec3.lerp([1.0, 1.0, 0.6], this.color, prepare)
+    const lerpedColor = vec3.lerp([1.0, 1.0, 0.6], this.color, warn)
 
     if (this.timer('damage')) {
       gfx.set('color', [1,1,1,1])
@@ -126,9 +134,9 @@ export default class Bomb extends Thing {
       translation: [...this.position],
       rotation: [this.angle1, this.angle2, 0],
       scale: [
-        u.lerp(1.5, 1, startle) * u.lerp(0.7, 1, prepare) * this.growScale * this.scale,
-        u.lerp(2.5, 1, startle) * u.lerp(0.7, 1, prepare) * this.growScale * this.scale,
-        u.lerp(1.5, 1, startle) * u.lerp(0.7, 1, prepare) * this.growScale * this.scale,
+        u.lerp(1.5, 1, startle) * u.lerp(warnSize, 1, warn) * this.growScale * this.scale,
+        u.lerp(2.5, 1, startle) * u.lerp(warnSize, 1, warn) * this.growScale * this.scale,
+        u.lerp(1.5, 1, startle) * u.lerp(warnSize, 1, warn) * this.growScale * this.scale,
       ]
     }))
     gfx.setTexture(assets.textures.square)
